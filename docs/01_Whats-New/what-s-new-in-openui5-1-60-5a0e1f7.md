@@ -1163,7 +1163,7 @@ User Documentation
 
 **Accessibility Improvements in Demo Apps and in the Walkthrough Tutorial**
 
-We have improved the accessibility of our demo apps. In addition, we have updated our *Walkthrough* tutorial and added a new step. Developers can improve the accessibility of their Walkthrough app by adding ARIA elements \(landmarks\). For more information, see [Step 37: Accessibility](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/ff7cab1f271a4181a86e5aa5c2f8d421.html "In this step we're going to improve the accessibility of our app.") :arrow_upper_right:.
+We have improved the accessibility of our demo apps. In addition, we have updated our *Walkthrough* tutorial and added a new step. Developers can improve the accessibility of their Walkthrough app by adding ARIA elements \(landmarks\). For more information, see [Step 37: Accessibility](../03_Get-Started/step-37-accessibility-ff7cab1.md).
 
 <sub>Changed•User Documentation•Info Only•1.60</sub>
 
@@ -1185,6 +1185,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
 
 [What's New in OpenUI5 1.135](what-s-new-in-openui5-1-135-93d7630.md "With this release OpenUI5 is upgraded from version 1.134 to 1.135.")
 

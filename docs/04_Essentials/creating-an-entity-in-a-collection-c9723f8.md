@@ -222,7 +222,7 @@ You can create such an inline creation row by calling [`sap.ui.model.odata.v4.OD
 -   `transient`: A POST is waiting in the batch queue.
 -   `createPending`: The POST has been sent to the server; the entity is waiting for the response.
 -   `parked`: A POST via an auto group that failed is parked until a property update takes place.
--   `createdPersisted`: The POST succeeded, and the entity now exists on the server. If the binding is refreshed, the context's reaction depends on its `isKeepAlive` state. If it's set to `false`, the context is dropped and created anew when it's read from the server. If it's set to `true`, it is refreshed with a special request and remains in the `createdPersisted` state.
+-   `createdPersisted`: The POST succeeded, and the entity now exists on the server. If the binding is refreshed, the context's reaction depends on its `isKeepAlive` state. If it's set to `false`, the context is dropped and created anew when it's read from the server. If it's set to `true`, it is refreshed with a special request and remains in the `createdPersisted` state. If the context itself is refreshed, the `createdPersisted` state does not change.
 
   
   

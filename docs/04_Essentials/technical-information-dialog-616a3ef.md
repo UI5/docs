@@ -8,7 +8,7 @@ To open the technical information dialog from within a supported desktop browser
 
 [Ctrl\] + [Shift\] + [Left-Alt\] /[Left-Option\] + [P\] 
 
-![](images/loio8bf9780408674588af6d33eb6cebadab_LowRes.png)
+![](../03_Get-Started/images/loio8bf9780408674588af6d33eb6cebadab_LowRes.png)
 
 The dialog contains the following information:
 

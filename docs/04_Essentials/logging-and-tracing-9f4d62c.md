@@ -295,5 +295,5 @@ assert(aValues.length === 10, "There are 10 values stored in the array")
 
 [Debugging](debugging-c9b0f8c.md#loioc9b0f8cca852443f9b8d3bf8ba5626ab "When developing apps, searching for bugs is an inevitable part of the process. To analyze an issue, you can use the developer tools of your browser and built-in OpenUI5 tools. In this section, we give an overview of the OpenUI5 tools you can use when debugging. To learn more about the developer tools of your browser, check the documentation of the browser.")
 
-[Troubleshooting Tutorial Step 1: Browser Developer Tools](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/eadd60ae907646bbb838866566b23182.html "In this step, you will learn how to use your browser's developers tools to troubleshoot your SAPUI5 app.") :arrow_upper_right:
+[Troubleshooting Tutorial Step 1: Browser Developer Tools](../03_Get-Started/step-1-browser-developer-tools-eadd60a.md "In this step, you will learn how to use your browser's developers tools to troubleshoot your OpenUI5 app.")
 

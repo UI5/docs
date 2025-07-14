@@ -240,7 +240,7 @@ Feature
 
 We have reworked the Data Binding tutorial, offering you state-of-the-art usage of data binding in OpenUI5.
 
-For more information, see [Data Binding Tutorial](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/e5310932a71f42daa41f3a6143efca9c.html "In this tutorial, we explain the concepts of data binding in SAPUI5.") :arrow_upper_right:.
+For more information, see [Data Binding Tutorial](../03_Get-Started/data-binding-tutorial-e531093.md).
 
 <sub>Changed•Feature•Info Only•1.122</sub>
 
@@ -597,6 +597,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
 
 [What's New in OpenUI5 1.135](what-s-new-in-openui5-1-135-93d7630.md "With this release OpenUI5 is upgraded from version 1.134 to 1.135.")
 

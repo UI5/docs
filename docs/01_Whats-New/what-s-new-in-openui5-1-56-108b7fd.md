@@ -1191,7 +1191,7 @@ User Documentation
 
 **New Tutorial**
 
-We have a new tutorial: [Flexible Column Layout App Tutorial](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/c4de2df385174e58a689d9847c7553bd.html "In this tutorial, we showcase how to structure your SAPUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.") :arrow_upper_right:. In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the latest SAP Fiori design guidelines.
+We have a new tutorial: [Flexible Column Layout App Tutorial](../03_Get-Started/flexible-column-layout-app-tutorial-c4de2df.md). In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the latest SAP Fiori design guidelines.
 
 <sub>Changed•User Documentation•Info Only•1.56</sub>
 
@@ -1263,6 +1263,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
 
 [What's New in OpenUI5 1.135](what-s-new-in-openui5-1-135-93d7630.md "With this release OpenUI5 is upgraded from version 1.134 to 1.135.")
 

@@ -1299,6 +1299,23 @@ Version 76
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 77
+
+</td>
+<td valign="top">
+
+\>=1.138
+
+</td>
+<td valign="top">
+
+1.76.0
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md)
@@ -1307,9 +1324,9 @@ For more information on the new fields introduced in each version, check out [Mi
 
 <a name="loiobe0cf40f61184b358b5faedaec98b2da__section_manifest2"/>
 
-## Manifest 2.0
+## Manifest Version 2
 
-As of OpenUI5 1.136, we support a new manifest version 2.0.0. Using this version has the following implications for a Component:
+As of OpenUI5 1.136, we support the new Manifest Version 2. Using this version has the following implications for a Component:
 
 ***
 
@@ -1333,13 +1350,13 @@ Deprecated manifest entries managed by the OpenUI5 framework cannot be used anym
 
 ### Error Validation
 
-Manifest version 2.0.0 also enables a stricter error handling for views and fragments. Syntactical errors \(e.g. broken binding strings\) will now lead to errors being thrown. Programmatically created views will reject the factory promise accordingly.
+Manifest Version 2 also enables a stricter error handling for views and fragments. Syntactical errors \(e.g. broken binding strings\) will now lead to errors being thrown. Programmatically created views will reject the factory promise accordingly.
 
 ***
 
 ### `IAsyncContentCreation`
 
-While the Manifest 2.0.0 behavior regarding root view and routing configuration is similar to the behavior of the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface, they are not interchangeable. For compatibility reasons, the manifest version 2.0.0 does **not** enforce the implementation of this interface. In order to use an asynchronous `sap/ui/core/UIComponent#createContent` implementation in your subclasses, the `sap.ui.core.IAsyncContentCreation` interface must be implemented explicitly.
+While the Manifest Version 2 behavior regarding root view and routing configuration is similar to the behavior of the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface, they are not interchangeable. For compatibility reasons, the Manifest Version 2 does **not** enforce the implementation of this interface. In order to use an asynchronous `sap/ui/core/UIComponent#createContent` implementation in your subclasses, the `sap.ui.core.IAsyncContentCreation` interface must be implemented explicitly.
 
 Please also be aware that the implementation of the `sap.ui.core.IAsyncContentCreation` interface changes the aggregation behavior of the root view. When the root view is loaded asynchronously and the Component implements `sap.ui.core.IAsyncContentCreation`, the root view controller's [`onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/onInit) hook no longer has access to Component models through the view instance. To retrieve model instances, we recommend using the [`sap/ui/core/mvc/Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/getOwnerComponent) API on the controller instance.
 
@@ -1611,7 +1628,7 @@ It's used as a reference point for most operations involving the manifest. If th
 
 A mandatory attribute. The following values are possible:
 
--   `application`: use if your `manifest.json` describes a **UI5 application**.For an example how to use a `manifest.json` for UI5 applications, see [Step 10: Descriptor for Applications](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/8f93bf2b2b13402e9f035128ce8b495f.html "All application-specific configuration settings will now further be put in a separate descriptor file called manifest.json. This clearly separates the application coding from the configuration settings and makes our app even more flexible. For example, all SAP Fiori applications are realized as components and come with a descriptor file in order to be hosted in the SAP Fiori launchpad.") :arrow_upper_right: in the Walkthrough Tutorial.
+-   `application`: use if your `manifest.json` describes a **UI5 application**.For an example how to use a `manifest.json` for UI5 applications, see [Step 10: Descriptor for Applications](../03_Get-Started/step-10-descriptor-for-applications-8f93bf2.md) in the Walkthrough Tutorial.
 
 -   `component`: use if your `manifest.json` describes a **reuse component** that is used in several apps. For further reuse component-specific configuration options, see [Manifest for Components \(Inside Libraries\)](manifest-for-components-inside-libraries-7701636.md).
 
@@ -2374,7 +2391,7 @@ Current version of the `manifest.json`
 ```
 
 {
-    "_version": "1.75.1",
+"_version": "1.76.0",
  
     "start_url": "index.html",
  
@@ -2459,7 +2476,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.137.0",
+            "minUI5Version": "1.138.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

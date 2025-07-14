@@ -84,5 +84,5 @@ The Support Assistant allows you to create custom rules and rulesets and test th
 **Related Information**  
 
 
-[Step 3: Support Assistant](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/35f08e10a5d74e058ce9929244d935f0.html "In this tutorial step, we will have a closer look at Support Assistant. You can use this tool to check whether your app is built according to the best practices with predefined rules.") :arrow_upper_right:
+[Step 3: Support Assistant](../03_Get-Started/step-3-support-assistant-35f08e1.md "In this tutorial step, we will have a closer look at Support Assistant. You can use this tool to check whether your app is built according to the best practices with predefined rules.")
 

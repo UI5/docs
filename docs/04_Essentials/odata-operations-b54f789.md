@@ -246,6 +246,8 @@ oModel.bindContext("name.space.DestroyOutdated(...)", oHeaderContext).invoke();
 > -   The parent binding of a deferred operation must not be a deferred operation itself.
 > 
 > -   When invoking a bound action, you can use the `bIgnoreETag` argument of [`ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) to actively ignore the ETag match that normally happens \(technically, the header *"If-Match : \*"* will be used\). This is useful if a second bound action for the same entity is to be invoked within the same batch \(especially if it is in a different change set\). An example would be "prepare" and "activate" for draft handling. Without this, the second bound action would be rejected, because the client sent the initial ETag via the *"If-Match"* header, but the first bound action changes that ETag on the server before the second one is invoked.
+> 
+> -   The bound operation is part of a schema that can be found in the OData metadata. This schema is identified by a namespace. The bound operation is identified by this namespace and the name of the bound operation. Note that using an alias for the namespace is not supported.
 
 ***
 

@@ -200,5 +200,5 @@ This section contains the most common issues that you might face when developing
 **Related Information**  
 
 
-[Troubleshooting Tutorial](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/5661952e72df471b932eddc10350c081.html "In this tutorial, we will show you some tools that will help you if you run into problems with your SAPUI5 app.") :arrow_upper_right:
+[Troubleshooting Tutorial](../03_Get-Started/troubleshooting-tutorial-5661952.md "In this tutorial, we will show you some tools that will help you if you run into problems with your OpenUI5 app.")
 

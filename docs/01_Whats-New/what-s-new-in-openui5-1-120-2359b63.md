@@ -452,7 +452,7 @@ Feature
 
 You can now take the Walkthrough tutorial with UI5 Tooling as our preferred development environment; the sample code for all tutorial steps has been updated to work with UI5 Tooling out of the box. We also included features of modern ECMAScript and added an additional step showing how to build an application.
 
-For more information, see [Walkthrough Tutorial (JavaScript)](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/3da5f4be63264db99f2e5b04c5e853db.html "In this tutorial we will introduce you to all major development paradigms of SAPUI5.") :arrow_upper_right:.
+For more information, see [Walkthrough Tutorial \(JavaScript\)](../03_Get-Started/walkthrough-tutorial-javascript-3da5f4b.md).
 
 <sub>Changed•Feature•Info Only•1.120</sub>
 
@@ -892,6 +892,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
 
 [What's New in OpenUI5 1.135](what-s-new-in-openui5-1-135-93d7630.md "With this release OpenUI5 is upgraded from version 1.134 to 1.135.")
 

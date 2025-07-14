@@ -772,7 +772,7 @@ User Documentation
 
 **Testing Tutorial**
 
-The **Testing** tutorial has been enhanced with two additional steps. For more information, see [Testing Tutorial](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/291c9121e6044ab381e0b51716f97f52.html "In this tutorial we will test application functionality with the testing tools that are delivered with SAPUI5. At different steps of this tutorial you will write tests using QUnit, OPA5, and the OData V2 mock server. Additionally, you will learn about testing strategies, Test Driven Development (TDD), and much more.") :arrow_upper_right:.
+The **Testing** tutorial has been enhanced with two additional steps. For more information, see [Testing Tutorial](../03_Get-Started/testing-tutorial-291c912.md).
 
 <sub>Changed•User Documentation•Info Only•1.44</sub>
 
@@ -849,6 +849,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
 
 [What's New in OpenUI5 1.135](what-s-new-in-openui5-1-135-93d7630.md "With this release OpenUI5 is upgraded from version 1.134 to 1.135.")
 

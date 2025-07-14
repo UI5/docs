@@ -206,7 +206,7 @@ When creating instances of OpenUI5 controls programmatically \(i.e. not declarat
 
 **`manifest.json`**
 
--   Migrate to Manifest 2.0. For more information, see [Manifest 2.0](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_manifest2).
+-   Use Manifest Version 2. For more information, see [Manifest Version 2](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__section_manifest2).
 -   Don't use the section `sap.ui5/resources/js` as it's deprecated. Use regular dependencies in the `Component.js` file instead.
 
 -   Unless the component intends to load specific OpenUI5 libraries manually on demand, avoid adding `{ lazy: true }` to the `sap.ui5/dependencies/libs` section.
@@ -314,7 +314,7 @@ Implement strict error handling to address critical issues.
 
 -   Ensure a dependency on the renderer or embed it within the control class.
 
--   Migrate to the rendering `apiVersion 2` or `apiVersion 4`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23overview).
+-   Use the rendering `apiVersion 2` or `apiVersion 4`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23overview).
 
 -   When utilizing [`RenderManager#icon`](https://ui5.sap.com/#/api/sap.ui.core.RenderManager%23methods/icon) during rendering, include a dependency to `sap/ui/core/IconPool` in your code.
 
@@ -342,7 +342,7 @@ Implement strict error handling to address critical issues.
 
 -   Don't use the global namespace of the library to add types. Use the return value of `Lib.init` instead to add them.
 
--   Migrate to the library `apiVersion 2`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
+-   Use the library `apiVersion 2`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
 
 -   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that shall be usable as a type of control properties.
 

@@ -1423,7 +1423,7 @@ User Documentation
 
 **Documentation Updates**
 
--   We have a new tutorial: [OData V4 Tutorial](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.138_SAPUI5_ABAP/en-US/bcdbde6911bd4fc68fd435cf8e306ed0.html "In this tutorial, we explore how features of OData V4 can be used in SAPUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.") :arrow_upper_right:.
+-   We have a new tutorial: [OData V4 Tutorial](../03_Get-Started/odata-v4-tutorial-bcdbde6.md).
 
 -   We have reworked the [Data Binding](../04_Essentials/data-binding-68b9644.md) section under *Essentials*.
 
@@ -1506,6 +1506,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
 
 [What's New in OpenUI5 1.135](what-s-new-in-openui5-1-135-93d7630.md "With this release OpenUI5 is upgraded from version 1.134 to 1.135.")
 
