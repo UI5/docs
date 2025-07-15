@@ -4,7 +4,7 @@
 
 Your place to contribute to the OpenUI5 documentation
 
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/openui5-docs)](https://api.reuse.software/info/github.com/SAP/openui5-docs)
+[![REUSE status](https://api.reuse.software/badge/github.com/UI5/docs)](https://api.reuse.software/info/github.com/UI5/docs)
 
 ## Introduction
 
