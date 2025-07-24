@@ -35,8 +35,8 @@ Bindings connect OpenUI5 view elements to model data, allowing changes in the mo
 -   **[Binding Events](binding-events-1a010d3.md "The OData V4 model supports certain events intended for applications, and others that
 		are to be used for controls, as outlined in this section.")**  
 The OData V4 model supports certain events intended for applications, and others that are to be used for controls, as outlined in this section.
--   **[Filtering](filtering-5338bd1.md "The OData V4 Model supports server side filtering on lists.")**  
-The OData V4 Model supports server side filtering on lists.
+-   **[Filtering](filtering-5338bd1.md "The OData V4 Model supports server-side filtering on lists.")**  
+The OData V4 Model supports server-side filtering on lists.
 -   **[Selection](selection-ec55312.md "The OData V4 Model supports (de-)selection of individual rows and of all rows at once.")**  
 The OData V4 Model supports \(de-\)selection of individual rows and of all rows at once.
 -   **[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")**  

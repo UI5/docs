@@ -57,7 +57,7 @@ The OData V4 model keeps data with respect to bindings. This allows different vi
 
 [Batch Control](batch-control-74142a3.md "OData V4 allows you to group multiple operations into a single HTTP request payload, as described in the official OData V4 specification Part 1, Batch Requests (see the link under Related Information for more details).")
 
-[Filtering](filtering-5338bd1.md "The OData V4 Model supports server side filtering on lists.")
+[Filtering](filtering-5338bd1.md "The OData V4 Model supports server-side filtering on lists.")
 
 [Sorting](sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")
 

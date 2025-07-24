@@ -249,7 +249,7 @@ We add the missing texts to the properties file.
 **Related Information**  
 
 
-[Filtering](../04_Essentials/filtering-5338bd1.md "The OData V4 Model supports server side filtering on lists.")
+[Filtering](../04_Essentials/filtering-5338bd1.md "The OData V4 Model supports server-side filtering on lists.")
 
 [Sorting](../04_Essentials/sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")
 
