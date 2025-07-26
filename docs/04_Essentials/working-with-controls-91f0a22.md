@@ -20,7 +20,7 @@ Controls consist of:
 
     Associated controls are not part or children of an aggregation control. They are connected by ID instead of reference. Destroying a control in an association does not affect the other control. It is possible that an associated control does not yet or no longer exist.
 
-    Controls fire events. Events typically relate to the control's purpose and functionality on a semantically higher level than browser events such as `click`. Examples for control events are `search` for `sap.m.SearchField` or `expand` in `sap.m.Panel`.
+    Controls fire events. Events typically relate to the control's purpose and functionality on a semantically higher level than browser events such as `click`. Examples for OpenUI5 control events are `search` for `sap.m.SearchField` or `expand` in `sap.m.Panel`.
 
 -   Elements
 
@@ -66,7 +66,7 @@ The above example is an abbreviated version of the following code snippet with a
 var oText = new Text(this.createId("myTextID"); 
 oText.setText("Hello World");
 oText.setTooltip("This is an example tooltip");
-oText.setWidth(100px");
+oText.setWidth("100px");
 ```
 
 The supported parameters are documented in the *API Reference* of the respective control.

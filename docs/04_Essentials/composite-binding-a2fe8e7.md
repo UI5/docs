@@ -182,5 +182,5 @@ This example uses `sap.ui.model.odata.type.DateTimeWithTimezone` to display only
 **Related Information**  
 
 
-[Escaping Binding Syntax](binding-syntax-e2e6f41.md#loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS)
+[Binding Syntax](binding-syntax-e2e6f41.md "You bind UI elements to data of a data source by defining a binding path to the model that represents the data source in the app.")
 
