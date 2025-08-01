@@ -82,6 +82,8 @@ The default version of our libraries has the generic URL `https://sdk.openui5.or
 
 > ### Caution:  
 > The default version is constantly being upgraded and this might have an impact on the stability of your application. Use this version for testing purposes only.
+> 
+> If you've been bootstrapping with the default version to keep your OpenUI5 version current, we strongly recommend switching to the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) instead. This allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner. In this way, upgrading becomes the informed and active decision of the developer, whereas bootstrapping with the default version might leave you unaware of version changes and the OpenUI5 version used by your app. This could hamper the speedy resolution of issues arising from such automatic version changes.
 
 ***
 
@@ -100,4 +102,6 @@ The cache control is different for dynamic and static resources. If you refer to
 [Set Up a CDN for SAPUI5 on Your On-Premise SAP ABAP Server](https://blogs.sap.com/2021/08/17/set-up-a-cdn-for-sapui5-on-your-on-premise-sap-abap-server/)
 
 [Versioning and Maintenance of OpenUI5](../02_Read-Me-First/versioning-and-maintenance-of-openui5-91f0214.md "Versioning and maintenance strategy for OpenUI5.")
+
+[Stay Up to Date with the UI5 Renovate Preset Config](https://community.sap.com/t5/technology-blog-posts-by-sap/stay-up-to-date-with-the-ui5-renovate-preset-config/ba-p/14070649)
 

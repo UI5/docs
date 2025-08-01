@@ -141,3 +141,10 @@ sap.ui.require([
 > ### Note:  
 > Standalone apps, e.g. apps using the `self-contained` build of [UI5 Tooling](https://sap.github.io/ui5-tooling), will report the version of the app itself. Only if the framework resources are provided by a content delivery network \(CDN\) or a similar shared installation will the main version of the framework be retrieved as shown above.
 
+**Related Information**  
+
+
+[Stay Up to Date with the UI5 Renovate Preset Config](https://community.sap.com/t5/technology-blog-posts-by-sap/stay-up-to-date-with-the-ui5-renovate-preset-config/ba-p/14070649)
+
+[UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/)
+
