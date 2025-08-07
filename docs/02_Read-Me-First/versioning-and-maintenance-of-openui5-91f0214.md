@@ -20,6 +20,9 @@ To view the documentation for a specific version, check at [https://sdk.openui5.
 
 To get an overview of the new features of each version, see [What's New in OpenUI5](../01_Whats-New/what-s-new-in-openui5-99ac68a.md). To see the fixes contained in each patch, check the [Change Log](https://sdk.openui5.org/releasenotes.html).
 
+> ### Caution:  
+> Specific OpenUI5 versions eventually become outdated and will be removed from the content delivery network. To keep your OpenUI5 version up to date, we recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool. It allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner.
+
 ***
 
 <a name="loio91f021426f4d1014b6dd926db0e91070__section_qnr_ghw_ffc"/>
@@ -104,7 +107,7 @@ The release strategy follows the principle of "one innovation code line": Subseq
 
 Mid-term and long-term maintenance releases also receive bug fixes until their end of maintenance \(EOM\) date \(for standard releases, bug fixes are included in the next OpenUI5 version\). After the EOM date, only critical security patches are offered for a year, after which these versions reach their EOL date.
 
-Whenever a new patch for a version is released, the older patch becomes outdated. One year after becoming outdated, it enters End of Cloud Provisioning \(EOCP\) and is removed from the Akamai content delivery network \(CDN\) at the start of the following quarter.
+OpenUI5 versions reach End of Cloud Provisioning \(EOCP\) and are removed from the Akamai content delivery network approximately one year after becoming outdated. A patch becomes outdated either when superseded by a newer patch, or when its corresponding OpenUI5 version reaches End of Maintenance \(EOM\). Removal occurs during the first week of the quarter following this one-year period.
 
 In the version overview at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html), you can find information on the maintenance status of all available OpenUI5 versions and the EOCP dates for each patch version.
 
