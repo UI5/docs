@@ -20,9 +20,6 @@ To view the documentation for a specific version, check at [https://sdk.openui5.
 
 To get an overview of the new features of each version, see [What's New in OpenUI5](../01_Whats-New/what-s-new-in-openui5-99ac68a.md). To see the fixes contained in each patch, check the [Change Log](https://sdk.openui5.org/releasenotes.html).
 
-> ### Caution:  
-> Specific OpenUI5 versions eventually become outdated and will be removed from the content delivery network. To keep your OpenUI5 version up to date, we recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool. It allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner.
-
 ***
 
 <a name="loio91f021426f4d1014b6dd926db0e91070__section_qnr_ghw_ffc"/>
@@ -118,6 +115,9 @@ In the version overview at [https://sdk.openui5.org/versionoverview.html](https:
 OpenUI5 resources are available on the Akamai content delivery network. There, you can also find multiple OpenUI5 versions, and you can use them in your code as described in [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md).
 
 Check the available versions with respective maintenance status at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html).
+
+> ### Caution:  
+> Keep in mind that OpenUI5 versions are removed from the Akamai content delivery network at the latest one year after their release. Therefore, make sure to keep your OpenUI5 version up to date! We recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool, which allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner.
 
 ***
 

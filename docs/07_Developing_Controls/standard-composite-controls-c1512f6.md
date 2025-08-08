@@ -64,7 +64,7 @@ this.getId()/*composite instance ID*/ + "-input"/*part ID*/
 > To avoid potential conflicts with other internal part IDs, the part ID \(`input`\) itself must not contain any additional dashes. A conflict can occur, for example, if your composite control defines one internal part incorrectly with the ID `input-inner` and another with the ID `input`, while the `input` part itself internally uses the suffix `-inner` for its subpart.
 > 
 > > ### Remember:  
-> > OpenUI5 reserves the single dash \(`-)` for composite controls and their parts, while a double dash \(`--)` is used to combine the ID of views and their contained controls, and a triple dash \(`---)`is used to combine component IDs and the IDs of their owned controls or views.
+> > OpenUI5 reserves the single dash \(`-`\) for composite controls and their parts, while a double dash \(`--`\) is used to combine the ID of views and their contained controls, and a triple dash \(`---`\) is used to combine component IDs and the IDs of their owned controls or views.
 
 During the `init` function, the settings of the composite only have their default values. If the application developer has provided some values to the constructor, these values will only be set later on. It is, therefore, crucial for the correct behavior of your composite control that you implement one of the synchronization mechanisms described below.
 
