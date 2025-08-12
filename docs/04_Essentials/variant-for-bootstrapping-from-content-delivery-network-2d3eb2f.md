@@ -13,8 +13,10 @@ OpenUI5 can either be loaded locally with a relative path from a Web server or e
 
 ## Bootstrapping From OpenUI5 CDN
 
-> ### Note:  
-> To ensure outdated versions no longer pose a potential security risk, SAP removes OpenUI5 versions from the OpenUI5 CDN one year after their end of maintenance. Also patches of versions in maintenance which are older than one year will be removed. For more information, see [this blog post](https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/). The end dates for the cloud provisioning of OpenUI5 versions and patches can be found at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html)
+> ### Caution:  
+> To ensure outdated versions don't pose a potential security risk, OpenUI5 versions are removed from the OpenUI5 CDN one year after their end of maintenance. Also, patches of versions in maintenance which are older than one year will be removed. For more information, see [this blog post](https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/). The end dates for the cloud provisioning of OpenUI5 versions and patches can be found at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html)
+> 
+> To avoid disruptions, you must keep your OpenUI5 version up to date. We recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool, which allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner.
 
 ***
 
@@ -81,7 +83,7 @@ When using the patch-level independent bootstrap you must use `data-sap-ui-async
 The default version of our libraries has the generic URL `https://sdk.openui5.org/resources/sap-ui-core.js` \(OpenUI5\).
 
 > ### Caution:  
-> The default version is constantly being upgraded and this might have an impact on the stability of your application. Use this version for testing purposes only.
+> The default version is constantly being upgraded and this might have an impact on the stability of your application. The caching mechanism of the default version using the CDN URL is often not stable either. **Do not** use this version in any real productive or testing environment.
 > 
 > If you've been bootstrapping with the default version to keep your OpenUI5 version current, we strongly recommend switching to the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) instead. This allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner. In this way, upgrading becomes the informed and active decision of the developer, whereas bootstrapping with the default version might leave you unaware of version changes and the OpenUI5 version used by your app. This could hamper the speedy resolution of issues arising from such automatic version changes.
 
