@@ -377,6 +377,7 @@ OpenUI5 Version
                 -   [JSON Model](04_Essentials/json-model-96804e3.md#loio96804e3315ff440aa0a50fd290805116)
                     -   [Sorting and Filtering in JSON Models](04_Essentials/json-model-96804e3.md#loio50357d719b35439984348080bcbb14a4)
                     -   [Binding Path Syntax for JSON Models](04_Essentials/json-model-96804e3.md#loiod52e364907f94a3caeb4f5e5ad0cf302)
+                    -   [Using the Typed JSON Model](04_Essentials/json-model-96804e3.md#loiob8cd1692485d4108af607af347982dd9)
                 -   [XML Model](04_Essentials/xml-model-a53e71d.md#loioa53e71d85fae4d0887a8b58431197a27)
                     -   [Sorting and Filtering in XML Models](04_Essentials/xml-model-a53e71d.md#loioab8ed73c5bbd4a2b9c9840401ebf25cf)
                     -   [XML Namespace Support](04_Essentials/xml-model-a53e71d.md#loio8674a69845c846d3bd68b60685bb5683)
