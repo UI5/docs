@@ -133,11 +133,9 @@ phone
 > ### Note:  
 > `sap.ui.model.json.TypedJSONModel` and `sap.ui.model.json.TypedJSONContext` are only applicable for TypeScript projects. If you use JavaScript, you can continue using `sap.ui.model.json.JSONModel` and `sap.ui.model.Context`.
 
-The `TypedJSONModel` and `TypedJSONContext` classes provide strongly-typed wrappers around the existing `JSONModel` and `Context` classes. This allows you to work with JSON data in a type-safe manner, ensuring that the data structure remains consistent and that only valid binding paths are used.
+The `TypedJSONModel` and `TypedJSONContext` classes provide strongly-typed wrappers around the existing `JSONModel` and `Context` classes. The `TypedJSONModel#setData` and `TypedJSONModel#getData` methods accept and return strongly typed data according to the underlying data structure. Manipulating and accessing data in the model via `TypedJSONModel#setProperty` and `TypedJSONModel#getProperty` is type-safe, ensuring that the data structure remains consistent and only **valid binding paths** are passed to these methods.
 
 These features not only prevent runtime errors but allow for a richer development experience due to **autocompletion features**.
-
-The `TypedJSONModel#setData` and `TypedJSONModel#getData` methods accept and return strongly typed data according to the underlying data structure. Manipulating and accessing data in the model via `TypedJSONModel#setProperty` and `TypedJSONModel#getProperty` is type-safe, ensuring that the data structure remains consistent and only **valid binding paths** are passed to these methods.
 
 The following code snippet illustrates how to use the `TypedJSONModel` and `TypedJSONContext` classes:
 

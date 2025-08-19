@@ -83,7 +83,7 @@ When using the patch-level independent bootstrap you must use `data-sap-ui-async
 The default version of our libraries has the generic URL `https://sdk.openui5.org/resources/sap-ui-core.js` \(OpenUI5\).
 
 > ### Caution:  
-> The default version is constantly being upgraded and this might have an impact on the stability of your application. The CDN's caching behavior of the default version URL is often not stable either. **Do not** use this version in any real productive or testing environment.
+> The default version is constantly being upgraded and this might have an impact on the stability of your application. The caching behavior of the default version URL is often not stable either. **Do not** use this version in any real productive or testing environment.
 > 
 > If you've been bootstrapping with the default version to keep your OpenUI5 version current, we strongly recommend switching to the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) instead. This allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner. In this way, upgrading becomes the informed and active decision of the developer, whereas bootstrapping with the default version might leave you unaware of version changes and the OpenUI5 version used by your app. This could hamper the speedy resolution of issues arising from such automatic version changes.
 
