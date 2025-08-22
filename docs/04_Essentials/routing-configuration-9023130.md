@@ -199,7 +199,7 @@ The `config` section defines global router settings and default values that appl
 
 Every property that can be used in a route or a target can also be defined in the `config` section. These values will then act as defaults. If a route or target defines the same property explicitly in its own configuration, that local value overrides the global default from `config`.
 
-The `config` section can contain the following properties:
+In addition to the defaults for the routes and targets of your app, the `config` section can contain the following properties:
 
 -   `routerClass`
 
