@@ -15,7 +15,7 @@ Depending on the platform your OpenUI5 apps run on, different browsers in differ
 
 ## Overview of Supported Browsers, Platforms, and Reference Devices
 
-The following tables give a general overview of the browsers, platforms, and reference devices supported by the main OpenUI5 libraries. Reported issues are investigated if they can be reproduced on one of the browser and platform combinations listed in the table. Combinations not included in the table may still function but are not part of the supported scope. Browsers and platforms that are no longer supported by their respective vendors are also not supported by SAP. There are certain known device-browser combinations that lead to visual degradations. For more information, see [Visual Degradations](visual-degradations-f08f296.md).
+The following tables give a general overview of the browsers, platforms, and reference devices supported by the main OpenUI5 libraries. Combinations not included in the table may still function but are not part of the supported scope. Browsers and platforms that are no longer supported by their respective vendors are also not supported by SAP. There are certain known device-browser combinations that lead to visual degradations. For more information, see [Visual Degradations](visual-degradations-f08f296.md).
 
 > ### Note:  
 > Browsers are constantly evolving across various devices. Browser upgrades may introduce changes that are not backward compatible and can affect the behavior of OpenUI5. SAP has no control over these upgrades and doesn't provide any warranty regarding the features or qualities of these browsers.

@@ -111,7 +111,7 @@ Control
 
 **`sap.ui.mdc.FilterBar`**
 
-We have now slightly adapted the option to filter for empty dates in the dynamic date range selection: The operator used is now called *Not Specified \(empty\)*. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc/src/sap/ui/mdc/condition/Operator.js) for `tokenTextForTypes`.
+We have now slightly adapted the option to filter for empty dates in the dynamic date range selection: The operator used is now called *Not Specified \(empty\)*. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc.condition.Operator) for `tokenTextForTypes`.
 
 <sub>Changed•Control•Info Only•1.139</sub>
 
