@@ -1,13 +1,8 @@
 <!-- loio26a106cc313d48e6b52b78c7c331f818 -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in OpenUI5 1.140
 
 With this release OpenUI5 is upgraded from version 1.139 to 1.140.
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ****
 
@@ -49,80 +44,6 @@ Action
 Available as of
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-Upcoming 
-
-</td>
-<td valign="top">
-
-Deleted 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for OpenUI5 Versions \(Q3/2025\)** 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for OpenUI5 Versions \(Q3/2025\)**
-
-The following OpenUI5 versions will be removed from the OpenUI5 Content Delivery Network \(CDN\) after the end of Q3/2025.
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.121
--   1.124
--   1.125
--   1.126
--   1.127
--   1.128
-
-**Action**: Upgrade to a version that is still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   1.71.66
--   1.84.46
--   1.96.31 to 1.96.33
--   1.108.30 to 1.108.34
--   1.120.16 to 1.120.20
--   1.121.5
--   1.124.1 to 1.124.6
--   1.125.0
--   1.126.0 to 1.126.1.
--   1.127.0
--   1.128.0
-
-**Action**: Upgrade to the latest available patch for the respective OpenUI5 version.
-
-For more information, see [Version Overview](https://sdk.openui5.org/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
 </tr>
 <tr>
 <td valign="top">
