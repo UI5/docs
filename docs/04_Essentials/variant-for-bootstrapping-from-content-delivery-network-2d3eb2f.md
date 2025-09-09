@@ -13,8 +13,10 @@ OpenUI5 can either be loaded locally with a relative path from a Web server or e
 
 ## Bootstrapping From OpenUI5 CDN
 
-> ### Note:  
-> To ensure outdated versions no longer pose a potential security risk, SAP removes OpenUI5 versions from the OpenUI5 CDN one year after their end of maintenance. Also patches of versions in maintenance which are older than one year will be removed. For more information, see [this blog post](https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/). The end dates for the cloud provisioning of OpenUI5 versions and patches can be found at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html)
+> ### Caution:  
+> To ensure outdated versions don't pose a potential security risk, OpenUI5 versions are removed from the OpenUI5 CDN one year after their end of maintenance. Also, patches of versions in maintenance which are older than one year will be removed. For more information, see [this blog post](https://blogs.sap.com/2021/01/26/removing-outdated-ui5-versions-from-ui5-cdn/). The end dates for the cloud provisioning of OpenUI5 versions and patches can be found at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html)
+> 
+> To avoid disruptions, you must keep your OpenUI5 version up to date. We recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool, which allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner.
 
 ***
 
@@ -24,7 +26,7 @@ The specific version allows you to select a particular fixed version for bootstr
 
 ```html
 <script id="sap-ui-bootstrap"
-    src="https://sdk.openui5.org/1.139.1/resources/sap-ui-core.js"
+    src="https://sdk.openui5.org/1.141.0/resources/sap-ui-core.js"
     data-sap-ui-async="true"
     data-...="...">
 </script>
@@ -47,7 +49,7 @@ The evergreen version allows you to automatically select the latest available pa
 <head>
     <!-- ... -->
     <script id="sap-ui-bootstrap"
-        src="https://sdk.openui5.org/1.120/resources/sap-ui-core.js"
+        src="https://sdk.openui5.org/1.136/resources/sap-ui-core.js"
         data-sap-ui-async="true"
         data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
         data-sap-ui-resource-roots='{ "my.app": "./" }'
@@ -81,7 +83,7 @@ When using the patch-level independent bootstrap you must use `data-sap-ui-async
 The default version of our libraries has the generic URL `https://sdk.openui5.org/resources/sap-ui-core.js` \(OpenUI5\).
 
 > ### Caution:  
-> The default version is constantly being upgraded and this might have an impact on the stability of your application. Use this version for testing purposes only.
+> The default version is constantly being upgraded and this might have an impact on the stability of your application. The caching behavior of the default version URL is often not stable either. **Do not** use this version in any real productive or testing environment.
 > 
 > If you've been bootstrapping with the default version to keep your OpenUI5 version current, we strongly recommend switching to the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) instead. This allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner. In this way, upgrading becomes the informed and active decision of the developer, whereas bootstrapping with the default version might leave you unaware of version changes and the OpenUI5 version used by your app. This could hamper the speedy resolution of issues arising from such automatic version changes.
 
@@ -90,6 +92,16 @@ The default version of our libraries has the generic URL `https://sdk.openui5.or
 ### Cache Control
 
 The cache control is different for dynamic and static resources. If you refer to the latest maintenance version \(dynamic\), you have a maximum cache age of one week, if you refer to a specific \(static\) version, you have a maximum cache age of 10 years. In both cases, cross-origin resource sharing \(CORS\) headers are set, so that you can consume resources from the central location without any proxy in between.
+
+You can use a cache buster mechanism for OpenUI5, which enables the browser to refresh OpenUI5 resources that have been changed instead of fetching them from the browser cache. For more information, see [Cache Buster for OpenUI5](cache-buster-for-openui5-91f0809.md).
+
+```html
+<script id="sap-ui-bootstrap"
+    src="https://sdk.openui5.org/resources/sap-ui-cachebuster/sap-ui-core.js"
+    data-sap-ui-async="true"
+    data-...="...">
+</script>
+```
 
 > ### Note:  
 > The Cache Buster is only needed if you consume OpenUI5 without a concrete version in the URL. When you consume OpenUI5 with the concrete version in the URL, this is not needed, as the content served by that unique URLs will never change and can be cached forever.

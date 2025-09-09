@@ -4,8 +4,7 @@ OpenUI5 Version
 
 -   [OpenUI5: UI Development Toolkit for HTML5](openui5-ui-development-toolkit-for-html5-95d113b.md)
     -   [What's New in OpenUI5](01_Whats-New/what-s-new-in-openui5-99ac68a.md)
-        -   [What's New in OpenUI5 1.139](01_Whats-New/what-s-new-in-openui5-1-139-e10db71.md)
-        -   [What's New in OpenUI5 1.138](01_Whats-New/what-s-new-in-openui5-1-138-8f6a92b.md)
+        -   [What's New in OpenUI5 1.140](01_Whats-New/what-s-new-in-openui5-1-140-26a106c.md)
         -   [Previous Versions](01_Whats-New/previous-versions-6660a59.md)
         -   [Change Log](01_Whats-New/change-log-a6a78b7.md)
     -   [Read Me First](02_Read-Me-First/read-me-first-167193c.md)
@@ -378,6 +377,7 @@ OpenUI5 Version
                 -   [JSON Model](04_Essentials/json-model-96804e3.md#loio96804e3315ff440aa0a50fd290805116)
                     -   [Sorting and Filtering in JSON Models](04_Essentials/json-model-96804e3.md#loio50357d719b35439984348080bcbb14a4)
                     -   [Binding Path Syntax for JSON Models](04_Essentials/json-model-96804e3.md#loiod52e364907f94a3caeb4f5e5ad0cf302)
+                    -   [Using the Typed JSON Model](04_Essentials/json-model-96804e3.md#loiob8cd1692485d4108af607af347982dd9)
                 -   [XML Model](04_Essentials/xml-model-a53e71d.md#loioa53e71d85fae4d0887a8b58431197a27)
                     -   [Sorting and Filtering in XML Models](04_Essentials/xml-model-a53e71d.md#loioab8ed73c5bbd4a2b9c9840401ebf25cf)
                     -   [XML Namespace Support](04_Essentials/xml-model-a53e71d.md#loio8674a69845c846d3bd68b60685bb5683)

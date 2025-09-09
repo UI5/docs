@@ -104,7 +104,7 @@ The release strategy follows the principle of "one innovation code line": Subseq
 
 Mid-term and long-term maintenance releases also receive bug fixes until their end of maintenance \(EOM\) date \(for standard releases, bug fixes are included in the next OpenUI5 version\). After the EOM date, only critical security patches are offered for a year, after which these versions reach their EOL date.
 
-Whenever a new patch for a version is released, the older patch becomes outdated. One year after becoming outdated, it enters End of Cloud Provisioning \(EOCP\) and is removed from the Akamai content delivery network \(CDN\) at the start of the following quarter.
+OpenUI5 versions reach End of Cloud Provisioning \(EOCP\) and are removed from the Akamai content delivery network approximately one year after becoming outdated. A patch becomes outdated either when superseded by a newer patch, or when its corresponding OpenUI5 version reaches End of Maintenance \(EOM\). Removal occurs during the first week of the quarter following this one-year period.
 
 In the version overview at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html), you can find information on the maintenance status of all available OpenUI5 versions and the EOCP dates for each patch version.
 
@@ -115,6 +115,9 @@ In the version overview at [https://sdk.openui5.org/versionoverview.html](https:
 OpenUI5 resources are available on the Akamai content delivery network. There, you can also find multiple OpenUI5 versions, and you can use them in your code as described in [Variant for Bootstrapping from Content Delivery Network](../04_Essentials/variant-for-bootstrapping-from-content-delivery-network-2d3eb2f.md).
 
 Check the available versions with respective maintenance status at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html).
+
+> ### Caution:  
+> Keep in mind that OpenUI5 versions are removed from the Akamai content delivery network at the latest one year after their release. Therefore, make sure to keep your OpenUI5 version up to date! We recommend using the [UI5 Renovate Preset Config](https://github.com/UI5/renovate-config/) tool, which allows you to become aware of version changes and upgrade OpenUI5 in a controlled manner.
 
 ***
 
