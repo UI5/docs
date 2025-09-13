@@ -28,6 +28,9 @@ The OData V4 model supports the following:
 -   **[Model Instantiation and Data Access](model-instantiation-and-data-access-9613f1f.md "One OData V4 model instance can only cover one OData service. This section describes
 		the creation of a model instance in more detail.")**  
 One OData V4 model instance can only cover one OData service. This section describes the creation of a model instance in more detail.
+-   **[Transition to OData V4.01](transition-to-odata-v4-01-cda632b.md "One OData V4 model instance can only cover one OData service. This section describes
+		the creation of a model instance in more detail.")**  
+One OData V4 model instance can only cover one OData service. This section describes the creation of a model instance in more detail.
 -   **[Bindings](bindings-54e0ddf.md "Bindings connect OpenUI5
 		view elements to model data, allowing changes in the model to be reflected in the view
 		element and vice versa.")**  

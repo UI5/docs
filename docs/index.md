@@ -339,6 +339,7 @@ OpenUI5 Version
                     -   [Handling of Temporarily Unavailable Back Ends](04_Essentials/odata-v2-model-6c47b2b.md#loio262f75165c3d43b1817f6469aaad453c)
                 -   [OData V4 Model](04_Essentials/odata-v4-model-5de13cf.md)
                     -   [Model Instantiation and Data Access](04_Essentials/model-instantiation-and-data-access-9613f1f.md)
+                    -   [Transition to OData V4.01](04_Essentials/transition-to-odata-v4-01-cda632b.md)
                     -   [Bindings](04_Essentials/bindings-54e0ddf.md)
                         -   [Creating Bindings](04_Essentials/creating-bindings-95cf4b1.md)
                         -   [Path Syntax](04_Essentials/path-syntax-596a570.md)

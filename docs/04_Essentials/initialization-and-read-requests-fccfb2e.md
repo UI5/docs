@@ -25,6 +25,9 @@ A relative list or context binding creates a data service request once it has a 
 
 In all other cases, a relative binding reads data from its parent binding that created the context. In case of an own data service request, the read URL path is the model's service URL concatenated with the path of the binding's context and the binding's path. Set the binding-specific parameter `$$canonicalPath` to `true` to use the canonical path computed from the context's path instead of the context's path in the read URL.
 
+> ### Caution:  
+> A relative list binding cannot share data that another list binding has created on the client. Only data that has been read via a data service request can be shared.
+
 The point in time that is used to actually send the request is determined as explained in the section [Batch Control](batch-control-74142a3.md). Bindings which create own data service requests cache data from data service responses. They do not send a data service request if data can be served from this cache.
 
 > ### Note:  
