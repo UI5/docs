@@ -54,7 +54,7 @@ The main objectives when migrating existing code or keeping it up to date with f
 
 Before attempting to migrate or upgrade to a higher OpenUI5 version, make sure that your development does **not** use any undocumented internal framework resources. Also, double check that all compatibility guidelines have been followed, such as those mentioned in [Upgrading](../02_Read-Me-First/upgrading-9638e4f.md).
 
-To build and serve your project in accordance with best practices, we recommend using the latest version of [UI5 Tooling](https://sap.github.io/ui5-tooling/).
+To build and serve your project in accordance with best practices, we recommend using the latest version of [UI5 Tooling](https://ui5.github.io/cli/).
 
 ***
 
@@ -220,11 +220,11 @@ Before using the Component's `EventBus` instance via `Component#getEventBus`, de
 
 Prevent bundling modules \(`Component-preload.js`\) into strings.
 
--   Leverage [UI5 Tooling](https://sap.github.io/ui5-tooling/) to build the bundle. Avoid generating the application bundle with legacy build tooling, such as grunt-openui5.
+-   Leverage [UI5 Tooling](https://ui5.github.io/cli/) to build the bundle. Avoid generating the application bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`. If absolutely required, replace e.g. `var myGlobal` with `globalThis.myGlobal` and/or wrap the module definition in an *Immediately Invoked Function Expression* \(IIFE\) if applicable.
 
--   For third-party libraries that have to define variables globally or must be exempted from being modified \(e.g. due to legal or license reasons\), [exclude them from the bundle](https://sap.github.io/ui5-tooling/v3/pages/Configuration/#excludes).
+-   For third-party libraries that have to define variables globally or must be exempted from being modified \(e.g. due to legal or license reasons\), [exclude them from the bundle](https://ui5.github.io/cli/v3/pages/Configuration/#excludes).
 
 
 ***
@@ -242,6 +242,10 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 -   Use the `loadFragment` method of the `sap.ui.core.mvc.Controller` to load fragments asynchronously.
 
 -   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). Use `template:require` if the XML content needs preprocessing.
+
+-   Event handlers must not be referenced by composite global names \(e.g. `my.event.handler`\) as these have to be resolved in the global namespace.
+
+-   All event handlers located in the view's controller must be prefixed by a dot \(`.`\). For example, use `press=".onButtonPress"` to call the `onButtonPress` method of the view's controller. This ensures that the event handler is resolved from the controller instance rather than by looking for a global function. For more information, see [Handling Events in XML Views](../04_Essentials/handling-events-in-xml-views-b0fb4de.md).
 
 -   Use the module name syntax \(e.g., `module:myapp/views/MyView`\) when creating a Typed View, Controller, or JS Fragment via factory API. This syntax provides greater flexibility by allowing you to name entities without requiring the `.view.js`, `.controller.js`, or `.fragment.js` suffixes.
 
@@ -363,11 +367,11 @@ Implement strict error handling to address critical issues.
 
 Prevent bundling modules \(`library-preload.js`\) into strings.
 
--   Leverage [UI5 Tooling](https://sap.github.io/ui5-tooling/) to build the bundle. Avoid generating the library bundle with legacy build tooling, such as grunt-openui5.
+-   Leverage [UI5 Tooling](https://ui5.github.io/cli/) to build the bundle. Avoid generating the library bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`.
 
--   For third-party libraries, set `requiresTopLevelScope="false"` to the `/library/appData/packaging/raw-module` tag within the `.library` file, **provided that** the third-party library is allowed to be bundled together and does not require access to the global scope. Otherwise, consider [excluding the third-party library from the bundle](https://sap.github.io/ui5-tooling/v3/pages/Configuration/#excludes_1).
+-   For third-party libraries, set `requiresTopLevelScope="false"` to the `/library/appData/packaging/raw-module` tag within the `.library` file, **provided that** the third-party library is allowed to be bundled together and does not require access to the global scope. Otherwise, consider [excluding the third-party library from the bundle](https://ui5.github.io/cli/v3/pages/Configuration/#excludes_1).
 
 
 ***
