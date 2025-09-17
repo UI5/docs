@@ -17,5 +17,5 @@ The following guidelines and recommendations apply:
 
 ## ESLint
 
-OpenUI5 uses ESLint to check JavaScript sources. A recommended set of rules and settings can be found in our [**OpenUI5 project**](https://github.com/SAP/openui5/blob/-/docs/eslint.md).
+OpenUI5 uses ESLint to check JavaScript sources. A recommended set of rules and settings can be found in our [**OpenUI5 project**](https://github.com/ui5/openui5/blob/-/docs/eslint.md).
 

@@ -80,7 +80,7 @@ alert("UI5 is ready");
 
 ## webapp/index.html
 
-In this step, we change the `index.html` page to make it load the OpenUI5 framework from the webserver provided by UI5 Tooling. We initialize the core modules with the following configuration options:
+In this step, we change the `index.html` page to make it load the OpenUI5 framework from the webserver provided by UI5 CLI. We initialize the core modules with the following configuration options:
 
 -   The `id` attribute of the `<script>` tag has to be exactly `"sap-ui-bootstrap"` to ensure proper booting of the OpenUI5 runtime.
 -   The `src` attribute of the `<script>` tag tells the browser where to find the OpenUI5 core library – it initializes the OpenUI5 runtime and loads additional resources, such as the theme specified in the `data-sap-ui-theme` attribute.
@@ -125,7 +125,7 @@ In this step, we change the `index.html` page to make it load the OpenUI5 framew
 
 ## package.json
 
-Now it's time to enhance our tooling setup once again. This time we install some custom middleware for the ui5-server to facilitate the handling of our development project.
+Now it's time to enhance our UI5 CLI setup once again. This time we install some custom middleware for the ui5-server to facilitate the handling of our development project.
 
 Open a terminal and navigate to the app root folder. Then execute the following command:
 
@@ -135,7 +135,7 @@ This will install the `ui5-middleware-livereload`, `ui5-middleware-serveframewor
 
 -   `ui5-middleware-livereload` is a middleware for ui5-server which triggers a live reload whenever files inside your directory change, e.g. upon *Save*.
 -   `ui5-middleware-serveframework` is a middleware for ui5-server which delivers the OpenUI5 framework from a locally built version.
--   `ui5-tooling-transpile` is a plugin for UI5 Tooling that transpiles mordern JavaScript \(ES6+\) and TypeScript into OpenUI5-compatible code. OpenUI5 is based on older versions of JavaScript, so this plugin allows you to take advantage of the latest language features and syntax while ensuring that your code remains compatible with OpenUI5.
+-   `ui5-tooling-transpile` is a plugin for UI5 CLI that transpiles mordern JavaScript \(ES6+\) and TypeScript into OpenUI5-compatible code. OpenUI5 is based on older versions of JavaScript, so this plugin allows you to take advantage of the latest language features and syntax while ensuring that your code remains compatible with OpenUI5.
 
 ***
 
@@ -143,20 +143,20 @@ This will install the `ui5-middleware-livereload`, `ui5-middleware-serveframewor
 
 ## ui5.yaml
 
-Next, we need to do some additional configuration work for our UI5 Tooling setup.
+Next, we need to do some additional configuration work for our UI5 CLI setup.
 
 Open a terminal in the app root folder and execute the following commands:
 
 -   `ui5 use OpenUI5` 
 
-    This configures the latest OpenUI5 version in your UI5 Tooling setup.
+    This configures the latest OpenUI5 version in your UI5 CLI setup.
 
 -   `ui5 add sap.ui.core themelib_sap_horizon`
 
     This adds the `sap.ui.core` and `themelib_sap_horizon` libraries as dependencies to your `ui5.yaml` file.
 
 
-Next, we have to configure the tooling extensions we installed from npm in our UI5 Tooling setup, so we can use them in our project. To hook a custom task into a certain build phase of a project, it needs to reference another task that will get executed before or after it. The same applies for a custom middleware:
+Next, we have to configure the tooling extensions we installed from npm in our UI5 CLI setup, so we can use them in our project. To hook a custom task into a certain build phase of a project, it needs to reference another task that will get executed before or after it. The same applies for a custom middleware:
 
 -   For the `ui5-tooling-transpile-task` we specify that this should happen after the`replaceVersion` task.
 -   All our custom middleware extensions will be called after the `compression` middleware.
@@ -192,7 +192,7 @@ Now you can benefit from live reload on changes, built framework resources at de
 
 **Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
 
-**Next:**[Step 1: Hello World! \(TypeScript\)](step-1-hello-world-typescript-c20489e.md "As you know OpenUI5 is all about HTML5. Let's get started with building a first &quot;Hello World&quot; with HTML. This tutorial version has been set up in a way that allows the use of UI5 Tooling in combination with it.")
+**Next:**[Step 1: Hello World! \(TypeScript\)](step-1-hello-world-typescript-c20489e.md "As you know, OpenUI5 is all about HTML5. Let's get started with building a first &quot;Hello World&quot; with HTML. This tutorial version has been set up in a way that allows the use of UI5 CLI in combination with it.")
 
 **Previous:**[Step 3: Controls \(TypeScript\)](step-3-controls-typescript-0feb70c.md "Now it is time to build our first little UI by replacing the &quot;Hello World&quot; text in the HTML body by the OpenUI5 control sap/m/Text. In the beginning, we will use the TypeScript control API to set up the UI, the control instance is then placed into the HTML body.")
 
@@ -205,7 +205,7 @@ Now you can benefit from live reload on changes, built framework resources at de
 
 [Content Security Policy](../05_Developing_Apps/content-security-policy-fe1a6db.md "Content Security Policy (CSP) adds an additional layer of security that can detect and mitigate certain types of attacks, such as cross-site scripting and data injection.")
 
-[UI5 Tooling: Consuming OpenUI5 Libaries](https://sap.github.io/ui5-tooling/v3/pages/OpenUI5/)
+[UI5 CLI: Consuming OpenUI5 Libaries](https://ui5.github.io/cli/v3/pages/OpenUI5/)
 
 [NPM Package: `ui5-middleware-livereload`](https://www.npmjs.com/package/ui5-middleware-livereload)
 
@@ -213,7 +213,7 @@ Now you can benefit from live reload on changes, built framework resources at de
 
 [NPM Package: `ui5-tooling-transpile`](https://www.npmjs.com/package/ui5-tooling-transpile)
 
-[UI5 Tooling: Custom Tasks](https://sap.github.io/ui5-tooling/v3/pages/extensibility/CustomTasks/)
+[UI5 CLI: Custom Tasks](https://ui5.github.io/cli/v3/pages/extensibility/CustomTasks/)
 
-[UI5 Tooling: Custom Server Middleware](https://sap.github.io/ui5-tooling/v3/pages/extensibility/CustomServerMiddleware/)
+[UI5 CLI: Custom Server Middleware](https://ui5.github.io/cli/v3/pages/extensibility/CustomServerMiddleware/)
 

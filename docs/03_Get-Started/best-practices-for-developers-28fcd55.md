@@ -54,7 +54,7 @@ The main objectives when migrating existing code or keeping it up to date with f
 
 Before attempting to migrate or upgrade to a higher OpenUI5 version, make sure that your development does **not** use any undocumented internal framework resources. Also, double check that all compatibility guidelines have been followed, such as those mentioned in [Upgrading](../02_Read-Me-First/upgrading-9638e4f.md).
 
-To build and serve your project in accordance with best practices, we recommend using the latest version of [UI5 Tooling](https://ui5.github.io/cli/).
+To build and serve your project in accordance with best practices, we recommend using the latest version of [UI5 CLI](https://ui5.github.io/cli/).
 
 ***
 
@@ -220,7 +220,7 @@ Before using the Component's `EventBus` instance via `Component#getEventBus`, de
 
 Prevent bundling modules \(`Component-preload.js`\) into strings.
 
--   Leverage [UI5 Tooling](https://ui5.github.io/cli/) to build the bundle. Avoid generating the application bundle with legacy build tooling, such as grunt-openui5.
+-   Leverage [UI5 CLI](https://ui5.github.io/cli/) to build the bundle. Avoid generating the application bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`. If absolutely required, replace e.g. `var myGlobal` with `globalThis.myGlobal` and/or wrap the module definition in an *Immediately Invoked Function Expression* \(IIFE\) if applicable.
 
@@ -367,7 +367,7 @@ Implement strict error handling to address critical issues.
 
 Prevent bundling modules \(`library-preload.js`\) into strings.
 
--   Leverage [UI5 Tooling](https://ui5.github.io/cli/) to build the bundle. Avoid generating the library bundle with legacy build tooling, such as grunt-openui5.
+-   Leverage [UI5 CLI](https://ui5.github.io/cli/) to build the bundle. Avoid generating the library bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`.
 

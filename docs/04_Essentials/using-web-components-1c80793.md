@@ -63,7 +63,7 @@ getters
 </td>
 <td valign="top">
 
-*Readonly* properties can be accessed with a camel-cased getter, e.g. for the [`AvatarGroup`'s `colorScheme`](https://sap.github.io/ui5-webcomponents/components/AvatarGroup/#colorscheme) property: `AvatarGroup#getColorScheme()`. Readonly properties of course do not provide a setter.
+*Readonly* properties can be accessed with a camel-cased getter, e.g. for the [`AvatarGroup`'s `colorScheme`](https://ui5.github.io/webcomponents/components/AvatarGroup/#colorscheme) property: `AvatarGroup#getColorScheme()`. Readonly properties of course do not provide a setter.
 
 </td>
 </tr>
@@ -114,7 +114,7 @@ methods
 </td>
 <td valign="top">
 
-Any API exposed by a Web Component is available, e.g. the `walk()` API of the [Tree Web Component](https://sap.github.io/ui5-webcomponents/components/Tree/#walk)
+Any API exposed by a Web Component is available, e.g. the `walk()` API of the [Tree Web Component](https://ui5.github.io/webcomponents/components/Tree/#walk)
 
 </td>
 </tr>
@@ -168,7 +168,7 @@ This section explains how to integrate UI5 Web Components into existing OpenUI5 
 
 ### 1. Preparing Your Project
 
-Before using external Web Components packages in your application, prepare your project by adding the `ui5-tooling-modules` UI5 Tooling extension and configuring your `ui5.yaml`.
+Before using external Web Components packages in your application, prepare your project by adding the `ui5-tooling-modules` UI5 CLI extension and configuring your `ui5.yaml`.
 
 **The `ui5-tooling-modules` extension**
 
@@ -208,7 +208,7 @@ server:
 
 We stick to the minimal needed configuration here, but the `ui5-tooling-modules` extension offers additional configuration options described in the [extension's official documentation](https://github.com/ui5-community/ui5-ecosystem-showcase/tree/main/packages/ui5-tooling-modules#configuration-options-in-yourappui5yaml).
 
-For more information on setting up custom tasks and middleware, see [UI5 Tooling Custom Task Documentation](https://sap.github.io/ui5-tooling/v4/pages/extensibility/CustomTasks/).
+For more information on setting up custom tasks and middleware, see [UI5 CLI Custom Task Documentation](https://ui5.github.io/cli/v4/pages/extensibility/CustomTasks/).
 
 **Installing UI5 Web Components Packages**
 
@@ -256,7 +256,7 @@ With `xmlns:ai="@ui5/webcomponents-ai"`, we declare the namespace for UI5 Web Co
 To add a `<ui5-ai-button>` to your XML view, use the `ai` namespace along with the button’s class name \(`Button`\) as an XML node.
 
 > ### Note:  
-> The class names of each UI5 Web Component can can be found in the official documentation, e.g. [`Button`](https://sap.github.io/ui5-webcomponents/components/main/Button/).
+> The class names of each UI5 Web Component can can be found in the official documentation, e.g. [`Button`](https://ui5.github.io/webcomponents/components/main/Button/).
 
 In this example, we use the `text` property to specify the button's text and bind the `click` event to a function in the controller. The AI button also needs to aggregate some internal states that provide their own icon. We'll look into the usage of icons in the next section.
 
@@ -327,7 +327,7 @@ Any `property` or `slot` \(`aggregation`, respectively\) offered by a UI5 Web Co
 
 The following example demonstrates how a `<ui5-list>` UI5 Web Component can be bound against a model. In this case, we use another UI5 Web Component, the `<ui5-li>` element, as a binding template.
 
-As before, use the corresponding **namespace and class name** to define the UI5 Web Components in our XML view \(see the official [`List`](https://sap.github.io/ui5-webcomponents/components/List/) and [`ListItemStandard`](https://sap.github.io/ui5-webcomponents/components/ListItemStandard/) documentation\):
+As before, use the corresponding **namespace and class name** to define the UI5 Web Components in our XML view \(see the official [`List`](https://ui5.github.io/webcomponents/components/List/) and [`ListItemStandard`](https://ui5.github.io/webcomponents/components/ListItemStandard/) documentation\):
 
 ```xml
 <mvc:View

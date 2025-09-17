@@ -8,11 +8,11 @@ This page contains some of the complementary offerings from the UI5 ecosystem - 
 
 <!-- loiod8ab43d845cd42ceb0aa4e47b44a8fcc -->
 
-## UI5 Tooling
+## UI5 CLI
 
 ***
 
-UI5 Tooling is a state-of-the-art way to develop OpenUI5 projects by consuming OpenUI5 via npm. It's an open-source, modular, configurable, and extensible CLI for efficient development of applications, libraries, and reuse components with the OpenUI5 framework. Here's what you get with this CLI:
+UI5 CLI is a state-of-the-art way to develop OpenUI5 projects by consuming OpenUI5 via npm. It's an open-source, modular, configurable, and extensible CLI for efficient development of applications, libraries, and reuse components with the OpenUI5 framework. Here's what you get with this CLI:
 
 -   Reuse of open source tooling
 -   Flexibility and extensibility
@@ -152,9 +152,9 @@ wdi5 is a Webdriver.IO service that uses OpenUI5's test API. It is designed to r
 
 ## Best of UI5
 
-The Best of UI5 page lists a number projects related to the UI5 ecosystem. It includes UI5 Tooling extensions \(tasks and middlewares\), Easy-UI5 subgenerators, custom UI5 libraries, as well as custom UI5 controls \(as standalone NPM packages\). It's the central place to find reusable projects around UI5.
+The Best of UI5 page lists a number projects related to the UI5 ecosystem. It includes UI5 CLI extensions \(tasks and middlewares\), Easy-UI5 subgenerators, custom UI5 libraries, as well as custom UI5 controls \(as standalone NPM packages\). It's the central place to find reusable projects around UI5.
 
-It's entirely comminuty-based, so any new additions are welcome!
+It's entirely community-based, so any new additions are welcome!
 
 ***
 

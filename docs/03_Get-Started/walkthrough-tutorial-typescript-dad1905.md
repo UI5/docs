@@ -21,10 +21,9 @@ We first introduce you to the basic development paradigms like *Model-View-Contr
 
 The tutorial consists of the following steps. To start, just open the first link - you'll be guided from there.
 
-1.  [Step 1: Hello World! \(TypeScript\)](step-1-hello-world-typescript-c20489e.md "As you know OpenUI5 is all about HTML5. Let's get started with building a
-		first &quot;Hello World&quot; with HTML. This tutorial version has been set up in a way that allows the use of UI5 Tooling in combination with
-		it.")  
-As you know OpenUI5 is all about HTML5. Let's get started with building a first "Hello World" with HTML. This tutorial version has been set up in a way that allows the use of UI5 Tooling in combination with it.
+1.  [Step 1: Hello World! \(TypeScript\)](step-1-hello-world-typescript-c20489e.md "As you know, OpenUI5 is all about HTML5. Let's get started with building a
+		first &quot;Hello World&quot; with HTML. This tutorial version has been set up in a way that allows the use of UI5 CLI in combination with it.")  
+As you know, OpenUI5 is all about HTML5. Let's get started with building a first "Hello World" with HTML. This tutorial version has been set up in a way that allows the use of UI5 CLI in combination with it.
 2.  [Step 2: Bootstrap \(TypeScript\)](step-2-bootstrap-typescript-32b14d8.md "Before we can do something with OpenUI5, we need to load and
 		initialize it. This process of loading and initializing OpenUI5 is called
 		bootstrapping. Once this bootstrapping is finished, we simply

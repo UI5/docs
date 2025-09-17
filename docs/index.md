@@ -10,7 +10,7 @@ OpenUI5 Version
     -   [Read Me First](02_Read-Me-First/read-me-first-167193c.md)
         -   [Enterprise Features of OpenUI5](02_Read-Me-First/enterprise-features-of-openui5-bf2d55e.md)
         -   [The UI5 Ecosystem](02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiob72ccb50eda94ac9b9be454a03ca4213)
-            -   [UI5 Tooling](02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiod8ab43d845cd42ceb0aa4e47b44a8fcc)
+            -   [UI5 CLI](02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiod8ab43d845cd42ceb0aa4e47b44a8fcc)
             -   [UI5 Linter](02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiof9c9470583b2455c94bed2bf934e0f1f)
             -   [Easy-UI5 Generator](02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loio702f08a7481e46688c5603385b5bdc68)
             -   [UI5-TypeScript](02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loioab4f18de7652442da85fc08b38a8a8ce)

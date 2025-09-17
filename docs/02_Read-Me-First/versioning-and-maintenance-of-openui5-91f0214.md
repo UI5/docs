@@ -142,7 +142,7 @@ sap.ui.require([
 ```
 
 > ### Note:  
-> Standalone apps, e.g. apps using the `self-contained` build of [UI5 Tooling](https://sap.github.io/ui5-tooling), will report the version of the app itself. Only if the framework resources are provided by a content delivery network \(CDN\) or a similar shared installation will the main version of the framework be retrieved as shown above.
+> Standalone apps, e.g. apps using the `self-contained` build of [UI5 CLI](https://ui5.github.io/cli), will report the version of the app itself. Only if the framework resources are provided by a content delivery network \(CDN\) or a similar shared installation will the main version of the framework be retrieved as shown above.
 
 **Related Information**  
 
