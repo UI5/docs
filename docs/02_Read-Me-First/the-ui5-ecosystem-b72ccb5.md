@@ -14,7 +14,7 @@ This page contains some of the complementary offerings from the UI5 ecosystem - 
 
 UI5 CLI is a state-of-the-art way to develop OpenUI5 projects by consuming OpenUI5 via npm. It's an open-source, modular, configurable, and extensible CLI for efficient development of applications, libraries, and reuse components with the OpenUI5 framework. Here's what you get with this CLI:
 
--   Reuse of open source tooling
+-   Open source
 -   Flexibility and extensibility
 -   Easy integration
 -   Enablement of modern language features

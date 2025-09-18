@@ -37,7 +37,7 @@ The first segment of the URL after the host name is used to specify a concrete v
 Check the available versions with the respective maintenance status at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html).
 
 > ### Note:  
-> Only use the *Stable* version for productive apps. Nevertheless, if you also want to test the [*Nightly*](https://openui5nightly.hana.ondemand.com) version, you are very welcome to send us your feedback!
+> Only use the *Stable* version for productive apps. Nevertheless, if you also want to test the [*Nightly*](https://sdk.openui5.org/nightly/) version, you are very welcome to send us your feedback!
 
 ***
 
