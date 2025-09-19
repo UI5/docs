@@ -450,7 +450,7 @@ Feature
 
 **Reworked Walkthrough Tutorial**
 
-You can now take the Walkthrough tutorial with UI5 Tooling as our preferred development environment; the sample code for all tutorial steps has been updated to work with UI5 Tooling out of the box. We also included features of modern ECMAScript and added an additional step showing how to build an application.
+You can now take the Walkthrough tutorial with UI5 CLI as our preferred development environment; the sample code for all tutorial steps has been updated to work with UI5 CLI out of the box. We also included features of modern ECMAScript and added an additional step showing how to build an application.
 
 For more information, see [Walkthrough Tutorial \(JavaScript\)](../03_Get-Started/walkthrough-tutorial-javascript-3da5f4b.md).
 

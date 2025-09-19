@@ -308,7 +308,7 @@ Latest version<sup>8</sup>
 
 1\) Windows 10 is supported only until official end of support by Microsoft \(October 14, 2025\). Although applications are expected to continue to run on Windows 10, it is strongly recommended to upgrade to Windows 11 as soon as possible.  
  2\) The specified browsers are also supported in virtual environments, such as Citrix and VMware. Any issues found must be reproducible in a non-virtualized environment.  
- 3\) OpenUI5 treats Microsoft Edge \(Chromium\) like Google Chrome from a technical perspective. However, if your personal or  organizational tracking prevention settings in MS Edge are too strict, loading OpenUI5 from hostnames ending in `*hana.ondemand.com` may be blocked. To prevent this, load OpenUI5 from `https://sdk.openui5.org/`.  
+ 3\) OpenUI5 treats Microsoft Edge \(Chromium\) like Google Chrome from a technical perspective. However, if your personal or organizational tracking prevention settings in MS Edge are too strict, loading OpenUI5 from hostnames ending in `hana.ondemand.com` may be blocked. To prevent this, load OpenUI5 from `https://sdk.openui5.org/`.  
  4\) We use current Apple iPhone and iPad devices for testing and reproducing the reported issues.  
  5\) Android-based devices are very fragmented in matters of operating system variants and hardware diversity. We use current Samsung Galaxy S and Galaxy Tab S series devices for testing and reproducing the reported issues.  
  6\) Not supported for `sap.ui.commons` and `sap.ui.ux3`.  

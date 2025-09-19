@@ -119,7 +119,7 @@ UI5 Web Components are not built on top of OpenUI5 and are not its successor. Th
 
 
 
-For more information, see the [UI5 Web Components](https://sap.github.io/ui5-webcomponents/) home page, the [GitHub Project](https://github.com/SAP/ui5-webcomponents), and the [blog post](https://blogs.sap.com/2019/02/11/ui5-web-components-the-beta-is-there/).
+For more information, see the [UI5 Web Components](https://ui5.github.io/webcomponents/) home page, the [GitHub Project](https://github.com/UI5/webcomponents), and the [blog post](https://blogs.sap.com/2019/02/11/ui5-web-components-the-beta-is-there/).
 
 <sub>New•Feature•Info Only•1.63</sub>
 

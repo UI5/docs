@@ -152,7 +152,7 @@ User Documentation
 
 **`sap.ui.integration.widgets.Card`**
 
-We have added documentation and a sample that demonstrate how you can bundle all the necessary files needed for a Component card using the UI5 Tooling. With this card type, card developers can expose a whole UI5 Component as content for the card. For more information, see the [Component Preload](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/bundle/componentPreload) section and the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/component/componentPreload) in the Card Explorer.
+We have added documentation and a sample that demonstrate how you can bundle all the necessary files needed for a Component card using UI5 CLI. With this card type, card developers can expose a whole UI5 Component as content for the card. For more information, see the [Component Preload](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/bundle/componentPreload) section and the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/component/componentPreload) in the Card Explorer.
 
 <sub>Changed•User Documentation•Info Only•1.118</sub>
 

@@ -367,7 +367,7 @@ Feature
 
 You can now use the*dts-generator* tool to generate TypeScript type definitions for any custom OpenUI5 library written in JavaScript. This is the same tool that is used for generating the productive type definitions for OpenUI5 and all its libraries.
 
-For more information, see the [GitHub repo](https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator) and the [npm package](https://www.npmjs.com/package/@ui5/dts-generator).
+For more information, see the [GitHub repo](https://github.com/UI5/typescript/tree/main/packages/dts-generator) and the [npm package](https://www.npmjs.com/package/@ui5/dts-generator).
 
 <sub>Changed•Feature•Info Only•1.124</sub>
 

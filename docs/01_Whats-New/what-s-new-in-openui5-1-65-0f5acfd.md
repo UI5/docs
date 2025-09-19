@@ -652,7 +652,7 @@ We have launched a new openSAP course on how to develop professional web apps wi
 -   Evolved best practices and recommendations for app developers
 -   New UI5 innovations \(drag and drop, OData V4, XML composites\)
 -   Developer productivity tools and features in SAP Web IDE
--   Optimizing apps with the UI5 Tooling
+-   Optimizing apps with UI5 CLI
 -   Configuring apps for SAP Fiori elements and SAP Fiori launchpad
 -   Adapting apps with SAPUI5 flexibility
 
