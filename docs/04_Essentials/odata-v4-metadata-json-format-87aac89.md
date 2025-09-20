@@ -421,6 +421,11 @@ Options and Additional Information
 
 edm:Not is written as `{"$Not" : <value>, "@..." : <value>}`. All others are written like `{"$And" : [<value>, <value>], "@..." : <value>}` because they require two child expressions.
 
+> ### Note:  
+> The 4.01 arithmetic operator edm:Neg is written like edm:Not, all others like edm:And.
+
+
+
 </td>
 </tr>
 <tr>
@@ -635,6 +640,30 @@ The record itself is a map:
 <td valign="top">
 
 `{"$UrlRef" : <value>, "@..." : <value>}` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+4.01 Expression `AnyPropertyPath` 
+
+</td>
+<td valign="top">
+
+`{"AnyPropertyPath" : "..."}` 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+4.01 Expression `ModelElementPath` 
+
+</td>
+<td valign="top">
+
+`{"ModelElementPath" : "..."}` 
 
 </td>
 </tr>
