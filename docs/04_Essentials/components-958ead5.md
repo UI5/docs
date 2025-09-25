@@ -22,7 +22,7 @@ OpenUI5 provides the following two types of components:
 
 The `sap.ui.core.Component` class is the base class and provides the metadata for both types of components. To extend the functionality, components can inherit from their base class or from another component.
 
-Components are loaded and created via the component factory function `sap.ui.component`. You can either pass the name of the component or the URL of the descriptor file \(`manifest.json`\) to load it via the descriptor, see [Manifest First Function](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst). We recommend loading the component using the descriptor \(if available\) - it improves performance during the initial load since the loading process can be parallelized and optimized.
+Components can be loaded and instantiated in a number of ways, each with its specific use case described in the [Component Instantiation Guide](component-instantiation-guide-346599f.md). For information on the component's manifest, see [Manifest First Function](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst). We recommend loading the component using the descriptor \(if available\) - it improves performance during the initial load since the loading process can be parallelized and optimized.
 
 After loading the descriptor, the component factory can load the dependencies \(OpenUI5 libraries and other dependent components\) in parallel next to the component preload, and also models can be preloaded.
 
@@ -71,11 +71,10 @@ The following list explains how other concepts used in OpenUI5 are distinguished
 -   **[Component Controller](component-controller-27ce0e4.md "The component controller is a script file (written in either JavaScript or TypeScript) that provides the runtime metadata and contains the
 		component methods.")**  
 The component controller is a script file \(written in either JavaScript or TypeScript\) that provides the runtime metadata and contains the component methods.
--   **[Using and Nesting Components](using-and-nesting-components-346599f.md "You can use a ComponentContainer to wrap a
-			UIComponent and reuse it anywhere within the OpenUI5 control tree. With the
-			ComponentContainer you can nest components inside other
-		components.")**  
-You can use a `ComponentContainer` to wrap a `UIComponent` and reuse it anywhere within the OpenUI5 control tree. With the `ComponentContainer` you can nest components inside other components.
+-   **[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components are the core building blocks of OpenUI5 applications. This guide explains the various ways 
+		to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern 
+		alternatives.")**  
+Components are the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.
 -   **[Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md "The declarative API enables you to define the initially started component directly in
 		the HTML markup.")**  
 The declarative API enables you to define the initially started component directly in the HTML markup.

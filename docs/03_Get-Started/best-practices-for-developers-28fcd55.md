@@ -201,8 +201,17 @@ When creating instances of OpenUI5 controls programmatically \(i.e. not declarat
 
 -   When creating a component via `sap.ui.core.ComponentContainer`, avoid setting a falsy value to the `manifest` property if the `async` property is kept undefined. Do not set the `async` property to `false`.
 
+-   Do not create components via their constructor. The `sap.ui.core.(UI)Component` class and its subclasses must only be created via any of the mechanisms described in the [Component Instantiation Guide](../04_Essentials/component-instantiation-guide-346599f.md).
+
 -   `sap.ui.core.Component#createComponent` must not be used with `async: false`.
 
+
+> ### Note:  
+> A best-practice guide for creating components can be found here: [Component Instantiation Guide](../04_Essentials/component-instantiation-guide-346599f.md).
+> 
+> [Overview of Instantiation Mechanisms](../04_Essentials/component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_OVW) outlines the recommended ways to instantiate a component.
+> 
+> In [Choosing the Right Instantiation Mechanism](../04_Essentials/component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_INM) we provide recommendations on when to use which creation mechanism.
 
 **`manifest.json`**
 

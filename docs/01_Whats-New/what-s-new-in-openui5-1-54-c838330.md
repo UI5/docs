@@ -267,7 +267,7 @@ Feature
 
 **`manifest` Property for Component Containers**
 
-You can now also use the "Manifest First" mechanism for component containers. For more information, see [Using and Nesting Components](../04_Essentials/using-and-nesting-components-346599f.md).
+You can now also use the "Manifest First" mechanism for component containers. For more information, see [Component Instantiation Guide](../04_Essentials/component-instantiation-guide-346599f.md).
 
 <sub>Changed•Feature•Info Only•1.54</sub>
 

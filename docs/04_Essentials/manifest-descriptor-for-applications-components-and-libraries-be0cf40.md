@@ -1350,9 +1350,26 @@ Version 79
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+Version 80
+
+</td>
+<td valign="top">
+
+\>=1.141
+
+</td>
+<td valign="top">
+
+1.79.0
+
+</td>
+</tr>
 </table>
 
-For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md)
+For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
 
 For more information about Manifest releases, versions, and the supported and deprecated manifest sections, refer to the documentation [Manifest Changelog](https://github.com/SAP/ui5-manifest/blob/HEAD/CHANGELOG.md).
 
@@ -1404,7 +1421,7 @@ We recommend any Component or UIComponent to implement the `sap.ui.core.IAsyncCo
 
 ## Manifest First Function
 
-The component factory function [`Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create), as introduced with 1.58, loads the `manifest.json` by default before the component instance is created. With this, you can preload the dependencies \(libraries and components\) and, thus, improve the performance for loading the component. The preload is also available for models, which can be flagged for preload during component loading.
+By default, all [modern component instantiation methods](component-instantiation-guide-346599f.md) load the `manifest.json` file before creating the component instance. This approach enables preloading of dependencies \(libraries and components\), thereby improving component loading performance. Additionally, OData models can be configured with `preload: true` to ensure the early loading of metadata and annotations during component initialization.
 
 The `manifest` option allows you to configure when and from where the manifest is loaded:
 
@@ -2110,7 +2127,7 @@ Specifies the used components with the a unique key/alias. Contains the followin
 -   `lazy`: Indicates whether the component usage should be lazily loaded. Default value: `true`
 
 
-For more information, see: [Using and Nesting Components](using-and-nesting-components-346599f.md).
+For more information, see: [Component Instantiation Guide](component-instantiation-guide-346599f.md).
 
 </td>
 </tr>
@@ -2427,7 +2444,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.78.0",
+"_version": "1.79.0",
  
     "start_url": "index.html",
  
@@ -2512,7 +2529,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.140.0",
+            "minUI5Version": "1.141.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -2616,7 +2633,7 @@ sap.ui.define([
 ], (UIComponent) => {
 	"use strict";
 	return UIComponent.extend("my.sample.Component", {
-		metadata  : { 
+		metadata: {
 			manifest: "json",
 			interfaces: [
 				"sap.ui.core.IAsyncContentCreation"

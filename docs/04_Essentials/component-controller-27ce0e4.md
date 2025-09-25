@@ -37,12 +37,12 @@ We recommend to add the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.co
 		additional metadata for the configuration of user interfaces or the navigation between
 		views.")**  
 The component class provides specific metadata for components by extending the `ManagedObject` class. The `UIComponent` class provides additional metadata for the configuration of user interfaces or the navigation between views.
--   **[Methods Controlling the Initial Instantiation](methods-controlling-the-initial-instantiation-b430345.md "OpenUI5 provides two
-		methods for the initial instantiation of the component.")**  
-OpenUI5 provides two methods for the initial instantiation of the component.
+-   **[Content Creation in Components](content-creation-in-components-b430345.md "OpenUI5 provides two methods for creating the content controls of a
+		component.")**  
+OpenUI5 provides two methods for creating the content controls of a component.
 
 **Related Information**  
 
 
-[Using and Nesting Components](using-and-nesting-components-346599f.md "You can use a ComponentContainer to wrap a UIComponent and reuse it anywhere within the OpenUI5 control tree. With the ComponentContainer you can nest components inside other components.")
+[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components are the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.")
 

@@ -173,7 +173,7 @@ new ComponentContainer({
 
 [Components](../04_Essentials/components-958ead5.md "Components are independent and reusable parts used in OpenUI5 applications.")
 
-[Methods Controlling the Initial Instantiation](../04_Essentials/methods-controlling-the-initial-instantiation-b430345.md "OpenUI5 provides two methods for the initial instantiation of the component.")
+[Content Creation in Components](../04_Essentials/content-creation-in-components-b430345.md "OpenUI5 provides two methods for creating the content controls of a component.")
 
 [Advanced Concepts for OpenUI5 Components](../04_Essentials/advanced-concepts-for-openui5-components-ecbc417.md "Advanced concepts for components include routing and navigation and component data as well as the event bus.")
 
