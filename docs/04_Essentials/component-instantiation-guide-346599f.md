@@ -144,7 +144,7 @@ Nested/reuse components
 </td>
 <td valign="top">
 
-Required for rendering a component; allows for automatic lifecycle management. Nested components can make use their own routing to create further nested components \(see navigation-based component creation\).
+Required for rendering a component; allows for automatic lifecycle management. Nested components can make use of their own routing to create further nested components \(see navigation-based component creation\).
 
 </td>
 </tr>
@@ -371,19 +371,19 @@ Before we can configure nested components via routing or instantiate them progra
 
 -   **`name`:** Component identifier \(mandatory\)
 -   **`settings`:** Component-specific settings
--   **`componentData`:** Data passed to component's constructor
--   **`lazy`:** Controls preloading behavior \(`false` = preload, `true` = load on demand\)
+-   **`componentData`:** Data passed to the component's constructor
+-   **`lazy`:** Controls the preloading behavior \(`false` = preload, `true` = load on demand\)
 
 ***
 
 ### Routing With Nested Components
 
-Nesting components with target-based navigation is the recommended way to achieve a separation of functionality and concerns. This approach is especially important when routing is used within nested components as it prevents conflicts that could otherwise arise when multiple components react to the same browser hash change.
+Nesting components with target-based navigation is the recommended way to achieve a separation of concerns. This approach is especially important when routing is used within nested components as it prevents conflicts that could otherwise arise when multiple components react to the same browser hash change.
 
 Using routing with nested components requires:
 
 -   **Asynchronous routing** enabled in all components
--   **Component target** configuration in parent routing
+-   **Component target** configuration in the parent routing
 -   **Proper `componentUsages`** declaration
 
 For more information, see [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md).
@@ -474,7 +474,7 @@ myView.addContent(oContainer);
 
 **`ComponentContainer` with owner component:**
 
-To add your newly created component into the control tree, you need to associate it with a `ComponentContainer`:
+Instead of calling the [`Component#createComponent`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/createComponent) factory on a component instance, you can also directly create a `ComponentContainer` and reference the reuse component via its name that is declared in the `manifest.json`.
 
 This approach **only works** if you ensure that the `ComponentContainer` is instantiated within the "owner scope" of the component defining the `componentUsage`. For more information, see [The Owner Component](the-owner-component-a7a3138.md).
 
@@ -503,7 +503,7 @@ To declaratively create a component from within an XML view, simply place it in 
 ```
 
 > ### Note:  
-> Depending on how you create the XML view, you may need to ensure that the "Owner Scope" is correctly set. For more information, see [The Owner Component](the-owner-component-a7a3138.md).
+> Depending on how you create the XML view, you may need to ensure that the *owner scope* is correctly set. For more information, see [The Owner Component](the-owner-component-a7a3138.md).
 
 If your view is created programmatically and not via a routing target, you need to wrap the view's factory call in a corresponding [`Component#runAsOwner`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/runAsOwner) call:
 
