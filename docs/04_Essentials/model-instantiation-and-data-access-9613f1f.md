@@ -23,7 +23,7 @@ sap.ui.define(["sap/ui/model/odata/v4/ODataModel"], function (ODataModel) {
 
 ## OData Custom Query Options
 
-An OData service accepts query options placed in the service URL query part, as explained on the URL conventions page [OData Version 4.0 Part 2: URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html) in chapter 2 *URL Components*. The OData V4 model accepts OData custom query options only as explained in section 5.2 *Custom Query Options* of the URL conventions page; you must not provide OData system query options \(starting with "$"\) or OData parameter aliases \(starting with "@"\) at model level, see sections 5.1 *System Query Options* and 5.3 *Parameter Aliases* in the URL conventions page.
+An OData service accepts query options placed in the service URL query part, as explained on the URL conventions page [OData Version 4.01 Part 2: URL Conventions, 2 URL Components](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360924) in chapter 2 *URL Components*. The OData V4 model accepts OData custom query options only as explained in section 5.2 *Custom Query Options* of the URL conventions page; you must not provide OData system query options \(starting with "$"\) or OData parameter aliases \(starting with "@"\) at model level, see sections 5.1 *System Query Options* and 5.3 *Parameter Aliases* in the URL conventions page.
 
 > ### Note:  
 > Note that it's possible to specify certain system query options for OData V4 model bindings. For more information, see [Bindings](bindings-54e0ddf.md).
@@ -195,7 +195,7 @@ Some SAP applications will also require the processing of `SAP-ContextId`, `SAP-
 
 [Constructor: sap.ui.model.odata.v4.ODataModel](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor)
 
-[OData Version 4.0 Part 2: URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)
+[OData Version 4.01 Part 2: URL Conventions](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html)
 
 [Bindings](bindings-54e0ddf.md "Bindings connect OpenUI5 view elements to model data, allowing changes in the model to be reflected in the view element and vice versa.")
 

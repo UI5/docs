@@ -202,7 +202,7 @@ Feature
 
 Support for controller extensions in TypeScript is now complete, comprising now also the use of extensions implemented by others in your own controller in addition to the modification of controllers implemented by others with your own extension.
 
-For more information, see [Using Controller Extension with TypeScript](../04_Essentials/using-controller-extension-21515f0.md#loio21515f09c0324218bb705b27407f5d61__section_UCETS).
+For more information, see [Using Controller Extension with TypeScript](../04_Essentials/controller-extensions-21515f0.md#loio21515f09c0324218bb705b27407f5d61__section_UCETS).
 
 <sub>Changed•Feature•Info Only•1.127</sub>
 
@@ -315,6 +315,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.140](what-s-new-in-openui5-1-140-26a106c.md "With this release OpenUI5 is upgraded from version 1.139 to 1.140.")
 
 [What's New in OpenUI5 1.139](what-s-new-in-openui5-1-139-e10db71.md "With this release OpenUI5 is upgraded from version 1.138 to 1.139.")
 

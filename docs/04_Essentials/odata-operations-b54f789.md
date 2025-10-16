@@ -362,7 +362,7 @@ See also the example in the Demo Kit: [Controller Code for `sap.ui.core.sample.o
 
 ## Advertised Operations
 
-According to the [OData 4.0 specification \("11.5.2 Advertising Available Operations within a Payload"\)](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752309) services may return available actions and functions bound to a particular entity as part of the entity representation within the payload. Data for an advertised operation within an entity is sent as property starting with `#<namespace>.<action>` of that entity. If the entity does not advertise the operation, it does not contain this property. To access the advertised operation in a binding, the same format has to be used. See the following example:
+According to the [OData Version 4.01. Part 1: Protocol, 11.5.3 Advertising Available Operations within a Payload](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31359008) services may return available actions and functions bound to a particular entity as part of the entity representation within the payload. Data for an advertised operation within an entity is sent as property starting with `#<namespace>.<action>` of that entity. If the entity does not advertise the operation, it does not contain this property. To access the advertised operation in a binding, the same format has to be used. See the following example:
 
 > ### Example:  
 > Enable a button to initiate an action `AcSetIsOccupied` available on entity type of entity set `EMPLOYEES` depending on advertisement of this action on the entity `EMPLOYEES('1')`
@@ -462,7 +462,7 @@ onEdit : function () {
 **Related Information**  
 
 
-[OData Version 4.0 Part 1, 11.5 Operations](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
+[OData Version 4.01. Part 1: Protocol, 11.5 Operations](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31359005)
 
 [ODataContextBinding](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding)
 

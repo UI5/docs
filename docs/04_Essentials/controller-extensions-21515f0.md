@@ -1,6 +1,6 @@
 <!-- loio21515f09c0324218bb705b27407f5d61 -->
 
-# Using Controller Extension
+# Controller Extensions
 
 Controller extensions allow you to add functionality to existing applications. They can be used for extensibility purposes, for example by a customer wishing to extend SAP-delivered applications, or as a reusable part that is added to the original application.
 
@@ -167,7 +167,7 @@ You can also override an extension directly in a controller.
 > 
 > ```
 
-For information on integrating controller extensions into controllers in TypeScript, see *Assigning Controller Extensions* and *Overriding Controller Extension Behavior* in [Using Controller Extension with TypeScript](using-controller-extension-21515f0.md#loio21515f09c0324218bb705b27407f5d61__section_UCETS).
+For information on integrating controller extensions into controllers in TypeScript, see *Assigning Controller Extensions* and *Overriding Controller Extension Behavior* in [Using Controller Extension with TypeScript](controller-extensions-21515f0.md#loio21515f09c0324218bb705b27407f5d61__section_UCETS).
 
 ***
 

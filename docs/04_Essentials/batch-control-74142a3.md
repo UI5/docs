@@ -217,5 +217,5 @@ The following example shows how to set the submit mode `sap.ui.model.odata.v4.Su
 
 [ODataPropertyBinding.setValue](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataPropertyBinding/methods/setValue)
 
-[OData V4 Specification Part 1, Batch Requests](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html)
+[OData Version 4.01. Part 1: Protocol, 11.7 Batch Requests](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31359017)
 

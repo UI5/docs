@@ -44,5 +44,5 @@ OpenUI5 provides two methods for creating the content controls of a component.
 **Related Information**  
 
 
-[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components are the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.")
+[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components serve as the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.")
 

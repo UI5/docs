@@ -1,13 +1,8 @@
 <!-- loioa7ed66de00934a8ebd8ec054e18182ad -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in OpenUI5 1.141
 
 With this release OpenUI5 is upgraded from version 1.140 to 1.141.
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ****
 
@@ -53,80 +48,6 @@ Available as of
 <tr>
 <td valign="top">
 
-Upcoming 
-
-</td>
-<td valign="top">
-
-Deleted 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for OpenUI5 Versions \(Q3/2025\)** 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for OpenUI5 Versions \(Q3/2025\)**
-
-The following OpenUI5 versions will be removed from the OpenUI5 Content Delivery Network \(CDN\) after the end of Q3/2025.
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.121
--   1.124
--   1.125
--   1.126
--   1.127
--   1.128
-
-**Action**: Upgrade to a version that is still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   1.71.66
--   1.84.46
--   1.96.31 to 1.96.33
--   1.108.30 to 1.108.34
--   1.120.16 to 1.120.20
--   1.121.5
--   1.124.1 to 1.124.6
--   1.125.0
--   1.126.0 to 1.126.1.
--   1.127.0
--   1.128.0
-
-**Action**: Upgrade to the latest available patch for the respective OpenUI5 version.
-
-For more information, see [Version Overview](https://sdk.openui5.org/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 1.141 
 
 </td>
@@ -151,7 +72,7 @@ Control
 
 -   The new `state` property enables card developers to incorporate predefined value state icons in the Default Card Header, enhancing the card's visual status indication. This feature is useful for quickly conveying the status of a card through a status-colored, non-interactive message icon, improving clarity and user experience. For more information, see the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/defaultHeader/messageIcon) and the [Documentation](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/headers/default).
 
--   Integration Cards now offer a centralized approach to organizing child cards and referencing them by key in the `ShowCard` action type. This feature enhances semantic clarity, streamlines card management, and enables centralized configuration of child card settings through the Configuration Editor. For more information, see the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/cardActions/showHideCard) and the [Documentation](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/configuration/childCards).
+-   Integration Cards now offer a centralized approach to organizing child cards and referencing them by key in the `ShowCard` action type. This feature enhances semantic clarity, streamlines card management, and enables centralized configuration of child card settings using the Configuration Editor. For more information, see the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/cardActions/showHideCard) and the [Documentation](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/configuration/childCards).
 
 <sub>Changed•Control•Info Only•1.141</sub>
 

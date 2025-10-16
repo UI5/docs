@@ -186,6 +186,7 @@ When creating instances of OpenUI5 controls programmatically \(i.e. not declarat
 
 -   Avoid inline scripts or inline styles.
 
+-   Do not build CSS selectors based on specific DOM structures. Controls retain the option to change DOM structures internally as these are not considered a public offering.
 
 **Additional Information:**
 

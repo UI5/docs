@@ -124,6 +124,22 @@ name
 phone
 ```
 
+<a name="loio18a76b577b144bc2b9b424e39d379c06"/>
+
+<!-- loio18a76b577b144bc2b9b424e39d379c06 -->
+
+## Performance Impact of Model Updates
+
+The JSON model allows for updating data via the [`JSONModel#setProperty`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/setProperty) API. The model then iterates all its data bindings to check if the data update in the model affects the binding. If this is the case, listeners to change events for this data binding—typically the bound control—are informed. When you update multiple properties by multiple calls of the `setProperty` API, **each** of these calls iterates the data bindings as described. This may lead to performance issues in large applications with many data bindings and many consecutive calls of the `setProperty` method.
+
+To avoid performance issues in this scenario, prefer [Two-Way Binding](odata-v2-model-6c47b2b.md#loio42b3ca19a47d49a3b4ba5f34ca0d1f7e) over `setProperty` calls. If this is not possible, set the `bAsyncUpdate` parameter to `true` in the calls of the `setProperty` method. The model then iterates the data bindings **asynchronously**: With this, the iteration is only done once for all `setProperty` calls, thus improving the performance.
+
+```
+
+oModel.setProperty("/company/name", "SampleTec Solutions", /*oContext*/ null, /*bAsyncUpdate*/ true);
+		
+```
+
 <a name="loiob8cd1692485d4108af607af347982dd9"/>
 
 <!-- loiob8cd1692485d4108af607af347982dd9 -->

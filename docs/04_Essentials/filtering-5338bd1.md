@@ -78,7 +78,7 @@ The example above filters the `Equipments` entity set by `Category` \(static fil
 
 ## Filtering with Any, All, NotAny, and NotAll
 
-The OData V4 model supports the Lambda Operators `any` and `all` as defined in Section 5.1.1.10 of the [OData Version 4.0. Part 2: URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752358) specification. These operators and their negated forms are represented using [`sap.ui.model.Filter`](https://ui5.sap.com/#/api/sap.ui.model.Filter) objects with [filter operators](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator/properties) `sap.ui.model.Filter.Any`, `sap.ui.model.Filter.All`, `sap.ui.model.Filter.NotAny`, and `sap.ui.model.Filter.NotAll`.
+The OData V4 model supports the Lambda Operators `any` and `all` as defined in Section 5.1.1.13 of the [OData Version 4.01. Part 2: URL Conventions](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361024) specification. These operators and their negated forms are represented using [`sap.ui.model.Filter`](https://ui5.sap.com/#/api/sap.ui.model.Filter) objects with [filter operators](https://ui5.sap.com/#/api/sap.ui.model.FilterOperator/properties) `sap.ui.model.Filter.Any`, `sap.ui.model.Filter.All`, `sap.ui.model.Filter.NotAny`, and `sap.ui.model.Filter.NotAll`.
 
 Example:
 

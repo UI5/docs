@@ -2,7 +2,7 @@
 
 # Component Instantiation Guide
 
-Components are the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.
+Components serve as the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.
 
 **On this page:**
 
@@ -10,7 +10,7 @@ Components are the core building blocks of OpenUI5 applications. This guide expl
 -   [Component Factories](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_COF)
 -   [Choosing the Right Instantiation Mechanism](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_INM)
 -   [Initial Components](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_INC) - How to create the main application component
--   [Nesting Components](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_NCP) - How to structure your app into smaller components and nesting them
+-   [Nesting Components](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_NCP) - How to structure your app into smaller components and nest them
 -   [Migration Guidelines](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_MIG) - How to migrate your legacy code
 -   [Best Practices](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_BPR)
 
@@ -20,13 +20,13 @@ Components are the core building blocks of OpenUI5 applications. This guide expl
 
 ## Overview of Instantiation Mechanisms
 
-OpenUI5 provides several mechanisms for component instantiation, each suited for different scenarios:
+OpenUI5 offers several mechanisms for component instantiation, each suited for different scenarios:
 
--   **`ComponentSupport` Module** - Declarative approach for initial application components
--   **Routing with Nested Components** - The routing definition allows for navigation-based creation and rendering of *nested* components
--   **`Component.create()` Factory Function** - Modern factory function; the recommended approach for programmatic component creation with full application control and responsibility. Needs a `ComponentContainer` to render.
--   **`Component#createComponent()` Factory Function** - Recommended approach to create a *reuse component* defined in an application component's `manifest.json`. Needs a `ComponentContainer` to render.
--   **`ComponentContainer`** - Container element for rendering components; can load and instantiate a component but also accepts any other programmatically created component, e.g. via `Component.create()` or `Component#createComponent`
+-   **`ComponentSupport` Module** - A declarative approach for initial application components.
+-   **Routing with Nested Components** - The routing definition allows for navigation-based creation and rendering of *nested* components.
+-   **`Component.create()` Factory Function** - A modern factory function. This is the recommended approach for programmatic component creation with full application control and responsibility. It requires a `ComponentContainer` to render.
+-   **`Component#createComponent()` Factory Function** - The recommended approach to create a *reuse component* defined in an application component's `manifest.json`. It also requires a `ComponentContainer` to render.
+-   **`ComponentContainer`** - A container element for rendering components. It can load and instantiate a component and accepts any other programmatically created component, such as those created via `Component.create()` or `Component#createComponent`.
 
 ***
 
@@ -39,11 +39,11 @@ OpenUI5 provides two modern component factories:
 -   **`Component.create()`**
 -   **`Component#createComponent()`**
 
-This section outlines the usage of the `Component.create()` API as it is the most flexible and versatile way to create a component instance. Keep in mind, however, that the full responsibility for component orchestration and rendering lies with the application.
+This section outlines the usage of the `Component.create()` API, as it is the most flexible and versatile way to create a component instance. Keep in mind that the full responsibility for component orchestration and rendering lies with the application.
 
 1.  **`Component.create()`**
 
-    The static `Component.create()` factory allows you to pass the name of a component, as well as some additional options like the URL for a `manifest.json`. The return value of this factory is a Promise that resolves with the final component instance once it is fully constructed.
+    The static `Component.create()` factory allows you to pass the name of a component along with additional options like the URL for a `manifest.json`. The return value of this factory is a Promise that resolves with the final component instance once it is fully constructed.
 
     > ### Note:  
     > For more information on the manifest, see [Manifest First Function](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst).
@@ -55,7 +55,7 @@ This section outlines the usage of the `Component.create()` API as it is the mos
     });
     ```
 
-    You can also pass a dedicated URL for the `manifest.json` to the factory function. In this case, the URL has to point to the `manifest.json` directly and must be resolved by the caller:
+    You can also pass a dedicated URL for the `manifest.json` to the factory function. In this case, the URL must point directly to the `manifest.json` and must be resolved by the caller:
 
     ```js
     // Creating a Component with a manifest URL
@@ -76,7 +76,7 @@ This section outlines the usage of the `Component.create()` API as it is the mos
 
 ## Choosing the Right Instantiation Mechanism
 
-The table below shows the recommended approach per scenario. We recommend initializing the first application component via the `ComponentSupport` in the initial HTML page. However, if needed, a component can also be created programmatically using the`Component.create()` factory method in combination with a `ComponentContainer`. All recommended approaches allow for an optimized manifest-first loading.
+The table below shows the recommended approach for each scenario. We recommend initializing the first application component via the `ComponentSupport` in the initial HTML page. If needed, you can also create a component programmatically using the `Component.create()` factory method in combination with a `ComponentContainer`. All recommended approaches support optimized manifest-first loading.
 
 
 <table>
@@ -127,7 +127,7 @@ Routing definition in `manifest.json`
 </td>
 <td valign="top">
 
-Versatile declarative defintion of navigation targets; allows for seamless nesting of components. This approach is especially important when routing is used within nested components as it prevents conflicts that could otherwise arise when multiple components react to the same browser hash change.
+Versatile declarative defintion of navigation targets; allows for seamless nesting of components. This approach is especially important when routing is used within nested components, as it prevents conflicts that could arise when multiple components react to the same browser hash change.
 
 </td>
 </tr>
@@ -144,7 +144,7 @@ Nested/reuse components
 </td>
 <td valign="top">
 
-Required for rendering a component; allows for automatic lifecycle management. Nested components can make use of their own routing to create further nested components \(see navigation-based component creation\).
+Required for rendering a component; allows for automatic lifecycle management. Nested components can use their own routing to create further nested components \(see navigation-based component creation\).
 
 </td>
 </tr>
@@ -185,14 +185,14 @@ Asynchronous factory; allows to manually orchestrate the loading
 </table>
 
 > ### Caution:  
-> Do not use deprecated legacy mechanisms! For the sake of completeness we also have to mention the deprecated `sap.ui.component()` synchronous factory function. **We strongly advise against using this factory function.**
+> Do not use deprecated legacy mechanisms! For completeness, we mention the deprecated `sap.ui.component()` synchronous factory function. **We strongly advise against using this function.**
 
 The modern approaches offers several significant advantages:
 
--   **Asynchronous loading** prevents blocking the UI thread
--   **Manifest-first** loading optimizes dependency resolution and early model loading/creation
--   **Promise-based** API for manual orchestration and error handling
--   **Future-proof** as synchronous requests are deprecated by all major browsers and are no longer available in legacy-free variants of OpenUI5
+-   **Asynchronous loading** prevents blocking the UI thread.
+-   **Manifest-first** loading optimizes dependency resolution and early model loading and creation.
+-   **Promise-based** APIs allow for manual orchestration and error handling.
+-   **Future-proof**, as synchronous requests are deprecated by all major browsers and are no longer available in legacy-free variants of OpenUI5.
 
 ***
 
@@ -200,7 +200,7 @@ The modern approaches offers several significant advantages:
 
 ## Initial Components
 
-The following sections outline the recommended ways to instantiate the initial application component. For a detailed guide on how to create nested components and subdivide your application, see [Nesting Components](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_NCP).
+The following sections outline the recommended ways for instantiating the initial application component. For a detailed guide on creating nested components and subdividing your application, see [Nesting Components](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_NCP).
 
 ***
 
@@ -210,9 +210,9 @@ The `ComponentSupport` module enables declarative component instantiation direct
 
 **Good to know:**
 
--   **HTML is case-insensitive:** Properties and settings of a component are defined in camelCase. In HTML, you need to specify them with hyphens, e.g. `data-handle-validation` for `handleValidation`
--   **Automatic optimization:** The `ComponentSupport` enforces manifest-first loading and asynchronous behavior by default
--   **Lifecycle management:** By default, the lifecycle management is configured to be `Container` \(see [`sap.ui.core.ComponentLifecycle`](https://ui5.sap.com/#/api/sap.ui.core.ComponentLifecycle) and the section about `ComponentContainer`s below\)
+-   **HTML is case-insensitive:** Properties and settings of a component are defined in camelCase. In HTML, you need to specify them with hyphens, e.g. `data-handle-validation` for `handleValidation`.
+-   **Automatic optimization:** The `ComponentSupport` enforces manifest-first loading and asynchronous behavior by default.
+-   **Lifecycle management:** By default, the lifecycle management is configured to be `Container`. See [`sap.ui.core.ComponentLifecycle`](https://ui5.sap.com/#/api/sap.ui.core.ComponentLifecycle) and the section about `ComponentContainer`s below.
 
 For samples regarding the `ComponentSupport`, see [Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md).
 
@@ -251,7 +251,7 @@ For more information, see the [API Reference: `module:sap/ui/core/ComponentSuppo
 
 **Advanced Usage**
 
-For scenarios requiring a pre-initialization setup, you can use a dedicated `init` module and manually load the `ComponentSupport`. Once it is loaded, it automatically detects any declarative component definition in the HTML page's DOM \(see the sample above\).
+For scenarios requiring a pre-initialization setup, you can use a dedicated `init` module and manually load the `ComponentSupport`. Once loaded, it automatically detects any declarative component definition in the HTML page's DOM \(see the sample above\).
 
 ```html
 <script id="sap-ui-bootstrap"
@@ -275,17 +275,17 @@ sap.ui.define(["my/app/MyModule"], (MyModule) => {
 
 ### `ComponentContainer` - Programmatic Approach
 
-Sometimes it is necessary to programmatically create a component and render it in a specific part of the application and/or HTML page. For these use cases we provide a `ComponentContainer` control, which has a special `component` association that holds the reference to the component instance.
+Sometimes you need to programmatically create a component and render it in a specific part of the application or HTML page. For these use cases, we provide a `ComponentContainer` control, which has a special `component` association that holds the reference to the component instance.
 
 > ### Note:  
 > You cannot use `placeAt()` directly on components - they must always be wrapped in a `ComponentContainer`.
 
-`ComponentContainer`s provide:
+`ComponentContainer`s offer several features:
 
--   **Lifecycle management:** Forwards lifecycle methods \(`onBeforeRendering`, `onAfterRendering`\) to its associated component
--   **Separation:** Decouples control tree and data binding between parent and child components. A component associated in a `ComponentContainer` has no parent control. The `Component#getParent()` function will return `null` even though the `ComponentContainer` itself is aggregated in the control tree.
--   **Model propagation:** Despite the above-mentioned strict separation, setting the `propagateModel` property to `true` forwards models and binding contexts to the associated component. By default, a component associated in a `ComponentContainer` does not take part in the model propagation process.
--   **Rendering context:** Provides the necessary wrapper for component rendering
+-   **Lifecycle management:** They forward lifecycle methods \(`onBeforeRendering`, `onAfterRendering`\) to their associated component.
+-   **Separation:** They decouple the control tree and data binding between parent and child components. A component within a `ComponentContainer` has no parent control. The `Component#getParent()` function returns `null`, even though the `ComponentContainer` itself is aggregated in the control tree.
+-   **Model propagation:** Despite the strict separation mentioned above, setting the `propagateModel` property to `true` forwards models and binding contexts to the associated component. By default, a component within a `ComponentContainer` doesn't participate in the model propagation process.
+-   **Rendering context:** They provide the necessary wrapper for component rendering.
 
 **Using `ComponentContainer`s**
 
@@ -318,7 +318,7 @@ Component.create({
 
 **Lifecycle Management**
 
-The `ComponentContainer` allows you to define a `lifecycle` of a component and how it is coupled to the lifecylce of the container.For more information, see the [API Reference: `sap.ui.core.ComponentLifecycle`](https://ui5.sap.com/#/api/sap.ui.core.ComponentLifecycle).
+The `ComponentContainer` lets you define a `lifecycle` of a component and how it aligns with the lifecylce of the container.For more information, see the [API Reference: `sap.ui.core.ComponentLifecycle`](https://ui5.sap.com/#/api/sap.ui.core.ComponentLifecycle).
 
 > ### Note:  
 > The default is `sap.ui.core.ComponentLifecycle.Legacy`.
@@ -339,18 +339,18 @@ var oContainer = new ComponentContainer({
 
 ## Nesting Components
 
-Nesting components enables you to subdivide your application into multiple smaller, independent parts, each with their own dedicated set of dependencies and resources. For example, consider a shop application that displays a list of products. The editing functionality must only be visible to administrators and thus does not need to be loaded and prepared for other users. Nested components allow you to decouple this functionality. This approach minimizes the initial payload required to start your main component, improving application startup performance and resource utilization.
+Nesting components lets you subdivide your application into smaller, independent parts. Each part has its own dedicated set of dependencies and resources. For example, in a shop application that displays a list of products, the editing functionality should only be visible to administrators. It doesn't need to be loaded for other users. Nested components help you decouple this functionality. This approach reduces the initial payload needed to start your main component, improving application startup performance and resource utilization.
 
-There are several ways of nesting components into each other:
+You can nest components in these ways:
 
--   [Routing with Nested Components](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__RWNC) \(i.e. with targets of `Component` type\) - Recommended for most use cases; must be used when nested components have routing enabled. This approach is especially important when routing is used within nested components as it prevents conflicts that could otherwise arise when multiple components react to the same browser hash change.
--   [Programmatic Instantiation](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__PI) \(i.e. via `componentUsage`\)
+-   [Routing with Nested Components](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__RWNC): You can implement this with targets of `Component` type. This method is recommended for most use cases. Use it when nested components have routing enabled. It's crucial when routing is used within nested components, as it prevents conflicts that could arise when multiple components react to the same browser hash change.
+-   [Programmatic Instantiation](component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__PI): You can achieve this by declaring your component in the `sap.ui5/componentUsages` section of your parent component's `manifest.json` and creating it using a factory function.
 
 ***
 
 ### Manifest Configuration
 
-Before we can configure nested components via routing or instantiate them programmatically, we first need to declare them in the `sap.ui5/componentUsages` section of your parent component's `manifest.json`:
+Before configuring nested components via routing or instantiating them programmatically, declare them in the `sap.ui5/componentUsages` section of your parent component's `manifest.json`:
 
 ```json
 {
@@ -378,7 +378,7 @@ Before we can configure nested components via routing or instantiate them progra
 
 ### Routing With Nested Components
 
-Nesting components with target-based navigation is the recommended way to achieve a separation of concerns. This approach is especially important when routing is used within nested components as it prevents conflicts that could otherwise arise when multiple components react to the same browser hash change.
+Nesting components with target-based navigation is the recommended way to achieve a separation of concerns. This approach is especially important when routing is used within nested components, as it prevents conflicts that could arise when multiple components react to the same browser hash change.
 
 Using routing with nested components requires:
 
@@ -390,9 +390,9 @@ For more information, see [Enabling Routing in Nested Components](enabling-routi
 
 **Routing Configuration \(`manifest.json`\):**
 
--   **`type: "Component"`:** Tells the framework's routing that we want to instantiate a component
+-   **`type: "Component"`:** Indicates that the framework's routing should instantiate a component
 -   **`usage`:** References the key from `componentUsages` in the `manifest.json`
--   **`options`:** Additional options for the component. This object is merged with the corresponding object from the `componentUsages` section of the `manifest.json`.
+-   **`options`:** Additional options for the component. This object merges with the corresponding object from the `componentUsages` section of the `manifest.json`.
 -   **`containerOptions`:** Additional options passed to the `ComponentContainer`'s constructor
 
 > ### Note:  
@@ -474,7 +474,7 @@ myView.addContent(oContainer);
 
 **`ComponentContainer` with owner component:**
 
-Instead of calling the [`Component#createComponent`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/createComponent) factory on a component instance, you can also directly create a `ComponentContainer` and reference the reuse component via its name that is declared in the `manifest.json`.
+Instead of calling the [`Component#createComponent`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/createComponent) factory on a component instance, you can directly create a `ComponentContainer` and reference the reuse component via its name declared in the `manifest.json`.
 
 This approach **only works** if you ensure that the `ComponentContainer` is instantiated within the "owner scope" of the component defining the `componentUsage`. For more information, see [The Owner Component](the-owner-component-a7a3138.md).
 
@@ -520,7 +520,7 @@ oMyAppComponent.runAsOwner(() => {
 
 ## Migration Guidelines
 
-The OpenUI5 framework is continuously evolving to leverage modern web standards and browser capabilities while maintaining backward compatibility. However, to ensure your applications remain performant, secure, and future-ready, migrating from legacy component APIs to modern alternatives is essential.
+The OpenUI5 framework is continuously evolving to leverage modern web standards and browser capabilities while maintaining backward compatibility. To keep your applications performant, secure, and future-ready, migrating from legacy component APIs to modern alternatives is essential.
 
 > ### Note:  
 > For comprehensive guidance on modernizing your codebase, see [Best Practices for Developers](../03_Get-Started/best-practices-for-developers-28fcd55.md), which provides detailed recommendations for legacy-free OpenUI5 development.
@@ -529,7 +529,7 @@ The OpenUI5 framework is continuously evolving to leverage modern web standards 
 
 ### Legacy `sap.ui.component()` Factory
 
-The legacy `sap.ui.component()` factory function creates components synchronously, which blocks the UI thread and violates Content Security Policy requirements, making migration to asynchronous alternatives essential for modern OpenUI5 development.
+The legacy `sap.ui.component()` factory function creates components synchronously, which blocks the UI thread and violates Content Security Policy requirements. Migrating to asynchronous alternatives is essential for modern OpenUI5 development.
 
 **Legacy approach:**
 
@@ -590,13 +590,13 @@ createContent: function() {
 
 ## Best Practices
 
-1.  **Always use asynchronous APIs**, i.e. `Component.create()` instead of `sap.ui.component()`
-2.  **Prefer `ComponentSupport`** for initial components over manual `ComponentContainer` creation
-3.  **Declare reuse components** in `componentUsages` rather than in `dependencies`
-4.  **Enable async routing** in all components when using nested component routing
-5.  **Use routing with nested components** for nested components that define their own routing
-6.  **Use proper lifecycle management** via the `ComponentContainer`'s `lifecycle` property
-7.  **Leverage manifest-first** loading for optimal performance
+1.  **Always use asynchronous APIs** - use `Component.create()` instead of `sap.ui.component()`.
+2.  **Prefer `ComponentSupport`** for initial components over manual `ComponentContainer` creation.
+3.  **Declare reuse components** in `componentUsages` rather than in `dependencies`.
+4.  **Enable async routing** in all components when using nested component routing.
+5.  **Use routing with nested components** for nested components that define their own routing.
+6.  **Use proper lifecycle management** via the `ComponentContainer`'s `lifecycle` property.
+7.  **Leverage manifest-first** loading for optimal performance.
 
 **Related Information**  
 

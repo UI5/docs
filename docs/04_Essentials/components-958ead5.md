@@ -68,13 +68,13 @@ The following list explains how other concepts used in OpenUI5 are distinguished
     The MVC concept allows to define views and controllers and, thus, to structure and reuse parts within an application. As MVC can only be deployed separately and has no means to define dependent styles or scripts that are loaded together with a view, this concept is of limited use across different applications.
 
 
+-   **[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components serve as the core building blocks of OpenUI5 applications. This
+		guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern
+		alternatives.")**  
+Components serve as the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.
 -   **[Component Controller](component-controller-27ce0e4.md "The component controller is a script file (written in either JavaScript or TypeScript) that provides the runtime metadata and contains the
 		component methods.")**  
 The component controller is a script file \(written in either JavaScript or TypeScript\) that provides the runtime metadata and contains the component methods.
--   **[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components are the core building blocks of OpenUI5 applications. This guide explains the various ways 
-		to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern 
-		alternatives.")**  
-Components are the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.
 -   **[Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md "The declarative API enables you to define the initially started component directly in
 		the HTML markup.")**  
 The declarative API enables you to define the initially started component directly in the HTML markup.
