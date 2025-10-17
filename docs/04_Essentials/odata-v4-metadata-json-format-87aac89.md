@@ -34,7 +34,8 @@ Annotations with external targeting are represented as a `"$Annotations"` map in
 
 *Normalization:* For all EDM elements which allow both inline annotations and external targeting, we assume that only external targeting is used. This affects edm:ActionImport, edm:ComplexType, edm:EntityContainer, edm:EntitySet, edm:EntityType, edm:EnumType, edm:FunctionImport, edm:Member, edm:Singleton, edm:Term, edm:TypeDefinition, edm:NavigationProperty, edm:Property. The goal is to reduce cases that contain a mixture of inline annotations and external targeting to the bare minimum.
 
-**Update for 4.01:** [\[OData-CSDL-JSON-v4.01\] 14.2.2 Target](https://docs.oasis-open.org/odata/odata-csdl-json/v4.01/csprd04/odata-csdl-json-v4.01-csprd04.html#sec_Target) now says, *"External targeting is possible for actions, functions, their parameters, and their return type, either in a way that applies to all overloads of the action or function or all parameters of that name across all overloads, or in a way that identifies a single overload."* Thus, we also normalize towards external targeting here.
+> ### Note:  
+> External targeting is possible for actions, functions, their parameters, and their return type, either in a way that applies to all overloads of the action or function or all parameters of that name across all overloads, or in a way that identifies a single overload.
 
 We use the <code>"&lt;<b>key</b>&gt;@&lt;14.2 Annotation Term&gt;#&lt;14.2.1 Annotation Qualifier&gt;" : &lt;value&gt;</code> syntax for inline annotations in the following cases to avoid explicit object representations:
 

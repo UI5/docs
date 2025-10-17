@@ -14,6 +14,14 @@ In general, there is a number of new features which are passed through by `v4.OD
 
 -   [8.2 Improved: Control Information without prefix odata](https://docs.oasis-open.org/odata/new-in-odata/v4.01/cn04/new-in-odata-v4.01-cn04.html#sec_ImprovedControlInformationwithoutpre)
 
+    > ### Note:  
+    > Change is taken care of by OpenUI5's `v4.ODataModel` and transformed back to the 4.0 format. No changes in your application code are needed here.
+
+-   [8.3 Improved: @type for Built-In Primitive Types](https://docs.oasis-open.org/odata/new-in-odata/v4.01/cn04/new-in-odata-v4.01-cn04.html#sec_ImprovedtypeforBuiltInPrimitiveTypes)
+
+    > ### Note:  
+    > Change is taken care of by OpenUI5's `v4.ODataModel` and transformed back to the 4.0 format. No changes in your application code are needed here.
+
 -   [8.4 New: Inlined JSON Streams](https://docs.oasis-open.org/odata/new-in-odata/v4.01/cn04/new-in-odata-v4.01-cn04.html#sec_NewInlinedJSONStreams)
 
 
