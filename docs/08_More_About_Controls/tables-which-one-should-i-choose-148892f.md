@@ -264,7 +264,7 @@ Hierarchical data
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)<sup>3</sup> 
 
 </td>
 <td valign="top">
@@ -318,7 +318,7 @@ Grouping
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)<sup>3</sup> 
 
 </td>
 <td valign="top">
@@ -328,7 +328,7 @@ Grouping
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)<sup>3</sup> 
 
 </td>
 </tr>
@@ -548,6 +548,10 @@ Cell selection
 > -   The browser being used
 
 For more information, search for loading items and performance in the responsive table section in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
+
+3\) To use grouping and hierarchical data features of the list binding within the OData V4 model for tables in `sap.ui.table`, use the `ODataV4Aggregation` and `ODataV4Hierarchy` plugins.
+
+To use the selection features of the list binding within the OData V4 model for tables in `sap.ui.table`, use the `ODataV4SingleSelection` and `ODataV4MultiSelection` plugins. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.table) for the V4 plugins.
 
 ***
 

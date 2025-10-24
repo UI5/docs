@@ -4,6 +4,7 @@ OpenUI5 Version
 
 -   [OpenUI5: UI Development Toolkit for HTML5](openui5-ui-development-toolkit-for-html5-95d113b.md)
     -   [What's New in OpenUI5](01_Whats-New/what-s-new-in-openui5-99ac68a.md)
+        -   [What's New in OpenUI5 1.142](01_Whats-New/what-s-new-in-openui5-1-142-92ed100.md)
         -   [What's New in OpenUI5 1.141](01_Whats-New/what-s-new-in-openui5-1-141-a7ed66d.md)
         -   [Previous Versions](01_Whats-New/previous-versions-6660a59.md)
         -   [Change Log](01_Whats-New/change-log-a6a78b7.md)
