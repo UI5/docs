@@ -63,7 +63,7 @@ If and when the entity has been successfully created in the back-end service, th
   
 **State Diagram for Creating an Entity via Upsert**
 
-![](images/loiof359082361f445868c75940f778a8c2e_LowRes.png "State Diagram for Creating an Entity via Upsert")
+![](images/loio71d871b7a36a4abf89a27cc5019d35f6_LowRes.png "State Diagram for Creating an Entity via Upsert")
 
 ***
 
