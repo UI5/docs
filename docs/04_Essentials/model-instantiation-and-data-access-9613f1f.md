@@ -4,8 +4,6 @@
 
 One OData V4 model instance can only cover one OData service. This section describes the creation of a model instance in more detail.
 
-The OData V4 model is primarily designed for OData V4 services. Nevertheless, OData V2 services may be used through an adapter as well. For more information see: [Consuming OData V2 Services with the OData V4 Model](consuming-odata-v2-services-with-the-odata-v4-model-365bdbd.md)
-
 When creating an OData V4 model instance, the only parameter you actually need is a map. This map must contain at least the `serviceUrl` property. For more information, see the [sap.ui.model.odata.v4.ODataModel constructor](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) API documentation in the Demo Kit.
 
 **OData V4 model instantiation:**
@@ -179,7 +177,11 @@ Some services do not support an "X-CSRF-Token" request header value "Fetch", for
 
 The OData model processes some of the response headers, namely:
 
--   `DataServiceVersion` \(only when consuming an OData V2 service\),
+-   `DataServiceVersion` \(only when consuming an OData V2 service; **deprecated**\),
+
+    > ### Caution:  
+    > The OData V2 service consumption with the OData V4 model is deprecated. Migrate your service to OData V4 if possible.
+
 -   `Date`,
 -   `ETag`,
 -   `OData-Version`,

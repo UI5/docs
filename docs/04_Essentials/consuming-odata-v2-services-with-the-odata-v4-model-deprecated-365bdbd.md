@@ -1,8 +1,11 @@
 <!-- loio365bdbd737034334a38a6fef07345196 -->
 
-# Consuming OData V2 Services with the OData V4 Model
+# Consuming OData V2 Services with the OData V4 Model \(deprecated\)
 
 The OpenUI5 framework can consume OData V2 Services in a non-intrusive way as if working directly with OData V4.
+
+> ### Caution:  
+> The OData V2 service consumption with the OData V4 model is deprecated. Migrate your service to OData V4 if possible.
 
 ***
 
@@ -205,11 +208,11 @@ Not all OData V4 features are supported yet when consuming an OData V2 service. 
 
 -   The OData V2 services has to provide inline type metadata in responses, i.e. property `__metadata.__type`. This information is needed to convert the data between the OData V2 and the OData V4 types.
 
--   Supported data types are listed above \(see [Type Mapping and Data Conversion](consuming-odata-v2-services-with-the-odata-v4-model-365bdbd.md#loio365bdbd737034334a38a6fef07345196__section_djd_wtp_fbb)\).
+-   Supported data types are listed above \(see [Type Mapping and Data Conversion](consuming-odata-v2-services-with-the-odata-v4-model-deprecated-365bdbd.md#loio365bdbd737034334a38a6fef07345196__section_djd_wtp_fbb)\).
 
 -   System query options $orderby, $filter and $count on top level and $expand and $select are supported. All other system query options raise an exception.
 
--   Not all OData V2 annotations are converted yet. Supported OData V2 annotations are listed above \(see [OData V2 Annotations](consuming-odata-v2-services-with-the-odata-v4-model-365bdbd.md#loio365bdbd737034334a38a6fef07345196__subsection_kmw_4fl_nbb)\).
+-   Not all OData V2 annotations are converted yet. Supported OData V2 annotations are listed above \(see [OData V2 Annotations](consuming-odata-v2-services-with-the-odata-v4-model-deprecated-365bdbd.md#loio365bdbd737034334a38a6fef07345196__subsection_kmw_4fl_nbb)\).
 
 
 > ### Caution:  

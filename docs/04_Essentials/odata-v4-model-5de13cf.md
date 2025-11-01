@@ -82,7 +82,7 @@ When a single-valued navigation property has a `null` value, you can create a ne
 A draft is an interim version of a business entity that has not yet been explicitly saved. Drafts are saved automatically in the background whenever users add or change information within a business entity.
 -   **[Deleting an Entity](deleting-an-entity-2613ebc.md "The v4.Context.delete method deletes an entity on the server and updates the user interface accordingly.")**  
 The `v4.Context.delete` method deletes an entity on the server and updates the user interface accordingly.
--   **[Consuming OData V2 Services with the OData V4 Model](consuming-odata-v2-services-with-the-odata-v4-model-365bdbd.md "The OpenUI5 framework can
+-   **[Consuming OData V2 Services with the OData V4 Model \(deprecated\)](consuming-odata-v2-services-with-the-odata-v4-model-deprecated-365bdbd.md "The OpenUI5 framework can
 		consume OData V2 Services in a non-intrusive way as if working directly with OData
 		V4.")**  
 The OpenUI5 framework can consume OData V2 Services in a non-intrusive way as if working directly with OData V4.
