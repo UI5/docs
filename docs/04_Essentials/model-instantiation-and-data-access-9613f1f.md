@@ -180,7 +180,7 @@ The OData model processes some of the response headers, namely:
 -   `DataServiceVersion` \(only when consuming an OData V2 service; **deprecated**\),
 
     > ### Caution:  
-    > The OData V2 service consumption with the OData V4 model is deprecated. Migrate your service to OData V4 if possible.
+    > The OData V2 service consumption with the OData V4 model is deprecated. We recommend migrating your service to OData V4.
 
 -   `Date`,
 -   `ETag`,

@@ -5,7 +5,7 @@
 The OpenUI5 framework can consume OData V2 Services in a non-intrusive way as if working directly with OData V4.
 
 > ### Caution:  
-> The OData V2 service consumption with the OData V4 model is deprecated. Migrate your service to OData V4 if possible.
+> The OData V2 service consumption with the OData V4 model is deprecated. We recommend migrating your service to OData V4.
 
 ***
 
