@@ -59,7 +59,7 @@ The OData V4 model keeps data with respect to bindings. This allows different vi
 
 [Filtering](filtering-5338bd1.md "The OData V4 Model supports server-side filtering on lists.")
 
-[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")
+[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server-side sorting on lists.")
 
 [OData Version 4.01 Part 2: URL Conventions, 4 Resource Path](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360928)
 

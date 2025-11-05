@@ -41,8 +41,8 @@ The OData V4 model supports certain events intended for applications, and others
 The OData V4 Model supports server-side filtering on lists.
 -   **[Selection](selection-ec55312.md "The OData V4 Model supports (de-)selection of individual rows and of all rows at once.")**  
 The OData V4 Model supports \(de-\)selection of individual rows and of all rows at once.
--   **[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")**  
-The OData V4 model supports server side sorting on lists.
+-   **[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server-side sorting on lists.")**  
+The OData V4 model supports server-side sorting on lists.
 -   **[Value Lists](value-lists-ab267a6.md "The OData V4 model supports the access to value list metadata and data.")**  
 The OData V4 model supports the access to value list metadata and data.
 -   **[OData Operations](odata-operations-b54f789.md "The OData V4 model supports OData operations (ActionImport,
