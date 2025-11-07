@@ -4,7 +4,7 @@
 
 The OData V4 model supports server-side sorting on lists.
 
-To use server-side sorting, set the operation mode to [sap.ui.model.odata.OperationMode.Server](https://ui5.sap.com/#/api/sap.ui.model.odata.OperationMode%23properties) as described unter [Filtering](filtering-5338bd1.md).
+To use server-side sorting, set the operation mode to [sap.ui.model.odata.OperationMode.Server](https://ui5.sap.com/#/api/sap.ui.model.odata.OperationMode%23properties), as described in [Filtering](filtering-5338bd1.md).
 
 `ODataListBinding` allows to set static and dynamic sorters:
 
