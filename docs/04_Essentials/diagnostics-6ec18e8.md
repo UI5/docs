@@ -331,3 +331,105 @@ You can start the interaction data collection in the following ways:
 
 [Interaction Tracking for Performance Measurement](interaction-tracking-for-performance-measurement-b2825ea.md "You can analyze the performance of your UI5 application by tracking the interaction that is performed on the UI.")
 
+<a name="loioc4ce41599ed143ecaf750f701695b88f"/>
+
+<!-- loioc4ce41599ed143ecaf750f701695b88f -->
+
+## Flexibility
+
+This feature is only available, if the app uses the `sap.ui.fl` library.
+
+With this feature, you can check whether there are SAPUI5 flexibilty changes for the controls used in an app, and you can analyze these changes.
+
+For example, you can see the layer of the changes in the layered repository, their type, or whether they're active. Active and erroneous changes are only evaluated for the controls currently in the DOM, in the current runtime.
+
+***
+
+<a name="loioc4ce41599ed143ecaf750f701695b88f__section_dkw_gtn_42b"/>
+
+## Prerequisites
+
+-   This tab only displays apps that use the `sap.ui.fl` library.
+
+-   SAPUI5 needs to be in debug mode.
+
+***
+
+<a name="loioc4ce41599ed143ecaf750f701695b88f__section_uf3_ptn_42b"/>
+
+## List of Applications
+
+The *Flexibility* panel displays a list of applications that have been handled by the `sap.ui.fl` library in this session. In case your application is an app variant, additional information about the base application will be displayed.
+
+For each app, you can download a JSON file containing the data that has been applied to an application as well as relevant runtime information.
+
+The JSON file contains changes on all layers. Personalization changes that have been saved to the USER layer are only collected for the current user.
+
+You can send this JSON file to SAP support for further investigation, or you can open the *UI Flexibility Diagnostics* application to investigate yourself.
+
+***
+
+<a name="loioc4ce41599ed143ecaf750f701695b88f__section_zfw_ptn_42b"/>
+
+## UI Flexibility Diagnostics Application
+
+In the *UI Flexibility Diagnostics* application, upload a JSON file that you downloaded from the *Flexibility* panel in the *Diagnostics* window.
+
+The *UI Flexibility Diagnostics* application displays all changes that have been loaded for the application. The arrows visualize dependencies between these changes. You can quickly spot which changes have been applied by checking their color:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Color
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Green
+
+</td>
+<td valign="top">
+
+This change has been applied to the control in the current system.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Red
+
+</td>
+<td valign="top">
+
+The change could not be applied, and an error was raised.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+White
+
+</td>
+<td valign="top">
+
+There was no attempt to apply the change either because required controls were not present, or because preconditions were not fulfilled.
+
+</td>
+</tr>
+</table>
+
+***
+
+For more information, see [SAPUI5 Flexibility: Adapting UIs Made Easy](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.143_SAPUI5_ABAP/en-US/a8e55aa2f8bc4127923b20685a6d1621.html "Modification-free, cost-saving, easy to use, and performant: Discover the new flexibility when adapting SAP Fiori UIs using SAPUI5 flexibility.") :arrow_upper_right:.
+

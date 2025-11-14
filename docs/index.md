@@ -554,6 +554,7 @@ OpenUI5 Version
                 -   [Debugging](04_Essentials/diagnostics-6ec18e8.md#loio7f4327d5aa274efda0c275d091c9d2f9)
                 -   [XML View and Templating Support Tools](04_Essentials/diagnostics-6ec18e8.md#loio1ecb6b9f3d044e7d8f5136447bd6d39e)
                 -   [Visualizing User Interaction](04_Essentials/diagnostics-6ec18e8.md#loio2e698c47a18e4303af9c6e59b6dd69b5)
+                -   [Flexibility](04_Essentials/diagnostics-6ec18e8.md#loioc4ce41599ed143ecaf750f701695b88f)
             -   [Support Assistant](04_Essentials/support-assistant-57ccd7d.md)
                 -   [Using the Support Assistant](04_Essentials/using-the-support-assistant-12572ab.md)
                     -   [Rules Management](04_Essentials/rules-management-3fc864a.md)
