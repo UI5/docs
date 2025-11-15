@@ -15,7 +15,7 @@ The app provides the following features:
 -   View product details and add comments
 
 
-We will use the worklist template as a starting point for this tutorial and add additional features to the app as we go through the steps. The template implements a typical "Worklist" floorplan, one of the patterns that are specified by the SAP Fiori design guidelines, but you can also use it as a starting point for easily creating any kind of list-based apps. For more information about worklist floorplans, see the *Related Information* section at the bottom of this topic.
+We will use the worklist template as a starting point for this tutorial and add additional features to the app as we go through the steps. The template implements a typical "Worklist" floorplan, one of the patterns that are specified by the SAP Design System guidelines, but you can also use it as a starting point for easily creating any kind of list-based apps. For more information about worklist floorplans, see the *Related Information* section at the bottom of this topic.
 
 ***
 
@@ -70,5 +70,5 @@ In this step, we extend the product detail view by adding a feature allowing to 
 **Related Information**  
 
 
-[SAP Fiori design guidelines: Worklist Floorplans](https://experience.sap.com/fiori-design/floorplans/work-list/)
+[SAP Design System guidelines: Worklist Floorplans](https://experience.sap.com/fiori-design/floorplans/work-list/)
 

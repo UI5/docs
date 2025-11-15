@@ -117,7 +117,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 
 We set the `rootView` to point to the created `App.view.xml`.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 1: Setting Up the Initial App](step-1-setting-up-the-initial-app-59b772b.md "We start by setting up a basic OpenUI5 app for this tutorial.")
 

@@ -112,7 +112,7 @@ Control
 
 **`sap.ui.table.AnalyticalTable`, `sap.ui.table.Table`, `sap.ui.table.TreeTable`**
 
-We have enhanced the `RowAction` functionality in `sap.ui.table` to display up to three actions, with the `Navigation` action always displayed on the far right. If more than three actions have been defined, an overflow menu is shown. For more information, see the [API Reference](https://ui5.sap.com/#/api/ap.ui.table.RowAction) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.table.Table/sample/sap.ui.table.sample.RowAction).
+We have enhanced the `RowAction` functionality in `sap.ui.table` to display up to three actions, with the `Navigation` action always displayed on the far right. If more than three actions have been defined, an overflow menu is shown. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.table.RowAction) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.table.Table/sample/sap.ui.table.sample.RowAction).
 
 <sub>Changed•Control•Info Only•1.142</sub>
 

@@ -159,7 +159,7 @@ sap.ui.define([
 
 In the `List.controller.js`, we attach a `onListItemPress` function to the `press` handler, which changes the `layout` to `TwoColumnsBeginExpanded`. This means that there are going to be two columns, where the first one is larger than the second. For more information on the available layout types, see [Types of Layout](../08_More_About_Controls/types-of-layout-3b9f760.md).
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 3: Using Dynamic Page for the List View](step-3-using-dynamic-page-for-the-list-view-0830bce.md "In this step, we create the list view of the app using sap.f.DynamicPage control.")
 

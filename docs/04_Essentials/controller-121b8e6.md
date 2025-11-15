@@ -213,7 +213,9 @@ For more information on how to use controller extensions, see [Controller Extens
 
 [sap.ui.core.mvc.Controller](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller)
 
--   **[Controller Extensions](controller-extensions-21515f0.md "Controller extensions allow you to add functionality to existing applications. They can be used for extensibility purposes, for example by
-        a customer wishing to extend SAP-delivered applications, or as a reusable part that is added to the original application.")**  
-Controller extensions allow you to add functionality to existing applications. They can be used for extensibility purposes, for example by a customer wishing to extend SAP-delivered applications, or as a reusable part that is added to the original application.
+-   **[Controller Extensions](controller-extensions-21515f0.md "Controller extensions enable you to enhance existing controller functionality without modifying the original application code, making them
+        one of the most versatile and commonly used extension mechanisms in OpenUI5. This
+        approach allows you to add custom business logic, override existing methods, and integrate seamlessly with the standard controller
+        lifecycle.")**  
+Controller extensions enable you to enhance existing controller functionality without modifying the original application code, making them one of the most versatile and commonly used extension mechanisms in OpenUI5. This approach allows you to add custom business logic, override existing methods, and integrate seamlessly with the standard controller lifecycle.
 

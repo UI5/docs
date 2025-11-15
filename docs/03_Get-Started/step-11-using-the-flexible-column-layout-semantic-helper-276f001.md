@@ -7,7 +7,7 @@ In this step, we use the `sap.f.FlexibleColumnLayoutSemanticHelper` class to imp
 `FlexibleColumnLayout` gives you the freedom to implement any app logic that involves changing the layout \(showing/hiding columns\) as a result of the user's actions. However, there are certain UX patterns that are considered as optimal and are recommended for SAP Fiori apps. The `FlexibleColumnLayoutSemanticHelper` class helps you implement them by giving you tips about what layout to display when.
 
 > ### Note:  
-> Using this class is NOT mandatory in order to build an app with the `FlexibleColumnLayout`, but makes it easier to achieve the optimal UX recommended in the SAP Fiori design guidelines.
+> Using this class is NOT mandatory in order to build an app with the `FlexibleColumnLayout`, but makes it easier to achieve the optimal UX recommended in the SAP Design System guidelines.
 
 For more information, see [Flexible Column Layout Semantic Helper](../08_More_About_Controls/flexible-column-layout-semantic-helper-623b01e.md).
 
@@ -506,7 +506,7 @@ sap.ui.define([
 
 Finally, we create a function in the `App.controller.js` to update the visibility of the list, detail, and detail-detail pages.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 10: Adding More Pages](step-10-adding-more-pages-a59b3de.md "In this step, we create an additional page that is displayed in a separate fullscreen column.")
 
