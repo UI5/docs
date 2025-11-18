@@ -2,11 +2,11 @@
 
 # Core Mechanisms for Extending Apps
 
-The first topics in this section describe how to configure app extensions in your `manifest.json` and explain **extension points** and **controller extensions**, which are our preferred standard approaches to customize applications.
+The first topics in this section describe how to configure app extensions in your `manifest.json` and explain **extension points** and **controller extensions**, which are the preferred standard approaches for customizing applications.
 
-There's also a section containing some further extensions. Consider these for specialised view customizations or for cases where our standard approaches aren't sufficient.
+You'll also find a section containing some further extensions. Consider these for specialized view customizations or when the standard approaches aren't sufficient.
 
-Another topic deals with your options for customizing application text.
+Another topic covers your options for customizing application text.
 
 -   **[Configuration in the manifest.json](configuration-in-the-manifest-json-c264d66.md "OpenUI5's extension configuration works through a
 		Component's manifest.json file, where you define your customization logic within the

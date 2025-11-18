@@ -2,10 +2,10 @@
 
 # Further Extensions
 
-We recommend using [Extension Points](extension-points-403c050.md) and [Controller Extensions](../04_Essentials/controller-extensions-21515f0.md) as our preferred standard approaches to customize applications. Only consider the mechanisms given below in the following cases:
+We recommend using [Extension Points](extension-points-403c050.md) and [Controller Extensions](../04_Essentials/controller-extensions-21515f0.md) as the preferred standard approaches to customize applications. Consider the mechanisms below only in the following cases:
 
--   You need a specialised extension that merely toggles the visibility of controls in your custom application.
--   You need to make fundamental changes to your view or your controller's behavior and our standard extension mechanisms aren't sufficient.
+-   You need a specialized extension that toggles the visibility of controls in your custom application.
+-   You need to make fundamental changes to your view or your controller's behavior, and the standard extension mechanisms aren't sufficient.
 
 -   **[View Modification](view-modification-aa93e1c.md "View modification lets you change specific properties of controls in standard views without altering the structure of the view
 		itself.")**  
