@@ -5,7 +5,7 @@
 Controller replacement lets you completely substitute an existing controller with a custom implementation. This approach gives you full control over the controller logic.
 
 > ### Tip:  
-> Before opting for controller replacement, consider whether [Controller Extensions](../04_Essentials/controller-extensions-21515f0.md) would meet your needs. Controller extensions offer better maintainability, support multiple layers of extensions, and are preferred for most scenarios.
+> Before opting for controller replacement, consider whether [Controller Extensions](controller-extensions-21515f0.md) would meet your needs. Controller extensions offer better maintainability, support multiple layers of extensions, and are preferred for most scenarios.
 
 To replace a controller without altering the view, simply configure it in the `sap.ui.controllerReplacements` section of your component's `manifest.json` file:
 
@@ -219,7 +219,7 @@ export default class CustomMainController extends MainController {
 **Related Information**  
 
 
-[Controller Extensions](../04_Essentials/controller-extensions-21515f0.md "Controller extensions enable you to enhance existing controller functionality without modifying the original application code, making them one of the most versatile and commonly used extension mechanisms in OpenUI5. This approach allows you to add custom business logic, override existing methods, and integrate seamlessly with the standard controller lifecycle.")
+[Controller Extensions](controller-extensions-21515f0.md "Controller extensions enable you to enhance existing controller functionality without modifying the original application code, making them one of the most versatile and commonly used extension mechanisms in OpenUI5. This approach allows you to add custom business logic, override existing methods, and integrate seamlessly with the standard controller lifecycle.")
 
 [Configuration in the manifest.json](configuration-in-the-manifest-json-c264d66.md "OpenUI5's extension configuration works through a Component's manifest.json file, where you define your customization logic within the sap.ui5/extends/extensions section. This declarative approach allows you to specify which views, controllers, or UI elements you want to extend or replace, without the need to modify the original application code.")
 

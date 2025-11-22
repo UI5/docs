@@ -39,7 +39,7 @@ Controller extensions are among the most common and versatile extension mechanis
 
 The simple object-based approach supports single-layer extensions, which means that once a controller has been extended, it cannot be extended again. However, the `sap.ui.core.mvc.ControllerExtension` class enables multiple layers of controller extensions, allowing for more complex customization scenarios, such as for applications that need to be extended multiple times.
 
-For more information, see [Controller Extensions](../04_Essentials/controller-extensions-21515f0.md).
+For more information, see [Controller Extensions](controller-extensions-21515f0.md).
 
 ***
 

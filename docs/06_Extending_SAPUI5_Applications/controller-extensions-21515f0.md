@@ -191,7 +191,7 @@ Object mixin controller extensions must be implemented as plain JavaScript objec
 The following example uses the module syntax approach, so we'll omit the `.controller` suffix.
 
 > ### Note:  
-> If you need typed controllers, consider using [Controller Replacement](../06_Extending_SAPUI5_Applications/controller-replacement-b0b14bf.md).
+> If you need typed controllers, consider using [Controller Replacement](controller-replacement-b0b14bf.md).
 
 Here's our controller extension, implemented in `CustomDetails.js`:
 
@@ -510,7 +510,7 @@ export default class SampleExtension2 extends ControllerExtension {
 }
 ```
 
-For more information on lifecycle hooks and controller metadata, see [Controller](controller-121b8e6.md).
+For more information on lifecycle hooks and controller metadata, see [Controller](../04_Essentials/controller-121b8e6.md).
 
 ***
 

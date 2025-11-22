@@ -49,7 +49,7 @@ Use when you need to add custom content to pre-defined locations in views, espec
 <tr>
 <td valign="top">
 
-[**Controller Extensions**](../04_Essentials/controller-extensions-21515f0.md)
+[**Controller Extensions**](controller-extensions-21515f0.md)
 
 </td>
 <td valign="top">
@@ -123,7 +123,7 @@ Use when you need complete substitution of a controller, especially for typed co
 The following code snippets show an example of the full configuration structure using separate `Component.js` and `manifest.json` files including all the above-mentioned extension mechanisms.
 
 > ### Note:  
-> Note the plural suffix "`s`" in `controllerNames` for the controller extension definition for `samples.components.ext.sap.Details`. For more information, see [Manifest Configuration](../04_Essentials/controller-extensions-21515f0.md#loio21515f09c0324218bb705b27407f5d61__section_MC).
+> Note the plural suffix "`s`" in `controllerNames` for the controller extension definition for `samples.components.ext.sap.Details`. For more information, see [Manifest Configuration](controller-extensions-21515f0.md#loio21515f09c0324218bb705b27407f5d61__section_MC).
 
 **`Component.js`** - Extending component class:
 

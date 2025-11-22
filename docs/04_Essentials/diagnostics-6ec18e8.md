@@ -355,7 +355,7 @@ For example, support teams can use the data to identify which change is causing 
 
 ## Anonymize User IDs
 
-You can select the checkbox to anonymize user IDs in the data, such as those of users who have made changes to the application: ![](images/a26179fa21694a989b37819f2f7cf705.image)
+You can select the checkbox to anonymize user IDs in the data, such as those of users who have made changes to the application: ![](images/loio8163102d06804e2c9c99a5a57057b8c4_HiRes.png)
 
 ***
 

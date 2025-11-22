@@ -16,7 +16,7 @@ OpenUI5's extension configuration works through a `Component`'s `manifest.json` 
 -   **[Extension Points](extension-points-403c050.md "Extension points are locations in application views where you can insert custom content. These points are pre-defined by the
         application.")**  
 Extension points are locations in application views where you can insert custom content. These points are pre-defined by the application.
--   **[Controller Extensions](../04_Essentials/controller-extensions-21515f0.md "Controller extensions enable you to enhance existing controller functionality without modifying the original application code, making them
+-   **[Controller Extensions](controller-extensions-21515f0.md "Controller extensions enable you to enhance existing controller functionality without modifying the original application code, making them
         one of the most versatile and commonly used extension mechanisms in OpenUI5. This
         approach allows you to add custom business logic, override existing methods, and integrate seamlessly with the standard controller
         lifecycle.")**  
