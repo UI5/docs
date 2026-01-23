@@ -719,8 +719,3 @@ To verify that your app works as before, perform checks to make sure the followi
 -   Navigation works as before
 
 
--   **[Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md "Information how to add new attributes of manifest (also known as descriptor) versions
-		higher than V2 (OpenUI5 1.30) to
-		the manifest file.")**  
-Information how to add new attributes of manifest \(also known as descriptor\) versions higher than V2 \(OpenUI5 1.30\) to the manifest file.
-

@@ -146,10 +146,10 @@ We can now navigate between the overview and the detail page, but the actual ite
 		function that shows our overview page again.")  
 Now we can navigate to our detail page and display an invoice, but we cannot go back to the overview page yet. We'll add a back button to the detail page and implement a function that shows our overview page again.
 33. [Step 33: Custom Controls \(TypeScript\)](step-33-custom-controls-typescript-3cc020e.md "In this step, we are going to extend the functionality of OpenUI5 with a custom control.
-		We want to rate the product shown on the detail page, so we create a composition of multiple
-		standard controls using the OpenUI5 extension mechanism and
-		add some glue code to make them work nicely together. This way, we can reuse the control
-		across the app and keep all related functionality in one module.")  
+        We want to rate the product shown on the detail page, so we create a composition of multiple
+        standard controls using the OpenUI5 extension mechanism and
+        add some glue code to make them work nicely together. This way, we can reuse the control
+        across the app and keep all related functionality in one module.")  
 In this step, we are going to extend the functionality of OpenUI5 with a custom control. We want to rate the product shown on the detail page, so we create a composition of multiple standard controls using the OpenUI5 extension mechanism and add some glue code to make them work nicely together. This way, we can reuse the control across the app and keep all related functionality in one module.
 34. [Step 34: Responsiveness \(TypeScript\)](step-34-responsiveness-typescript-e5577bb.md "In this step, we improve the responsiveness of our app. OpenUI5 applications can be run
 		on phone, tablet, and desktop devices and we can configure the application to make best use

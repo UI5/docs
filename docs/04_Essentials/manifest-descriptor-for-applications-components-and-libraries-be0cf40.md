@@ -1636,6 +1636,10 @@ oComponent.getManifestEntry("/sap.ui5/dependencies/libs"); // returns reference 
 -   **[Migrating from Component Metadata to Manifest](migrating-from-component-metadata-to-manifest-e282db2.md "Overview, how the component metadata are mapped to the manifest (descriptor for
 		applications, components and libraries). ")**  
 Overview, how the component metadata are mapped to the manifest \(descriptor for applications, components and libraries\).
+-   **[Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md "Information how to add new attributes of manifest (also known as descriptor) versions
+		higher than V2 (OpenUI5 1.30) to
+		the manifest file.")**  
+Information how to add new attributes of manifest \(also known as descriptor\) versions higher than V2 \(OpenUI5 1.30\) to the manifest file.
 -   **[Manifest for Libraries](manifest-for-libraries-b229914.md "The manifest (also known as descriptor) for libraries contains a subset of the
 		attributes in the manifest for applications and components.")**  
 The manifest \(also known as descriptor\) for libraries contains a subset of the attributes in the manifest for applications and components.
