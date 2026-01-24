@@ -110,6 +110,7 @@ export default class ProductRating extends Control {
     static readonly metadata: MetadataOptions = {
 
     }
+
     init(): void {
 
     }

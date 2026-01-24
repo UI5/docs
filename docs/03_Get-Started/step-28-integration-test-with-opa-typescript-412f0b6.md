@@ -71,8 +71,8 @@ export default class HelloPanelPage extends Opa5 {
         return this.waitFor({
             controlType: "sap.m.Dialog",
             success: function () {
-            // we set the view busy, so we need to query the parent of the app
-            Opa5.assert.ok(true, "The dialog is open");
+                // we set the view busy, so we need to query the parent of the app
+                Opa5.assert.ok(true, "The dialog is open");
             },
             errorMessage: "Did not find the dialog control"
         });
