@@ -4,6 +4,8 @@
 
 Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.145.0\)
 
+> ### Caution:  
+
 ***
 
 OpenUI5 offers powerful development concepts:
@@ -35,6 +37,11 @@ And many more....
 > Check at [https://sdk.openui5.org/versionoverview.html](https://sdk.openui5.org/versionoverview.html) which versions are available. You can view the version-specific Demo Kit by adding the version number to the URL, e.g. `https://sdk.openui5.org/1.38.8/`
 > 
 > For more information, see [Versioning and Maintenance of OpenUI5](02_Read-Me-First/versioning-and-maintenance-of-openui5-91f0214.md).
+
+***
+
+> ### Note:  
+> For information about SAP Fiori elements for OData V2, see [General Concepts](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.145_SAPUI5_ABAP/en-US/f52647a878ae4871a58f1a69055c50f5.html "") :arrow_upper_right:.
 
 -   **[What's New in OpenUI5](01_Whats-New/what-s-new-in-openui5-99ac68a.md "Find out what's new in the latest versions of OpenUI5.")**  
 Find out what's new in the latest versions of OpenUI5.
