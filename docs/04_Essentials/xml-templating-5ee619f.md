@@ -126,7 +126,7 @@ See the [sap.ui.core.sample.ViewTemplate.tiny](https://ui5.sap.com/#/entity/sap.
 ```js
 1   /*!
 2    * OpenUI5
-3    * (c) Copyright 2025 SAP SE or an SAP affiliate company.
+3    * (c) Copyright 2026 SAP SE or an SAP affiliate company.
 4    * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
 5    */
 6    
