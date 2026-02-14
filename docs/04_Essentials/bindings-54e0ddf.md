@@ -21,7 +21,7 @@ The OData V4 model supports the following types of binding:
 
 -   **[Parameters](parameters-1ab4f62.md "")**  
 
--   **[Binding Collection Inline Count](binding-collection-inline-count-77d2310.md "")**  
+-   **[Binding the Count of a Collection](binding-the-count-of-a-collection-77d2310.md "")**  
 
 -   **[Type Determination](type-determination-53cdd55.md "")**  
 

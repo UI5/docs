@@ -72,7 +72,7 @@ Announcement
 
 **Preannouncement: End of Support for Microsoft Internet Explorer 11 after OpenUI5 1.87**
 
-OpenUI5 1.87 will be the last version to support Microsoft Internet Explorer 11. For more information, see [OpenUI5 Support Status for Microsoft Internet Explorer 11](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
+OpenUI5 1.87 will be the last version to support Microsoft Internet Explorer 11. For more information, see [74b59efa0eef48988d3b716bd0ecc933.md\#loio74b59efa0eef48988d3b716bd0ecc933\_\_MS\_IE](../02_Read-Me-First/browser-and-platform-support-74b59ef.md#loio74b59efa0eef48988d3b716bd0ecc933__MS_IE).
 
 <sub>Deprecated•Announcement•Info Only•1.86</sub>
 
@@ -577,6 +577,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.143](what-s-new-in-openui5-1-143-ad08c66.md "With this release OpenUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in OpenUI5 1.142](what-s-new-in-openui5-1-142-92ed100.md "With this release OpenUI5 is upgraded from version 1.141 to 1.142.")
 

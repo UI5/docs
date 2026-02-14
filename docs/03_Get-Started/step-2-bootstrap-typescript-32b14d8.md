@@ -47,21 +47,21 @@ Specify the compiler options as follows:
 ```
 {
     "compilerOptions": {
-      "target": "es2023",
-      "module": "es2022",
-      "moduleResolution": "node",
-      "skipLibCheck": true,
-      "allowJs": true,
-      "strict": true,
-      "strictPropertyInitialization": false,
-      "rootDir": "webapp",
-      "baseUrl": "./",
-      "paths": {
-        "ui5/walkthrough/*": ["webapp/*"]
-      }
+        "target": "es2023",
+        "module": "es2022",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "allowJs": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "rootDir": "webapp",
+        "baseUrl": "./",
+        "paths": {
+            "ui5/walkthrough/*": ["webapp/*"]
+        }
     },
     "include": ["webapp/**/*"]
-  }
+}
 ```
 
 ***
@@ -99,22 +99,22 @@ In this step, we change the `index.html` page to make it load the OpenUI5 framew
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>UI5 TypeScript Walkthrough</title>
-	<script
-		id="sap-ui-bootstrap"
-		src="resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compat-version="edge"
-		data-sap-ui-async="true"
-		data-sap-ui-on-init="module:ui5/walkthrough/index"
-		data-sap-ui-resource-roots='{
-			"ui5.walkthrough": "./"
-		}'>
-	</script>
+    <meta charset="utf-8">
+    <title>UI5 TypeScript Walkthrough</title>
+    <script
+        id="sap-ui-bootstrap"
+        src="resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-compat-version="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-on-init="module:ui5/walkthrough/index"
+        data-sap-ui-resource-roots='{
+            "ui5.walkthrough": "./"
+        }'>
+    </script>
 </head>
 <body>
-	<div>Hello World</div>
+    <div>Hello World</div>
 </body>
 </html>
 ```

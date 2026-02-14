@@ -48,11 +48,11 @@ In our `webapp` folder, we create a new HTML file named `index.html` and enter t
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>UI5 TypeScript Walkthrough</title>
+    <meta charset="utf-8">
+    <title>UI5 TypeScript Walkthrough</title>
 </head>
 <body>
-	<div>Hello World</div>
+    <div>Hello World</div>
 </body>
 </html>
 ```

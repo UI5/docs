@@ -165,6 +165,10 @@ When creating instances of OpenUI5 controls programmatically \(i.e. not declarat
 
 -   When creating an aggregation binding with a template, explicitly set the `templateShareable` option to either `true` or `false`: Use `true` if your code manages the lifecycle of the template instance, or `false` if you prefer the framework to handle this automatically. For more information, see [Lifecycle of Binding Templates](../04_Essentials/lifecycle-of-binding-templates-3a4a9e5.md).
 
+-   Do **not** use an XML view or fragment as a binding template because cloning a view/fragment runs synchronously, which has the following consequences:
+    -   It eliminates the availability of mandatory asynchronous content, for example, Flexibility changes.
+    -   It does **not** correctly respect runtime changes to the control tree, since the original processing of the view/fragment is repeated.
+
 -   When an [Expression Binding](../04_Essentials/expression-binding-daf6852.md) refers to any of the built-in global symbols `odata.compare`, `odata.fillUriTemplate`, or `odata.uriEncode`, the corresponding modules must be required by the surrounding code \(either via [`template:require`](../04_Essentials/require-263f6e5.md), [`core:require`](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md), or in the controller code\):
 
     -   `odata.compare`: `sap/ui/model/odata/v4/ODataUtils`
@@ -251,7 +255,7 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 
 -   Use the `loadFragment` method of the `sap.ui.core.mvc.Controller` to load fragments asynchronously.
 
--   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). Use `template:require` if the XML content needs preprocessing.
+-   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). If the view or the fragment is used in XML templating scenarios, use `template:require`. For more information, see [XML Templating](../04_Essentials/xml-templating-5ee619f.md).
 
 -   Event handlers must not be referenced by composite global names \(e.g. `my.event.handler`\) as these have to be resolved in the global namespace.
 
@@ -408,9 +412,10 @@ To keep your apps future proof and up to date with the latest improvements, you 
 -   **[Load Only What You Really Need](load-only-what-you-really-need-e8fca3e.md "The amount of resources and data that your app loads will directly affect the performance of your app. You should declare all dependencies
 		and remove unused libraries and classes from your code.")**  
 The amount of resources and data that your app loads will directly affect the performance of your app. You should declare all dependencies and remove unused libraries and classes from your code.
--   **[Use the MVC Concept](use-the-mvc-concept-07afcf4.md "MVC (Model-View-Controller) is a concept for structuring your software. It makes it easier to maintain and to extend your
-		apps.")**  
-MVC \(Model-View-Controller\) is a concept for structuring your software. It makes it easier to maintain and to extend your apps.
+-   **[Use the MVC Concept](use-the-mvc-concept-07afcf4.md "MVC (Model-View-Controller) is a concept for structuring your software. Separating the
+		representation of information from the user interaction makes it easier to maintain and to
+		extend your apps.")**  
+MVC \(Model-View-Controller\) is a concept for structuring your software. Separating the representation of information from the user interaction makes it easier to maintain and to extend your apps.
 -   **[Keep Your Views Short and Simple](keep-your-views-short-and-simple-b0d7db7.md "The view part of your app reflects what users can see and interact with. You should use a suitable set of UI controls that match your
 		scenario and keep things simple.")**  
 The view part of your app reflects what users can see and interact with. You should use a suitable set of UI controls that match your scenario and keep things simple.

@@ -1,13 +1,8 @@
 <!-- loioad1c8056995148148cb398d318c8f5b9 -->
 
-<link rel="stylesheet" type="text/css" href="../css/sap-icons.css"/>
-
 # What's New in OpenUI5 1.144
 
 With this release OpenUI5 is upgraded from version 1.143 to 1.144.
-
-> ### Note:  
-> Content marked as <span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)** is provided as a courtesy, without a warranty, and may be subject to change. For more information, see the [preview disclaimer](https://help.sap.com/docs/whats-new-disclaimer).
 
 ****
 
@@ -49,123 +44,6 @@ Action
 Available as of
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-Upcoming 
-
-</td>
-<td valign="top">
-
-Deleted 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for OpenUI5 Versions \(Q1/2026\)** 
-
-</td>
-<td valign="top">
-
-**End of Cloud Provisioning for OpenUI5 Versions \(Q1/2026\)**
-
-The following OpenUI5 versions will be removed from the OpenUI5 Content Delivery Network \(CDN\) after the end of Q1/2026.
-
-**Minor Versions Reaching Their End of Cloud Provisioning**
-
-The following versions including all patches will be removed entirely:
-
--   1.124
--   1.127
--   1.130
--   1.131
--   1.132
-
-**Action**: Upgrade to a version that is still in maintenance.
-
-**Patch Versions Reaching Their End of Cloud Provisioning**
-
-The following patches will be removed:
-
--   1.38.63
--   1.71.68 to 1.71.69
--   1.84.48 to 1.84.49
--   1.96.36 to 1.96.37
--   1.108.38 to 1.108.39
--   1.120.24 to 1.120.27
--   1.124.9
--   1.127.5
--   1.130.2 to 1.130.5
--   1.131.1
--   1.132.0 to 1.132.1
-
-**Action**: Upgrade to the latest available patch for the respective OpenUI5 version.
-
-For more information, see [Version Overview](https://sdk.openui5.org/versionoverview.html).
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•Deleted•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Upcoming 
-
-</td>
-<td valign="top">
-
-UI Changed 
-
-</td>
-<td valign="top">
-
-Announcement 
-
-</td>
-<td valign="top">
-
-**Accessible Personalization for Table Filters** 
-
-</td>
-<td valign="top">
-
-**Accessible Personalization for Filters**
-
-> ### Note:  
-> The following information concerns important upcoming changes for end users. These changes may require end users to adjust and/or test cases to be adapted, but they won't stop or disrupt software or processes.
-
-We will revamp the personalization in the *Adapt Filters* dialog to allow users to personalize filter bars even more easily while ensuring accessibility compliance, enhancing user efficiency and satisfaction. For example, we will provide additional screenreader announcements, improve the usability of the screen content, and the display of certain UI elements.
-
-<sub><span style="color:#666666;"><span class="SAP-icons-V5"></span></span>**[Preview](https://help.sap.com/docs/whats-new-disclaimer)**•UI Changed•Announcement•Info Only•Upcoming</sub>
-
-</td>
-<td valign="top">
-
-Info Only 
-
-</td>
-<td valign="top">
-
-9999-01-01
-
-</td>
 </tr>
 <tr>
 <td valign="top">

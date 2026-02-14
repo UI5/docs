@@ -1,8 +1,8 @@
 <!-- loio77d2310b637b490495d78b393ed6aa64 -->
 
-# Binding Collection Inline Count
+# Binding the Count of a Collection
 
-The OData V4 model allows for binding the count of an entity collection displayed in a table **as a whole** \(for example, the number of teams displayed\). For more information, see [Binding An Entity Set's Count](binding-collection-inline-count-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BESC). It also allows for binding the count of entity collections displayed inside **individual table rows** \(for example, the number of employees per team\). For more information, see [Binding A Navigation Property's Count](binding-collection-inline-count-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BNPC).
+The OData V4 model allows for binding the count of an entity collection displayed in a table **as a whole** \(for example, the number of teams displayed\). For more information, see [Binding An Entity Set's Count](binding-the-count-of-a-collection-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BESC). It also allows for binding the count of entity collections displayed inside **individual table rows** \(for example, the number of employees per team\). For more information, see [Binding A Navigation Property's Count](binding-the-count-of-a-collection-77d2310.md#loio77d2310b637b490495d78b393ed6aa64__section_BNPC).
 
 ***
 
@@ -10,7 +10,7 @@ The OData V4 model allows for binding the count of an entity collection displaye
 
 ## Binding An Entity Set's Count
 
-The OData V4 model allows for binding the inline count of the entity collection read by an `ODataListBinding` which has the parameter `$count` set to `true`. Inactive contexts do not contribute to this count; for more information see [Creating an Entity in a Collection](creating-an-entity-in-a-collection-c9723f8.md). In the example below, the table title is bound to `"$count"`, thus representing the number of sales order entities in the collection bound to the table.
+The OData V4 model allows for binding the count of the entity collection read by an `ODataListBinding` which has the parameter `$count` set to `true`. Inactive contexts do not contribute to this count; for more information see [Creating an Entity in a Collection](creating-an-entity-in-a-collection-c9723f8.md). In the example below, the table title is bound to `"$count"`, thus representing the number of sales order entities in the collection bound to the table.
 
 **Example: Table with title bound to `$count`**
 
@@ -35,7 +35,7 @@ The OData V4 model allows for binding the inline count of the entity collection 
 </Table>
 ```
 
-The `ODataListBinding` provides a header context which holds header information like inline count for the list. Set the binding context for the relative property binding with path `"$count"` to the header context, see [ODataListBinding\#getHeaderContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/getHeaderContext). With this, the property binding's value is the list's inline count.
+The `ODataListBinding` provides a header context which holds header information like the count for the list. Set the binding context for the relative property binding with path `"$count"` to the header context, see [ODataListBinding\#getHeaderContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/getHeaderContext). With this, the property binding's value is the list's count.
 
 > ### Note:  
 > In the same way, the list's [selection count](selection-ec55312.md#loioec55312f796f45e8883810af3b68b46c__section_SCN) can be bound as well.
@@ -71,7 +71,7 @@ setHeaderContext : function () {
 > To see this solution for the above example, search for `"headerContext"` in the code of the *OData V4 "Sales Orders"* sample app.
 
 > ### Note:  
-> In addition to binding the inline count of the entity collection read by an `ODataListBinding` you can also use an `ODataPropertyBinding` with an absolute path to read a count separately:
+> In addition to binding the count of the entity collection read by an `ODataListBinding`, you can also use an `ODataPropertyBinding` with an absolute path to read a count separately:
 > 
 > ```xml
 > <Title text="{/SalesOrderList/$count} Sales Orders"/>

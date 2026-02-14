@@ -240,6 +240,38 @@ Resource model
 
 For more information, see the [API Reference: `sap.ui.model.BindingMode`](https://ui5.sap.com/#/api/sap.ui.model.BindingMode). 
 
+***
+
+<a name="loio68b9644a253741e8a4b9e4279a35c247__section_SDBM"/>
+
+## Setting the Default Binding Mode
+
+The default binding mode applies when a model instance is created. You can overwrite the default binding mode after model creation. Here's what you need to know:
+
+-   To change the default binding mode, call the `setDefaultBindingMode` method on the model as follows:
+
+    ```js
+    
+    var oModel = new sap.ui.model.json.JSONModel();
+    oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
+    ```
+
+    In this example, all new bindings for the model will have the one-way binding mode by default.
+
+-   You can, however, only set supported binding modes as default binding mode. You can check if a binding mode is supported as follows:
+
+    ```js
+    
+    var oModel = new sap.ui.model.json.JSONModel();
+    if (oModel.isBindingModeSupported(sap.ui.model.BindingMode.OneTime)) { // true
+        oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneTime); 
+    }
+    ```
+
+    > ### Note:  
+    > When you change the binding mode of an existing model instance, the existing bindings are not updated with the newly set binding mode.
+
+
 -   **[Binding Types](binding-types-91f0d8a.md "Depending on the different use cases, you can use different binding types: Propety
 		binding, context binding, and list binding.")**  
 Depending on the different use cases, you can use different binding types: Propety binding, context binding, and list binding.
@@ -251,9 +283,6 @@ You bind UI elements to data of a data source by defining a binding path to the 
         parsed and validated to be understood by the data source. For this purpose, you use
         formatters and data types.")**  
 Data that is presented on the UI often has to be converted so that is human readable and fits to the locale of the user. On the other hand, data entered by the user has to be parsed and validated to be understood by the data source. For this purpose, you use formatters and data types.
--   **[Models](models-e1b6259.md "A model in the Model View Controller concept holds the data and provides methods to
-		retrieve the data from the database and to set and update data.")**  
-A model in the Model View Controller concept holds the data and provides methods to retrieve the data from the database and to set and update data.
 -   **[Using Data Binding for Data Export](using-data-binding-for-data-export-f1ee7a8.md "Data binding supports the export of data in a specific format so that the data can be
         used in other programs.")**  
 Data binding supports the export of data in a specific format so that the data can be used in other programs.

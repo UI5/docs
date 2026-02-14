@@ -42,6 +42,18 @@ OpenUI5 provides Components as independent and reusable parts of UI5 application
 -   **[Model View Controller \(MVC\)](model-view-controller-mvc-91f2334.md "The Model View Controller (MVC) concept is used in OpenUI5 to separate the
 		representation of information from the user interaction. This separation facilitates development and the changing of parts independently.")**  
 The Model View Controller \(MVC\) concept is used in OpenUI5 to separate the representation of information from the user interaction. This separation facilitates development and the changing of parts independently.
+-   **[Models](models-e1b6259.md "A model in the Model View Controller concept holds the data and provides methods to
+		retrieve the data from the database and to set and update data.")**  
+A model in the Model View Controller concept holds the data and provides methods to retrieve the data from the database and to set and update data.
+-   **[Views](views-91f27e3.md "The view in the Model-View-Controller (MVC) concept is responsible for defining and rendering the UI. OpenUI5 supports predefined view types.")**  
+The view in the Model-View-Controller \(MVC\) concept is responsible for defining and rendering the UI. OpenUI5 supports predefined view types.
+-   **[Controller](controller-121b8e6.md "A controller contains methods that define how models and views interact.")**  
+A controller contains methods that define how models and views interact.
+-   **[Support for Unique IDs](support-for-unique-ids-91f28be.md "Stable IDs are used to identify and modify the controls within the controller during
+		runtime. However, if you reuse or nest these views, these stable IDs are no longer unique.
+		To avoid ambiguity, each view adds its own ID as prefix to all its child
+		controls.")**  
+Stable IDs are used to identify and modify the controls within the controller during runtime. However, if you reuse or nest these views, these stable IDs are no longer unique. To avoid ambiguity, each view adds its own ID as prefix to all its child controls.
 -   **[Data Binding](data-binding-68b9644.md "You use data binding to bind UI elements to data sources to keep the data in sync and
 		allow data editing on the UI.")**  
 You use data binding to bind UI elements to data sources to keep the data in sync and allow data editing on the UI.

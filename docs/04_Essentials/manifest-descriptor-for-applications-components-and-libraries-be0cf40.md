@@ -24,7 +24,7 @@ When the manifest schema changes, a new version is published alongside the relea
 
 ## Manifest Version 2
 
-Starting with OpenUI5 1.136, the new major version 2.x.x Using this new version ensures you follow best practices and are prepared for the future. As mentioned earlier, this new major version removes deprecated features. Check the [Migration Information for Upgrading the Manifest File](https://github.wdf.sap.corp/uics-innersource/ui5-docs/blob/main/docs/04_Essentials/migration-information-for-upgrading-the-manifest-file-a110f76.md) to learn about the changes needed to migrate to this version.
+Starting with OpenUI5 1.136, the new major version 2.x.x Using this new version ensures you follow best practices and are prepared for the future. As mentioned earlier, this new major version removes deprecated features. Check the [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md) to learn about the changes needed to migrate to this version.
 
 ***
 
@@ -379,6 +379,18 @@ OpenUI5 Version
 <td valign="top">
 
 \>=1.144
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.5.0 *or* 1.83.0
+
+</td>
+<td valign="top">
+
+\>=1.145
 
 </td>
 </tr>
@@ -1419,7 +1431,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.82.0",
+"_version": "1.83.0",
  
     "start_url": "index.html",
  
@@ -1506,7 +1518,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.144.0",
+            "minUI5Version": "1.145.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

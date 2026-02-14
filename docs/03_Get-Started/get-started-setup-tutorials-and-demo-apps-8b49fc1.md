@@ -54,8 +54,9 @@ If you can't fix the problem, try downloading the solution of the previews or cu
 
 If you want to see some practical examples for OpenUI5 apps, check out our [Demo Apps](https://ui5.sap.com/#/demoapps). These are fully-functional apps that showcase certain floorplans, control libraries, or other OpenUI5 features. You can also download the source code of each demo app to find out how everything works together. Feel free to explore!
 
--   **[Best Practices for Developers](best-practices-for-developers-28fcd55.md "This page is a good starting point for you to ensure your code bases, specifically your OpenUI5 applications and libraries, are ready for the future and won't become
-		outdated.")**  
+-   **[Best Practices for Developers](best-practices-for-developers-28fcd55.md "This page is a good starting point for you to ensure your code bases, specifically
+		your OpenUI5 applications and
+		libraries, are ready for the future and won't become outdated.")**  
 This page is a good starting point for you to ensure your code bases, specifically your OpenUI5 applications and libraries, are ready for the future and won't become outdated.
 -   **[Quickstart Tutorial](quickstart-tutorial-592f36f.md "Unleash your OpenUI5 skills with this simple three-step tutorial. We start
 		with a simple &quot;Hello World&quot; example, and convert it to a minimalist two-page app.")**  

@@ -4,8 +4,6 @@
 
 Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5. \(Documentation patch 1.145.0\)
 
-> ### Caution:  
-
 ***
 
 OpenUI5 offers powerful development concepts:

@@ -153,7 +153,7 @@ Feature
 
 **OpenUI5 OData V4 Model**
 
-You can now use the `Edm.Decimal` type with a new `scale="floating"` option, which is necessary for working with ABAP DECFLOAT types. The OData V4 model supports OData V4.01 services within this scope. For more information, see [Transition to OData V4.01](../04_Essentials/transition-to-odata-v4-01-cda632b.md)and the `scale` parameter in the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Decimal%23constructor).
+You can now use the `Edm.Decimal` type with a new `scale="floating"` option, which is necessary for working with ABAP DECFLOAT types. The OData V4 model supports OData V4.01 services within this scope. For more information, see [Upgrading Your OData Model](../04_Essentials/upgrading-your-odata-model-cda632b.md)and the `scale` parameter in the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.type.Decimal%23constructor).
 
 <sub>Changed•Feature•Info Only•1.142</sub>
 
@@ -380,6 +380,8 @@ Info Only
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.143](what-s-new-in-openui5-1-143-ad08c66.md "With this release OpenUI5 is upgraded from version 1.142 to 1.143.")
 
 [What's New in OpenUI5 1.141](what-s-new-in-openui5-1-141-a7ed66d.md "With this release OpenUI5 is upgraded from version 1.140 to 1.141.")
 

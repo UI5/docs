@@ -20,8 +20,8 @@ This page contains some of the complementary offerings from the UI5 ecosystem - 
 -   **[TypeScript Support](typescript-support-a7ee961.md "TypeScript is an extension of JavaScript that adds type information to the language. It helps developers catch errors early through type
 		checking and by providing code assist in supporting code editors, for example through code completion and inline documentation.")**  
 TypeScript is an extension of JavaScript that adds type information to the language. It helps developers catch errors early through type checking and by providing code assist in supporting code editors, for example through code completion and inline documentation.
--   **[Browser and Platform Support](browser-and-platform-support-74b59ef.md "Here you can find information on the browser and platform support for the OpenUI5 libraries on iOS, Android, macOS, and Windows platforms.")**  
-Here you can find information on the browser and platform support for the OpenUI5 libraries on iOS, Android, macOS, and Windows platforms.
+-   **[Browser and Platform Support](browser-and-platform-support-74b59ef.md "Supported browsers and platforms for the OpenUI5 libraries.")**  
+Supported browsers and platforms for the OpenUI5 libraries.
 -   **[Compatibility Rules](compatibility-rules-91f0873.md "The following sections describe what SAP can change in major, minor, and patch
 		releases. Always consider these rules when developing apps, features, or controls with or
 		for OpenUI5.")**  
