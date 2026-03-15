@@ -74,7 +74,7 @@ The manifest file, also known as the "descriptor" or "app descriptor," serves as
 
 Hence, we create a new file named `manifest.json` in the webapp folder and define its essential attributes:
 
--   The `_version` attribute is a mandatory field in the app descriptor that indicates the format version of the descriptor. This attribute is crucial for identifying application settings when the descriptor is read by various tools. As new features or changes are introduced in future versions of the descriptor, the version number helps to ensure compatibility and proper interpretation of the descriptor's contents. Consequently, with each new version of OpenUI5 a corresponding version of the app descriptor is released. For this tutorial, we have determined that our app requires a minimum OpenUI5 version of 1.128. Therefore, we specify the descriptor format version as 1.65.0, aligning it with the appropriate OpenUI5 version.
+-   The `_version` attribute is a mandatory field in the app descriptor that indicates the format version of the descriptor. This attribute is crucial for identifying application settings when the descriptor is read by various tools. As new features or changes are introduced in future versions of the descriptor, the version number helps to ensure compatibility and proper interpretation of the descriptor's contents. Consequently, with each new version of OpenUI5 a corresponding version of the app descriptor is released.
 
     > ### Note:  
     > To find the appropriate `_version` for each OpenUI5 release, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).
@@ -96,7 +96,7 @@ Hence, we create a new file named `manifest.json` in the webapp folder and defin
 
 ```
 {
-  "_version": "1.65.0",
+  "_version": "2.6.0",
   "sap.app": {
     "id": "ui5.walkthrough",
     "type": "application",

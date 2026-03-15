@@ -86,5 +86,5 @@ Start the application and check each screen element. Check the following:
 
 [Screen Reader Support for OpenUI5 Controls](../04_Essentials/screen-reader-support-for-openui5-controls-656e825.md "OpenUI5 offers screen reader support in order to aid people with visual impairments. The implementation is based on the ARIA and HTML standards.")
 
-[Theming](../04_Essentials/theming-497c27a.md "OpenUI5 is an HTML UI library, therefore styling is done using Cascading Style Sheets (CSS). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.")
+[Theming](../04_Essentials/theming-497c27a.md "OpenUI5 is an HTML library, therefore styling is done using Cascading Style Sheets (CSS). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.")
 

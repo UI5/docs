@@ -249,7 +249,7 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 
 -   Don't use `sap.ui.getCore().byId()` or`Element.getElementById()`. Use `this.byId()` or `this.getView().byId()` to address controls in your views or fragments.
 
--   Don't use native HTML, SVG, or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own notepad control. Existing inline CSS must be migrated to an external style sheet.
+-   Don't use native HTML, SVG, or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own custom control. Existing inline CSS must be migrated to an external style sheet.
 
 -   Don't use view cloning via `sap.ui.core.mvc.View#clone` as it's deprecated. Instead, call the respective factory function \(e.g. `XMLView.create`\) with the View's name.
 
@@ -360,13 +360,15 @@ Implement strict error handling to address critical issues.
 
 -   Don't use the global namespace of the library to add types. Use the return value of `Lib.init` instead to add them.
 
+-   Always return the object from `Lib.init()` as the return value of your `library.js` module. This enables consumers of the library to access enums and other exports properly. For more information, see [The library.js File](../07_Developing_Controls/the-library-js-file-bd039ed.md).
 -   Use the library `apiVersion 2`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
 
--   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that shall be usable as a type of control properties.
+-   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that you want to use as types for control properties. Make sure that enum keys and values match, for example: `{Small: "Small", Large: "Large"}`.
 
+-   For enums in nested namespaces, create the namespace object first, before defining the enum, for example `thisLib.cards = thisLib.cards|| {}; thisLib.cards.MyEnum = {...}`. For more information, see [Enumerations and RegEx Types](../07_Developing_Controls/the-library-js-file-bd039ed.md#loiobd039ed5f99e4d3f8d020b0da62f9d85__section_ENUM).
 -   Define the `appData/manifest/i18n` section in the `.library` file or the `sap.app/i18n` section in the `manifest.json`, so that the framework can load resource bundles in advance.
 
--   Properly define library dependencies in all places where it is required. For more information, see [Dependencies to Libraries](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md#loio8521ad1955f340f9a6207d615c88d7fd__section_DEPLIB).
+-   Properly define library dependencies in all places where it is required. For more information, see [Dependencies to Libraries](../04_Essentials/manifest-dependencies-to-libraries-and-components-8521ad1.md#loio8521ad1955f340f9a6207d615c88d7fd__section_DEPLIB).
 
 
 **Additional Information:**

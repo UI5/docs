@@ -394,6 +394,18 @@ OpenUI5 Version
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+2.6.0 *or* 1.84.0
+
+</td>
+<td valign="top">
+
+\>=1.146
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version and implications when upgrading, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
@@ -1091,7 +1103,7 @@ Mandatory; specifies the external dependencies that are loaded by the OpenUI5 co
 -   `components`: ID \(namespace\) of the components that the OpenUI5 core should load for use in your component. If your app requires a minimum version of the component, specify the `minVersion` for information purposes. Specify `lazy` to indicate that the component shall be lazy loaded.
 
 
-For more information, see [Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md).
+For more information, see [Manifest Dependencies to Libraries and Components](manifest-dependencies-to-libraries-and-components-8521ad1.md).
 
 </td>
 </tr>
@@ -1431,7 +1443,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.83.0",
+"_version": "1.84.0",
  
     "start_url": "index.html",
  
@@ -1518,7 +1530,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.145.0",
+            "minUI5Version": "1.146.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -1665,9 +1677,9 @@ The `resources.json` file lists all resources in a component or library folder. 
         descriptor) V2 for applications file for an existing transactional app
             created by the customer based on SAP Fiori.")**  
 Detailed description of the steps needed to create a manifest \(also known as descriptor\) V2 for applications file for an existing transactional app created by the customer based on SAP Fiori.
--   **[Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md "Description of the performance-relevant attributes that are available for the descriptor
-		for applications, components and libraries")**  
-Description of the performance-relevant attributes that are available for the descriptor for applications, components and libraries
+-   **[Manifest Dependencies to Libraries and Components](manifest-dependencies-to-libraries-and-components-8521ad1.md "Description of the performance-relevant attributes that are available for the manifest
+		(also known as descriptor for applications, components and libraries).")**  
+Description of the performance-relevant attributes that are available for the manifest \(also known as descriptor for applications, components and libraries\).
 -   **[Manifest Model Preload](manifest-model-preload-26ba6a5.md "The preload flag  enables a preload mode for a model, thus improving
 		the startup performance of an app or component.")**  
 The `preload` flag enables a preload mode for a model, thus improving the startup performance of an app or component.

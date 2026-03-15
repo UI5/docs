@@ -64,7 +64,7 @@ The resource handler in OpenUI5 provides the following additional features:
 
 ## Resource Servlet
 
-For Java Servlet containers, OpenUI5 provides a `ResourceServlet` to manage the access to OpenUI5 resources within the web application and the various UI libraries in the classpath. The following snippet shows how to enable the resource servlet for OpenUI5:
+For Java Servlet containers, OpenUI5 provides a `ResourceServlet` to manage the access to OpenUI5 resources within the web application and the various libraries in the class path. The following snippet shows how to enable the resource servlet for OpenUI5:
 
 ```xml
   <!-- ============================================================ -->
@@ -298,7 +298,7 @@ x-sap-ResourceUrl = http://%server%:%port%/sap/public/bc/ui5_ui5/resources/sap-u
 
 ## Resource Packaging
 
-Resource packaging for web applications and Java modules can be any kind of JAR file, for example OpenUI5 UI library that is available in the classpath of the web application.
+Resource packaging for web applications and Java modules can be any kind of JAR file, for example a OpenUI5 library that is available in the class path of the web application.
 
 Store the resources as follows:
 
@@ -312,7 +312,7 @@ Store the resources as follows:
         **/**
     ```
 
--   OpenUI5 UI libraries:
+-   OpenUI5 libraries:
 
     ```
     META-INF/
@@ -331,11 +331,11 @@ Store the resources as follows:
 
 ## OSGi Servlet Container
 
-When you run OpenUI5 as an OSGi web bundle and reference the UI libraries as OSGi bundles, you need to determine the OpenUI5 OSGi bundles as follows:
+When you run OpenUI5 as an OSGi web bundle and reference the libraries as OSGi bundles, you need to determine the OpenUI5 OSGi bundles as follows:
 
--   Extend the `ResourceServlet` in the OSGi servlet container by using an OSGi fragment that is responsible to add the OSGi flavor for the determination of UI libraries. Now, the `ResourceServlet` is aware of the OSGi bundles and can search within the OSGi servlet container for UI libraries.
+-   Extend the `ResourceServlet` in the OSGi servlet container by using an OSGi fragment that is responsible to add the OSGi flavor for the determination of libraries. Now, the `ResourceServlet` is aware of the OSGi bundles and can search within the OSGi servlet container for libraries.
 
--   The `OSGiResourceServlet` uses the following entry in the `MANIFEST.MF` of the UI library's JAR files to determine the relevant UI libraries:
+-   The `OSGiResourceServlet` uses the following entry in the `MANIFEST.MF` of the library's JAR files to determine the relevant libraries:
 
     ```
     x-sap-ui5-ContentTypes: UILibrary

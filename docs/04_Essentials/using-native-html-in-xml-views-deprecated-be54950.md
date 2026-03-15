@@ -7,7 +7,7 @@ The use of native HTML in XML views depends on the XHTML feature set.
 ***
 
 > ### Caution:  
-> Deprecated as of OpenUI5 version 1.120. Consider either using `sap.ui.core.HTML` or creating a notepad control instead, both of which can be used in your XML view.
+> Deprecated as of OpenUI5 version 1.120. Consider using either `sap/ui/core/HTML` or your own custom control instead, both of which can be used in your XML view.
 
 When mixing XHTML and OpenUI5 controls, observe the following rules:
 

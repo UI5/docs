@@ -22,14 +22,14 @@ You are familiar with OpenUI5 app development, but do you want to learn how to d
 
 
 
+-   **[What's New in OpenUI5 1.146](what-s-new-in-openui5-1-146-6ccfe05.md "With
+		this release OpenUI5 is upgraded
+		from version 1.145 to 1.146.")**  
+With this release OpenUI5 is upgraded from version 1.145 to 1.146.
 -   **[What's New in OpenUI5 1.145](what-s-new-in-openui5-1-145-7676a2a.md "With
 		this release OpenUI5 is upgraded
 		from version 1.144 to 1.145.")**  
 With this release OpenUI5 is upgraded from version 1.144 to 1.145.
--   **[What's New in OpenUI5 1.144](what-s-new-in-openui5-1-144-ad1c805.md "With
-		this release OpenUI5 is upgraded
-		from version 1.143 to 1.144.")**  
-With this release OpenUI5 is upgraded from version 1.143 to 1.144.
 -   **[Previous Versions](previous-versions-6660a59.md "")**  
 
 -   **[Change Log](change-log-a6a78b7.md "")**  

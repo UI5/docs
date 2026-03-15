@@ -24,7 +24,7 @@ Depending on the environment in which OpenUI5 is used, the libraries or your app
 
 ## Artifacts in the Framework
 
-The top-level structural unit is called a **library**. Libraries are the master artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom UI libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
+The top-level structural unit is called a **library**. Libraries are the main artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
 
 A UI **element** is the basic building block of our user interfaces; it is a reusable entity with properties, events, methods, and relations. The most important relations are aggregations to other UI elements, and in this way a tree structure of elements can be created.
 
@@ -97,11 +97,11 @@ No need to worry about device specifics! OpenUI5 apps run on smartphones, tablet
 -   **[Testing](testing-7cdee40.md "OpenUI5 provides several testing options, like to unit and integration tests
 		and the OData V2 mock server.")**  
 OpenUI5 provides several testing options, like to unit and integration tests and the OData V2 mock server.
--   **[Theming](theming-497c27a.md "OpenUI5 is an HTML UI
-		library, therefore styling is done using Cascading Style Sheets (CSS). This allows for
-		creating an impressive visual experience using a widely known standard technology which is
-		well-accepted on the market.")**  
-OpenUI5 is an HTML UI library, therefore styling is done using Cascading Style Sheets \(CSS\). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.
+-   **[Theming](theming-497c27a.md "OpenUI5 is an HTML library,
+		therefore styling is done using Cascading Style Sheets (CSS). This allows for creating an
+		impressive visual experience using a widely known standard technology which is well-accepted
+		on the market.")**  
+OpenUI5 is an HTML library, therefore styling is done using Cascading Style Sheets \(CSS\). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.
 -   **[Localization](localization-91f217c.md "The framework concepts for text localization in OpenUI5 are aligned with the general
 		concepts of the Java platform. ")**  
 The framework concepts for text localization in OpenUI5 are aligned with the general concepts of the Java platform.

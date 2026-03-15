@@ -16,6 +16,8 @@ Generally, OpenUI5 does not support browsers or platforms that are no longer und
 
 The following tables provide details on supported browsers and platforms.
 
+**Supported Desktop Browsers and Operating Systems**
+
 
 <table>
 <tr>
@@ -100,6 +102,8 @@ Latest version
 </td>
 </tr>
 </table>
+
+**Supported Mobile Browsers and Operating Systems**
 
 
 <table>

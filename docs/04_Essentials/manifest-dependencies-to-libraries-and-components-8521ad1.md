@@ -1,10 +1,10 @@
 <!-- loio8521ad1955f340f9a6207d615c88d7fd -->
 
-# Descriptor Dependencies to Libraries and Components
+# Manifest Dependencies to Libraries and Components
 
-Description of the performance-relevant attributes that are available for the descriptor for applications, components and libraries
+Description of the performance-relevant attributes that are available for the manifest \(also known as descriptor for applications, components and libraries\).
 
-The performance-relevant attributes have been introduced with the version 3 of the descriptor for applications, components, and libraries.
+The performance-relevant attributes have been introduced with the version 3 of the manifest.
 
 ***
 
@@ -38,7 +38,7 @@ For **applications and components**, modify the `manifest.json` as follows:
 
 ```
 
-For **libraries**, modify the `.library` file as shown in the follown code sample. This file is available because the `manifest.json` for libraries is generated based on this metadata.
+For **libraries**, modify the `.library` file as shown in the following code sample. This file is available because the `manifest.json` for libraries is generated based on this metadata.
 
 ```
 <dependencies>
@@ -79,7 +79,7 @@ sap.ui.define(['sap/ui/core/Lib'], function(Library) {
 
 ## Dependencies to Components
 
-**Scenario 1:** UI library contains multiple components
+**Scenario 1:** Library contains multiple components
 
 In this scenario, the library is the leading container and **no** component preload is available. This means, that you maintain the library dependency as described above. This is true for all kinds of component dependencies, also for `sap.ui5/extends/component`. If the extended component originates in a library, do **not** use `sap.ui5/extends/component`, but only declare the library dependency. Otherwise, the component dependency causes a 404 request.
 
