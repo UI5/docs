@@ -80,7 +80,7 @@ Start the application and check each screen element. Check the following:
 **Related Information**  
 
 
-[Support for Unique IDs](../04_Essentials/support-for-unique-ids-91f28be.md "Stable IDs are used to identify and modify the controls within the controller during runtime. However, if you reuse or nest these views, these stable IDs are no longer unique. To avoid ambiguity, each view adds its own ID as prefix to all its child controls.")
+[ID Handling in OpenUI5: The Complete Guide](id-handling-in-openui5-the-complete-guide-f51dbb7.md "This guide covers everything you need to know about ID handling in OpenUI5, from stable IDs for controls and components to DOM element IDs and how the framework manages them. Understanding ID handling is essential for building maintainable, testable, and adaptable applications.")
 
 [Keyboard Handling for OpenUI5 Controls for Developers](../07_Developing_Controls/keyboard-handling-for-openui5-controls-for-developers-3e631ad.md "As an application developer, you need to be aware of how the various accessibility aspects, like keyboard handling, are implemented and used.")
 

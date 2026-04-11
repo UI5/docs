@@ -17,12 +17,10 @@ OpenUI5 UI elements provide keyboard handling in order to improve accessibility 
 		features out of the box.")**  
 OpenUI5 offers visualization features out of the box.
 -   **[High Contrast Themes for OpenUI5 Controls](high-contrast-themes-for-openui5-controls-cfcbde2.md "
-		OpenUI5  offers two high
-		contrast themes  for controls - High Contrast Black (HCB) and High Contrast White (HCW).
-		These themes support people with visual impairments and are required by the
-			Accessibility product standard. The themes can be switched on by
-		adding a dedicated URL parameter.")**  
-OpenUI5 offers two high contrast themes for controls - High Contrast Black \(HCB\) and High Contrast White \(HCW\). These themes support people with visual impairments and are required by the **Accessibility** product standard. The themes can be switched on by adding a dedicated URL parameter.
+		OpenUI5 offers two high contrast themes for its controls, High Contrast Black
+		(HCB) and High Contrast White (HCW). These themes support users with visual impairments and are required by the accessibility product
+		standards. The themes can be switched on by adding a dedicated URL parameter.")**  
+OpenUI5 offers two high contrast themes for its controls, High Contrast Black \(HCB\) and High Contrast White \(HCW\). These themes support users with visual impairments and are required by the accessibility product standards. The themes can be switched on by adding a dedicated URL parameter.
 -   **[Messaging Patterns](messaging-patterns-6393d1d.md "Standard messaging patterns ensure that messages appear at predefined
 		locations.")**  
 Standard messaging patterns ensure that messages appear at predefined locations.

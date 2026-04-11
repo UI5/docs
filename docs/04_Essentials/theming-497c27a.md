@@ -141,7 +141,7 @@ For detailed implementation guidance, see the specialized topics below this topi
 
 -   **[Available Themes](available-themes-da0d2e7.md "Provides a list of themes and their names. ")**  
 Provides a list of themes and their names.
--   **[Setting Themes](setting-themes-e9fc648.md "You define which theme is used by your app either by using the theme
+-   **[Theme Configuration and Management](theme-configuration-and-management-e9fc648.md "You define which theme is used by your app either by using the theme
 		configuration parameter or the sap/ui/core/Theming.setTheme
 		method.")**  
 You define which theme is used by your app either by using the `theme` configuration parameter or the `sap/ui/core/Theming.setTheme` method.
@@ -149,13 +149,11 @@ You define which theme is used by your app either by using the `theme` configura
 		offers advanced theming concepts and functions which can be used optionally. These concepts
 		are outlined in detail below.")**  
 On top of pure CSS, OpenUI5 offers advanced theming concepts and functions which can be used optionally. These concepts are outlined in detail below.
--   **[Creating Themable User Interfaces](creating-themable-user-interfaces-a2c67ac.md "There are several things you should keep in mind to ensure that an application can
-		actually be themed.")**  
-There are several things you should keep in mind to ensure that an application can actually be themed.
--   **[CSS Classes for Theme Parameters](css-classes-for-theme-parameters-ea08f53.md "OpenUI5 provides a set of
-		essential adjustable colors behind the generic predefined CSS rules that enable custom
-		content to use the respective CSS classes for the required colors.")**  
-OpenUI5 provides a set of essential adjustable colors behind the generic predefined CSS rules that enable custom content to use the respective CSS classes for the required colors.
+-   **[Creating Themable User Interfaces](creating-themable-user-interfaces-a2c67ac.md "Best
+		practices for developing OpenUI5 applications and controls that properly adapt to
+		different themes while ensuring an excellent and consistent user experience, good performance, and consistent accessibility standards across
+		all themes.")**  
+Best practices for developing OpenUI5 applications and controls that properly adapt to different themes while ensuring an excellent and consistent user experience, good performance, and consistent accessibility standards across all themes.
 -   **[Theming FAQ](theming-faq-d0db4d5.md "Frequently asked questions regarding theming in OpenUI5")**  
 Frequently asked questions regarding theming in OpenUI5
 
