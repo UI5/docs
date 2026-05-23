@@ -8,11 +8,11 @@ The following tables show available configuration options.
 > In earlier framework versions, the configuration options available in OpenUI5 could be found in the [API Reference via the `sap.ui.core.Configuration`](https://ui5.sap.com/#/api/sap.ui.core.Configuration). This legacy module has been deprecated with OpenUI5 1.120 and replaced by a modular, future-proof solution for configuration handling.
 
 > ### Note:  
-> As of OpenUI5 1.120, the configuration options follow a consistent naming scheme based on kebab-case notation. Configuration options in older framework versions or code samples \(especially those from before OpenUI5 1.120\) may still use the former camelCase notation. **You must now use the kebab-case names** instead of the old camelCase syntax, e.g. `log-level` instead of `logLevel`.
+> The OpenUI5 configuration options now follow a consistent naming scheme based on kebab-case notation. Configuration options in older framework versions or code samples \(especially those from before OpenUI5 1.120\) may follow the former camelCase notation. Typically, you should now use \(or search for\) the newer names, e.g. `log-level` instead of `logLevel`.
 
 The available configuration options are given below the topic they belong to, e.g. **Localization**, **Theming**, etc. Often, these topics correspond to modules with the same name, which provide methods to retrieve and set the values of their associated configuration options.
 
-Some configuration options can also be set via URL parameters, which is indicated by an entry in the corresponding column in the tables below. URL parameter names are composed of the `sap-ui-` prefix together with the name of the configuration option, for example: `sap-ui-log-level=ALL`. An application may set the `ignore-url-params` option to `true` to disable configuration URL parameters.
+Some configuration options can also be set via URL parameters, which is indicated by an entry in the corresponding column in the tables below. URL parameter names are composed of the `sap-ui-` prefix together with the name of the configuration option, for example: `sap-ui-log-level=ALL`. An application may set the `ignore-url-parameters` option to `true` to disable configuration URL parameters.
 
 Typically, configuration options are evaluated when booting OpenUI5. After that, all changes to these options are ignored. For some configuration options, specific APIs exist that allow you to modify their values at runtime. This is indicated by an entry in the corresponding column in the tables below, which usually also provides a link to the respective API method.
 
@@ -209,7 +209,7 @@ by URL parameter
 </td>
 <td valign="top">
 
-Type: [`sap/base/i18n/date/CalendarType`](https://ui5.sap.com/#/api/module:sap/base/i18n/date/CalendarType)
+Type: [`sap/base/18n/date/CalendarType`](https://ui5.sap.com/#/api/module:sap/base/18n/date/CalendarType)
 
 Default value: If there is no value defined, the actual value is determined from the locale data for the configured locale.
 
@@ -237,13 +237,13 @@ Defines the calendar type that is used for locale-dependent, date-related featur
 </td>
 <td valign="top">
 
-Type: [`sap/base/i18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/i18n/date/CalendarWeekNumbering)
+Type: [`sap/base/18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/18n/date/CalendarWeekNumbering)
 
 Default value: `Default`
 
 Defines the calendar week numbering algorithm that is used to determine the first day of the week and the first calendar week of the year.
 
-For more information, see the [API Reference: `sap/base/i18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/i18n/date/CalendarWeekNumbering)
+For more information, see the [API Reference: `sap/base/18n/date/CalendarWeekNumbering`](https://ui5.sap.com/#/api/module:sap/base/18n/date/CalendarWeekNumbering)
 
 </td>
 <td valign="top">
@@ -469,11 +469,11 @@ Defines whether a favicon is used. If set to `true`, a favicon, defined as part 
 
 [Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `string`
 
-Default value: The default theme of the used UI5 version. For more information, see [Theming - Default Behavior](theming-497c27a.md#loio497c27a8ee26426faacd2b8a1751794a__sub_default).
+Default value: The default theme of the used UI5 version
 
 Defines the theme that shall be used.
 
-**Theme Root:** When the theme string contains an at-sign \(`@`\), anything before the `@` is assumed to denote the ID of the theme, while anything after the `@` is assumed to represent the URL location of the theme. To defend against XSS attacks, only origins maintained in `sap-allowed-theme-origins` are accepted. For more information, see [Theme Origin Allowlist](theme-configuration-and-management-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA).
+**Theme Root:** When the theme string contains an at-sign \(`@`\), anything before the `@` is assumed to denote the ID of the theme, while anything after the `@` is assumed to represent the URL location of the theme. To defend against XSS attacks, only origins maintained in `sap-allowed-theme-origins` are accepted. For more information, see [Theme Origin Allowlist](setting-themes-e9fc648.md#loioe9fc648661d84ed89360bbec3ae02611__section_TOA).
 
 </td>
 <td valign="top">
@@ -507,6 +507,32 @@ Defines the location of themes.
 <td valign="top">
 
 ![NO](images/loiodfb38de82f6d46dab60cb1397e3ed8ae_LowRes.png)
+
+</td>
+<td valign="top">
+
+![NO](images/loiodfb38de82f6d46dab60cb1397e3ed8ae_LowRes.png)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`preload-lib-css`
+
+</td>
+<td valign="top">
+
+[Type](configuration-options-and-url-parameters-91f2d03.md#loio91f2d03b6f4d1014b6dd926db0e91070__section_TVT): `string[]`
+
+Default value: `{}`
+
+Specifies a list of UI libraries using the same syntax as the `libs` property, for which the OpenUI5 core does not include the `library.css` stylesheet in the head of the page. If the list starts with an exclamation mark \(!\), no stylesheet is loaded at all for the specified libs. In this case, it is assumed that the application takes care of loading CSS, for example, a manually merged, single CSS file. Otherwise, the framework instructs the back end to create a merged CSS for the specified libs. In both cases, if the first libraries name is an asterisk \(\*\), it will be expanded to the list of already configured libraries.
+
+</td>
+<td valign="top">
+
+![YES](../02_Read-Me-First/images/loio3929e469c7824eb0a69206aeac69f257_LowRes.png)
 
 </td>
 <td valign="top">

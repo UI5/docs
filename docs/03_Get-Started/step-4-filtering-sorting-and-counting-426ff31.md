@@ -33,62 +33,61 @@ You can view and download all files at [OData V4 - Step 4](https://ui5.sap.com/#
 
 ```js
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
-    "sap/m/MessageBox",
-    "sap/ui/model/Sorter",
-    "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator",
-    "sap/ui/model/FilterType",
-    "sap/ui/model/json/JSONModel"
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast",
+	"sap/m/MessageBox",
+	"sap/ui/model/Sorter",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator",
+	"sap/ui/model/FilterType",
+	"sap/ui/model/json/JSONModel"
 ], function (Controller, MessageToast, MessageBox, Sorter, Filter, FilterOperator, FilterType, JSONModel) {
-    "use strict";
+	"use strict";
 
-    return Controller.extend("sap.ui.core.tutorial.odatav4.controller.App", {
+	return Controller.extend("sap.ui.core.tutorial.odatav4.controller.App", {
 
-        onInit : function () {
-            var oJSONData = {
-                    busy : false,
-                    order : 0
-                },
-                oModel = new JSONModel(oJSONData);
+		onInit : function () {
+			var oJSONData = {
+				busy : false,
+				order : 0
+			};
+			var oModel = new JSONModel(oJSONData);
+			this.getView().setModel(oModel, "appView");
+		},
 
-            this.getView().setModel(oModel, "appView");
-        },
+		onRefresh : function () {
+		...
+		},
 
-        onRefresh : function () {
-        ...
-        },
+						onSearch : function () {
+			var oView = this.getView(),
+				sValue = oView.byId("searchField").getValue(),
+				oFilter = new Filter("LastName", FilterOperator.Contains, sValue);
 
-        onSearch : function () {
-            var oView = this.getView(),
-                sValue = oView.byId("searchField").getValue(),
-                oFilter = new Filter("LastName", FilterOperator.Contains, sValue);
+			oView.byId("peopleList").getBinding("items").filter(oFilter, FilterType.Application);
+		},
 
-            oView.byId("peopleList").getBinding("items").filter(oFilter, FilterType.Application);
-        },
+		onSort : function () {
+			var oView = this.getView(),
+				aStates = [undefined, "asc", "desc"],
+				aStateTextIds = ["sortNone", "sortAscending", "sortDescending"],
+				sMessage,
+				iOrder = oView.getModel("appView").getProperty("/order");
 
-        onSort : function () {
-            var oView = this.getView(),
-                aStates = [undefined, "asc", "desc"],
-                aStateTextIds = ["sortNone", "sortAscending", "sortDescending"],
-                sMessage,
-                iOrder = oView.getModel("appView").getProperty("/order");
+			iOrder = (iOrder + 1) % aStates.length;
+			var sOrder = aStates[iOrder];
 
-            iOrder = (iOrder + 1) % aStates.length;
-            var sOrder = aStates[iOrder];
+			oView.getModel("appView").setProperty("/order", iOrder);
+			oView.byId("peopleList").getBinding("items").sort(sOrder && new Sorter("LastName", sOrder === "desc"));
 
-            oView.getModel("appView").setProperty("/order", iOrder);
-            oView.byId("peopleList").getBinding("items").sort(sOrder && new Sorter("LastName", sOrder === "desc"));
+			sMessage = this._getText("sortMessage", [this._getText(aStateTextIds[iOrder])]);
+			MessageToast.show(sMessage);
+			},
 
-            sMessage = this._getText("sortMessage", [this._getText(aStateTextIds[iOrder])]);
-            MessageToast.show(sMessage);
-        },
-
-        _getText : function (sTextId, aArgs) {
-        ...
-        }
-    });
+		_getText : function (sTextId, aArgs) {
+		...
+		}
+	});
 });
 ```
 
@@ -116,84 +115,85 @@ We add the `order` property to variable `oJSONData` in `onInit` method. This pro
 
 ```xml
 <mvc:View
-    controllerName="sap.ui.core.tutorial.odatav4.controller.App"
-    displayBlock="true"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Shell>
-        <App busy="{appView>/busy}" class="sapUiSizeCompact">
-            <pages>
-                <Page title="{i18n>peoplePageTitle}">
-                    <content>
-                        <Table
-                            id="peopleList"
-                            growing="true"
-                            growingThreshold="10"
-                            items="{
-                                path: '/People',
-                                parameters: {
-                                    $count: true
-                                }
-                            }">
-                            <headerToolbar>
-                                <OverflowToolbar>
-                                    <content>
-                                        <ToolbarSpacer/>
-                                        <SearchField
-                                            id="searchField"
-                                            width="20%"
-                                            placeholder="{i18n>searchFieldPlaceholder}"
-                                            search=".onSearch"/>
-                                        <Button
-                                            id="refreshUsersButton"
-                                            icon="sap-icon://refresh"
-                                            tooltip="{i18n>refreshButtonText}"
-                                            press=".onRefresh"/>
-                                        <Button
-                                            id="sortUsersButton"
-                                            icon="sap-icon://sort"
-                                            tooltip="{i18n>sortButtonText}"
-                                            press="onSort"/>
-                                    </content>
-                                </OverflowToolbar>
-                            </headerToolbar>
-                            <columns>
-                                <Column id="userNameColumn">
-                                    <Text text="{i18n>userNameLabelText}"/>
-                                </Column>
-                                <Column id="firstNameColumn">
-                                    <Text text="{i18n>firstNameLabelText}"/>
-                                </Column>
-                                <Column id="lastNameColumn">
-                                    <Text text="{i18n>lastNameLabelText}"/>
-                                </Column>
-                                <Column id="ageColumn">
-                                    <Text text="{i18n>ageLabelText}"/>
-                                </Column>
-                            </columns>
-                            <items>
-                                <ColumnListItem>
-                                    <cells>
-                                        <Input value="{UserName}"/>
-                                    </cells>
-                                    <cells>
-                                        <Input value="{FirstName}"/>
-                                    </cells>
-                                    <cells>
-                                        <Input value="{LastName}"/>
-                                    </cells>
-                                    <cells>
-                                        <Input value="{Age}"/>
-                                    </cells>
-                                </ColumnListItem>
-                            </items>
-                        </Table>
-                    </content>
-                </Page>
-            </pages>
-        </App>
-    </Shell>
+	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Shell>
+		<App busy="{appView>/busy}" class="sapUiSizeCompact">
+			<pages>
+				<Page title="{i18n>peoplePageTitle}">
+					<content>
+						<Table
+							id="peopleList"
+							growing="true"
+							growingThreshold="10"
+							items="{
+								path: '/People',
+								parameters: {
+									$count: true
+								}
+							}">
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<ToolbarSpacer/>
+										<SearchField
+											id="searchField"
+											width="20%"
+											placeholder="{i18n>searchFieldPlaceholder}"
+											search=".onSearch"/>
+										<Button
+											id="refreshUsersButton"
+											icon="sap-icon://refresh"
+											tooltip="{i18n>refreshButtonText}"
+											press=".onRefresh"/>
+										<Button
+											id="sortUsersButton"
+											icon="sap-icon://sort"
+											tooltip="{i18n>sortButtonText}"
+											press="onSort"/>
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns>
+								<Column id="userNameColumn">
+									<Text text="{i18n>userNameLabelText}"/>
+								</Column>
+								<Column id="firstNameColumn">
+									<Text text="{i18n>firstNameLabelText}"/>
+								</Column>
+								<Column id="lastNameColumn">
+									<Text text="{i18n>lastNameLabelText}"/>
+								</Column>
+								<Column id="ageColumn">
+									<Text text="{i18n>ageLabelText}"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Input value="{UserName}"/>
+									</cells>
+									<cells>
+										<Input value="{FirstName}"/>
+									</cells>
+									<cells>
+										<Input value="{LastName}"/>
+									</cells>
+									<cells>
+										<Input value="{Age}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>
+
 ```
 
 We add the `$count : true` parameter to tell the OData service to send the number of entities. With this setting, we automatically get the full number of entities \(20\) and the number of displayed entities \(10\) beneath the *More* button.
@@ -251,7 +251,7 @@ We add the missing texts to the properties file.
 
 [Filtering](../04_Essentials/filtering-5338bd1.md "The OData V4 Model supports server-side filtering on lists.")
 
-[Sorting](../04_Essentials/sorting-d2ce3f5.md "The OData V4 model supports server-side sorting on lists.")
+[Sorting](../04_Essentials/sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")
 
 [Query Options under *Querying Data* in the Basic Tutorial on the OData home page](http://www.odata.org/getting-started/basic-tutorial/#queryData)
 

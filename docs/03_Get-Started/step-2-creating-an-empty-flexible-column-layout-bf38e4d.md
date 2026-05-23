@@ -32,7 +32,7 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 
 ```json
 {
-	"_version": "2.8.0",
+	"_version": "1.38.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -48,7 +48,7 @@ You can view and download all files at [Flexible Column Layout App - Step 2](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.148.0",
+			"minUI5Version": "1.98.0",
 			"libs": {
 				"sap.f": {},
 				"sap.ui.core": {}
@@ -86,7 +86,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 
 ```json
 {
-	"_version": "2.8.0",
+	"_version": "1.38.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -102,7 +102,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.148.0",
+			"minUI5Version": "1.98.0",
 			"libs": {
 				"sap.f": {},
 				"sap.ui.core": {}
@@ -117,7 +117,7 @@ We create a new **`App.view.xml`** that contains an instance of the `sap.f.Flexi
 
 We set the `rootView` to point to the created `App.view.xml`.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
 
 **Next:**[Step 1: Setting Up the Initial App](step-1-setting-up-the-initial-app-59b772b.md "We start by setting up a basic OpenUI5 app for this tutorial.")
 

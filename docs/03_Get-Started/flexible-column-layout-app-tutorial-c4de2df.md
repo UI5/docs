@@ -2,7 +2,7 @@
 
 # Flexible Column Layout App Tutorial
 
-In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.
+In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.
 
 The app provides the following features:
 

@@ -4,26 +4,9 @@
 
 As you know OpenUI5 is all about HTML5. Let's get started with building a first "Hello World" with only HTML.
 
-We first introduce you to the basic development paradigms like *Model-View-Controller* and establish a best-practice structure of our application. We'll do this along the classic example of "Hello World" and start a new app from scratch. Next, we'll introduce the fundamental data binding concepts of OpenUI5 and extend our app to show a list of invoices. We'll continue to add more functionality by adding navigation, extending controls, and making our app responsive. Finally we'll look at the testing features and the built-in support tools of OpenUI5.
-
 ***
 
-## Preview Walkthrough Tutorial App \(JavaScript\)
-
-![Preview of the UI5 application that is going to be built in this tutorial. Contains a Hello World header with buttons and a text input field. The lower part shows a list of invoices with details, grouped by vendor names.](images/loiofb12cea5ac9b45bb9007aac5a1a8689f_LowRes.png)
-
-***
-
-> ### Tip:  
-> You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step and make sure that the application runs as intended; for detailed instructions, see [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download).
-> 
-> You can view and download the samples for all steps in the Demo Kit at [Walkthrough](https://ui5.sap.com/#/entity/sap.m.tutorial.walkthrough).
-> 
-> For more information, see the overview page: [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
-
-***
-
-## Preview Step 1
+## Preview
 
 ![The browser shows the text "Hello World"](images/loio1dd456361379431aab7e5bcdaaeff00f_LowRes.png)
 
@@ -33,7 +16,7 @@ We first introduce you to the basic development paradigms like *Model-View-Contr
 
 ## Setup
 
-Open a terminal and install UI5 CLI globally on your machine by executing the following command:
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -92,7 +75,7 @@ You can view and download all files at [Walkthrough - Step 1](https://ui5.sap.co
 
     ```
     {
-      "_version": "2.8.0",
+      "_version": "1.65.0",
       "sap.app": {
         "id": "ui5.walkthrough"
       }
@@ -102,10 +85,14 @@ You can view and download all files at [Walkthrough - Step 1](https://ui5.sap.co
     > ### Note:  
     > In this tutorial step, we only enter the most basic settings and parameters of the app descriptor file. In some development environments, you may get validation errors because some settings are missing; you can ignore them in this context. [Step 10: Descriptor for Applications](step-10-descriptor-for-applications-8f93bf2.md) explains the purpose of the file in general and describes some configuration options.
 
-6.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 CLI.
+6.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling.
 
 7.  Execute `ui5 init` in the app root folder.
 
 8.  Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
 
+
+**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
+
+**Previous:**[Step 2: Bootstrap](step-2-bootstrap-fe12df2.md "Before we can do something with OpenUI5, we need to load and initialize it. This process of loading and initializing OpenUI5 is called bootstrapping. Once this bootstrapping is finished, we simply display an alert.")
 

@@ -1,6 +1,6 @@
 <!-- loio124ee13b03664b14b455630fb8171996 -->
 
-# Upload Collection \(deprecated\)
+# Upload Collection \(Deprecated\)
 
 `UploadCollection` is a list control for attachment management that provides the ability to upload, edit or delete attachments.
 

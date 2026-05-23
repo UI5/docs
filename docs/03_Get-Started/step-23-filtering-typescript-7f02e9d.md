@@ -110,6 +110,12 @@ We then remove the `headerText` property in the list control and use the `header
 
 The search field is part of the list header, and therefore each change on the list binding will trigger a rerendering of the whole list, including the search field.
 
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 22: Custom Formatters \(TypeScript\)](step-22-custom-formatters-typescript-61d4e2b.md "If we want to do a more complex logic for formatting properties of our data model, we can also write a custom formatting function. We will now add a localized status with a custom formatter, because the status in our data model is in a rather technical format.")
+
+**Previous:**[Step 24: Sorting and Grouping \(TypeScript\)](step-24-sorting-and-grouping-typescript-86bbe13.md "To make our list of invoices even more user-friendly, we sort it alphabetically instead of just showing the order from the data model. Additionally, we introduce groups and add the company that ships the products so that the data is easier to consume.")
+
 **Related Information**  
 
 

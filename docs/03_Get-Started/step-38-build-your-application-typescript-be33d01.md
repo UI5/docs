@@ -40,7 +40,16 @@ Now we create a production-ready version of our OpenUI5 application that can be 
       "start": "ui5 serve -o test/mockServer.html",
       "build": "ui5 build --all --clean-dest"
   },
-  ...
+  "devDependencies": {
+    "@types/openui5": "^1.120.0",
+    "@ui5/cli": "^3.7.1",
+    "@ui5/ts-interface-generator": "^0.8.1",
+    "typescript": "^5.2.2",
+    "ui5-middleware-livereload": "^3.0.2",
+    "ui5-middleware-serveframework": "3.0.0",
+    "ui5-middleware-simpleproxy": "^3.2.8",
+    "ui5-tooling-transpile": "^3.2.7"
+  }
 }
 ```
 
@@ -78,7 +87,16 @@ To actually use the newly added web server, we have to add a new script to our `
       "build": "ui5 build --all --clean-dest",
       "serve-dist": "ws --compress -d dist --open"
   },
-  ...
+  "devDependencies": {
+    "@types/openui5": "^1.120.0",
+    "@ui5/cli": "^3.7.1",
+    "@ui5/ts-interface-generator": "^0.8.1",
+    "typescript": "^5.2.2",
+    "ui5-middleware-livereload": "^3.0.2",
+    "ui5-middleware-serveframework": "3.0.0",
+    "ui5-middleware-simpleproxy": "^3.2.8",
+    "ui5-tooling-transpile": "^3.2.7"
+  }
 }
 ```
 
@@ -92,8 +110,12 @@ Now it's time to start the server by executing `npm run serve-dist` in a termina
 
 You've completed the walkthrough, good job! You should now be familiar with all the major development paradigms and concepts of OpenUI5. Our other tutorials focus on particular aspects of OpenUI5 and some advanced topics, so if you want to dive deeper into specific topics, feel free to explore!
 
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 37: Accessibility \(TypeScript\)](step-37-accessibility-typescript-5a74cea.md "In this step we're going to improve the accessibility of our app.")
+
 **Related Information**  
 
 
-[UI5 CLI documentation](https://ui5.github.io/cli/stable/)
+[UI5 Tooling documentation](https://sap.github.io/ui5-tooling/stable/)
 

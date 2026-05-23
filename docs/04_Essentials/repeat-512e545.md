@@ -5,7 +5,7 @@
 The `<template:repeat` instruction iterates the `sap.ui.model.ListBinding` given by the `list` attribute.
 
 > ### Note:  
-> Sorting and filtering is already supported by the list binding via an extended syntax. For more information, see [Sorting, Grouping, and Filtering for List Binding and Tree Binding](sorting-grouping-and-filtering-for-list-binding-and-tree-binding-ec79a5d.md).
+> Sorting and filtering is already supported by the list binding via an extended syntax. For more information, see [Sorting, Grouping, and Filtering for List Binding](sorting-grouping-and-filtering-for-list-binding-ec79a5d.md).
 
 The `var` attribute holds the name of the loop variable which can be used to access the current list element in a child element of `repeat`. In the preprocessing, `repeat` is replaced by multiple clones of its content, one clone per list element, with each clone again preprocessed as if it were contained in a `with` instruction defining the loop variable.
 
@@ -26,17 +26,17 @@ The following example iterates all fields in the identification annotation from 
 ```xml
 
 <Label text="Product ID" />
-<Text core:require="{EdmString: 'sap/ui/model/odata/type/String'}" text="{
-    path: 'ProductID', type:'EdmString', constraints: {"nullable": false, "maxLength": 10}}" />
+<Text core:require="{StringType: 'sap/ui/model/odata/type/String'}" text="{
+    path: 'ProductID', type:'StringType', constraints: {"nullable": false, "maxLength": 10}}" />
 <Label text="Price" />
 <Text core:require="{Decimal: 'sap/ui/model/odata/type/Decimal'}" text="{
     path: 'Price/Amount', type: 'Decimal', constraints: {"precision":13, "scale":3}}" />
 <Label text="Category" />
-<Text core:require="{EdmString: 'sap/ui/model/odata/type/String'}" text="{
-    path: 'Category', type: 'EdmString', constraints: {"maxLength": 40}}" />
+<Text core:require="{StringType: 'sap/ui/model/odata/type/String'}" text="{
+    path: 'Category', type: 'StringType', constraints: {"maxLength": 40}}" />
 <Label text="Supplier" />
-<Text core:require="{EdmString: 'sap/ui/model/odata/type/String'}" text="{
-    path: 'SupplierName', type: 'EdmString', constraints: {"maxLength": 80}}" />
+<Text core:require="{StringType: 'sap/ui/model/odata/type/String'}" text="{
+    path: 'SupplierName', type: 'StringType', constraints: {"maxLength": 80}}" />
 ```
 
 **Example: Template for the "repeat" Instruction with `startIndex` and `length`**

@@ -28,7 +28,7 @@ You can view and download all files at [Walkthrough - Step 38](https://ui5.sap.c
 
 ## package.json
 
-We introduce a new npm script called "build", which executes a UI5 CLI build. As command-line arguments, we add `-all` to also build the framework dependencies \(e.g. `sap.ui.core`, etc.\) and `--clean-dest` to clear any output of a previous build from the `dist` folder before creating the new build result.
+We introduce a new npm script called "build", which executes a UI5 Tooling build. As command-line arguments, we add `-all` to also build the framework dependencies \(e.g. `sap.ui.core`, etc.\) and `--clean-dest` to clear any output of a previous build from the `dist` folder before creating the new build result.
 
 ```
 {
@@ -96,8 +96,12 @@ Now it's time to start the server by executing `npm run serve-dist` in a termina
 
 You've completed the walkthrough, good job! You should now be familiar with all the major development paradigms and concepts of OpenUI5. Our other tutorials focus on particular aspects of OpenUI5 and some advanced topics, so if you want to dive deeper into specific topics, feel free to explore!
 
+**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
+
+**Next:**[Step 37: Accessibility](step-37-accessibility-ff7cab1.md "In this step we're going to improve the accessibility of our app.")
+
 **Related Information**  
 
 
-[UI5 CLI documentation](https://ui5.github.io/cli/stable/)
+[UI5 Tooling documentation](https://sap.github.io/ui5-tooling/stable/)
 

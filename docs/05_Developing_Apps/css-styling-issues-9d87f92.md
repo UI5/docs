@@ -231,7 +231,7 @@ Good Example
 
 ## Don't use hard-coded colors, font sizes and images if the app should be themable
 
-Themability of applications relies on LESS calculations within the OpenUI5 theme CSS and custom CSS properties. Hard-coding colors, fonts and images in applications and custom controls means that these colors are not modified by theming, which leads to design issues or accessibility issues \(for example, in the High Contrast Black \(HCB\) theme\).You should use custom CSS properties to provide a theme-dependent behavior.
+Themability of applications relies on LESS calculations within the OpenUI5 theme CSS. Hard-coding colors, fonts and images in applications and custom controls means that these colors are not modified by theming, which leads to design issues or accessibility issues \(for example, in the High Contrast Black \(HCB\) theme\). You can use special CSS classes instead that are supplied by these LESS calculations.
 
 **Examples**
 
@@ -265,21 +265,13 @@ Good Example
 </td>
 <td valign="top">
 
-```
-`
-.myCustomHTML {
-	color: var(--sapContent_ContrastTextColor);
-	background-color: var(--sapHighlightColor);
-}
-```
-
-
+Add the CSS classes `sapThemeTextInverted` and `sapThemeHighlight-asBackgroundColor` to your custom HTML element.
 
 </td>
 </tr>
 </table>
 
-For more information, see [Theme Parameter Toolbox](https://ui5.sap.com/test-resources/sap/m/demokit/theming/webapp/index.html).
+See also: [CSS Classes for Theme Parameters](../04_Essentials/css-classes-for-theme-parameters-ea08f53.md).
 
 ***
 
@@ -287,7 +279,7 @@ For more information, see [Theme Parameter Toolbox](https://ui5.sap.com/test-res
 
 ## Don't use theming parameters for attributes they were not intended for
 
-OpenUI5 applications come with a built-in set of parameters which are used for theme-dependent styling, mainly for colors. They are accessible using custom CSS properties. These theme parameters have descriptive names, meaning that by looking at a parameter name, you can see the usage it has been defined for.
+OpenUI5 applications come with a built-in set of parameters which are used for theme-dependent styling, mainly for colors. They are accessible using the `sap.ui.core.theming.Parameters.get()` API \(and for library builds using the OpenUI5 build mechanism, also in the \*.less files in control libraries\). These theme parameters have descriptive names, meaning that by looking at a parameter name, you can see the usage it has been defined for.
 
 To ensure that you do not use combinations of theme colors which may clash after future theme changes, do not use background colors for fonts or vice versa, for example, and do not use border colors for anything else but borders.
 
@@ -310,11 +302,10 @@ Good Example
 <tr>
 <td valign="top">
 
-```
+```js
 
-.myCustomHTML {
-	background-color: var(--sapNeutralBorderColor);
-}
+var sColor = sap.ui.core.theming.Parameters.get("sapUiButtonBorderColor");
+$(oSomeDomElement).css("background-color", sColor);
 ```
 
 
@@ -322,11 +313,10 @@ Good Example
 </td>
 <td valign="top">
 
-```
+```js
 
-.myCustomHTML {
-	background-color: var(--sapBackgroundColor);
-}
+var sColor = sap.ui.core.theming.Parameters.get("sapUiButtonBorderColor");
+$(oSomeDomElement).css("border-color", sColor);
 ```
 
 
@@ -335,7 +325,5 @@ Good Example
 </tr>
 </table>
 
-For more information, see [Theme Parameter Toolbox](https://ui5.sap.com/test-resources/sap/m/demokit/theming/webapp/index.html).
-
-For more information, see [Namespace sap.ui.core.theming.Parameters](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters).
+See also: [Namespace sap.ui.core.theming.Parameters](https://ui5.sap.com/#/api/sap.ui.core.theming.Parameters).
 

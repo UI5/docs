@@ -41,7 +41,7 @@ If you want to make additional libraries known in your app, without directly loa
 ```json
 "sap.ui5": {
 	"dependencies": {
-		"minUI5Version": "1.148.0",
+		"minUI5Version": "1.70.0",
 		"libs": {
 			"sap.ui.core": {},
 			"sap.m": {},
@@ -141,7 +141,7 @@ If the library preloads are disabled or not found, every module is loaded separa
 
 In some cases it may happen that preloads are not enabled, or that modules of some libraries are still loaded separately:
 
--   A subset of libraries in the `sap.ui5/dependencies/libs` section of the `manifest.json` is declared with the `lazy` loading option, but these `lazy` libraries aren't preloaded manually before their modules are used. For more information, see [Manifest Dependencies to Libraries and Components](../04_Essentials/manifest-dependencies-to-libraries-and-components-8521ad1.md).
+-   A subset of libraries in the `sap.ui5/dependencies/libs` section of the `manifest.json` is declared with the `lazy` loading option, but these `lazy` libraries aren't preloaded manually before their modules are used. For more information, see [Descriptor Dependencies to Libraries and Components](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md).
 
 -   Neither `sap-ui-async` nor `sap-ui-preload` is enabled in the bootstrap configuration options. Note that if `sap-ui-async` is set to `true`, the value of the preload configuration is automatically set to `"async"`.
 
@@ -156,7 +156,7 @@ In some cases it may happen that preloads are not enabled, or that modules of so
 Application modules \(e.g. components, controllers, views or resource bundles\) should be loaded asynchronously via the component preload file. Check \(e.g. via the Network tab in the Google Chrome developer tools\) if a component preload \(`Component-preload.js`\) is missing. If the application isn't configured to load modules asynchronously, required application files may be loaded synchronously.
 
 > ### Note:  
-> If a component preload doesn't exist yet, the bundle needs to be created. For example, you can use [UI5 CLI](https://ui5.github.io/cli/).
+> If a component preload doesn't exist yet, the bundle needs to be created. For example, you can use the [UI5 Tooling](https://sap.github.io/ui5-tooling/).
 
 ***
 
@@ -176,7 +176,7 @@ In this case, use the `data-sap-ui-async="true"` setting in the bootstrap.
 
 ### Too many requests
 
-You can use [UI5 CLI](https://ui5.github.io/cli/) to bundle and minimize all relevant component files by creating a component-preload file.
+You can use [UI5 Tooling](https://sap.github.io/ui5-tooling/) to bundle and minimize all relevant component files by creating a component-preload file.
 
 ***
 

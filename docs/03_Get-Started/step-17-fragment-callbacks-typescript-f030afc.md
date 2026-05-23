@@ -47,7 +47,7 @@ export default class HelloPanel extends Controller {
     onShowHello(): void {
         ...
     }
-    async onOpenDialog(): Promise<void> {
+   async onOpenDialog(): Promise<void> {
         ...
     }
     onCloseDialog(): void {
@@ -103,6 +103,12 @@ In the fragment definition, we add a button to the `beginButton` aggregation of 
 ```
 
 By using the `loadFragment` function to create the fragment content in the controller of the panel's content view, the method will be invoked there when the button is pressed. The dialog has an aggregation named `beginButton` as well as `endButton`. Placing buttons in both of these aggregations makes sure that the `beginButton` is placed before the `endButton` on the UI. What `before` means, however, depends on the text direction of the current language. We therefore use the terms `begin` and `end` as a synonym to "left" and "right". In languages with left-to-right direction, the `beginButton` will be rendered left, the `endButton` on the right side of the dialog footer; in right-to-left mode for specific languages the order is switched.
+
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 16: Dialogs and Fragments \(TypeScript\)](step-16-dialogs-and-fragments-typescript-4b2e306.md "In this step, we will take a closer look at another element which can be used to assemble views: the fragment.")
+
+**Previous:**[Step 18: Icons \(TypeScript\)](step-18-icons-typescript-49b1ac6.md "Our dialog is still pretty much empty. Since OpenUI5 is shipped with a large icon font that contains more than 500 icons, we will add an icon to greet our users when the dialog is opened.")
 
 **Related Information**  
 

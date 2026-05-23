@@ -132,6 +132,12 @@ If you're stuck and need help for some development task, you can also post a que
 -   As per OpenUI5 convention uncompressed source files end with `*-dbg.js`
 
 
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 28: Integration Test with OPA \(TypeScript\)](step-28-integration-test-with-opa-typescript-412f0b6.md "If we want to test interaction patterns or more visual features of our app, we can also write an integration test.")
+
+**Previous:**[Step 30: Routing and Navigation \(TypeScript\)](step-30-routing-and-navigation-typescript-6173e3d.md "So far, we have put all app content on one single page. As we add more and more features, we want to split the content and put it on separate pages.")
+
 **Related Information**  
 
 

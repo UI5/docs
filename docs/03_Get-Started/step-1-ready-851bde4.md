@@ -4,29 +4,11 @@
 
 Let's get you ready for your journey! We bootstrap OpenUI5 in an HTML page and implement a simple "Hello World" example.
 
-We create an app with two pages and a navigation button to navigate between the pages.
-
-***
-
-## Preview Quickstart App
-
-  
-  
-**Ready...Steady...Go!**
-
-![](images/loio443918d392b94ec58e0f84df6ec54d46_LowRes.png "Ready...Steady...Go!")
-
-> ### Tip:  
-> If you want to skip one or more steps, you can jump directly to the step you're interested in. Then simply download the code from the previous step, and start learning from there. You can download the code for each step in the [Quick Start Sample](https://ui5.sap.com/#/entity/sap.m.tutorial.quickstart). 
-
-> ### Note:  
-> All you need to build your app, is a Web browser, a Web server, and a development environment of your choice. For more information, see the links below.
-
 ***
 
 <a name="loio851bde42e4e1410c96abbe402fa9128c__section_cpm_14c_1gb"/>
 
-## Preview Step 1
+## Preview
 
   
   
@@ -40,7 +22,7 @@ We create an app with two pages and a navigation button to navigate between the 
 
 ## Setup
 
-Open a terminal and install UI5 CLI globally on your machine by executing the following command:
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -98,7 +80,7 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
 
     With the `script` tag, we load and initialize OpenUI5 with typical bootstrap parameters. We define, for example, a theme, control libraries, as well as performance and compatibility flags.
 
-    First, we need a source to load OpenUI5 from. In this tutorial, we will use UI5 CLI to host the OpenUI5 resources.
+    First, we need a source to load OpenUI5 from. In this tutorial, we will use UI5 Tooling to host the OpenUI5 resources.
 
     The bootstrap property `resourceroots` defines the namespace for all resources of the app. This way, we can easily reference additional files that we are about to create in this step.
 
@@ -135,14 +117,14 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
 
     ```
     {
-      "_version": "2.8.0",
+      "_version": "1.58.0",
       "sap.app": {
         "id": "ui5.quickstart"
       }
     }
     ```
 
-7.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 CLI.
+7.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling.
 
 8.  Execute `ui5 init` in the app root folder.
 
@@ -152,6 +134,10 @@ You can view and download all files at [Quick Start - Step 1](https://ui5.sap.co
 
 11. Execute `npm start` to start the web server and to open a new browser window hosting your newly created `index.html`.
 
+
+**Parent topic:**[Quickstart Tutorial](quickstart-tutorial-592f36f.md "Unleash your OpenUI5 skills with this simple three-step tutorial. We start with a simple &quot;Hello World&quot; example, and convert it to a minimalist two-page app.")
+
+**Previous:**[Step 2: Steady...](step-2-steady-128214a.md "Now we extend our minimalist HTML page to a basic app with a view and a controller.")
 
 **Related Information**  
 

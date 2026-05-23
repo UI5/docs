@@ -102,17 +102,17 @@ Phone
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -129,17 +129,17 @@ Responsive \(hide column, popin support\)
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -178,7 +178,7 @@ Condensed density
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -232,12 +232,12 @@ Summarized cell
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -247,7 +247,7 @@ Summarized cell
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -259,17 +259,17 @@ Hierarchical data
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)<sup>3</sup> 
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -286,7 +286,7 @@ Large number of rows \(\> 200\)<sup>2</sup>
 </td>
 <td valign="top">
 
-![Partly](images/loio3ea53dcd3acc4783a7a4b83e10c8f1aa_LowRes.gif)
+![Partly](../02_Read-Me-First/images/loio3ea53dcd3acc4783a7a4b83e10c8f1aa_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -318,7 +318,7 @@ Grouping
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)<sup>3</sup> 
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -328,7 +328,7 @@ Grouping
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)<sup>3</sup> 
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -340,7 +340,7 @@ Freeze columns
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -367,7 +367,7 @@ Horizontal scrolling
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -399,17 +399,17 @@ Merge duplicates
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -453,17 +453,17 @@ Row-based
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -475,7 +475,7 @@ Column-based
 </td>
 <td valign="top">
 
-![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
@@ -527,7 +527,7 @@ Cell selection
 
 -   ![Yes](../02_Read-Me-First/images/loio3cb17ee88aed44d2bf1d14b97728c709_LowRes.gif): Feature is supported for this table type
 
--   ![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif): Feature is not supported for this table type
+-   ![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif): Feature is not supported for this table type
 
 
 1\) `Text`, `Label`, `ObjectStatus`, `Icon`, `Button`, `Input`, `DatePicker`, `Select`, `ComboBox`, `MultiComboBox`, `CheckBox`, `Link`, `Currency`, `RatingIndicator`, `ProgressIndicator`; To keep the control height always stable, the `wrapping` and `renderWhitespace` properties in the `sap.m.Text` control, for example, must be set to `false`. For more information, search for cell level in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
@@ -548,10 +548,6 @@ Cell selection
 > -   The browser being used
 
 For more information, search for loading items and performance in the responsive table section in the [SAP Fiori Design Guidelines](https://experience.sap.com/fiori-design-web/).
-
-3\) To use grouping and hierarchical data features of the list binding within the OData V4 model for tables in `sap.ui.table`, use the `ODataV4Aggregation` and `ODataV4Hierarchy` plugins.
-
-To use the selection features of the list binding within the OData V4 model for tables in `sap.ui.table`, use the `ODataV4SingleSelection` and `ODataV4MultiSelection` plugins. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.table) for the V4 plugins.
 
 ***
 

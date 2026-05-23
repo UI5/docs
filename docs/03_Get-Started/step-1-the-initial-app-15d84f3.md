@@ -60,48 +60,19 @@ This file defines the home page of the app. It contains the bootstrap script and
 
 ### `webapp/manifest.json`
 
-The `manifest.json` descriptor file contains the app configuration:
-
--   In the `sap.app` section, the OData V4 service is configured as the default service.
--   In the `sap.ui5` section, the OData V4.0 model provided by the default service is configured with the following settings:
-    -   `"preload"`: Whether to enable a preload model, thus improving the startup performance. For more information, see [Manifest Model Preload](../04_Essentials/manifest-model-preload-26ba6a5.md).
-    -   `"autoExpandSelect"`: Whether to automatically generate `$select` and `$expand` system query options for service requests from the binding hierarchy of the OData model. Only data needed for the UI are then selected, leading to a minimal response size and improved performance. For more information, see [Automatic determination of $expand and $select](../04_Essentials/automatic-determination-of-expand-and-select-10ca58b.md).
-    -   `"earlyRequests"`: Whether the root `$metadata` document, the annotation files, and the security token are requested at the earliest convenience to speed up the start of your app or component.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor).
-    -   `"operationMode"`: The operation mode for filtering and sorting; only `Server` is supported by the OData V4 model.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor).
-
+The `manifest.json` descriptor file contains the app configuration. In the `sap.app` section, the OData V4 service is configured as the default service:
 
 ```json
-{
-    ...
-    "sap.app": {
-        ...
-        "dataSources": {
-            "default": {
-                "uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
-                "type": "OData",
-                "settings": {
-                    "odataVersion": "4.0"
-                }
-            }
-        }
-    },
-    ...
-    "sap.ui5": {
-        ...
-        "models": {
-            ...
-            "": {
-                "dataSource": "default",
-                "preload": true,
-                "settings": {
-                    "autoExpandSelect": true,
-                    "earlyRequests": true,
-                    "operationMode": "Server"
-                }
-            }
-        }
-    }
+"dataSources": {
+	"default": {
+		"uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
+		"type": "OData",
+		"settings": {
+			"odataVersion": "4.0"
+		}
+	}
 }
+
 ```
 
 ***
@@ -109,7 +80,7 @@ The `manifest.json` descriptor file contains the app configuration:
 ### Mock server \(`webapp/localService/*`\)
 
 > ### Note:  
-> The [Mock Server](../04_Essentials/mock-server-69d3cbd.md) included in this tutorial is only meant to support the features needed in this tutorial. Currently, there is no "general-purpose mock server" for application development available with OData V4 \(like there is for OData V2\).
+> The mock server included in this tutorial is only meant to support the features needed in this tutorial. Currently, there is no "general-purpose mock server" for application development available with OData V4 \(like there is for OData V2\).
 
 The `mockserver.js` file contains the implementation of the mock server. It is quite simple since the mock server is only used to simulate certain types of requests to the *TripPin* service.
 
@@ -131,6 +102,4 @@ In this tutorial, we only use the entity type `Person` of the *TripPin* service.
 [Bootstrapping: Loading and Initializing](../04_Essentials/bootstrapping-loading-and-initializing-a04b0d1.md "To use OpenUI5 features in your HTML page, you have to load and initialize the SAPUI5 library.")
 
 [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md "The manifest (also known as descriptor for applications, components, and libraries, in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
-
-[Mock Server](../04_Essentials/mock-server-69d3cbd.md "A mock server mimics one or more back-end services. It is used to simplify integration testing and to decouple UI development from service development. By using a mock server you can develop and test the UI even if the service in the back end is incomplete or unstable.")
 

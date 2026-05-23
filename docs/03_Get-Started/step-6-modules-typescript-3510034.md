@@ -40,11 +40,17 @@ import Controller from "sap/ui/core/mvc/Controller";
 export default class AppController extends Controller {
     onShowHello(): void {
         MessageToast.show("Hello World");
-    }
+     }
 };
 ```
 
 For now, the message toast just displays a static "Hello World" message. We'll show how to load a translated text here in [Step 8: Translatable Texts \(TypeScript\)](step-8-translatable-texts-typescript-4dcf52e.md).
+
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 5: Controllers \(TypeScript\)](step-5-controllers-typescript-e5c58fe.md "In this step, we replace the text with a button and show the &quot;Hello World&quot; message when the button is pressed. The handling of the button's press event is implemented in the controller of the view.")
+
+**Previous:**[Step 7: JSON Model \(TypeScript\)](step-7-json-model-typescript-cfbbeab.md "Now that we have set up the view and controller, it's about time to think about the M in MVC.")
 
 **Related Information**  
 

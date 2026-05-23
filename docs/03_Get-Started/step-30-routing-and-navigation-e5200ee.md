@@ -291,12 +291,16 @@ You should now see the detail page when you click an item in the list of invoice
 
 -   Initialize the router at the end of your `Component#init` function
 
+**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
+
+**Next:**[Step 29: Debugging Tools](step-29-debugging-tools-1ff250c.md "Even though we have added a basic test coverage in the previous steps, it seems like we accidentally broke our app, because it does not display prices to our invoices anymore. We need to debug the issue and fix it before someone finds out.")
+
+**Previous:**[Step 31: Routing with Parameters](step-31-routing-with-parameters-2366345.md "We can now navigate between the overview and the detail page, but the actual item that we selected in the overview is not displayed on the detail page yet. A typical use case for our app is to show additional information for the selected item on the detail page.")
+
 **Related Information**  
 
 
 [Routing and Navigation](../04_Essentials/routing-and-navigation-3d18f20.md "OpenUI5 offers hash-based navigation, which allows you to build single-page apps where the navigation is done by changing the hash. In this way the browser does not have to reload the page; instead there is a callback to which the app and especially the affected view can react. A hash string is parsed and matched against patterns which will then inform the handlers.")
-
-[Routing Configuration](../04_Essentials/routing-configuration-9023130.md "Routing configuration consists of routes, targets, config, and owner.")
 
 [Tutorial: Navigation and Routing](navigation-and-routing-tutorial-1b6dcd3.md "OpenUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in OpenUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of OpenUI5 to your applications.")
 

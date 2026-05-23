@@ -82,35 +82,35 @@ We can also hide single controls by device type when we set a CSS class like `sa
 
 ```xml
 <mvc:View
-    controllerName="ui5.walkthrough.controller.HelloPanel"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Panel
-        headerText="{i18n>helloPanelTitle}"
-        class="sapUiResponsiveMargin"
-        width="auto"
-        expandable="{device>/system/phone}"
-        expanded="{= !${device>/system/phone} }">
-        <content>
-            <Button
-                id="helloDialogButton"
-                icon="sap-icon://world"
-                text="{i18n>openDialogButtonText}"
-                press=".onOpenDialog"
-                class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
-            <Button
-                text="{i18n>showHelloButtonText}"
-                press=".onShowHello"
-                class="myCustomButton"/>
-            <Input
-                value="{/recipient/name}"
-                valueLiveUpdate="true"
-                width="60%"/>
-            <FormattedText
-                htmlText="Hello {/recipient/name}"
-                class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-        </content>
-    </Panel>
+	controllerName="ui5.walkthrough.controller.HelloPanel"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Panel
+		headerText="{i18n>helloPanelTitle}"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		expandable="{device>/system/phone}"
+		expanded="{= !${device>/system/phone} }">
+		<content>
+			<Button
+				id="helloDialogButton"
+				icon="sap-icon://world"
+				text="{i18n>openDialogButtonText}"
+				press=".onOpenDialog"
+				class="sapUiSmallMarginEnd sapUiVisibleOnlyOnDesktop"/>
+			<Button
+				text="{i18n>showHelloButtonText}"
+				press=".onShowHello"
+				class="myCustomButton"/>
+			<Input
+				value="{/recipient/name}"
+				valueLiveUpdate="true"
+				width="60%"/>
+			<FormattedText
+				htmlText="Hello {/recipient/name}"
+				class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+		</content>
+	</Panel>
 </mvc:View>
 ```
 
@@ -154,7 +154,7 @@ export default class Detail extends Controller {
         const router = UIComponent.getRouterFor(this);
         router.getRoute("detail").attachPatternMatched(this.onObjectMatched, this);
     }
-        …
+		…
 };
 ```
 
@@ -249,6 +249,12 @@ We can see the results when we decrease the browser's screen size or open the ap
 ## Conventions
 
 Optimize your application for the different screen sizes of phone, tablet, and desktop devices.
+
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 34: Responsiveness \(TypeScript\)](step-34-responsiveness-typescript-e5577bb.md "In this step, we improve the responsiveness of our app. OpenUI5 applications can be run on phone, tablet, and desktop devices and we can configure the application to make best use of the screen estate for each scenario. Fortunately, OpenUI5 controls like the sap.m.Table already deliver a lot of features that we can use.")
+
+**Previous:**[Step 36: Content Density \(TypeScript\)](step-36-content-density-typescript-667aa4a.md "In this step of our Walkthrough tutorial, we adjust the content density based on the user's device. Content density refers to the spacing and sizing of the UI controls and elements within your application. OpenUI5 contains different content densities allowing you to display larger controls for touch-enabled devices and a smaller, more compact design for devices that are operated by mouse. In our app, we will detect the device and adjust the density accordingly.")
 
 **Related Information**  
 

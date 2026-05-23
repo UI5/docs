@@ -16,7 +16,7 @@ In this step, we create a basic application and simply place some text on the sc
 
 ## Setup
 
-Open a terminal and install UI5 CLI globally on your machine by executing the following command:
+Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -80,7 +80,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
 
     ```
     {
-    	"_version": "2.8.0",
+    	"_version": "1.60.0",
     	"sap.app": {
     		"id": "ui5.databinding",
     		"type": "application",
@@ -98,7 +98,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
     	},
     	"sap.ui5": {
     		"dependencies": {
-    			"minUI5Version": "1.148.0",
+    			"minUI5Version": "1.120.0",
     			"libs": {
     				"sap.m": {},
     				"sap.ui.core": {}
@@ -143,7 +143,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 1](h
     </mvc:View>
     ```
 
-8.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 CLI in the app root folder.
+8.  Open a terminal in the app root folder and execute `npm i -D @ui5/cli` to install UI5 Tooling in the app root folder.
 
 9.  Execute `ui5 init` in the app root folder.
 

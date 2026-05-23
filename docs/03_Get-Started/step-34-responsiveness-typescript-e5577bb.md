@@ -103,98 +103,98 @@ Instead of the `ObjectListItem` that we had before, we will now split the inform
 
 ```xml
 <mvc:View
-    controllerName="ui5.walkthrough.controller.InvoiceList"
-    xmlns="sap.m"
-    xmlns:core="sap.ui.core"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Table
-        id="invoiceList"
-        class="sapUiResponsiveMargin"
-        width="auto"
-        items="{
-            path : 'invoice>/Invoices',
-            sorter : {
-                path : 'ShipperName',
-                group : true
-            }
-        }">
-        <headerToolbar>
-            <Toolbar>
-                <Title text="{i18n>invoiceListTitle}" />
-                <ToolbarSpacer />
-                <SearchField
-                    width="50%"
-                    search=".onFilterInvoices"/>
-            </Toolbar>
-        </headerToolbar>
-        <columns>
-            <Column
-                hAlign="End"
-                minScreenWidth="Small"
-                demandPopin="true"
-                width="5em">
-                <Text text="{i18n>columnQuantity}" />
-            </Column>
-            <Column>
-                <Text text="{i18n>columnName}" />
-            </Column>
-            <Column
-                minScreenWidth="Small"
-                demandPopin="true">
-                <Text text="{i18n>columnStatus}" />
-            </Column>
-            <Column
-                minScreenWidth="Tablet"
-                demandPopin="false">
-                <Text text="{i18n>columnSupplier}" />
-            </Column>
-            <Column hAlign="End">
-                <Text text="{i18n>columnPrice}" />
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem
-                type="Navigation"
-                press=".onPress">
-                <cells>
-                    <ObjectNumber
-                        number="{invoice>Quantity}"
-                        emphasized="false"/>
-                    <ObjectIdentifier title="{invoice>ProductName}" />
-                    <Text
-                        core:require="{
-                                Formatter: 'ui5/walkthrough/model/formatter'
-                        }"
-                        text="{
-                                parts: [
-                                    'invoice>Status',
-                                    'i18n>invoiceStatusA',
-                                    'i18n>invoiceStatusB',
-                                    'i18n>invoiceStatusC'
-                                ],
-                                formatter: 'Formatter.statusText.bind($controller)'
-                        }"/>
-                    <Text text="{invoice>ShipperName}" />
-                    <ObjectNumber
-                        core:require="{
-                            Currency: 'sap/ui/model/type/Currency'
-                        }"
-                        number="{
-                            parts: [
-                                'invoice>ExtendedPrice',
-                                'view>/currency'
-                            ],
-                            type: 'Currency',
-                            formatOptions: {
-                                showMeasure: false
-                            }
-                        }"
-                        unit="{view>/currency}"
-                        state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"/>
-                </cells>
-            </ColumnListItem>
-        </items>
-    </Table>
+	controllerName="ui5.walkthrough.controller.InvoiceList"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Table
+		id="invoiceList"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		items="{
+				path : 'invoice>/Invoices',
+				sorter : {
+					path : 'ShipperName',
+					group : true
+				}
+			}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>invoiceListTitle}" />
+				<ToolbarSpacer />
+				<SearchField
+					width="50%"
+					search=".onFilterInvoices"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column
+				hAlign="End"
+				minScreenWidth="Small"
+				demandPopin="true"
+				width="5em">
+				<Text text="{i18n>columnQuantity}" />
+			</Column>
+			<Column>
+				<Text text="{i18n>columnName}" />
+			</Column>
+			<Column
+				minScreenWidth="Small"
+				demandPopin="true">
+				<Text text="{i18n>columnStatus}" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="false">
+				<Text text="{i18n>columnSupplier}" />
+			</Column>
+			<Column hAlign="End">
+				<Text text="{i18n>columnPrice}" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem
+				type="Navigation"
+				press=".onPress">
+				<cells>
+					<ObjectNumber
+						number="{invoice>Quantity}"
+						emphasized="false"/>
+					<ObjectIdentifier title="{invoice>ProductName}" />
+					<Text
+						core:require="{
+								Formatter: 'ui5/walkthrough/model/formatter'
+						}"
+						text="{
+								parts: [
+									'invoice>Status',
+									'i18n>invoiceStatusA',
+									'i18n>invoiceStatusB',
+									'i18n>invoiceStatusC'
+								],
+								formatter: 'Formatter.statusText.bind($controller)'
+						}"/>
+					<Text text="{invoice>ShipperName}" />
+					<ObjectNumber
+						core:require="{
+							Currency: 'sap/ui/model/type/Currency'
+						}"
+						number="{
+							parts: [
+								'invoice>ExtendedPrice',
+								'view>/currency'
+							],
+							type: 'Currency',
+							formatOptions: {
+								showMeasure: false
+							}
+						}"
+						unit="{view>/currency}"
+						state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
 </mvc:View>
 ```
 
@@ -211,6 +211,12 @@ We can see the results when we decrease the browser's screen size or open the ap
 
 -   Optimize your application for the different screen sizes of phone, tablet, and desktop devices.
 
+
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 33: Custom Controls \(TypeScript\)](step-33-custom-controls-typescript-3cc020e.md "In this step, we are going to extend the functionality of OpenUI5 with a custom control. We want to rate the product shown on the detail page, so we create a composition of multiple standard controls using the OpenUI5 extension mechanism and add some glue code to make them work nicely together. This way, we can reuse the control across the app and keep all related functionality in one module.")
+
+**Previous:**[Step 35: Device Adaptation \(TypeScript\)](step-35-device-adaptation-typescript-ab8ed1b.md "We now configure the visibility and properties of controls based on the device that we run the application on. By making use of the sap.ui.Device API and defining a device model we will make the app look great on many devices.")
 
 **Related Information**  
 

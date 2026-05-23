@@ -6,16 +6,18 @@ As OpenUI5 evolves over time, some of the UI controls are replaced by others, or
 
 ***
 
-## Deprecated Themes
+## Themes that are no longer supported
 
-All deprecated themes have been removed as of OpenUI5 1.136 or earlier. The recommended target theme is `sap_horizon`.
+The following themes have been deprecated and/or removed entirely:
+
+**Deprecated Themes**
 
 
 <table>
 <tr>
 <th valign="top">
 
-Deprecated Theme
+Theme
 
 </th>
 <th valign="top">
@@ -30,14 +32,14 @@ Removed as of
 </th>
 <th valign="top">
 
-Replacement
+Recommendation\(\*\)
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_belize`
+`sap_belize` 
 
 </td>
 <td valign="top">
@@ -52,14 +54,14 @@ Replacement
 </td>
 <td valign="top">
 
-`sap_horizon`
+Switch to `sap_horizon`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_hcb`
+`sap_hcb` 
 
 </td>
 <td valign="top">
@@ -74,14 +76,14 @@ Replacement
 </td>
 <td valign="top">
 
-`sap_horizon_hcb`
+Switch to `sap_horizon_hcb`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_bluecrystal`
+`sap_bluecrystal` 
 
 </td>
 <td valign="top">
@@ -96,14 +98,14 @@ Replacement
 </td>
 <td valign="top">
 
-`sap_horizon`
+Switch to `sap_horizon`.
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_ux`
+`sap_ux` 
 
 </td>
 <td valign="top">
@@ -118,14 +120,14 @@ Replacement
 </td>
 <td valign="top">
 
-`sap_horizon`
+n/a
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_platinum`
+`sap_platinum` 
 
 </td>
 <td valign="top">
@@ -140,14 +142,14 @@ Replacement
 </td>
 <td valign="top">
 
-`sap_horizon`
+n/a
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_goldreflection`
+`sap_goldreflection` 
 
 </td>
 <td valign="top">
@@ -162,11 +164,13 @@ Replacement
 </td>
 <td valign="top">
 
-`sap_horizon`
+n/a
 
 </td>
 </tr>
 </table>
+
+\(\*\) Also valid for custom themes based on the respective theme
 
 For a list of the available themes, see [Available Themes](../04_Essentials/available-themes-da0d2e7.md).
 
@@ -175,6 +179,8 @@ For a list of the available themes, see [Available Themes](../04_Essentials/avai
 ## Deprecated Libraries
 
 The following libraries have been deprecated and/or removed entirely:
+
+**Deprecated Libraries**
 
 
 <table>
@@ -191,48 +197,24 @@ Deprecated as of
 </th>
 <th valign="top">
 
-Replacement
+Note
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-`sap.apf`
+`sap.sac.grid`
 
 </td>
 <td valign="top">
 
-1.136
+1.112
 
 </td>
 <td valign="top">
 
-No replacement
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.webc.common`
-
-`sap.ui.webc.fiori`
-
-`sap.ui.webc.main`
-
-</td>
-<td valign="top">
-
-1.120
-
-</td>
-<td valign="top">
-
-> ### Remember:  
-> Removed as of 1.147, see [this blog post](https://community.sap.com/t5/frontend-ui5-sap-fiori-blog-posts/removal-of-legacy-sap-ui-webc-web-component-ui-libraries-from-sapui5/ba-p/14358564). Modern usage of native web components in OpenUI5 is documented in [Using Web Components](../04_Essentials/using-web-components-1c80793.md).
-
-
+Removed as of 1.114. Use `sap.sac.df.FlexAnalysis` instead.
 
 </td>
 </tr>
@@ -249,7 +231,7 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement
+ 
 
 </td>
 </tr>
@@ -266,7 +248,7 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement \(removed as of 1.120\)
+Removed as of 1.120
 
 </td>
 </tr>
@@ -283,7 +265,7 @@ No replacement \(removed as of 1.120\)
 </td>
 <td valign="top">
 
-No replacement
+ 
 
 </td>
 </tr>
@@ -304,7 +286,7 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement
+ 
 
 </td>
 </tr>
@@ -325,7 +307,7 @@ No replacement
 </td>
 <td valign="top">
 
-Replaced by `sap.m` and `sap.ui.layout` controls
+ 
 
 </td>
 </tr>
@@ -342,7 +324,7 @@ Replaced by `sap.m` and `sap.ui.layout` controls
 </td>
 <td valign="top">
 
-No replacement
+ 
 
 </td>
 </tr>
@@ -359,7 +341,7 @@ No replacement
 </td>
 <td valign="top">
 
-No replacement
+ 
 
 </td>
 </tr>
@@ -374,7 +356,7 @@ To find out whether these libraries have been replaced by other content, check t
 
 [Supported Library Combinations](supported-library-combinations-363cd16.md "OpenUI5 provides a set of JavaScript and CSS libraries, which can be combined in an application using the combinations that are supported.")
 
-[Supported Themes](supported-themes-38ff8c2.md "This chapter gives an overview of the supported themes.")
+[Supported Combinations of Themes and Libraries](supported-combinations-of-themes-and-libraries-38ff8c2.md "This chapter gives an overview of the possible combinations of themes and libraries for the OpenUI5 versions that are still in maintenance.")
 
 [Available Themes](../04_Essentials/available-themes-da0d2e7.md "Provides a list of themes and their names.")
 

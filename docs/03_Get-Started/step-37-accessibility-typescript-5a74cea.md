@@ -65,25 +65,25 @@ For more information, see the [API Reference: `sap.m.PageAccessibleLandmarkInfo`
 
 ```xml
 <mvc:View
-    controllerName="ui5.walkthrough.controller.App"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true">
-    <Page title="{i18n>homePageTitle}">
-        <landmarkInfo>
-            <PageAccessibleLandmarkInfo
-                rootRole="Region"
-                rootLabel="{i18n>Overview_rootLabel}"
-                contentRole="Main"
-                contentLabel="{i18n>Overview_contentLabel}"
-                headerRole="Banner"
-                headerLabel="{i18n>Overview_headerLabel}"/>
-        </landmarkInfo>
-        <content>
-            <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
-            <mvc:XMLView viewName="ui5.walkthrough.view.InvoiceList"/>
-        </content>
-    </Page>
+	controllerName="ui5.walkthrough.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Page title="{i18n>homePageTitle}">
+		<landmarkInfo>
+			<PageAccessibleLandmarkInfo
+				rootRole="Region"
+				rootLabel="{i18n>Overview_rootLabel}"
+				contentRole="Main"
+				contentLabel="{i18n>Overview_contentLabel}"
+				headerRole="Banner"
+				headerLabel="{i18n>Overview_headerLabel}"/>
+		</landmarkInfo>
+		<content>
+			<mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
+			<mvc:XMLView viewName="ui5.walkthrough.view.InvoiceList"/>
+		</content>
+	</Page>
 </mvc:View>
 ```
 
@@ -97,38 +97,38 @@ We add an `sap.m.Panel` around the invoice list and move the toolbar from the ta
 
 ```xml
 <mvc:View
-    controllerName="ui5.walkthrough.controller.InvoiceList"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Panel accessibleRole="Region">
-        <headerToolbar>
-            <Toolbar>
-                <Title text="{i18n>invoiceListTitle}"/>
-                <ToolbarSpacer/>
-                <SearchField
-                    width="50%"
-                    search=".onFilterInvoices"/>
-            </Toolbar>
-        </headerToolbar>
-        <Table
-            id="invoiceList"
-            class="sapUiResponsiveMargin"
-            width="auto"
-            items="{
-                path : 'invoice>/Invoices',
-                sorter : {
-                    path : 'ShipperName',
-                    group : true
-                }
-            }">
-            <columns>
-                <Column
-                    hAlign="End"
-                    ...
-            </columns>
-            ...
-        </Table>
-    </Panel>
+	controllerName="ui5.walkthrough.controller.InvoiceList"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Panel accessibleRole="Region">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>invoiceListTitle}"/>
+				<ToolbarSpacer/>
+				<SearchField
+					width="50%"
+					search=".onFilterInvoices"/>
+			</Toolbar>
+		</headerToolbar>
+		<Table
+			id="invoiceList"
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{
+				path : 'invoice>/Invoices',
+				sorter : {
+					path : 'ShipperName',
+					group : true
+				}
+			}">
+			<columns>
+				<Column
+					hAlign="End"
+					...
+			</columns>
+			...
+		</Table>
+	</Panel>
 </mvc:View>
 ```
 
@@ -142,18 +142,18 @@ In the `HelloPanel` view, we already have a panel, so we just add the `accessibl
 
 ```xml
 <mvc:View
-    controllerName="ui5.walkthrough.controller.HelloPanel"
-    xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
-    <Panel
-        headerText="{i18n>helloPanelTitle}"
-        class="sapUiResponsiveMargin"
-        width="auto"
-        expandable="{device>/system/phone}"
-        expanded="{= !${device>/system/phone} }"
-        accessibleRole="Region">    
-        …
-    </Panel>
+	controllerName="ui5.walkthrough.controller.HelloPanel"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Panel
+		headerText="{i18n>helloPanelTitle}"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		expandable="{device>/system/phone}"
+		expanded="{= !${device>/system/phone} }"
+		accessibleRole="Region">	
+		…
+	</Panel>
 </mvc:View>
 
 ```
@@ -200,6 +200,12 @@ As you can see, we now have four landmarks on our page. The top three landmarks 
 
 -   *Page Content* marks the content of our page. This landmark already has two children.
 
+
+**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
+
+**Next:**[Step 36: Content Density \(TypeScript\)](step-36-content-density-typescript-667aa4a.md "In this step of our Walkthrough tutorial, we adjust the content density based on the user's device. Content density refers to the spacing and sizing of the UI controls and elements within your application. OpenUI5 contains different content densities allowing you to display larger controls for touch-enabled devices and a smaller, more compact design for devices that are operated by mouse. In our app, we will detect the device and adjust the density accordingly.")
+
+**Previous:**[Step 38: Build Your Application \(TypeScript\)](step-38-build-your-application-typescript-be33d01.md "In this step we're going to build our application and consume the speed of a built OpenUI5 application.")
 
 **Related Information**  
 
