@@ -5,6 +5,9 @@
 Custom models can be used if none of the models provided by OpenUI5 is suitable for the specific needs of an application.
 
 > ### Note:  
+> It is possible to create a custom model implementation for data sources that are not yet covered by the framework or are domain-specific. Keep in mind, however, that creating a custom model is highly complex and error-prone. We recommend using one of OpenUI5's predefined models whenever possible.
+
+> ### Note:  
 > The subclassing of standard models is not supported in OpenUI5.
 
 To instantiate a custom model, proceed as follows:
@@ -18,5 +21,5 @@ To instantiate a custom model, proceed as follows:
 4.  To enable the sorting functionality, use the `Sorter` class in your binding implementation.
 
 
-You can find all necessary classes in the `sap.ui.model` namespace. As a starting point, take a look at the `JSONModel` implementation in `sap.ui.model.json.JSONModel`, which is available on the SAP Open Source GitHub at [https://github.com/SAP/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js](https://github.com/SAP/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js).
+You can find all necessary classes in the `sap.ui.model` namespace. As a starting point, take a look at the `JSONModel` implementation in `sap.ui.model.json.JSONModel`, which is available on the UI5 Open Source GitHub at [https://github.com/UI5/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js](https://github.com/UI5/openui5/blob/-/src/sap.ui.core/src/sap/ui/model/json/JSONModel.js).
 

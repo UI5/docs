@@ -54,7 +54,7 @@ The main objectives when migrating existing code or keeping it up to date with f
 
 Before attempting to migrate or upgrade to a higher OpenUI5 version, make sure that your development does **not** use any undocumented internal framework resources. Also, double check that all compatibility guidelines have been followed, such as those mentioned in [Upgrading](../02_Read-Me-First/upgrading-9638e4f.md).
 
-To build and serve your project in accordance with best practices, we recommend using the latest version of [UI5 Tooling](https://sap.github.io/ui5-tooling/).
+To build and serve your project in accordance with best practices, we recommend using the latest version of [UI5 CLI](https://ui5.github.io/cli/).
 
 ***
 
@@ -134,7 +134,7 @@ In the following we'll focus on crucial aspects of app development, specifically
 
 -   Use asynchronous loading for views, fragments, components, and resource bundles to enhance performance; see, for example, [Deprecated Factories Replacement](../04_Essentials/deprecated-factories-replacement-491bd9c.md).
 -   Implement the `sap.ui.core.IAsyncContentCreation` marker interface in your [Component.js file](../04_Essentials/component-controller-27ce0e4.md) to allow the content to be created fully asynchronously and for a stricter handling of certain types of errors during its view processing.
--   Make sure that dependent libraries and components are preloaded before modules from the respective preload are accessed. For example, if the `sap.f.FlexibleColumnLayout` control is part of the root view, `"sap.f": {}` should be included in the `sap.ui5/dependencies/libs` section of the `manifest.json`. Avoid setting `{ "lazy": true }` if the application does not intend to preload the bundle manually. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
+-   Make sure that dependent libraries and components are preloaded before modules from the respective preload are accessed. For example, if the `sap.f.FlexibleColumnLayout` control is part of the root view, `"sap.f": {}` should be included in the `sap.ui5/dependencies/libs` section of the `manifest.json`.Avoid setting `{ "lazy": true }` if the application does not intend to preload the bundle manually. For more information, see [Ensure that Library Preloads are Enabled](../05_Developing_Apps/performance-speed-up-your-app-408b40e.md#loio408b40efed3c416681e1bd8cdd8910d4__section_LibraryPreloads).
 
 **Additional Information:**
 
@@ -165,6 +165,10 @@ When creating instances of OpenUI5 controls programmatically \(i.e. not declarat
 
 -   When creating an aggregation binding with a template, explicitly set the `templateShareable` option to either `true` or `false`: Use `true` if your code manages the lifecycle of the template instance, or `false` if you prefer the framework to handle this automatically. For more information, see [Lifecycle of Binding Templates](../04_Essentials/lifecycle-of-binding-templates-3a4a9e5.md).
 
+-   Do **not** use an XML view or fragment as a binding template because cloning a view/fragment runs synchronously, which has the following consequences:
+    -   It eliminates the availability of mandatory asynchronous content, for example, Flexibility changes.
+    -   It does **not** correctly respect runtime changes to the control tree, since the original processing of the view/fragment is repeated.
+
 -   When an [Expression Binding](../04_Essentials/expression-binding-daf6852.md) refers to any of the built-in global symbols `odata.compare`, `odata.fillUriTemplate`, or `odata.uriEncode`, the corresponding modules must be required by the surrounding code \(either via [`template:require`](../04_Essentials/require-263f6e5.md), [`core:require`](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md), or in the controller code\):
 
     -   `odata.compare`: `sap/ui/model/odata/v4/ODataUtils`
@@ -184,8 +188,11 @@ When creating instances of OpenUI5 controls programmatically \(i.e. not declarat
 
 -   During OpenUI5 bootstrapping, assign `module:sap/ui/core/ComponentSupport` or a separate JavaScript file to `data-sap-ui-on-init`.
 
+-   Unless a specific theme is mandated, omit `data-sap-ui-theme` from the bootstrap configuration. This allows SAPUI5 to automatically apply the latest default theme based on the [Supported Themes](../02_Read-Me-First/supported-themes-38ff8c2.md), respecting the user's color scheme preference. For more information, see [Theming - Default Behavior](../04_Essentials/theming-497c27a.md#loio497c27a8ee26426faacd2b8a1751794a__sub_default).
+
 -   Avoid inline scripts or inline styles.
 
+-   Do not build CSS selectors based on specific DOM structures. Controls retain the option to change DOM structures internally as these are not considered a public offering.
 
 **Additional Information:**
 
@@ -201,8 +208,17 @@ When creating instances of OpenUI5 controls programmatically \(i.e. not declarat
 
 -   When creating a component via `sap.ui.core.ComponentContainer`, avoid setting a falsy value to the `manifest` property if the `async` property is kept undefined. Do not set the `async` property to `false`.
 
+-   Do not create components via their constructor. The `sap.ui.core.(UI)Component` class and its subclasses must only be created via any of the mechanisms described in the [Component Instantiation Guide](../04_Essentials/component-instantiation-guide-346599f.md).
+
 -   `sap.ui.core.Component#createComponent` must not be used with `async: false`.
 
+
+> ### Note:  
+> A best-practice guide for creating components can be found here: [Component Instantiation Guide](../04_Essentials/component-instantiation-guide-346599f.md).
+> 
+> [Overview of Instantiation Mechanisms](../04_Essentials/component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_OVW) outlines the recommended ways to instantiate a component.
+> 
+> In [Choosing the Right Instantiation Mechanism](../04_Essentials/component-instantiation-guide-346599f.md#loio346599f0890d4dfaaa11c6b4ffa96312__section_INM) we provide recommendations on when to use which creation mechanism.
 
 **`manifest.json`**
 
@@ -220,11 +236,11 @@ Before using the Component's `EventBus` instance via `Component#getEventBus`, de
 
 Prevent bundling modules \(`Component-preload.js`\) into strings.
 
--   Leverage [UI5 Tooling](https://sap.github.io/ui5-tooling/) to build the bundle. Avoid generating the application bundle with legacy build tooling, such as grunt-openui5.
+-   Leverage [UI5 CLI](https://ui5.github.io/cli/) to build the bundle. Avoid generating the application bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`. If absolutely required, replace e.g. `var myGlobal` with `globalThis.myGlobal` and/or wrap the module definition in an *Immediately Invoked Function Expression* \(IIFE\) if applicable.
 
--   For third-party libraries that have to define variables globally or must be exempted from being modified \(e.g. due to legal or license reasons\), [exclude them from the bundle](https://sap.github.io/ui5-tooling/v3/pages/Configuration/#excludes).
+-   For third-party libraries that have to define variables globally or must be exempted from being modified \(e.g. due to legal or license reasons\), [exclude them from the bundle](https://ui5.github.io/cli/v3/pages/Configuration/#excludes).
 
 
 ***
@@ -235,13 +251,17 @@ Prevent bundling modules \(`Component-preload.js`\) into strings.
 
 -   Don't use `sap.ui.getCore().byId()` or`Element.getElementById()`. Use `this.byId()` or `this.getView().byId()` to address controls in your views or fragments.
 
--   Don't use native HTML, SVG, or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own notepad control. Existing inline CSS must be migrated to an external style sheet.
+-   Don't use native HTML, SVG, or inline CSS style within your XML view or fragment. Instead, consider using the [`sap.ui.core.HTML`](https://ui5.sap.com/#/api/sap.ui.core.HTML) control or your own custom control. Existing inline CSS must be migrated to an external style sheet.
 
 -   Don't use view cloning via `sap.ui.core.mvc.View#clone` as it's deprecated. Instead, call the respective factory function \(e.g. `XMLView.create`\) with the View's name.
 
 -   Use the `loadFragment` method of the `sap.ui.core.mvc.Controller` to load fragments asynchronously.
 
--   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). Use `template:require` if the XML content needs preprocessing.
+-   Don't use global names in your XML. Ensure that the target function or object is defined as a module and require the defined module via [`core:require` in the XML](../04_Essentials/require-modules-in-xml-view-and-fragment-b11d853.md). If the view or the fragment is used in XML templating scenarios, use `template:require`. For more information, see [XML Templating](../04_Essentials/xml-templating-5ee619f.md).
+
+-   Event handlers must not be referenced by composite global names \(e.g. `my.event.handler`\) as these have to be resolved in the global namespace.
+
+-   All event handlers located in the view's controller must be prefixed by a dot \(`.`\). For example, use `press=".onButtonPress"` to call the `onButtonPress` method of the view's controller. This ensures that the event handler is resolved from the controller instance rather than by looking for a global function. For more information, see [Handling Events in XML Views](../04_Essentials/handling-events-in-xml-views-b0fb4de.md).
 
 -   Use the module name syntax \(e.g., `module:myapp/views/MyView`\) when creating a Typed View, Controller, or JS Fragment via factory API. This syntax provides greater flexibility by allowing you to name entities without requiring the `.view.js`, `.controller.js`, or `.fragment.js` suffixes.
 
@@ -342,13 +362,15 @@ Implement strict error handling to address critical issues.
 
 -   Don't use the global namespace of the library to add types. Use the return value of `Lib.init` instead to add them.
 
+-   Always return the object from `Lib.init()` as the return value of your `library.js` module. This enables consumers of the library to access enums and other exports properly. For more information, see [The library.js File](../07_Developing_Controls/the-library-js-file-bd039ed.md).
 -   Use the library `apiVersion 2`. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.init).
 
--   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that shall be usable as a type of control properties.
+-   Use [`sap.ui.base.DataType.registerEnum`](https://ui5.sap.com/#/api/sap.ui.base.DataType%23methods/sap.ui.base.DataType.registerEnum) to register enums that you want to use as types for control properties. Make sure that enum keys and values match, for example: `{Small: "Small", Large: "Large"}`.
 
+-   For enums in nested namespaces, create the namespace object first, before defining the enum, for example `thisLib.cards = thisLib.cards|| {}; thisLib.cards.MyEnum = {...}`. For more information, see [Enumerations and RegEx Types](../07_Developing_Controls/the-library-js-file-bd039ed.md#loiobd039ed5f99e4d3f8d020b0da62f9d85__section_ENUM).
 -   Define the `appData/manifest/i18n` section in the `.library` file or the `sap.app/i18n` section in the `manifest.json`, so that the framework can load resource bundles in advance.
 
--   Properly define library dependencies in all places where it is required. For more information, see [Dependencies to Libraries](../04_Essentials/descriptor-dependencies-to-libraries-and-components-8521ad1.md#loio8521ad1955f340f9a6207d615c88d7fd__section_DEPLIB).
+-   Properly define library dependencies in all places where it is required. For more information, see [Dependencies to Libraries](../04_Essentials/manifest-dependencies-to-libraries-and-components-8521ad1.md#loio8521ad1955f340f9a6207d615c88d7fd__section_DEPLIB).
 
 
 **Additional Information:**
@@ -363,11 +385,11 @@ Implement strict error handling to address critical issues.
 
 Prevent bundling modules \(`library-preload.js`\) into strings.
 
--   Leverage [UI5 Tooling](https://sap.github.io/ui5-tooling/) to build the bundle. Avoid generating the library bundle with legacy build tooling, such as grunt-openui5.
+-   Leverage [UI5 CLI](https://ui5.github.io/cli/) to build the bundle. Avoid generating the library bundle with legacy build tooling, such as grunt-openui5.
 
 -   Avoid declaring `var`, `let`, or `const` in the global scope above `sap.ui.define`.
 
--   For third-party libraries, set `requiresTopLevelScope="false"` to the `/library/appData/packaging/raw-module` tag within the `.library` file, **provided that** the third-party library is allowed to be bundled together and does not require access to the global scope. Otherwise, consider [excluding the third-party library from the bundle](https://sap.github.io/ui5-tooling/v3/pages/Configuration/#excludes_1).
+-   For third-party libraries, set `requiresTopLevelScope="false"` to the `/library/appData/packaging/raw-module` tag within the `.library` file, **provided that** the third-party library is allowed to be bundled together and does not require access to the global scope. Otherwise, consider [excluding the third-party library from the bundle](https://ui5.github.io/cli/v3/pages/Configuration/#excludes_1).
 
 
 ***
@@ -394,9 +416,10 @@ To keep your apps future proof and up to date with the latest improvements, you 
 -   **[Load Only What You Really Need](load-only-what-you-really-need-e8fca3e.md "The amount of resources and data that your app loads will directly affect the performance of your app. You should declare all dependencies
 		and remove unused libraries and classes from your code.")**  
 The amount of resources and data that your app loads will directly affect the performance of your app. You should declare all dependencies and remove unused libraries and classes from your code.
--   **[Use the MVC Concept](use-the-mvc-concept-07afcf4.md "MVC (Model-View-Controller) is a concept for structuring your software. It makes it easier to maintain and to extend your
-		apps.")**  
-MVC \(Model-View-Controller\) is a concept for structuring your software. It makes it easier to maintain and to extend your apps.
+-   **[Use the MVC Concept](use-the-mvc-concept-07afcf4.md "MVC (Model-View-Controller) is a concept for structuring your software. Separating the
+		representation of information from the user interaction makes it easier to maintain and to
+		extend your apps.")**  
+MVC \(Model-View-Controller\) is a concept for structuring your software. Separating the representation of information from the user interaction makes it easier to maintain and to extend your apps.
 -   **[Keep Your Views Short and Simple](keep-your-views-short-and-simple-b0d7db7.md "The view part of your app reflects what users can see and interact with. You should use a suitable set of UI controls that match your
 		scenario and keep things simple.")**  
 The view part of your app reflects what users can see and interact with. You should use a suitable set of UI controls that match your scenario and keep things simple.

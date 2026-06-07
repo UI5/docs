@@ -4,14 +4,14 @@
 
 The OData V4 Model supports features of the OData Extension for Data Aggregation V4.0 specification.
 
-The `$$aggregation` binding parameter at [`sap.ui.model.odata.v4.ODataModel#bindList`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataModel/methods/bindList) holds the information needed for data aggregation. It may be changed by [`sap.ui.model.odata.v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation). It cannot be combined with an explicit system query option `$apply`, because it implicitly derives `$apply`. For more information, see the [OData Extension for Data Aggregation V4.0 specification](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/odata-data-aggregation-ext-v4.0.html).
+The `$$aggregation` binding parameter at [`sap.ui.model.odata.v4.ODataModel#bindList`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataModel/methods/bindList) holds the information needed for data aggregation. It may be changed by [`sap.ui.model.odata.v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation). It cannot be combined with an explicit system query option `$apply`, because it implicitly derives `$apply`. For more information, see the [OData Extension for Data Aggregation Version 4.0](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/odata-data-aggregation-ext-v4.0.html) specification.
 
 Since 1.117.0, either a read-only recursive hierarchy \(see below\) or \(pure\) data aggregation is supported, but no mix; `hierarchyQualifier` is the leading property that decides between these two use cases. Since 1.125.0, maintenance of a recursive hierarchy is supported.
 
 > ### Note:  
 > -   Data aggregation or a recursive hierarchy cannot be combined with grouping via a list binding's first sorter.For more information, see the `vGroup` parameter of [`sap.ui.model.Sorter`](https://ui5.sap.com/#/api/sap.ui.model.Sorter).
 > 
-> -   Data aggregation or a recursive hierarchy do not support the [creation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/create), [deletion](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/delete), or [refreshing](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/refresh) of data. Additional property requests for an entity that already has been requested \(see [Data Reuse](data-reuse-648e360.md)\) as well as [updating](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/setProperty) of data including [invocation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) of bound actions and [side effects](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestSideEffects) are only supported for a recursive hierarchy.
+> -   Data aggregation does not support the [creation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/create), [deletion](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/delete), or [refreshing](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/refresh) of data; only a recursive hierarchy does. Additional property requests for an entity that already has been requested \(see [Data Reuse](data-reuse-648e360.md)\) as well as [updating](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/setProperty) of data including [invocation](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataContextBinding/methods/invoke) of bound actions and [side effects](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestSideEffects) are only supported for a recursive hierarchy.
 
 ***
 
@@ -23,12 +23,24 @@ For every aggregatable property, you can provide the name of the custom aggregat
 
 Normally, there is also a structural property of the same name as the custom aggregate, providing type information, etc. In case of a multi-unit situation, [`v4.Context#getFilter`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context%23methods/getFilter) may be helpful to send a request for more details.
 
-The following client-side instance annotations can be used to access a node level or expansion state. For property bindings, a syntax like `{= %{@$ui5.node.level} }` is usually helpful, because automatic type determination is not available.
+You can use the client-side instance annotations listed below to access a node level, expansion state, and other node properties.
+
+> ### Note:  
+> For property bindings, the usual syntax like `{= %{@$ui5.node.level} }` can be used, and automatic type determination is available.
+> 
+> For expression bindings, use the `%{binding}` syntax instead of `${binding}` to avoid type conversion errors, for example:
+> 
+> -   `<m:Button enabled="{= %{@$ui5.node.level} > 1 }"/>`
+> -   `<m:Button enabled="{= %{@$ui5.node.isExpanded} !== undefined }"/>`
+> 
+> The `%{binding}` syntax is a shortcut for `${path : 'binding', targetType : 'any'}` and prevents automatic type detection that would otherwise format the value according to the control property's target type.
 
 -   `@$ui5.node.level` – A non-negative integer which describes the node level; "0" is the single root node which corresponds to the grand total row, "1" are the top-level group nodes, etc.
 
 -   `@$ui5.node.isExpanded` – A boolean which determines whether this node is currently expanded. `true` means yes, `false` means no, `undefined` means that \(the state is undefined because\) this node is a leaf. As an implementation detail, the annotation might simply be missing for leaves.
 -   `@$ui5.node.groupLevelCount` – An integer value which determines the count of the direct children of a group node. As an implementation detail, the annotation is only available if the corresponding node is expanded.
+
+-   `@$ui5.node.isTotal` – A boolean which indicates whether the node represents a subtotal or grand total row.
 
 
 Two scenarios are supported:
@@ -72,7 +84,7 @@ Two scenarios are supported:
 
 -   You can provide group levels to determine a hierarchy of expandable group levels in addition to the leaf nodes determined by the groupable and aggregatable properties. To achieve this, specify the names of the group levels in the `groupLevels` property of `$$aggregation`. If no other groupable properties are given except those named as levels, the last group level determines the leaf nodes and is not expandable.
 
-    Group levels can be combined with the system query option `$count : true`; for more information, see [Binding Collection Inline Count](binding-collection-inline-count-77d2310.md). Group levels can only be combined with filtering before the aggregation \(see below\). Note how an `$orderby` option can address groups across all levels. For every aggregatable property, you can request subtotals and a grand total individually.
+    Group levels can be combined with the system query option `$count : true`; for more information, see [Binding the Count of a Collection](binding-the-count-of-a-collection-77d2310.md). Group levels can only be combined with filtering before the aggregation \(see below\). Note how an `$orderby` option can address groups across all levels. For every aggregatable property, you can request subtotals and a grand total individually.
 
     > ### Sample Code:  
     > **Example XML View With Hierarchy**
@@ -136,7 +148,7 @@ Use the `grandTotalAtBottomOnly` or `subtotalsAtBottomOnly` property with values
 
 Filters are provided to the list binding as described in [Filtering](filtering-5338bd1.md). The `Filter` objects are analyzed automatically to perform the filtering before the aggregation where possible using the `filter()` transformation. The remaining filters, including the provided `$filter` parameter of the binding, are applied after the aggregation either via the system query option `$filter` or within the system query option `$apply`, using again the `filter()` transformation.
 
-Note that `Filter` objects are not supported for aggregatable properties with an alias.For more information, see the `name` property of the `aggregate` map of the `oAggregation` parameter of [`v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/setAggregation).
+Note that `Filter` objects are only supported for aggregatable properties with an alias if neither `grandTotal` nor `groupLevels` are used. For more information, see the `name` property of the `aggregate` map of the `oAggregation` parameter of [`v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/setAggregation).
 
 ***
 
@@ -144,7 +156,7 @@ Note that `Filter` objects are not supported for aggregatable properties with an
 
 ## Search Before Data Aggregation
 
-You can provide a search string to be applied before data aggregation via the `oAggregation.search` parameter of [ODataListBinding\#setAggregation](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation). It works like the ["5.1.7 System Query Option $search"](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752364), but is applied before data aggregation, not after it. Note that certain content will break the syntax of the `$apply` system query option when embedded into a `search()` transformation and thus result in an invalid request. If the OData service supports the [ODATA-1452](https://issues.oasis-open.org/browse/ODATA-1452) proposal, then the command system query option when embedded into a `ODataUtils.formatLiteral(sSearch, "Edm.String");` should be used to encapsulate the whole search string beforehand \(see [sap.ui.model.odata.v4.ODataUtils.formatLiteral](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataUtils/methods/sap.ui.model.odata.v4.ODataUtils.formatLiteral)\). Otherwise, it might be wise to restrict your search input accordingly.
+You can provide a search string to be applied before data aggregation via the `oAggregation.search` parameter of [ODataListBinding\#setAggregation](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/setAggregation). It works like the ["5.1.8 System Query Option $search"](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361044), but is applied before data aggregation, not after it. Note that certain content will break the syntax of the `$apply` system query option when embedded into a `search()` transformation and thus result in an invalid request. If the OData service supports the [ODATA-1452](https://issues.oasis-open.org/browse/ODATA-1452) proposal, then the command system query option when embedded into a `ODataUtils.formatLiteral(sSearch, "Edm.String");` should be used to encapsulate the whole search string beforehand \(see [sap.ui.model.odata.v4.ODataUtils.formatLiteral](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataUtils/methods/sap.ui.model.odata.v4.ODataUtils.formatLiteral)\). Otherwise, it might be wise to restrict your search input accordingly.
 
 ***
 
@@ -173,6 +185,9 @@ The following properties are required from a ["com.sap.vocabularies.Hierarchy.v1
 -   `LimitedDescendantCount`
 -   `LimitedRank`
 
+> ### Note:  
+> These hierarchical properties are used internally by the list binding. They are not intended for use by applications for property bindings.
+
 Actions and functions can be invoked as usual. Side effects are supported both for single rows and the entire list \("side-effects refresh"; see [`v4.Context#requestSideEffects`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestSideEffects) for details\), even if they affect the hierarchy \(node IDs, parent/child relations, or sibling order\) itself. The current tree state with respect to [`expanded`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/expand) and [collapsed](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/collapse) nodes \(see [`v4.Context#isExpanded`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/isExpanded)\) is kept even in case of such a side-effects refresh.
 
 The `@$ui5.node.level` and `@$ui5.node.isExpanded` client-side instance annotations can be used as described above to access a node level or expansion state. A context's index refers to its position in the list binding's "flat" collection. You can use [`v4.Context#getParent`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/getParent) to access a node's parent. If the parent is not yet known, [`v4.Context#requestParent`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/requestParent) can be used to request it from the server. The [`v4.Context#isAncestorOf`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/isAncestorOf) API also helps to inspect the parent/child relationship \(note that [`v4.ODataListBinding#getRootBinding`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/getRootBinding) is unrelated\).
@@ -183,6 +198,7 @@ Since 1.125.0, a recursive hierarchy need not be read-only, but maintenance is s
 -   **Creation of new nodes**, either as new root nodes or below an existing parent node. Creation is even supported if the parent was a leaf before, however it is not supported for a collapsed parent.For more details, see [`v4.ODataListBinding#create`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding/methods/create) and "`@$ui5.node.parent`" therein. Since 1.130.0, the `createInPlace` option is supported for the`$$aggregation` binding parameter and the [`v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.ODataListBinding%23methods/setAggregation) method. When set, newly created nodes are shown "in place", i.e. at the position specified by the service . Otherwise, created nodes are displayed out of place as the first children of their parent or as the first roots, but not in their usual position as defined by the service and the current sort order.
 -   **Deletion of existing nodes**, see [`v4.Context#delete`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/delete). Note that the deletion is first done on the server and only later shown on the client. Thus, the group ID must not have submit mode "API".
 -   **Moving of nodes**. You can change the parent node, including turning a child node into a root node and vice versa, and you can also change the sibling position, including making a node the last one among its siblings or moving it just before a specified sibling. For more details, see [`v4.Context#move`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context/methods/move). Note that `nextSibling` requires a ["com.sap.vocabularies.Hierarchy.v1.RecursiveHierarchyActions"](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Hierarchy.md#RecursiveHierarchyActions) annotation with at least a `ChangeNextSiblingAction`. An out-of-place node has no preceding sibling and thus cannot be moved up. Each out-of-place node with the same parent has the same following sibling, namely that parent's first in-place \(that is, not out-of-place\) node. That following sibling is `null` if the parent has no in-place children. A similar consideration applies for out-of-place root nodes. This way, you can move out-of-place nodes down so that they become in-place nodes. Thus, you actively determine their position among their siblings. A first in-place node has no preceding sibling even if out-of-place nodes are present. Thus, an in-place node cannot be moved up in order to become out-of-place \(again\).
+-   **Copying of nodes**. Since 1.141, you can copy nodes using the `copy` parameter of [`v4.Context#move`](https://ui5.sap.com/#api/sap.ui.model.odata.v4.Context%23methods/move). Note that the copying of nodes requires a ["com.sap.vocabularies.Hierarchy.v1.RecursiveHierarchyActions"](https://github.com/SAP/odata-vocabularies/blob/main/vocabularies/Hierarchy.md#RecursiveHierarchyActions) annotation with the `CopyAction`.
 
 Note that only one such change must be pending at any point in time. That is, you must wait for one change to be completed before starting the next change. The only exception is property updates, for which multiple properties can be combined as usual.
 
@@ -196,7 +212,7 @@ A typical request to read the first page of a hierarchical table may look like t
 
 `GET /sap/opu/odata4/IWBEP/TEA/default/IWBEP/TEA_BUSI/0001/EMPLOYEES?$apply=orderby(AGE)/com.sap.vocabularies.Hierarchy.v1.TopLevels(HierarchyNodes=$root/EMPLOYEES,HierarchyQualifier='OrgChart',NodeProperty='ID',Levels=2)&$select=AGE,DescendantCount,DistanceFromRoot,DrillState,ID,MANAGER_ID,Name&$count=true&$skip=0&$top=115`
 
-Note how the sibling\(!\) order is specified via an [`orderby`](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs03/odata-data-aggregation-ext-v4.0-cs03.html#Transformationorderby) transformation \(see the list binding's sorters as well as `$orderby`\). The list binding's path would be "`/EMPLOYEES`", and `$$aggregation` looks as follows. The model's `autoExpandSelect` parameter does its magic, and `$count&$skip&$top` is taken care of automatically by the list binding.
+Note how the sibling\(!\) order is specified via an [`orderby`](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/odata-data-aggregation-ext-v4.0.html#Transformationorderby) transformation \(see the list binding's sorters as well as `$orderby`\). The list binding's path would be "`/EMPLOYEES`", and `$$aggregation` looks as follows. The model's `autoExpandSelect` parameter does its magic, and `$count&$skip&$top` is taken care of automatically by the list binding.
 
 ```xml
 <Table rows="{
@@ -216,9 +232,9 @@ Note how the sibling\(!\) order is specified via an [`orderby`](https://docs.oas
 
 If the list binding uses `$count: true`, for example, to show this count as part of a title, an extra request is sent once \(not each time when scrolling, but of course again after a \(side-effects\) refresh\). It includes any custom query options as well as filter and search criteria: `GET /sap/opu/odata4/IWBEP/TEA/default/IWBEP/TEA_BUSI/0001/EMPLOYEES/$count?sap-client=123&$filter=AGE ge 0 and (Is_Manager)&$search=developer`
 
-With filter and search, the main request looks a bit more complicated and includes an [`ancestors`](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs03/odata-data-aggregation-ext-v4.0-cs03.html#Transformationsancestorsanddescendants) transformation beforehand: <code>GET /sap/opu/odata4/IWBEP/TEA/default/IWBEP/TEA_BUSI/0001/EMPLOYEES?<b>$apply=ancestors($root/EMPLOYEES,OrgChart,ID,filter(AGE ge 0 and (Is_Manager))/search(developer),keep start)</b>/orderby(AGE)/com.sap.vocabularies.Hierarchy.v1.TopLevels(HierarchyNodes=$root/EMPLOYEES,HierarchyQualifier='OrgChart',NodeProperty='ID',Levels=2) &amp;$select=AGE,DescendantCount,DistanceFromRoot,DrillState,ID,MANAGER_ID,Name&amp;$count=true&amp;$skip=0&amp;$top=115</code>
+With filter and search, the main request looks a bit more complicated and includes an [`ancestors`](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/odata-data-aggregation-ext-v4.0.html#Transformationsancestorsanddescendants) transformation beforehand: <code>GET /sap/opu/odata4/IWBEP/TEA/default/IWBEP/TEA_BUSI/0001/EMPLOYEES?<b>$apply=ancestors($root/EMPLOYEES,OrgChart,ID,filter(AGE ge 0 and (Is_Manager))/search(developer),keep start)</b>/orderby(AGE)/com.sap.vocabularies.Hierarchy.v1.TopLevels(HierarchyNodes=$root/EMPLOYEES,HierarchyQualifier='OrgChart',NodeProperty='ID',Levels=2) &amp;$select=AGE,DescendantCount,DistanceFromRoot,DrillState,ID,MANAGER_ID,Name&amp;$count=true&amp;$skip=0&amp;$top=115</code>
 
-When a node is expanded individually, a request for its children is sent using a [`descendants`](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs03/odata-data-aggregation-ext-v4.0-cs03.html#Transformationsancestorsanddescendants) transformation, for example: <code>GET /sap/opu/odata4/IWBEP/TEA/default/IWBEP/TEA_BUSI/0001/EMPLOYEES?<b>$apply=descendants($root/EMPLOYEES,OrgChart,ID,filter(ID eq '0'),1)</b>/orderby(AGE)&amp;$select=AGE,DrillState,ID,MANAGER_ID,Name&amp;$count=true&amp;$skip=0&amp;$top=6</code>
+When a node is expanded individually, a request for its children is sent using a [`descendants`](https://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/odata-data-aggregation-ext-v4.0.html#Transformationsancestorsanddescendants) transformation, for example: <code>GET /sap/opu/odata4/IWBEP/TEA/default/IWBEP/TEA_BUSI/0001/EMPLOYEES?<b>$apply=descendants($root/EMPLOYEES,OrgChart,ID,filter(ID eq '0'),1)</b>/orderby(AGE)&amp;$select=AGE,DrillState,ID,MANAGER_ID,Name&amp;$count=true&amp;$skip=0&amp;$top=6</code>
 
 When keeping the expand/collapsed state of nodes, the `TopLevels` function's `ExpandLevels` parameter is needed, for example: <code>GET /sap/opu/odata4/IWBEP/TEA/default/IWBEP/TEA_BUSI/0001/EMPLOYEES?$apply=com.sap.vocabularies.Hierarchy.v1.TopLevels(HierarchyNodes=$root/EMPLOYEES,HierarchyQualifier='OrgChart',NodeProperty='ID',Levels=2,<b>ExpandLevels=[{NodeID : "8", Levels : 0}, {NodeID : "1", Levels : 1}]</b>)&amp;...</code>
 

@@ -2,11 +2,28 @@
 
 # Step 1: Hello World! \(TypeScript\)
 
-As you know OpenUI5 is all about HTML5. Let's get started with building a first "Hello World" with HTML. This tutorial version has been set up in a way that allows the use of UI5 Tooling in combination with it.
+As you know, OpenUI5 is all about HTML5. Let's get started with building a first "Hello World" with HTML. This tutorial version has been set up in a way that allows the use of UI5 CLI in combination with it.
+
+We first introduce you to the basic development paradigms like *Model-View-Controller* and establish a best-practice structure of our application. We'll do this along the classic example of "Hello World" and start a new app from scratch. Next, we'll introduce the fundamental data binding concepts of OpenUI5 and extend our app to show a list of invoices. We'll continue to add more functionality by adding navigation, extending controls, and making our app responsive. We'll also have a look at the testing features and the built-in support tools of OpenUI5.
 
 ***
 
-## Preview
+## Preview Walkthrough Tutorial App \(TypeScript\)
+
+![Preview of the OpenUI5 application that is going to be built in this tutorial. Contains a Hello World upper part with buttons and a text input. The lower part shows list of invoices with details, grouped by vendor names.](images/loiofb12cea5ac9b45bb9007aac5a1a8689f_LowRes.png)
+
+***
+
+> ### Tip:  
+> You don't have to do all tutorial steps sequentially, you can also jump directly to any step you want. Just download the code from the previous step and make sure that the application runs as intended.
+> 
+> You can view the samples for all steps and download the solutions as zip files on GitHub at [OpenUI5 TypeScript Walkthrough](https://github.com/SAP-samples/ui5-typescript-walkthrough/tree/main/README.md).
+
+The tutorial consists of the following steps. To start, just open the first link - you'll be guided from there.
+
+***
+
+## Preview Step 1
 
   
   
@@ -20,7 +37,7 @@ As you know OpenUI5 is all about HTML5. Let's get started with building a first 
 
 ## Setup
 
-Open a terminal and install UI5 Tooling globally on your machine by executing the following command:
+Open a terminal and install UI5 CLI globally on your machine by executing the following command:
 
 `npm install --global @ui5/cli`
 
@@ -30,7 +47,7 @@ Open a terminal and install UI5 Tooling globally on your machine by executing th
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 1: Hello World!](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/01) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-01.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 Create a folder on your local machine which will contain all the sources of the app we're going to build. We refer to this folder as the "app root directory".
 
@@ -48,11 +65,11 @@ In our `webapp` folder, we create a new HTML file named `index.html` and enter t
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>UI5 TypeScript Walkthrough</title>
+    <meta charset="utf-8">
+    <title>UI5 TypeScript Walkthrough</title>
 </head>
 <body>
-	<div>Hello World</div>
+    <div>Hello World</div>
 </body>
 </html>
 ```
@@ -70,11 +87,11 @@ In our `webapp` folder, we create a new HTML file named `index.html` and enter t
 
 ## webapp/manifest.json \(New\)
 
-The manifest file, also known as the "descriptor" or "app descriptor," serves as a crucial configuration file for applications, components, and libraries. Stored in the `webapp` folder, this file is read by OpenUI5 to instantiate a component. Although we haven't created a component yet \(which is part of [Step 9: Component Configuration \(TypeScript\)](step-9-component-configuration-typescript-f9d0e2f.md)\), we need to create the app descriptor now because the UI5 Tooling we intend to use for development also requires it.
+The manifest file, also known as the "descriptor" or "app descriptor," serves as a crucial configuration file for applications, components, and libraries. Stored in the `webapp` folder, this file is read by OpenUI5 to instantiate a component. Although we haven't created a component yet \(which is part of [Step 9: Component Configuration \(TypeScript\)](step-9-component-configuration-typescript-f9d0e2f.md)\), we need to create the app descriptor now because UI5 CLI we intend to use for development also requires it.
 
 Hence, we create a new file named `manifest.json` in the webapp folder and define its essential attributes:
 
--   The `_version` attribute is a mandatory field in the app descriptor that indicates the format version of the descriptor. This attribute is crucial for identifying application settings when the descriptor is read by various tools. As new features or changes are introduced in future versions of the descriptor, the version number helps to ensure compatibility and proper interpretation of the descriptor's contents. Consequently, with each new version of OpenUI5 a corresponding version of the app descriptor is released. For this tutorial, we have determined that our app requires a minimum OpenUI5 version of 1.128. Therefore, we specify the descriptor format version as 1.65.0, aligning it with the appropriate OpenUI5 version.
+-   The `_version` attribute is a mandatory field in the app descriptor that indicates the format version of the descriptor. This attribute is crucial for identifying application settings when the descriptor is read by various tools. As new features or changes are introduced in future versions of the descriptor, the version number helps to ensure compatibility and proper interpretation of the descriptor's contents. Consequently, with each new version of OpenUI5 a corresponding version of the app descriptor is released.
 
     > ### Note:  
     > To find the appropriate `_version` for each OpenUI5 release, see [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md).
@@ -96,7 +113,7 @@ Hence, we create a new file named `manifest.json` in the webapp folder and defin
 
 ```
 {
-  "_version": "1.65.0",
+  "_version": "2.8.0",
   "sap.app": {
     "id": "ui5.walkthrough",
     "type": "application",
@@ -115,9 +132,9 @@ Hence, we create a new file named `manifest.json` in the webapp folder and defin
 
 <a name="loioc20489e2a59d46e99c83f0510392cb6c__section_e2v_fmx_kzb"/>
 
-## UI5 Tooling
+## UI5 CLI
 
-The following steps are tailored for using this project with [UI5 Tooling](../05_Developing_Apps/development-environment-7bb04e0.md).
+The following steps are tailored for using this project with [UI5 CLI](../02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiod8ab43d845cd42ceb0aa4e47b44a8fcc).
 
 ***
 
@@ -141,25 +158,21 @@ Enter the following content:
 
 ```
 
-Next, we install the UI5 CLI and add it as development dependency to our project. For this, we open a terminal in the app root folder and execute the following command:
+Next, we install UI5 CLI and add it as development dependency to our project. For this, we open a terminal in the app root folder and execute the following command:
 
 `npm install --save-dev @ui5/cli`
 
-Finally, we initialize the UI5 Tooling configuration for our project by executing the following command on the app root folder:
+Finally, we initialize the UI5 CLI configuration for our project by executing the following command on the app root folder:
 
 `ui5 init`
 
-This generates a `ui5.yaml` file in our app root directory, which is essential for using UI5 Tooling with our project.
+This generates a `ui5.yaml` file in our app root directory, which is essential for using UI5 CLI with our project.
 
 To start the web server, execute the following command:
 
 `npm start`
 
 This opens a new browser window hosting your newly created `index.html`.
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Previous:**[Step 2: Bootstrap \(TypeScript\)](step-2-bootstrap-typescript-32b14d8.md "Before we can do something with OpenUI5, we need to load and initialize it. This process of loading and initializing OpenUI5 is called bootstrapping. Once this bootstrapping is finished, we simply display an alert.")
 
 **Related Information**  
 
@@ -170,5 +183,5 @@ This opens a new browser window hosting your newly created `index.html`.
 
 [App Development](../05_Developing_Apps/app-development-b1fbe1a.md "There are several ways to develop OpenUI5 applications. Select the one that meets the requirements of your projects and your expectations best.")
 
-[UI5 Tooling: Getting Started](https://sap.github.io/ui5-tooling/stable/pages/GettingStarted/)
+[UI5 CLI: Getting Started](https://ui5.github.io/cli/stable/pages/GettingStarted/)
 

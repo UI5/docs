@@ -20,7 +20,7 @@ If we want to do a more complex logic for formatting properties of our data mode
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 22: Custom Formatters](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/22) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-22.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -135,12 +135,6 @@ We add a status using the `firstStatus` aggregation to our `ObjectListItem` that
 ```
 
 Instead of a technical status we get now the human-readable texts below the `number` attribute of the `ObjectListItem` that we specified in our resource bundle.
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 21: Expression Binding \(TypeScript\)](step-21-expression-binding-typescript-8d67ba2.md "Sometimes the predefined types of OpenUI5 are not flexible enough and you want to do a simple calculation or formatting in the view - that is where expressions are really helpful. We use them to format our price according to the current number in the data model.")
-
-**Previous:**[Step 23: Filtering \(TypeScript\)](step-23-filtering-typescript-7f02e9d.md "In this step, we add a search field for our product list and define a filter that represents the search term. When searching, the list is automatically updated to show only the items that match the search term.")
 
 **Related Information**  
 

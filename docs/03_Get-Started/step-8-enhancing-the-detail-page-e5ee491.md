@@ -147,7 +147,7 @@ We adjust the `headerContent` so that the `sap.f.Avatar` displays the specific i
 
 We adjust the *General Information* section to display Product ID, Description and Supplier of the selected product.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 7: Routing](step-7-routing-7f65131.md "In this step, we utilize the sap.f.routing.Router.")
 

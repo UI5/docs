@@ -38,7 +38,7 @@ You can view and download all files at [Flexible Column Layout App - Step 5](htt
 
 ```json
 {
-	"_version": "1.38.0",
+	"_version": "2.8.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -54,7 +54,7 @@ You can view and download all files at [Flexible Column Layout App - Step 5](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.98.0",
+			"minUI5Version": "1.149.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},
@@ -275,7 +275,7 @@ We add content in the `headerContent` aggregation. We're using `sap.m.Avatar` as
 
 Finally, we add page content in two separate sections with blocks. For more information, see [Object Page Blocks](../08_More_About_Controls/object-page-blocks-4527729.md).
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 4: Adding a Detail Page](step-4-adding-a-detail-page-4e4315c.md "In this step, we add an empty detail page.")
 

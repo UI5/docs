@@ -4,13 +4,18 @@
 
 Web Components integrate seamlessly into OpenUI5. A Web Component, especially a UI5 Web Component with its Custom Elements metadata, can be required and used like a regular OpenUI5 control.
 
+**On this page:**
+
+-   [General Concepts Compared to OpenUI5 Controls](using-web-components-1c80793.md#loio1c80793df5bb424091954697fc0b2828__section_GCS)
+-   [Using UI5 Web Components in OpenUI5 Applications](using-web-components-1c80793.md#loio1c80793df5bb424091954697fc0b2828__section_WCSU)
+
 ***
 
-<a name="loio1c80793df5bb424091954697fc0b2828__section_BAD4FC9765174E0EB7264A423F7C4ED6"/>
+<a name="loio1c80793df5bb424091954697fc0b2828__section_GCS"/>
 
 ## General Concepts Compared to OpenUI5 Controls
 
-To use Web Components, it's important to understand the different concepts and their mapping. While there are some differences between Web Components and OpenUI5 controls, the basic concepts of Web Components map easily to OpenUI5 nomenclature:
+To use Web Components, it's important to understand how their concepts map to OpenUI5 concepts. While there are some differences, the basic concepts map easily to OpenUI5 nomenclature:
 
 
 <table>
@@ -63,7 +68,7 @@ getters
 </td>
 <td valign="top">
 
-*Readonly* properties can be accessed with a camel-cased getter, e.g. for the [`AvatarGroup`'s `colorScheme`](https://sap.github.io/ui5-webcomponents/components/AvatarGroup/#colorscheme) property: `AvatarGroup#getColorScheme()`. Readonly properties of course do not provide a setter.
+*Readonly* properties can be accessed with a camel-cased getter, e.g. for the [`AvatarGroup`'s `colorScheme`](https://ui5.github.io/webcomponents/components/AvatarGroup/#colorscheme) property: `AvatarGroup#getColorScheme()`. Readonly properties of course do not provide a setter.
 
 </td>
 </tr>
@@ -114,7 +119,7 @@ methods
 </td>
 <td valign="top">
 
-Any API exposed by a Web Component is available, e.g. the `walk()` API of the [Tree Web Component](https://sap.github.io/ui5-webcomponents/components/Tree/#walk)
+Any API exposed by a Web Component is available, e.g. the `walk()` API of the [Tree Web Component](https://ui5.github.io/webcomponents/components/Tree/#walk)
 
 </td>
 </tr>
@@ -141,7 +146,7 @@ Associations are a UI5-only concept. Any Web Component property that takes an HT
 
 ### API-Specific Differences
 
-Besides the nomenclature for the basic concepts, several additional naming differences need to be considered to harmonize the usage together with OpenUI5 controls:
+Besides the nomenclature for the basic concepts, several additional naming differences apply when using Web Components alongside OpenUI5 controls:
 
 -   The DOM's `disabled` attribute is available as the `enabled` property in OpenUI5.
 
@@ -154,187 +159,232 @@ Besides the nomenclature for the basic concepts, several additional naming diffe
 
 ***
 
-<a name="loio1c80793df5bb424091954697fc0b2828__section_798A4B993F764A04BAB08DEAACC5DFA9"/>
+<a name="loio1c80793df5bb424091954697fc0b2828__section_WCSU"/>
 
 ## Using UI5 Web Components in OpenUI5 Applications
 
-This section explains how to integrate UI5 Web Components into existing OpenUI5 applications. We'll cover the following topics:
-
-1.  [Preparing your project](using-web-components-1c80793.md#loio1c80793df5bb424091954697fc0b2828__subsection_PREP)
-2.  [Usage of UI5 Web Components in XML views](using-web-components-1c80793.md#loio1c80793df5bb424091954697fc0b2828__subsection_XML)
-3.  [Usage of UI5 Web Components in JavaScript/TypeScript, e.g. in controllers](using-web-components-1c80793.md#loio1c80793df5bb424091954697fc0b2828__subsection_JSTS)
-
 ***
 
-### 1. Preparing Your Project
+### I. Preparing Your Project
 
-Before using external Web Components packages in your application, prepare your project by adding the `ui5-tooling-modules` UI5 Tooling extension and configuring your `ui5.yaml`.
+Before using Web Components packages in your application, follow these steps in your project directory:
 
-**The `ui5-tooling-modules` extension**
+1.  **Install the `ui5-tooling-modules` UI5 CLI extension**
 
-This extension is essential for handling npm dependencies, including UI5 Web Components. Run the following command in your project directory:
+    ```sh
+    npm install ui5-tooling-modules --save-dev --ignore-scripts=false -rte=ui5.yaml,ui5-local.yaml,ui5-deploy.yaml,...
+    # If only ui5.yaml exists, simply use -rte without the assigned values (=...)
+    ```
 
-`npm install ui5-tooling-modules --save-dev`
+    The `-rte` flag \(or `--register-tooling-extension`\) automatically registers the required custom task and middleware in your listed `ui5*.yaml` files, and `--ignore-scripts=false` ensures the registration script runs even if your `.npmrc` disables lifecycle scripts.
 
-This adds the extension to your project's `package.json` under `devDependencies`, similar to the example below:
+2.  **Install the Web Components packages your project needs**
 
-```json
-"devDependencies": {
-    ...
-    "ui5-tooling-modules": "^3",
-    ...
-}
-```
+    ```sh
+    npm install @ui5/webcomponents
+    npm install @ui5/webcomponents-ai
+    npm install @ui5/webcomponents-fiori
+    # npm install @ui5/webcomponents-...
+    ```
 
-> ### Note:  
-> We install the `ui5-tooling-modules` extension as a `devDependency` since it's not needed for the final productive build of the application.
 
-**Configuring `ui5.yaml`**
-
-Next, add the custom task and custom middleware to the respective sections in the `ui5.yaml`:
+After installation, verify that your `ui5*.yaml` files contain the following entries. If `-rte` did not add them \(e.g. because the package was already installed or the postinstall script was skipped\), add them manually to **all** applicable `ui5*.yaml` files in your project:
 
 ```
+# In e.g. ui5.yaml, ui5-local.yaml, ui5-deploy.yaml, ui5-...yaml
 builder:
   customTasks:
     - name: ui5-tooling-modules-task
       afterTask: replaceVersion
-  # ... more custom taks, e.g. transpilation, and so on
 server:
   customMiddleware:
     - name: ui5-tooling-modules-middleware
       afterMiddleware: compression
-  # ... more custom middlewares, e.g. transpilation, live-reload, and so on
 ```
 
-We stick to the minimal needed configuration here, but the `ui5-tooling-modules` extension offers additional configuration options described in the [extension's official documentation](https://github.com/ui5-community/ui5-ecosystem-showcase/tree/main/packages/ui5-tooling-modules#configuration-options-in-yourappui5yaml).
+Your `package.json` should now contain **`ui5-tooling-modules` in `devDependencies`** and **`@ui5/webcomponents*` in `dependencies`**. UI5 Web Component packages must be `dependencies` \(not `devDependencies`\) to ensure that `ui5-tooling-modules` can resolve their modules during both development and production builds.
 
-For more information on setting up custom tasks and middleware, see [UI5 Tooling Custom Task Documentation](https://sap.github.io/ui5-tooling/v4/pages/extensibility/CustomTasks/).
+> ### Caution:  
+> **Projects with multiple UI5 CLI configuration files \(`ui5*.yaml`\):**
+> 
+> SAP Fiori tools projects commonly use separate YAML files for different scenarios \(e.g. `ui5.yaml`, `ui5-local.yaml`, `ui5-deploy.yaml`\). If your production build uses a different config file, for example `ui5 build --config ui5-deploy.yaml`, you **must** ensure that the `ui5-tooling-modules-task` is configured there as well. Otherwise, your Web Components aren't bundled into the build output, and the deployed application fails to find them at runtime.
 
-**Installing UI5 Web Components Packages**
+For additional configuration options, see the [ui5-tooling-modules documentation](https://github.com/ui5-community/ui5-ecosystem-showcase/tree/main/packages/ui5-tooling-modules#configuration-options-in-yourappui5yaml).
 
-Run the following commands to add the `@ui5/webcomponents` and the `@ui5/webcomponents-ai` packages to your project:
+**Finding UI5 Web Components**
 
-`npm install @ui5/webcomponents`
+UI5 Web Components are distributed across several npm packages. To find which package contains the web component you need, consult the [official UI5 Web Components documentation](https://ui5.github.io/webcomponents/). Each web component's page indicates its package.
 
-`npm install @ui5/webcomponents-ai`
 
-Your `package.json` should now contain the following entries in the `dependencies` section:
+<table>
+<tr>
+<th valign="top" align="center">
 
-```json
-"dependencies": {
-    ...
-    "@ui5/webcomponents": "^2.9.0",
-    "@ui5/webcomponents-ai": "^2.9.0",
-    ...
-}
-```
+Package
 
-> ### Note:  
-> Web Component packages must be installed as a `dependency` to ensure that `ui5-tooling-modules` can resolve their modules.
+</th>
+<th valign="top" align="center">
+
+Contents
+
+</th>
+<th valign="top" align="center">
+
+Examples
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+`@ui5/webcomponents`
+
+</td>
+<td valign="top">
+
+Core UI controls
+
+</td>
+<td valign="top">
+
+Button, Input, List, Table, Dialog, ...
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`@ui5/webcomponents-fiori`
+
+</td>
+<td valign="top">
+
+SAP Fiori-specific controls
+
+</td>
+<td valign="top">
+
+ShellBar, BarcodeScannerDialog, Wizard, SideNavigation, ...
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`@ui5/webcomponents-ai`
+
+</td>
+<td valign="top">
+
+AI-related controls
+
+</td>
+<td valign="top">
+
+Button \(AI\), PromptInput, ...
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`@ui5/webcomponents-icons`
+
+</td>
+<td valign="top">
+
+Icon collections
+
+</td>
+<td valign="top">
+
+Individual icons and AllIcons
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`@ui5/webcomponents-...`
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+</tr>
+</table>
 
 ***
 
-### 2. Using UI5 Web Components in XML Views
+### II. Using UI5 Web Components in XML Views
 
-**Declaring the Namespace**
-
-To use the UI5 Web Components in an XML view, first declare the corresponding namespace.
-
-With `xmlns:ai="@ui5/webcomponents-ai"`, we declare the namespace for UI5 Web Components, allowing you to use their tags with the XML namespace `ai`.
+To use UI5 Web Components in an XML view, declare the corresponding namespace and use the web component's class name as an XML node.The class names can can be found in the official documentation, for example [`Button`](https://ui5.github.io/webcomponents/components/main/Button/).
 
 ```xml
-<!-- On the view, we define the "ai" namespace for UI5 Web Components -->
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
-    xmlns:ai="@ui5/webcomponents-ai">
-</mvc:View>
-```
-
-**Using an AI Button**
-
-To add a `<ui5-ai-button>` to your XML view, use the `ai` namespace along with the button’s class name \(`Button`\) as an XML node.
-
-> ### Note:  
-> The class names of each UI5 Web Component can can be found in the official documentation, e.g. [`Button`](https://sap.github.io/ui5-webcomponents/components/main/Button/).
-
-In this example, we use the `text` property to specify the button's text and bind the `click` event to a function in the controller. The AI button also needs to aggregate some internal states that provide their own icon. We'll look into the usage of icons in the next section.
-
-```xml
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:core="sap.ui.core"
-    xmlns:ai="@ui5/webcomponents-ai">
-
-    <!-- Add the button using the class name -->
+    xmlns:ai="@ui5/webcomponents-ai"
+>
     <ai:Button text="Generate" click=".onBtnClick">
-        <ai:ButtonState name="generate" icon="sap-icon://ai"></ai:ButtonState>
-        <ai:ButtonState name="generating" icon="sap-icon://stop"></ai:ButtonState>
+        <ai:ButtonState name="generate" icon="sap-icon://ai" />
+        <ai:ButtonState name="generating" icon="sap-icon://stop" />
     </ai:Button>
 </mvc:View>
 ```
 
-> ### Note:  
-> Properties and Events can be used identically to any other OpenUI5 control.
+Properties and events can be used identically to any other OpenUI5 control.
 
 **Using Icons**
 
-To enable the usage of icons, use the XML view's `core:require` mechanism and load the `AllIcons` module.
+To use icons, load the `AllIcons` module via the XML view's `core:require` mechanism .
 
 ```xml
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:core="sap.ui.core"
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
     xmlns:ai="@ui5/webcomponents-ai"
-    core:require="{
-        allIcons: '@ui5/webcomponents-icons/AllIcons',
-    }">
-
+    xmlns:core="sap.ui.core"
+    core:require="{ allIcons: '@ui5/webcomponents-icons/AllIcons' }"
+>
     <ai:Button text="Generate" click=".onBtnClick">
         <!-- both icons are loaded in the 'AllIcons' collection -->
-        <ai:ButtonState name="generate" icon="sap-icon://ai"></ai:ButtonState>
-        <ai:ButtonState name="generating" icon="sap-icon://stop"></ai:ButtonState>
+        <ai:ButtonState name="generate" icon="sap-icon://ai" />
+        <ai:ButtonState name="generating" icon="sap-icon://stop" />
     </ai:Button>
 </mvc:View>
 ```
 
-To reduce the overall payload of an application, you can also require individual icons:
+To reduce the application's payload, you can also require individual icons:
 
 ```xml
-<!-- In this sample we only load one specific icon: chain-link -->
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:core="sap.ui.core"
-    xmlns:ai="@ui5/webcomponents-ai"
-    core:require="{
-        iconAI: '@ui5/webcomponents-icons/ai',
-        iconStop: '@ui5/webcomponents-icons/stop'
-    }">
-
-    <ai:Button text="Generate" click=".onBtnClick">
-        <!-- each icon is loaded individually in a core:require statement -->
-        <ai:ButtonState name="generate" icon="sap-icon://ai"></ai:ButtonState>
-        <ai:ButtonState name="generating" icon="sap-icon://stop"></ai:ButtonState>
-    </ai:Button>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:ai="@ui5/webcomponents-ai">
+<!-- ... -->
+    <ai:ButtonState core:require="{ iconAI: '@ui5/webcomponents-icons/ai' }"
+        name="generate"
+        icon="sap-icon://ai"
+    />
+    <ai:ButtonState core:require="{ iconStop: '@ui5/webcomponents-icons/stop' }"
+        name="generating"
+        icon="sap-icon://stop"
+    />
 </mvc:View>
 ```
 
 **Aggregations and Data Binding**
 
-In the previous examples, we have seen how the AI button can aggregate internal states. Now let's look at how data binding can be used with UI5 Web Components in the same fashion as with traditional OpenUI5 controls.
+The previous examples show how the AI button aggregates internal states. Data binding works the same way as with traditional OpenUI5 controls - any `property` or `slot` \(`aggregation`, respectively\) offered by a Web Component can be bound to a model value.
 
-Any `property` or `slot` \(`aggregation`, respectively\) offered by a UI5 Web Component can be bound to a model value, thus leveraging the full data binding capabilities of the OpenUI5 programming model.
+The following example demonstrates how a `<ui5-list>` Web Component \(`List`\) can be bound against a model. In this case, we use another Web Component, the `<ui5-li>` element \(`ListItemStandard`\), as a binding template.
 
-The following example demonstrates how a `<ui5-list>` UI5 Web Component can be bound against a model. In this case, we use another UI5 Web Component, the `<ui5-li>` element, as a binding template.
-
-As before, use the corresponding **namespace and class name** to define the UI5 Web Components in our XML view \(see the official [`List`](https://sap.github.io/ui5-webcomponents/components/List/) and [`ListItemStandard`](https://sap.github.io/ui5-webcomponents/components/ListItemStandard/) documentation\):
+As before, use the corresponding **namespace and class name** to define the UI5 Web Components in our XML view \(see the official [`List`](https://ui5.github.io/webcomponents/components/List/) and [`ListItemStandard`](https://ui5.github.io/webcomponents/components/ListItemStandard/) documentation\):
 
 ```xml
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:core="sap.ui.core"
-    xmlns:webc="@ui5/webcomponents">
-
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:webc="@ui5/webcomponents">
     <!-- You can use the standard UI5 data binding features -->
     <webc:List headerText="My Sample List" items="{/pathToMyListItems}">
         <!-- Web Components can aggregate other Web Components and use them as binding templates. -->
@@ -343,114 +393,37 @@ As before, use the corresponding **namespace and class name** to define the UI5 
             icon="slim-arrow-right"
             iconEnd="true"
             description="{productID}"
-            additionalText="{price}" text="{productName}">
+            additionalText="{price}"
+            text="{productName}"
+        />
     </webc:List>
 </mvc:View>
 ```
 
 > ### Note:  
-> Besides aggregating other UI5 Web Components, you can of course also aggregate OpenUI5 controls in most UI5 Web Components.
-> 
-> However, there are exceptions if the [official UI5 Web Component documentation](https://sap.github.io/ui5-webcomponents/) states otherwise. This applies, for example, to the `<ui5-avatar-group>`, which can only hold `<ui5-avatar>` UI5 Web Components in its [default slot](https://sap.github.io/ui5-webcomponents/components/AvatarGroup/#default) and `content` aggregations.
+> Besides aggregating other UI5 Web Components, you can of course also aggregate OpenUI5 controls in most UI5 Web Components. However, there are exceptions if the [official UI5 Web Component documentation](https://sap.github.io/ui5-webcomponents/) states otherwise. This applies, for example, to the `<ui5-avatar-group>`, which can only hold `<ui5-avatar>` Web Components in its [default slot](https://sap.github.io/ui5-webcomponents/components/AvatarGroup/#default) and `content` aggregations.
 
 ***
 
-### 3. Using UI5 Web Components in JavaScript/TypeScript \(e.g. in Controllers\)
+### III. Using UI5 Web Components in JavaScript/TypeScript \(e.g. in Controllers\)
 
 UI5 Web Components can easily be used in JavaScript by requiring the corresponding classes. Their usage is identical to any other traditional OpenUI5 control. You can create instances via constructor calls and then aggregate them into other UI5 Web Components or OpenUI5 controls.
 
-The following sample demonstrates how UI5 Web Components can be used in a JavaScript-based Typed View:
-
 ```js
-sap.ui.define([
+sap.ui.define([ // TypeScript: import ...
     "@ui5/webcomponents/Panel",
     "@ui5/webcomponents-ai/Button",
     "@ui5/webcomponents-ai/ButtonState",
     "@ui5/webcomponents-icons/ai",
-    "@ui5/webcomponents-icons/stop"
-    ], function(Panel, AIButton, AIButtonState) {
-    "use strict";
-    return {
-        createContent() {
-            // we can aggregate Web Components from different packages, e.g. the Panel's content can hold AI Buttons
-            return new Panel({
-                content: [new AIButton({
-                    text: "Generate",
-                    // aggregation content is defined like any other OpenUI5 control
-                    states: [
-                        new AIButtonState({ name: "generate", icon: "sap-icon://ai" }),
-                        new AIButtonState({ name: "generating", icon: "sap-icon://stop" })
-                    ]
-                    click: (evt) => {
-                        // some event handler
-                        const src = evt.getSource();
-                        // ...
-                    }
-                })]
-            })
-        }
-    };
-});
-```
-
-> ### Note:  
-> UI5 Web Components can be used in TypeScript but without type definitions.
-
-The same sample in TypeScript looks like this:
-
-```js
-import Event from "sap/ui/base/Event";
-import Panel from "@ui5/webcomponents/Panel";
-import AIButton from "@ui5/webcomponents-ai/Button";
-import AIButtonState from "@ui5/webcomponents-ai/ButtonState";
-import "@ui5/webcomponents-icons/ai";
-import "@ui5/webcomponents-icons/stop";
-
-export default {
-    createContent() {
-        return new Panel({
-            // we can aggregate Web Components from different packages, e.g. the Panel's content can hold AI Buttons
-            content: [new AIButton({
-                text: "Generate",
-                // aggregation content is defined like any other OpenUI5 control
-                states: [
-                    new AIButtonState({ name: "generate", icon: "sap-icon://ai" }),
-                    new AIButtonState({ name: "generating", icon: "sap-icon://stop" })
-                ]
-                click(evt:Event) {
-                    // some event handler
-                    const src = evt.getSource() as AIButton;
-                    // ...
-                }
-            })]
-        })
-    }
-}
-```
-
-**Including UI5 Web Components Assets \(i18n, Themes\)**
-
-UI5 Web Components are translated into the same languages as OpenUI5, and the same themes are available. To ensure that the assets are included in your application, require the `Assets` module:
-
-In JavaScript:
-
-```js
-sap.ui.define([
-    [...],
+    "@ui5/webcomponents-icons/stop",
     "@ui5/webcomponents/dist/Assets",
-    "@ui5/webcomponents-ai/dist/Assets"
-    ], function([...]) {
-        [...]
-    };
+    "@ui5/webcomponents-ai/dist/Assets",
+    "@ui5/webcomponents-fiori/dist/Assets"
+], (Panel, AIButton, AIButtonState) => {
+    "use strict";
+    // ...
 });
 ```
 
-In TypeScript:
-
-```js
-import "@ui5/webcomponents/dist/Assets";
-import "@ui5/webcomponents-ai/dist/Assets";
-```
-
-If you include another UI5 Web Components package, such as `@ui5/webcomponents-fiori`, you need to also include the `Assets` module from this package, e.g. `@ui5/webcomponents-fiori/dist/Assets`.
+The `Assets` modules in the code above register translations and theme styles for the web components. Make sure to include the `Assets` module from each `@ui5/webcomponents-*` package you use to ensure proper theming and language support at runtime.
 

@@ -25,6 +25,9 @@ A relative list or context binding creates a data service request once it has a 
 
 In all other cases, a relative binding reads data from its parent binding that created the context. In case of an own data service request, the read URL path is the model's service URL concatenated with the path of the binding's context and the binding's path. Set the binding-specific parameter `$$canonicalPath` to `true` to use the canonical path computed from the context's path instead of the context's path in the read URL.
 
+> ### Caution:  
+> A relative list binding cannot share data that another list binding has created on the client. Only data that has been read via a data service request can be shared.
+
 The point in time that is used to actually send the request is determined as explained in the section [Batch Control](batch-control-74142a3.md). Bindings which create own data service requests cache data from data service responses. They do not send a data service request if data can be served from this cache.
 
 > ### Note:  
@@ -58,15 +61,13 @@ You can refresh a **single** entity by calling [`sap.ui.model.odata.v4.Context#r
 > ```
 
 > ### Note:  
-> -   Contexts of an [`sap.ui.model.odata.v4.ODataListBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/overview) and the bound context of an [`sap.ui.model.odata.v4.ODataContextBinding`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding/overview) can only be refreshed if the binding is not relative to an [`sap.ui.model.odata.v4.Context`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Contex/overview).
+> Refresh is only allowed if there are no pending changes for the context and all its dependent bindings. If you have a relative binding with changes and this binding loses its context, the former parent binding does not report pending changes: the changes are kept, but the relation between these bindings is lost. You can do the following:
 > 
-> -   Refresh is only allowed if there are no pending changes for the context and all its dependent bindings. If you have a relative binding with changes and this binding loses its context, the former parent binding does not report pending changes: the changes are kept, but the relation between these bindings is lost. You can do the following:
+> -   To find out if there are pending changes, use `sap.ui.model.odata.v4.ODataModel#hasPendingChanges`.
 > 
->     -   To find out if there are pending changes, use `sap.ui.model.odata.v4.ODataModel#hasPendingChanges`.
+> -   To save the changes, use `sap.ui.model.odata.v4.ODataModel#submitBatch`; to reset the changes, use `sap.ui.model.odata.v4.ODataModel#resetChanges`, `sap.ui.model.odata.v4.ODataListBinding#resetChanges`, `sap.ui.model.odata.v4.ODataContextBinding#resetChanges`, or `sap.ui.model.odata.v4.Context#resetChanges`. To get rid of a transient entity you can use `sap.ui.model.odata.v4.Context#delete`.
 > 
->     -   To save the changes, use `sap.ui.model.odata.v4.ODataModel#submitBatch`; to reset the changes, use `sap.ui.model.odata.v4.ODataModel#resetChanges`, `sap.ui.model.odata.v4.ODataListBinding#resetChanges`, `sap.ui.model.odata.v4.ODataContextBinding#resetChanges`, or `sap.ui.model.odata.v4.Context#resetChanges`. To get rid of a transient entity you can use `sap.ui.model.odata.v4.Context#delete`.
-> 
->     -   If you set a context at the relative binding, the new parent binding will report the pending changes again.
+> -   If you set a context at the relative binding, the new parent binding will report the pending changes again.
 
 ***
 

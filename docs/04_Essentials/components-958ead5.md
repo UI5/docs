@@ -22,7 +22,7 @@ OpenUI5 provides the following two types of components:
 
 The `sap.ui.core.Component` class is the base class and provides the metadata for both types of components. To extend the functionality, components can inherit from their base class or from another component.
 
-Components are loaded and created via the component factory function `sap.ui.component`. You can either pass the name of the component or the URL of the descriptor file \(`manifest.json`\) to load it via the descriptor, see [Manifest First Function](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst). We recommend loading the component using the descriptor \(if available\) - it improves performance during the initial load since the loading process can be parallelized and optimized.
+Components can be loaded and instantiated in a number of ways, each with its specific use case described in the [Component Instantiation Guide](component-instantiation-guide-346599f.md). For information on the component's manifest, see [Manifest First Function](manifest-descriptor-for-applications-components-and-libraries-be0cf40.md#loiobe0cf40f61184b358b5faedaec98b2da__manifirst). We recommend loading the component using the descriptor \(if available\) - it improves performance during the initial load since the loading process can be parallelized and optimized.
 
 After loading the descriptor, the component factory can load the dependencies \(OpenUI5 libraries and other dependent components\) in parallel next to the component preload, and also models can be preloaded.
 
@@ -55,27 +55,22 @@ The following list explains how other concepts used in OpenUI5 are distinguished
 
     Both concepts provide a set of controls behind a single interface. Composite controls are intended for reuse within control development and allow to include existing controls in a complex control whereas components are intended for reuse in application development.
 
--   UI library
+-   Libraries
 
-    The UI library is the deployable unit around controls: Controls are never deployed standalone, but as part of a control library. Components, however, are self-contained and should **not** be used to deploy controls.
-
--   Notepad control
-
-    A notepad control is another way to define a control. Notepad controls have all the characteristics of a control.
+    A library is the deployable unit around controls: OpenUI5 controls are never deployed standalone, but as part of a control library. Components, however, are self-contained and should **not** be used to deploy controls for reuse outside themselves.
 
 -   MVC
 
     The MVC concept allows to define views and controllers and, thus, to structure and reuse parts within an application. As MVC can only be deployed separately and has no means to define dependent styles or scripts that are loaded together with a view, this concept is of limited use across different applications.
 
 
+-   **[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components serve as the core building blocks of OpenUI5 applications. This
+		guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern
+		alternatives.")**  
+Components serve as the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.
 -   **[Component Controller](component-controller-27ce0e4.md "The component controller is a script file (written in either JavaScript or TypeScript) that provides the runtime metadata and contains the
 		component methods.")**  
 The component controller is a script file \(written in either JavaScript or TypeScript\) that provides the runtime metadata and contains the component methods.
--   **[Using and Nesting Components](using-and-nesting-components-346599f.md "You can use a ComponentContainer to wrap a
-			UIComponent and reuse it anywhere within the OpenUI5 control tree. With the
-			ComponentContainer you can nest components inside other
-		components.")**  
-You can use a `ComponentContainer` to wrap a `UIComponent` and reuse it anywhere within the OpenUI5 control tree. With the `ComponentContainer` you can nest components inside other components.
 -   **[Declarative API for Initial Components](declarative-api-for-initial-components-82a0fce.md "The declarative API enables you to define the initially started component directly in
 		the HTML markup.")**  
 The declarative API enables you to define the initially started component directly in the HTML markup.

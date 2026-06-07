@@ -4,31 +4,18 @@
 
 Unleash your OpenUI5 skills with this simple three-step tutorial. We start with a simple "Hello World" example, and convert it to a minimalist two-page app.
 
-We create an app with two pages and a navigation button to navigate between the pages.
+This tutorial has been moved.
 
-***
+-   For a JavaScript version, see [JavaScript Quickstart Tutorial on GitHub](https://ui5.github.io/tutorials/quickstart/?lang=js).
+-   For a TypeScript version, see [TypeScript Quickstart Tutorial on GitHub](https://ui5.github.io/tutorials/quickstart/?lang=ts).
 
-## Preview
-
-  
-  
-**Ready...Steady...Go!**
-
-![](images/loio443918d392b94ec58e0f84df6ec54d46_LowRes.png "Ready...Steady...Go!")
-
-> ### Tip:  
-> If you want to skip one or more steps, you can jump directly to the step you're interested in. Then simply download the code from the previous step, and start learning from there. You can download the code for each step in the [Quick Start Sample](https://ui5.sap.com/#/entity/sap.m.tutorial.quickstart). 
-
-> ### Note:  
-> All you need to build your app, is a Web browser, a Web server, and a development environment of your choice. For more information, see the links below.
-
-1.  [Step 1: Ready...](step-1-ready-851bde4.md "Let's get you ready for your journey! We bootstrap OpenUI5 in an HTML page and
-		implement a simple &quot;Hello World&quot; example.")  
+-   **[Step 1: Ready...](step-1-ready-851bde4.md "Let's get you ready for your journey! We bootstrap OpenUI5 in an HTML page and
+		implement a simple &quot;Hello World&quot; example.")**  
 Let's get you ready for your journey! We bootstrap OpenUI5 in an HTML page and implement a simple "Hello World" example.
-2.  [Step 2: Steady...](step-2-steady-128214a.md "Now we extend our minimalist HTML page to a basic app with a view and a controller.")  
+-   **[Step 2: Steady...](step-2-steady-128214a.md "Now we extend our minimalist HTML page to a basic app with a view and a controller.")**  
 Now we extend our minimalist HTML page to a basic app with a view and a controller.
-3.  [Step 3: Go!](step-3-go-073d107.md "Finally, we add a second page to our app showcasing some of the key OpenUI5
-		concepts.")  
+-   **[Step 3: Go!](step-3-go-073d107.md "Finally, we add a second page to our app showcasing some of the key OpenUI5
+		concepts.")**  
 Finally, we add a second page to our app showcasing some of the key OpenUI5 concepts.
 
 **Related Information**  

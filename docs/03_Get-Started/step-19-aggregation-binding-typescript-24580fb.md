@@ -20,7 +20,7 @@ Now that we have established a good structure for our app, it's time to add some
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 19: Aggregation Binding](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/19) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-19.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -87,32 +87,32 @@ We add a new model named `invoice` to the `sap.ui5` section of the descriptor. T
 
 ```
 {
-  ...
-  "sap.ui5": {
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "ui5.walkthrough.i18n.i18n",
-          "supportedLocales": [
-            ""
-          ],
-          "fallbackLocale": ""
-        }
-      },
-      "invoice": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "model/localInvoices.json"
-      }
+    ...
+    "sap.ui5": {
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ui5.walkthrough.i18n.i18n",
+                    "supportedLocales": [
+                        ""
+                    ],
+                    "fallbackLocale": ""
+                }
+            },
+            "invoice": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/localInvoices.json"
+            }
         },
         "resources": {
-          "css": [
-            {
-              "uri": "css/style.css"
-            }
-          ]
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
         }
-      }
+    }
 }
 ```
 
@@ -155,18 +155,18 @@ In the `items` aggregation, we define the template for the list that will be aut
 
 ```xml
 <mvc:View
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <List
-      headerText="{i18n>invoiceListTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto"
-      items="{invoice>/Invoices}" >
-      <items>
-         <ObjectListItem
-            title="{invoice>Quantity} x {invoice>ProductName}"/>
-      </items>
-   </List>
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{invoice>/Invoices}" >
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} x {invoice>ProductName}"/>
+        </items>
+    </List>
 </mvc:View>
 ```
 
@@ -180,10 +180,10 @@ In the app view we add a second view and assign it to our newly created `Invoice
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
     <Shell>
         <App class="myAppDemoWT">
             <pages>
@@ -219,12 +219,6 @@ In the app view we add a second view and assign it to our newly created `Invoice
 -   Model file names are lowercased
 
 
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 18: Icons \(TypeScript\)](step-18-icons-typescript-49b1ac6.md "Our dialog is still pretty much empty. Since OpenUI5 is shipped with a large icon font that contains more than 500 icons, we will add an icon to greet our users when the dialog is opened.")
-
-**Previous:**[Step 20: Data Types \(TypeScript\)](step-20-data-types-typescript-0dad01a.md "The list of invoices is already looking nice, but what is an invoice without a price assigned? Typically prices are stored in a technical format and with a '.' delimiter in the data model. For example, our invoice for pineapples has the calculated price 87.2 without a currency. We are going to use the OpenUI5 data types to format the price properly, with a locale-dependent decimal separator and two digits after the separator.")
-
 **Related Information**  
 
 
@@ -238,5 +232,5 @@ In the app view we add a second view and assign it to our newly created `Invoice
 
 [Samples: `sap.m.List` ](https://ui5.sap.com/#/entity/sap.m.List)
 
-[List Binding \(Aggregation Binding\)](../04_Essentials/list-binding-aggregation-binding-91f0577.md "List binding (or aggregation binding) is used to automatically create child controls according to model data.")
+[List Binding and Tree Binding \(Aggregation Binding\)](../04_Essentials/list-binding-and-tree-binding-aggregation-binding-91f0577.md "List binding and tree binding are both also referred to as aggregation binding. List binding binds to a flat list and is used to automatically create child controls according to model data. Tree binding works the same way but binds to hierarchical data.")
 

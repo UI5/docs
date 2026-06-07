@@ -27,5 +27,5 @@ The individual capabilities of OpenUI5 help you to easily build enterprise apps.
 
 Hover over the shapes to find out more about some key benefits of OpenUI5.
 
-![](images/loioba827f7fdaff4db98ab12d01a431ba62_LowRes.png)
+![Key concepts of UI5 are: Async Loading, Modular Core, Performance, Innovation, UI5 CLI, and Open Standards](images/loioba827f7fdaff4db98ab12d01a431ba62_LowRes.png)
 

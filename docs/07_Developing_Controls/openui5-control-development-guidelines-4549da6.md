@@ -12,6 +12,7 @@ Content developers developing OpenUI5 controls should follow the guidelines outl
 
 -   Reuse is good, but carefully compare how many features of the reused control are needed, and how big the impact on performance would be. For example, if a control needs a clickable area, you can simply implement `onclick` and check where the click came from - this has zero impact on performance. Only if you need more features should you think about instantiating and aggregating. For example, you could use a `Button` control and use its `press` event, but this would cost performance.
 
+-   OpenUI5 supports several data sources, such as JSON, XML, or OData. However, you need to make sure that the controls you develop work with the data models that the OpenUI5 application can be expected to use.
 
 ***
 
@@ -104,7 +105,40 @@ With regard to the renderer, the following guidelines apply:
 -   `RenderManager.writeClasses()` must be called in the root HTML element of a control; otherwise `addStyleClass` does not work. this does not need to be used in subelements.
 
 
--   **[Control Development Guidelines: Theming/CSS](control-development-guidelines-theming-css-5e08ff9.md "For themes and CSS for control development in OpenUI5, the following
-		guidelines apply.")**  
-For themes and CSS for control development in OpenUI5, the following guidelines apply.
+***
+
+## Theming and CSS
+
+For theming and CSS-related development, follow the comprehensive guidelines provided in the main theming documentation:
+
+-   [Theming](../04_Essentials/theming-497c27a.md) 
+
+-   [Creating Themable User Interfaces](../04_Essentials/creating-themable-user-interfaces-a2c67ac.md) 
+
+    This topic elaborates on best practices for theme-aware control development, including the following:
+
+    -   Using CSS custom properties for theme parameters
+
+    -   Proper CSS class naming conventions
+
+    -   Container context considerations
+
+    -   Local parameter naming guidelines
+
+
+-   [Enhanced Theming Concepts](../04_Essentials/enhanced-theming-concepts-45df6df.md) 
+
+    This topic elaborates on advanced theming features, such as the `Parameters` API and CSS math functions
+
+
+**Key Points for Control Developers**:
+
+-   Use CSS custom properties \(for example, `var(--sapButton_Background)`\) instead of hard-coded values
+
+-   Follow semantic CSS class naming conventions with proper prefixes
+
+-   Ensure theme-aware styling that works across all OpenUI5 themes
+
+-   Test controls with different themes to verify proper appearance
+
 

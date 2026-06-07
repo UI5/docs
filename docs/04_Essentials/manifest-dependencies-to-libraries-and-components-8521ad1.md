@@ -1,10 +1,10 @@
 <!-- loio8521ad1955f340f9a6207d615c88d7fd -->
 
-# Descriptor Dependencies to Libraries and Components
+# Manifest Dependencies to Libraries and Components
 
-Description of the performance-relevant attributes that are available for the descriptor for applications, components and libraries
+Description of the performance-relevant attributes that are available for the manifest \(also known as descriptor for applications, components and libraries\).
 
-The performance-relevant attributes have been introduced with the version 3 of the descriptor for applications, components, and libraries.
+The performance-relevant attributes have been introduced with the version 3 of the manifest.
 
 ***
 
@@ -25,29 +25,28 @@ For **applications and components**, modify the `manifest.json` as follows:
 "sap.ui5": {
     ...
     "dependencies": {
-      ...
-      "libs": {
-        "sap.m": {},
-        "sap.suite.ui.commons": {
-          "lazy": true
+        ...
+        "libs": {
+            "sap.m": {},
+            "sap.suite.ui.commons": {
+                "lazy": true
+            }
         }
-      }
-      ...
+        ...
     },
     ...
-
 ```
 
-For **libraries**, modify the `.library` file as shown in the follown code sample. This file is available because the `manifest.json` for libraries is generated based on this metadata.
+For **libraries**, modify the `.library` file as shown in the following code sample. This file is available because the `manifest.json` for libraries is generated based on this metadata.
 
 ```
 <dependencies>
     <dependency>
-       <libraryName>sap.m</libraryName>
+        <libraryName>sap.m</libraryName>
     </dependency>
     <dependency>
-       <libraryName>sap.suite.ui.commons</libraryName>
-       <lazy>true</lazy>
+        <libraryName>sap.suite.ui.commons</libraryName>
+        <lazy>true</lazy>
     </dependency>
     ...
 ```
@@ -79,7 +78,7 @@ sap.ui.define(['sap/ui/core/Lib'], function(Library) {
 
 ## Dependencies to Components
 
-**Scenario 1:** UI library contains multiple components
+**Scenario 1:** Library contains multiple components
 
 In this scenario, the library is the leading container and **no** component preload is available. This means, that you maintain the library dependency as described above. This is true for all kinds of component dependencies, also for `sap.ui5/extends/component`. If the extended component originates in a library, do **not** use `sap.ui5/extends/component`, but only declare the library dependency. Otherwise, the component dependency causes a 404 request.
 
@@ -130,12 +129,12 @@ The full list of options for the `createComponent` factory method can be found i
 
 As of Version 1.56 it is sufficient to declare the `sap.ui5/componentUsages` and indicate whether the component should be loaded lazily or not. The declaration of the component as a separate dependency is not recommended and should be avoided in this case.
 
-For more information, see: [Using and Nesting Components](using-and-nesting-components-346599f.md) and [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md). These section include information how to migrate your component declarations from the old `sap.ui5/dependencies/components` section to the modern `sap.ui5/componentUsages` section of your `manifest.json` and enable routing in nested components.
+For more information, see: [Component Instantiation Guide](component-instantiation-guide-346599f.md) and [Enabling Routing in Nested Components](enabling-routing-in-nested-components-fb19f50.md). These section include information how to migrate your component declarations from the old `sap.ui5/dependencies/components` section to the modern `sap.ui5/componentUsages` section of your `manifest.json` and enable routing in nested components.
 
 **Related Information**  
 
 
-[Using and Nesting Components](using-and-nesting-components-346599f.md "You can use a ComponentContainer to wrap a UIComponent and reuse it anywhere within the OpenUI5 control tree. With the ComponentContainer you can nest components inside other components.")
+[Component Instantiation Guide](component-instantiation-guide-346599f.md "Components serve as the core building blocks of OpenUI5 applications. This guide explains the various ways to instantiate components, when to use each approach, and how to migrate from older mechanisms to modern alternatives.")
 
 [API Reference: `sap/ui/core/Lib.load`](https://ui5.sap.com/#/api/sap.ui.core.Lib%23methods/sap.ui.core.Lib.load)
 

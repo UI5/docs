@@ -188,12 +188,6 @@ If we now open the `webapp/test/testsuite.qunit.html` file in the browser and se
 -   Use `page` objects and `journeys` for structuring OPA tests.
 
 
-**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
-
-**Next:**[Step 27: Unit Test with QUnit](step-27-unit-test-with-qunit-e1ce1de.md "Now that we have a test folder in the app, we can start to increase our test coverage.")
-
-**Previous:**[Step 29: Debugging Tools](step-29-debugging-tools-1ff250c.md "Even though we have added a basic test coverage in the previous steps, it seems like we accidentally broke our app, because it does not display prices to our invoices anymore. We need to debug the issue and fix it before someone finds out.")
-
 **Related Information**  
 
 

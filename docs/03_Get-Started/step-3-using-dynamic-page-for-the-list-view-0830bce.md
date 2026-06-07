@@ -32,7 +32,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 
 ```json
 {
-	"_version": "1.38.0",
+	"_version": "2.8.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -48,7 +48,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.98.0",
+			"minUI5Version": "1.149.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},
@@ -62,7 +62,7 @@ You can view and download all files at [Flexible Column Layout App - Step 3](htt
 First, we add the `sap.m` library as a dependency in the `manifest.json`.
 
 > ### Note:  
-> We also need to modify the `ui5.yaml` file located in the root folder by adding the `sap.m` and `sap.f` libraries as a dependency. For more information, see the section about UI5 tooling in [The UI5 Ecosystem](../02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiob72ccb50eda94ac9b9be454a03ca4213).
+> We also need to modify the `ui5.yaml` file located in the root folder by adding the `sap.m` and `sap.f` libraries as a dependency. For more information, see the section about UI5 CLI in [The UI5 Ecosystem](../02_Read-Me-First/the-ui5-ecosystem-b72ccb5.md#loiob72ccb50eda94ac9b9be454a03ca4213).
 
 ***
 
@@ -74,15 +74,14 @@ First, we add the `sap.m` library as a dependency in the `manifest.json`.
 	...
 	<script id="sap-ui-bootstrap"
 		src="resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-resourceroots='{
+		data-sap-ui-resource-roots='{
 			"sap.ui.demo.fcl": "./",
 			"sap.ui.demo.mock": "test-resources/sap/ui/documentation/sdk/"
 		}'
-		data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
-		data-sap-ui-compatversion="edge"
+		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+		data-sap-ui-compat-version="edge"
 		data-sap-ui-async="true"
-		data-sap-ui-frameoptions="trusted">
+		data-sap-ui-frame-options="trusted">
 	</script>
 	...
 ```
@@ -287,7 +286,7 @@ sap.ui.define([
 
 We create the list controller that provides a basic search and sort functionality for the products listed in the list page.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 2: Creating an Empty Flexible Column Layout](step-2-creating-an-empty-flexible-column-layout-bf38e4d.md "In this step, we add an instance of the sap.f.FlexibleColumnLayout control in the main view of the app.")
 

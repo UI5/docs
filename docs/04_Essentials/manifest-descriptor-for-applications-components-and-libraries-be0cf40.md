@@ -4,7 +4,7 @@
 
 The manifest \(also known as descriptor for applications, components, and libraries, in short: app descriptor\) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.
 
-In general, the manifest describes the behavior of an app through attributes. It doesn't directly influence that behavior itself for the most part. When a section in the manifest does affect the behavior of an app, this is described in the [API Reference](https://ui5.sap.com/#/api/). for the corresponding namespace.
+In general, the manifest describes the behavior of an app through attributes. When a section in the manifest does affect the behavior of an app, this is described in the [API Reference](https://ui5.sap.com/#/api/). for the corresponding namespace.
 
 The data of the manifest is stored in JSON format in the `manifest.json` file. The developer creates the file with attributes in different namespaces. It contains, for example, the app ID, the version, the data sources used, along with the required components and libraries. The existence of the `manifest.json` file must be declared in the component metadata, which is then delivered as part of the application archive. After delivery, the file is read-only.
 
@@ -12,1313 +12,11 @@ The data of the manifest is stored in JSON format in the `manifest.json` file. T
 
 <a name="loiobe0cf40f61184b358b5faedaec98b2da__section_mkz_dgh_1cb"/>
 
-## General Information
+## Manifest Schema
 
-There is a new version of the manifest when the schema is changed. In the following table, you can see how the OpenUI5 version is related to the manifest version and the value of `_version.`
+The manifest schema defines how you need to maintain the content of the manifest. It also specifies which namespaces and fields are available. The full schema is available as open source in a [repository on Github](https://github.com/UI5/manifest).
 
-**Manifest Release and OpenUI5 Version**
-
-
-<table>
-<tr>
-<th valign="top">
-
-Manifest Release
-
-</th>
-<th valign="top">
-
-OpenUI5 Version
-
-</th>
-<th valign="top">
-
-\_version
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-Version 2
-
-</td>
-<td valign="top">
-
-\>=1.30
-
-</td>
-<td valign="top">
-
-1.1.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 3
-
-</td>
-<td valign="top">
-
-\>=1.32
-
-</td>
-<td valign="top">
-
-1.2.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 4
-
-</td>
-<td valign="top">
-
-\>=1.34
-
-</td>
-<td valign="top">
-
-1.3.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 5
-
-</td>
-<td valign="top">
-
-\>=1.38
-
-</td>
-<td valign="top">
-
-1.4.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 6
-
-</td>
-<td valign="top">
-
-\>=1.42
-
-</td>
-<td valign="top">
-
-1.5.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 7
-
-</td>
-<td valign="top">
-
-\>=1.46
-
-</td>
-<td valign="top">
-
-1.6.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 8
-
-</td>
-<td valign="top">
-
-\>=1.48
-
-</td>
-<td valign="top">
-
-1.7.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 9
-
-</td>
-<td valign="top">
-
-\>=1.50
-
-</td>
-<td valign="top">
-
-1.8.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 10
-
-</td>
-<td valign="top">
-
-\>=1.52
-
-</td>
-<td valign="top">
-
-1.9.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 11
-
-</td>
-<td valign="top">
-
-\>=1.54
-
-</td>
-<td valign="top">
-
-1.10.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 12
-
-</td>
-<td valign="top">
-
-\>=1.56
-
-</td>
-<td valign="top">
-
-1.11.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 13
-
-</td>
-<td valign="top">
-
-\>=1.58
-
-</td>
-<td valign="top">
-
-1.12.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 14
-
-</td>
-<td valign="top">
-
-\>=1.61
-
-</td>
-<td valign="top">
-
-1.13.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 15
-
-</td>
-<td valign="top">
-
-\>=1.62
-
-</td>
-<td valign="top">
-
-1.14.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 16
-
-</td>
-<td valign="top">
-
-\>=1.66
-
-</td>
-<td valign="top">
-
-1.15.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 17
-
-</td>
-<td valign="top">
-
-\>=1.70
-
-</td>
-<td valign="top">
-
-1.16.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 18
-
-</td>
-<td valign="top">
-
-\>=1.71
-
-</td>
-<td valign="top">
-
-1.17.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 19
-
-</td>
-<td valign="top">
-
-\>=1.74
-
-</td>
-<td valign="top">
-
-1.18.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 20
-
-</td>
-<td valign="top">
-
-\>=1.75
-
-</td>
-<td valign="top">
-
-1.19.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 21
-
-</td>
-<td valign="top">
-
-\>=1.76
-
-</td>
-<td valign="top">
-
-1.20.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 22
-
-</td>
-<td valign="top">
-
-\>=1.77
-
-</td>
-<td valign="top">
-
-1.21.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 23
-
-</td>
-<td valign="top">
-
-\>=1.78
-
-</td>
-<td valign="top">
-
-1.22.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 24
-
-</td>
-<td valign="top">
-
-\>=1.79
-
-</td>
-<td valign="top">
-
-1.23.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 25
-
-</td>
-<td valign="top">
-
-\>=1.80
-
-</td>
-<td valign="top">
-
-1.24.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 26
-
-</td>
-<td valign="top">
-
-\>=1.81
-
-</td>
-<td valign="top">
-
-1.25.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 27
-
-</td>
-<td valign="top">
-
-\>=1.82
-
-</td>
-<td valign="top">
-
-1.26.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 28
-
-</td>
-<td valign="top">
-
-\>=1.83 \(OpenUI5 1.83 was not released, see [2979657](https://me.sap.com/notes/2979657)\)
-
-</td>
-<td valign="top">
-
-1.27.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 29
-
-</td>
-<td valign="top">
-
-\>=1.84
-
-</td>
-<td valign="top">
-
-1.28.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 30
-
-</td>
-<td valign="top">
-
-\>=1.85
-
-</td>
-<td valign="top">
-
-1.29.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 31
-
-</td>
-<td valign="top">
-
-\>=1.86
-
-</td>
-<td valign="top">
-
-1.30.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 32
-
-</td>
-<td valign="top">
-
-\>=1.87
-
-</td>
-<td valign="top">
-
-1.31.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 33
-
-</td>
-<td valign="top">
-
-\>=1.88
-
-</td>
-<td valign="top">
-
-1.32.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 34
-
-</td>
-<td valign="top">
-
-\>=1.90
-
-</td>
-<td valign="top">
-
-1.33.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 35
-
-</td>
-<td valign="top">
-
-\>=1.92
-
-</td>
-<td valign="top">
-
-1.34.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 36
-
-</td>
-<td valign="top">
-
-\>=1.93
-
-</td>
-<td valign="top">
-
-1.35.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 37
-
-</td>
-<td valign="top">
-
-\>=1.95
-
-</td>
-<td valign="top">
-
-1.36.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 38
-
-</td>
-<td valign="top">
-
-\>=1.96
-
-</td>
-<td valign="top">
-
-1.37.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 39
-
-</td>
-<td valign="top">
-
-\>=1.98
-
-</td>
-<td valign="top">
-
-1.38.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 40
-
-</td>
-<td valign="top">
-
-\>=1.99
-
-</td>
-<td valign="top">
-
-1.39.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 41
-
-</td>
-<td valign="top">
-
-\>=1.100
-
-</td>
-<td valign="top">
-
-1.40.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 42
-
-</td>
-<td valign="top">
-
-\>=1.101
-
-</td>
-<td valign="top">
-
-1.41.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 43
-
-</td>
-<td valign="top">
-
-\>=1.102
-
-</td>
-<td valign="top">
-
-1.42.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 44
-
-</td>
-<td valign="top">
-
-\>=1.103
-
-</td>
-<td valign="top">
-
-1.43.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 45
-
-</td>
-<td valign="top">
-
-\>=1.104
-
-</td>
-<td valign="top">
-
-1.44.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 46
-
-</td>
-<td valign="top">
-
-\>=1.105
-
-</td>
-<td valign="top">
-
-1.45.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 47
-
-</td>
-<td valign="top">
-
-\>=1.106
-
-</td>
-<td valign="top">
-
-1.46.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 48
-
-</td>
-<td valign="top">
-
-\>=1.107
-
-</td>
-<td valign="top">
-
-1.47.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 49
-
-</td>
-<td valign="top">
-
-\>=1.108
-
-</td>
-<td valign="top">
-
-1.48.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 50
-
-</td>
-<td valign="top">
-
-\>=1.109
-
-</td>
-<td valign="top">
-
-1.49.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 51
-
-</td>
-<td valign="top">
-
-\>=1.110
-
-</td>
-<td valign="top">
-
-1.50.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 52
-
-</td>
-<td valign="top">
-
-\>=1.111
-
-</td>
-<td valign="top">
-
-1.51.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 53
-
-</td>
-<td valign="top">
-
-\>=1.112
-
-</td>
-<td valign="top">
-
-1.52.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 54
-
-</td>
-<td valign="top">
-
-\>=1.113
-
-</td>
-<td valign="top">
-
-1.53.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 55
-
-</td>
-<td valign="top">
-
-\>=1.114
-
-</td>
-<td valign="top">
-
-1.54.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 56
-
-</td>
-<td valign="top">
-
-\>=1.115
-
-</td>
-<td valign="top">
-
-1.55.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 57
-
-</td>
-<td valign="top">
-
-\>=1.116
-
-</td>
-<td valign="top">
-
-1.56.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 58
-
-</td>
-<td valign="top">
-
-\>=1.117
-
-</td>
-<td valign="top">
-
-1.57.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 59
-
-</td>
-<td valign="top">
-
-\>=1.118
-
-</td>
-<td valign="top">
-
-1.58.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 60
-
-</td>
-<td valign="top">
-
-\>=1.119
-
-</td>
-<td valign="top">
-
-1.59.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 61
-
-</td>
-<td valign="top">
-
-\>=1.120
-
-</td>
-<td valign="top">
-
-1.60.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 62
-
-</td>
-<td valign="top">
-
-\>=1.121
-
-</td>
-<td valign="top">
-
-1.61.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 63
-
-</td>
-<td valign="top">
-
-\>=1.122
-
-</td>
-<td valign="top">
-
-1.62.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 64
-
-</td>
-<td valign="top">
-
-\>=1.123
-
-</td>
-<td valign="top">
-
-1.63.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 65
-
-</td>
-<td valign="top">
-
-\>=1.124
-
-</td>
-<td valign="top">
-
-1.64.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 66
-
-</td>
-<td valign="top">
-
-\>=1.126
-
-</td>
-<td valign="top">
-
-1.65.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 67
-
-</td>
-<td valign="top">
-
-\>=1.129
-
-</td>
-<td valign="top">
-
-1.66.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 68
-
-</td>
-<td valign="top">
-
-\>=1.130
-
-</td>
-<td valign="top">
-
-1.67.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 69
-
-</td>
-<td valign="top">
-
-\>=1.131
-
-</td>
-<td valign="top">
-
-1.68.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 70
-
-</td>
-<td valign="top">
-
-\>=1.132
-
-</td>
-<td valign="top">
-
-1.69.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 71
-
-</td>
-<td valign="top">
-
-\>=1.133
-
-</td>
-<td valign="top">
-
-1.70.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 72
-
-</td>
-<td valign="top">
-
-\>=1.134
-
-</td>
-<td valign="top">
-
-1.71.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 73
-
-</td>
-<td valign="top">
-
-\>=1.135
-
-</td>
-<td valign="top">
-
-1.72.3
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 74
-
-</td>
-<td valign="top">
-
-\>=1.136
-
-</td>
-<td valign="top">
-
-1.73.1
-
-*or*
-
-2.0.0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 76
-
-</td>
-<td valign="top">
-
-\>=1.137
-
-</td>
-<td valign="top">
-
-1.75.1
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Version 77
-
-</td>
-<td valign="top">
-
-\>=1.138
-
-</td>
-<td valign="top">
-
-1.76.0
-
-</td>
-</tr>
-</table>
-
-For more information on the new fields introduced in each version, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md)
+When the manifest schema changes, a new version is published alongside the release of the new OpenUI5 version. This new OpenUI5 version understands the updated schema and supports new features. The schema version you use is defined by the value of `_version`. The version number follows the pattern described under [Versioning and Maintenance of OpenUI5](../02_Read-Me-First/versioning-and-maintenance-of-openui5-91f0214.md). In general, a new version with the same major version number is compatible with the previous one. It offers new features or marks certain features as deprecated, which you should migrate. A new major version can remove features that were previously deprecated, and these must be migrated.
 
 ***
 
@@ -1326,41 +24,417 @@ For more information on the new fields introduced in each version, check out [Mi
 
 ## Manifest Version 2
 
-As of OpenUI5 1.136, we support the new Manifest Version 2. Using this version has the following implications for a Component:
+Starting with OpenUI5 1.136, the new major *version 2.x.x* is available. Using this new version ensures you follow best practices and are prepared for the future. As mentioned earlier, this new major version removes deprecated features. Check the [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md) to learn about the changes needed to migrate to this version.
 
 ***
 
-### Root View and Routing Configuration
+The table below shows the relationship between recent OpenUI5 versions and the manifest schema versions.
 
-The synchronous root view creation and routing configuration are not supported anymore.
+**Manifest Schema Version and OpenUI5 Version**
 
-The `async` flag for both the `rootView` and the `routing` configuration is now implicitly `true` and must no longer be specified.
 
-***
+<table>
+<tr>
+<th valign="top">
 
-### Deprecated Manifest Entries
+\_Version
 
-Deprecated manifest entries managed by the OpenUI5 framework cannot be used anymore and will cause errors. This has the following consequences:
+</th>
+<th valign="top">
 
--   Arbitrary JavaScript resources cannot be loaded via `sap.ui5/resources/js` anymore. Please use dedicated modules as eager dependencies instead, e.g. within your `Component.js`.
--   The routing properties `viewId`, `viewName`, `viewPath`, and `viewLevel` cannot be used anymore. Please use the documented alternatives instead, i.e. replace them with the properties `id`, `name`, `path`, and `level`, respectively, alongside adding the `type: "View"`. For more information, see [Routing Configuration](routing-configuration-9023130.md).
--   Supported themes cannot be specified via the `sap.ui/supportedThemes` section.
+OpenUI5 Version
 
-***
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-### Error Validation
+1.4.0
 
-Manifest Version 2 also enables a stricter error handling for views and fragments. Syntactical errors \(e.g. broken binding strings\) will now lead to errors being thrown. Programmatically created views will reject the factory promise accordingly.
+</td>
+<td valign="top">
 
-***
+\>=1.38
 
-### `IAsyncContentCreation`
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-While the Manifest Version 2 behavior regarding root view and routing configuration is similar to the behavior of the [`sap.ui.core.IAsyncContentCreation`](https://ui5.sap.com/#/api/sap.ui.core.IAsyncContentCreation) interface, they are not interchangeable. For compatibility reasons, the Manifest Version 2 does **not** enforce the implementation of this interface. In order to use an asynchronous `sap/ui/core/UIComponent#createContent` implementation in your subclasses, the `sap.ui.core.IAsyncContentCreation` interface must be implemented explicitly.
+1.17.0
 
-Please also be aware that the implementation of the `sap.ui.core.IAsyncContentCreation` interface changes the aggregation behavior of the root view. When the root view is loaded asynchronously and the Component implements `sap.ui.core.IAsyncContentCreation`, the root view controller's [`onInit`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/onInit) hook no longer has access to Component models through the view instance. To retrieve model instances, we recommend using the [`sap/ui/core/mvc/Controller#getOwnerComponent`](https://ui5.sap.com/#/api/sap.ui.core.mvc.Controller%23methods/getOwnerComponent) API on the controller instance.
+</td>
+<td valign="top">
 
-We recommend any Component or UIComponent to implement the `sap.ui.core.IAsyncContentCreation` interface whenever possible.
+\>=1.71
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.28.0
+
+</td>
+<td valign="top">
+
+\>=1.84
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.37.0
+
+</td>
+<td valign="top">
+
+\>=1.96
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.48.0
+
+</td>
+<td valign="top">
+
+\>=1.108
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.51.0
+
+</td>
+<td valign="top">
+
+\>=1.111
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.60.0
+
+</td>
+<td valign="top">
+
+\>=1.120
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.61.0
+
+</td>
+<td valign="top">
+
+\>=1.121
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.62.0
+
+</td>
+<td valign="top">
+
+\>=1.122
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.63.0
+
+</td>
+<td valign="top">
+
+\>=1.123
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.64.0
+
+</td>
+<td valign="top">
+
+\>=1.124
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.65.0
+
+</td>
+<td valign="top">
+
+\>=1.126
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.66.0
+
+</td>
+<td valign="top">
+
+\>=1.129
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.67.2
+
+</td>
+<td valign="top">
+
+\>=1.130
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.68.0
+
+</td>
+<td valign="top">
+
+\>=1.131
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.69.0
+
+</td>
+<td valign="top">
+
+\>=1.132
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.70.1
+
+</td>
+<td valign="top">
+
+\>=1.133
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.72.0
+
+</td>
+<td valign="top">
+
+\>=1.134
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.72.3
+
+</td>
+<td valign="top">
+
+\>=1.135
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.0.0 *or* 1.73.1
+
+</td>
+<td valign="top">
+
+\>=1.136
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.1.0 *or* 1.75.1
+
+</td>
+<td valign="top">
+
+\>=1.137
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.1.0 *or* 1.76.0
+
+</td>
+<td valign="top">
+
+\>=1.138
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.1.0 *or* 1.77.0
+
+</td>
+<td valign="top">
+
+\>=1.139
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.1.1 *or* 1.78.0
+
+</td>
+<td valign="top">
+
+\>=1.140
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.2.0 *or* 1.79.0
+
+</td>
+<td valign="top">
+
+\>=1.141
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.3.1 *or* 1.80.1
+
+</td>
+<td valign="top">
+
+\>=1.142
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.3.1 *or* 1.81.1
+
+</td>
+<td valign="top">
+
+\>=1.143
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.4.0 *or* 1.82.0
+
+</td>
+<td valign="top">
+
+\>=1.144
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.5.0 *or* 1.83.0
+
+</td>
+<td valign="top">
+
+\>=1.145
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.6.0 *or* 1.84.0
+
+</td>
+<td valign="top">
+
+\>=1.146
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.7.0 *or* 1.85.0
+
+</td>
+<td valign="top">
+
+\>=1.147
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.8.0 *or* 1.86.0
+
+</td>
+<td valign="top">
+
+\>=1.148
+
+</td>
+</tr>
+</table>
+
+For more information on the new fields introduced in each version and implications when upgrading, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
+
+For more information about Manifest releases, versions, and the supported and deprecated manifest sections, refer to the documentation [Manifest Changelog](https://github.com/SAP/ui5-manifest/blob/HEAD/CHANGELOG.md).
 
 ***
 
@@ -1368,7 +442,7 @@ We recommend any Component or UIComponent to implement the `sap.ui.core.IAsyncCo
 
 ## Manifest First Function
 
-The component factory function [`Component.create`](https://ui5.sap.com/#/api/sap.ui.core.Component%23methods/sap.ui.core.Component.create), as introduced with 1.58, loads the `manifest.json` by default before the component instance is created. With this, you can preload the dependencies \(libraries and components\) and, thus, improve the performance for loading the component. The preload is also available for models, which can be flagged for preload during component loading.
+By default, all [modern component instantiation methods](component-instantiation-guide-346599f.md) load the `manifest.json` file before creating the component instance. This approach enables preloading of dependencies \(libraries and components\), thereby improving component loading performance. Additionally, OData models can be configured with `preload: true` to ensure the early loading of metadata and annotations during component initialization.
 
 The `manifest` option allows you to configure when and from where the manifest is loaded:
 
@@ -1591,7 +665,9 @@ Description
 </td>
 <td valign="top">
 
-A mandatory attribute that has to be provided in dot notation and specifies an ID for the project that must be unique in the system. It must match the namespace provided in the corresponding `Component.js`.
+This is a mandatory attribute that must be provided in dot notation and specifies a unique ID for the project within the system. It serves as a reference point for most operations involving the manifest. For example, it must be specified in the target mapping when configuring a Launchpad App Descriptor in an ABAP system.
+
+When developing an app or a reuse component, it must match the namespace provided in the corresponding `Component.js`
 
 If, for example, a module is instantiated there as follows:
 
@@ -1607,7 +683,7 @@ If, for example, a module is instantiated there as follows:
 
 then its `id` would be `sap.ui.demo.walkthrough`
 
-It's used as a reference point for most operations involving the manifest. If the project is the app variant of an existing application, `sap.app/id` is the ID of this app variant. The ID of the underlying application is then provided in `sap.ui5/componentName`.
+If the manifest belongs to an app variant of an existing application \(the file nameis manifest.appdescr\_variant\), `sap.app/id` is the ID of this app variant. The ID of the underlying base application is then provided in `sap.ui5/componentName`.
 
 > ### Note:  
 > The ID must not exceed 70 characters. It must be unique.
@@ -2046,12 +1122,12 @@ Mandatory; specifies the external dependencies that are loaded by the OpenUI5 co
 
 -   `minUI5Version`: Mandatory; Minimum version of OpenUI5 that your component requires; this information ensures that the features of the OpenUI5 runtime version of the component are available. This must be either a specific version or an array of versions where each major version can only be included once. If you specify an array that contains more than one version, and if version 1 is included, it must be at least 1.120.x. As OpenUI5 does not currently enforce use of the correct version, the `minUI5Version` is used for information purposes only. If the minimum OpenUI5 version criteria is not fulfilled, a warning is issued in the console log.
 
--   `libs`: ID \(namespace\) of the libraries that the OpenUI5 core should load for use in the component. If your app requires a minimum version of the lib, specify the `minVersion` for information purposes. Specify `lazy` to indicate that the lib shall be lazy loaded.
+-   `libs`: ID \(namespace\) of the libraries that the OpenUI5 core should load for use in the component. If your app requires a minimum version of the lib, specify the `minVersion` for information purposes.Specify `lazy` to indicate that the lib shall be loaded lazily.
 
--   `components`: ID \(namespace\) of the components that the OpenUI5 core should load for use in your component. If your app requires a minimum version of the component, specify the `minVersion` for information purposes. Specify `lazy` to indicate that the component shall be lazy loaded.
+-   `components`: ID \(namespace\) of the components that the OpenUI5 core should load for use in your component. If your app requires a minimum version of the component, specify the `minVersion` for information purposes. Specify `lazy: true` to indicate that the component shall be loaded lazily.
 
 
-For more information, see [Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md).
+For more information, see [Manifest Dependencies to Libraries and Components](manifest-dependencies-to-libraries-and-components-8521ad1.md).
 
 </td>
 </tr>
@@ -2074,7 +1150,7 @@ Specifies the used components with the a unique key/alias. Contains the followin
 -   `lazy`: Indicates whether the component usage should be lazily loaded. Default value: `true`
 
 
-For more information, see: [Using and Nesting Components](using-and-nesting-components-346599f.md).
+For more information, see: [Component Instantiation Guide](component-instantiation-guide-346599f.md).
 
 </td>
 </tr>
@@ -2386,12 +1462,12 @@ The newest flattened JSON schema is available on the SAP Open Source GitHub at [
 Current version of the `manifest.json`
 
 > ### Note:  
-> The following sample contains the **full scope of all available manifest properties**. Some properties might not be applicable for all `manifest.json` variants. For example, the `sap.ui5/models` section is not supported for library manifests. For more information, see the above listing of namespaces and properties.
+> The following sample contains the **full scope of all available manifest properties**. Some properties might not be applicable for all `manifest.json` variants. For example, the `sap.ui5/models` \}, "liabilities": \{, "cdsService": \{ "uri": "/sap/bc/ina/ina1/sap/ex section is not supported for library "settings": \{ "localUri": "localServi
 
 ```
 
 {
-"_version": "1.76.0",
+"_version": "1.86.0",
  
     "start_url": "index.html",
  
@@ -2431,7 +1507,9 @@ Current version of the `manifest.json`
                     "localUri": "model/annotations.xml"
                 }
             }
-        },
+
+                            "objectName": "SAPFinLiabilities",
+                            "objectType": "cdsprojectionview"        },
         "cdsViews": [
             "VIEW1", "VIEW2"
         ],
@@ -2476,7 +1554,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.138.0",
+            "minUI5Version": "1.148.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"
@@ -2580,7 +1658,7 @@ sap.ui.define([
 ], (UIComponent) => {
 	"use strict";
 	return UIComponent.extend("my.sample.Component", {
-		metadata  : { 
+		metadata: {
 			manifest: "json",
 			interfaces: [
 				"sap.ui.core.IAsyncContentCreation"
@@ -2606,6 +1684,9 @@ oComponent.getManifestEntry("/sap.ui5/dependencies/libs"); // returns reference 
 -   **[Migrating from Component Metadata to Manifest](migrating-from-component-metadata-to-manifest-e282db2.md "Overview, how the component metadata are mapped to the manifest (descriptor for
 		applications, components and libraries). ")**  
 Overview, how the component metadata are mapped to the manifest \(descriptor for applications, components and libraries\).
+-   **[Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md "Use the following table to identify manifest attribute incompatibilities that are
+		relevant to your target manifest version.")**  
+Use the following table to identify manifest attribute incompatibilities that are relevant to your target manifest version.
 -   **[Manifest for Libraries](manifest-for-libraries-b229914.md "The manifest (also known as descriptor) for libraries contains a subset of the
 		attributes in the manifest for applications and components.")**  
 The manifest \(also known as descriptor\) for libraries contains a subset of the attributes in the manifest for applications and components.
@@ -2619,9 +1700,9 @@ The `resources.json` file lists all resources in a component or library folder. 
         descriptor) V2 for applications file for an existing transactional app
             created by the customer based on SAP Fiori.")**  
 Detailed description of the steps needed to create a manifest \(also known as descriptor\) V2 for applications file for an existing transactional app created by the customer based on SAP Fiori.
--   **[Descriptor Dependencies to Libraries and Components](descriptor-dependencies-to-libraries-and-components-8521ad1.md "Description of the performance-relevant attributes that are available for the descriptor
-		for applications, components and libraries")**  
-Description of the performance-relevant attributes that are available for the descriptor for applications, components and libraries
+-   **[Manifest Dependencies to Libraries and Components](manifest-dependencies-to-libraries-and-components-8521ad1.md "Description of the performance-relevant attributes that are available for the manifest
+		(also known as descriptor for applications, components and libraries).")**  
+Description of the performance-relevant attributes that are available for the manifest \(also known as descriptor for applications, components and libraries\).
 -   **[Manifest Model Preload](manifest-model-preload-26ba6a5.md "The preload flag  enables a preload mode for a model, thus improving
 		the startup performance of an app or component.")**  
 The `preload` flag enables a preload mode for a model, thus improving the startup performance of an app or component.

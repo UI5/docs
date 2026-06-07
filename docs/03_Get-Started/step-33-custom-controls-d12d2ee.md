@@ -46,7 +46,7 @@ sap.ui.define([
 
 We create a new folder `control` and a file `ProductRating.js` that will hold our new control. As with our controllers and views, the custom control inherits the common control functionality from a OpenUI5 base object, for controls this is done by extending the base class `sap.ui.core.Control`.
 
-Custom controls are small reuse components that can be created within the app very easily. Due to their nature, they are sometimes also referred to as "notepad" or "on the fly" controls. A custom control is a JavaScript object that has two special sections \(`metadata` and `renderer`\) and a number of methods that implement the functionality of the control.
+A custom control offers a reusable visual experience. It might be located directly inside your application or stored in a dedicated library. A custom control is a subclass of the base `Control` class written in JavaScript or TypeScript. To implement it, specify `sap/ui/core/Control` in the `extend` method call. You can also define special control-related properties, such as `metadata` and `renderer`, and methods that implement the control's functionality.
 
 The `metadata` section defines the data structure and thus the API of the control. With this meta information on the properties, events, and aggregations of the control OpenUI5 automatically creates setter and getter methods and other convenience functions that can be called within the app.
 
@@ -341,12 +341,6 @@ The resource bundle is extended with the confirmation message and the strings th
 
 -   Put custom controls in the `control` folder of your app.
 
-
-**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
-
-**Next:**[Step 32: Routing Back and History](step-32-routing-back-and-history-8ef57cf.md "Now we can navigate to our detail page and display an invoice, but we cannot go back to the overview page yet. We'll add a back button to the detail page and implement a function that shows our overview page again.")
-
-**Previous:**[Step 34: Responsiveness](step-34-responsiveness-a96e18b.md "In this step, we improve the responsiveness of our app. OpenUI5 applications can be run on phone, tablet, and desktop devices and we can configure the application to make best use of the screen estate for each scenario. Fortunately, OpenUI5 controls like the sap.m.Table already deliver a lot of features that we can use.")
 
 **Related Information**  
 

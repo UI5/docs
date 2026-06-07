@@ -23,7 +23,7 @@ We'll create a view model in our controller, add an input field to our app, bind
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 7: JSON Model](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/07) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-07.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -46,20 +46,20 @@ import JSONModel from "sap/ui/model/json/JSONModel";
  * @name ui5.walkthrough.controller.App
  */
 export default class AppController extends Controller {
-   onInit() : void {
-      // set data model on view
+    onInit() : void {
+        // set data model on view
         const data = {
-           recipient: {
-              name: "World"
-           }
+            recipient: {
+                name: "World"
+            }
         };
         const dataModel = new JSONModel(data);
         this.getView()?.setModel(dataModel);
     }
 
     onShowHello(): void {
-       MessageToast.show("Hello World");
-     }
+        MessageToast.show("Hello World");
+    }
 };
 ```
 
@@ -97,12 +97,6 @@ We also create a greeting message by combining the static "Hello" text with the 
       width="60%"/>
 </mvc:View>
 ```
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 6: Modules \(TypeScript\)](step-6-modules-typescript-3510034.md "In OpenUI5, resources are often referred to as modules. In this step, we replace the alert from the last exercise with a proper Message Toast from the sap.m library.")
-
-**Previous:**[Step 8: Translatable Texts \(TypeScript\)](step-8-translatable-texts-typescript-4dcf52e.md "In this step we move the texts of our UI to a separate resource file.")
 
 **Related Information**  
 

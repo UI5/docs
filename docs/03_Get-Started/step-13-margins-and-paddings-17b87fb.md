@@ -82,12 +82,6 @@ To format the output text individually, we remove the description from the input
 -   Use the standard OpenUI5 CSS classes for the layout if possible.
 
 
-**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
-
-**Next:**[Step 12: Shell Control as Container](step-12-shell-control-as-container-4df1d91.md "Now we use a shell control as container for our app and use it as our new root element. The shell takes care of visual adaptation of the application to the device's screen size by introducing a so-called letterbox on desktop screens.")
-
-**Previous:**[Step 14: Custom CSS and Theme Colors](step-14-custom-css-and-theme-colors-723f4b2.md "Sometimes we need to define some more fine-granular layouts and this is when we can use the flexibility of CSS by adding custom style classes to controls and style them as we like.")
-
 **Related Information**  
 
 

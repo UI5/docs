@@ -125,7 +125,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -157,7 +157,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -189,7 +189,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -211,17 +211,17 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -238,22 +238,22 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -317,7 +317,7 @@ The following table provides an overview of the two main types of card controls 
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>

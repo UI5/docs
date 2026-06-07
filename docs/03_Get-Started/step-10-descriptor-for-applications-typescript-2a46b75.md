@@ -21,7 +21,7 @@ The SAP Fiori launchpad acts as an application container and instantiates the ap
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 10: Descriptor for Applications](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/10) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-10.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -46,7 +46,7 @@ helloMsg=Hello {0}
 
 ## webapp/manifest.json
 
-As mentioned in Step 1 the manifest file is used by OpenUI5 to instantiate the component. We have already configured the essential attributes of the file so that it can be used with UI5 Tooling. Now, we'll add further attributes that are important for creating a proper UI component in OpenUI5.
+As mentioned in Step 1 the manifest file is used by OpenUI5 to instantiate the component. We have already configured the essential attributes of the file so that it can be used with UI5 CLI. Now, we'll add further attributes that are important for creating a proper UI component in OpenUI5.
 
 We enhance the `sap.app` namespace by adding configuration for the following application-specific attributes:
 
@@ -85,7 +85,7 @@ The **`sap.ui5`** namespace adds OpenUI5-specific configuration parameters that 
 
     -   The `minUI5Version` property is mandatory and specifies the minimum version of OpenUI5 required by the component. Our component requires OpenUI5 version 1.20 as a minimum.
 
-    -   The `libs` settings declare the libraries that the OpenUI5 core should load for use in the component. To benefit from the asynchronous library preload, it's essential to add all obligatory libraries here. You can set the `lazy` parameter to `true` to indicate that the lib shall be lazy-loaded, so that it only gets loaded once needed. If your app requires a minimum version of the lib, you also need to specify the `minVersion` for information purposes. We declare here the two libraries `sap.ui.core` and `sap.m` as dependencies to be loaded directly when starting the component.
+    -   The `libs` settings declare the libraries that the OpenUI5 core should load for use in the component. To benefit from the asynchronous library preload, it's essential to add all obligatory libraries here.You can set the `lazy` parameter to `true` to indicate that the lib shall be lazy-loaded, so that it only gets loaded once needed. If your app requires a minimum version of the lib, you also need to specify the `minVersion` for information purposes. We declare here the two libraries `sap.ui.core` and `sap.m` as dependencies to be loaded directly when starting the component.
 
 
     > ### Note:  
@@ -100,7 +100,7 @@ The **`sap.ui5`** namespace adds OpenUI5-specific configuration parameters that 
 
 ```
 {
-    "_version": "1.65.0",
+    "_version": "2.8.0",
     "sap.app": {
         "id": "ui5.walkthrough",
         "type": "application",
@@ -127,7 +127,7 @@ The **`sap.ui5`** namespace adds OpenUI5-specific configuration parameters that 
     },
     "sap.ui5": {
         "dependencies": {
-            "minUI5Version": "1.120",
+            "minUI5Version": "1.149.0",
             "libs": {
                 "sap.ui.core": {},
                 "sap.m": {}
@@ -209,22 +209,22 @@ It's worth noting that the `ComponentSupport` module enforces asynchronous loadi
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>UI5 TypeScript Walkthrough</title>
-	<script
-		id="sap-ui-bootstrap"
-		src="resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compat-version="edge"
-		data-sap-ui-async="true"
-		data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
-		data-sap-ui-resource-roots='{
-			"ui5.walkthrough": "./"
-		}'>
-	</script>
+    <meta charset="utf-8">
+    <title>UI5 TypeScript Walkthrough</title>
+    <script
+        id="sap-ui-bootstrap"
+        src="resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-compat-version="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-resource-roots='{
+            "ui5.walkthrough": "./"
+        }'>
+    </script>
 </head>
 <body class="sapUiBody" id="content">
-	<div data-sap-ui-component data-name="ui5.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
+    <div data-sap-ui-component data-name="ui5.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
 </body>
 </html>
 ```
@@ -241,12 +241,6 @@ We can delete our `index.ts`, because the descriptor now takes care of everythin
 
 -   Use translatable strings for the title and the description of the app.
 
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 9: Component Configuration \(TypeScript\)](step-9-component-configuration-typescript-f9d0e2f.md "After we have introduced all three parts of the Model-View-Controller (MVC) concept, we now come to another important structural aspect of OpenUI5.")
-
-**Previous:**[Step 11: Pages and Panels \(TypeScript\)](step-11-pages-and-panels-typescript-feed613.md "After all the work on the app structure it's time to improve the look of our app. We will use two controls from the sap.m library to add a bit more &quot;bling&quot; to our UI. You will also learn about control aggregations in this step.")
 
 **Related Information**  
 

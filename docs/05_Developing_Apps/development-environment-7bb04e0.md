@@ -10,17 +10,17 @@ Depending on your use case, the following environments might be interesting for 
 
 <a name="loio7bb04e05f9484e1b95b38a2e48ecef4f__section_ud3_1ds_ymb"/>
 
-## UI5 Tooling
+## UI5 CLI
 
-[UI5 Tooling](https://sap.github.io/ui5-tooling/) is an open and modular toolchain to develop state-of-the-art OpenUI5 applications. As a modern build and development environment it comes with a [command line interface \(CLI\)](https://sap.github.io/ui5-tooling/pages/CLI/), leverages Node.js and npm, and is being further advanced as an open-source project.
+[UI5 CLI](https://ui5.github.io/cli/) is an open and modular toolchain to develop state-of-the-art OpenUI5 applications. As a modern build and development environment it comes with a [command line interface \(CLI\)](https://ui5.github.io/cli/pages/CLI/), leverages Node.js and npm, and is being further advanced as an open-source project.
 
-Follow these steps to start your UI5 journey with UI5 Tooling:
+Follow these steps to start your UI5 journey with UI5 CLI:
 
 1.  Install the latest LTS version of [Node.js](https://nodejs.org/)
 
 2.  Open a new terminal and execute `npm i -g @ui5/cli`
 
-You're all set! Start your journey by checking out the [UI5 sample app](https://github.com/SAP/openui5-sample-app)or our [Walkthrough Tutorial \(JavaScript\)](../03_Get-Started/walkthrough-tutorial-javascript-3da5f4b.md).
+You're all set! Start your journey by checking out the [UI5 sample app](https://github.com/UI5/sample-app)or our [Walkthrough Tutorial \(JavaScript\)](../03_Get-Started/walkthrough-tutorial-javascript-3da5f4b.md).
 
 ***
 
@@ -43,9 +43,8 @@ In general, you can use the JavaScript IDE of your choice. Some use cases as wel
 -   **[App Development](app-development-b1fbe1a.md "There are several ways to develop OpenUI5
 		applications. Select the one that meets the requirements of your projects and your expectations best.")**  
 There are several ways to develop OpenUI5 applications. Select the one that meets the requirements of your projects and your expectations best.
--   **[App Development Using SAP Business Application Studio](app-development-using-sap-business-application-studio-6bbad66.md "Learn how you can use SAP Business Application Studio together with UI5 Tooling to develop
-		state-of-the-art UI5 apps.")**  
-Learn how you can use SAP Business Application Studio together with UI5 Tooling to develop state-of-the-art UI5 apps.
+-   **[App Development Using SAP Business Application Studio](app-development-using-sap-business-application-studio-6bbad66.md "Learn how you can use SAP Business Application Studio together with UI5 CLI to develop state-of-the-art UI5 apps.")**  
+Learn how you can use SAP Business Application Studio together with UI5 CLI to develop state-of-the-art UI5 apps.
 -   **[OpenUI5 Framework Development](openui5-framework-development-ee8726a.md "This UI5 Developer's Guide contains information relevant for UI5 app developers. Information for framework developers is maintained on
 		GitHub.")**  
 This UI5 Developer's Guide contains information relevant for UI5 app developers. Information for framework developers is maintained on GitHub.

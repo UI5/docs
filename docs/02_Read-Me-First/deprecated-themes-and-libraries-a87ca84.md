@@ -6,18 +6,16 @@ As OpenUI5 evolves over time, some of the UI controls are replaced by others, or
 
 ***
 
-## Themes that are no longer supported
+## Deprecated Themes
 
-The following themes have been deprecated and/or removed entirely:
-
-**Deprecated Themes**
+All deprecated themes have been removed as of OpenUI5 1.136 or earlier. The recommended target theme is `sap_horizon`.
 
 
 <table>
 <tr>
 <th valign="top">
 
-Theme
+Deprecated Theme
 
 </th>
 <th valign="top">
@@ -32,14 +30,14 @@ Removed as of
 </th>
 <th valign="top">
 
-Recommendation\(\*\)
+Replacement
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_belize` 
+`sap_belize`
 
 </td>
 <td valign="top">
@@ -54,14 +52,14 @@ Recommendation\(\*\)
 </td>
 <td valign="top">
 
-Switch to `sap_horizon`.
+`sap_horizon`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_hcb` 
+`sap_hcb`
 
 </td>
 <td valign="top">
@@ -76,14 +74,14 @@ Switch to `sap_horizon`.
 </td>
 <td valign="top">
 
-Switch to `sap_horizon_hcb`.
+`sap_horizon_hcb`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_bluecrystal` 
+`sap_bluecrystal`
 
 </td>
 <td valign="top">
@@ -98,14 +96,14 @@ Switch to `sap_horizon_hcb`.
 </td>
 <td valign="top">
 
-Switch to `sap_horizon`.
+`sap_horizon`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_ux` 
+`sap_ux`
 
 </td>
 <td valign="top">
@@ -120,14 +118,14 @@ Switch to `sap_horizon`.
 </td>
 <td valign="top">
 
-n/a
+`sap_horizon`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_platinum` 
+`sap_platinum`
 
 </td>
 <td valign="top">
@@ -142,14 +140,14 @@ n/a
 </td>
 <td valign="top">
 
-n/a
+`sap_horizon`
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap_goldreflection` 
+`sap_goldreflection`
 
 </td>
 <td valign="top">
@@ -164,23 +162,17 @@ n/a
 </td>
 <td valign="top">
 
-n/a
+`sap_horizon`
 
 </td>
 </tr>
 </table>
-
-\(\*\) Also valid for custom themes based on the respective theme
-
-For a list of the available themes, see [Available Themes](../04_Essentials/available-themes-da0d2e7.md).
 
 ***
 
 ## Deprecated Libraries
 
 The following libraries have been deprecated and/or removed entirely:
-
-**Deprecated Libraries**
 
 
 <table>
@@ -197,24 +189,28 @@ Deprecated as of
 </th>
 <th valign="top">
 
-Note
+Replacement
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-`sap.sac.grid`
+`sap.ui.webc.common`
+
+`sap.ui.webc.fiori`
+
+`sap.ui.webc.main`
 
 </td>
 <td valign="top">
 
-1.112
+1.120
 
 </td>
 <td valign="top">
 
-Removed as of 1.114. Use `sap.sac.df.FlexAnalysis` instead.
+No direct replacement. Removed as of 1.147. For native web component usage in OpenUI5, see [Using Web Components](../04_Essentials/using-web-components-1c80793.md). See also the removal [blog post](https://community.sap.com/t5/frontend-ui5-sap-fiori-blog-posts/removal-of-legacy-sap-ui-webc-web-component-ui-libraries-from-sapui5/ba-p/14358564).
 
 </td>
 </tr>
@@ -231,73 +227,14 @@ Removed as of 1.114. Use `sap.sac.df.FlexAnalysis` instead.
 </td>
 <td valign="top">
 
- 
+No replacement
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap.landvisz`
-
-</td>
-<td valign="top">
-
-1.98
-
-</td>
-<td valign="top">
-
-Removed as of 1.120
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.vtm`
-
-</td>
-<td valign="top">
-
-1.96
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.zen.commons`
-
-`sap.zen.crosstab`
-
-`sap.zen.dsh`
-
-</td>
-<td valign="top">
-
-1.89
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ui.commons`
-
-`sap.ui.ux3`
-
-`sap.makit`
+`sap.ui.commons` 
 
 </td>
 <td valign="top">
@@ -307,47 +244,28 @@ Removed as of 1.120
 </td>
 <td valign="top">
 
- 
+Replaced by `sap.m`, `sap.ui.unified`, and `sap.tnt` controls
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-`sap.me`
+`sap.ui.ux3`
 
 </td>
 <td valign="top">
 
-1.34
+1.38
 
 </td>
 <td valign="top">
 
- 
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-`sap.ca.ui`
-
-</td>
-<td valign="top">
-
-1.28
-
-</td>
-<td valign="top">
-
- 
+Replaced by `sap.uxap` and `sap.ui.layout` controls
 
 </td>
 </tr>
 </table>
-
-To find out whether these libraries have been replaced by other content, check them at [API Reference: `deprecated`](https://ui5.sap.com/#/api/deprecated).
 
 **Related Information**  
 
@@ -356,7 +274,7 @@ To find out whether these libraries have been replaced by other content, check t
 
 [Supported Library Combinations](supported-library-combinations-363cd16.md "OpenUI5 provides a set of JavaScript and CSS libraries, which can be combined in an application using the combinations that are supported.")
 
-[Supported Combinations of Themes and Libraries](supported-combinations-of-themes-and-libraries-38ff8c2.md "This chapter gives an overview of the possible combinations of themes and libraries for the OpenUI5 versions that are still in maintenance.")
+[Supported Themes](supported-themes-38ff8c2.md "This chapter gives an overview of the supported themes.")
 
 [Available Themes](../04_Essentials/available-themes-da0d2e7.md "Provides a list of themes and their names.")
 

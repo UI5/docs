@@ -21,7 +21,7 @@ The OData V4 model supports the following types of binding:
 
 -   **[Parameters](parameters-1ab4f62.md "")**  
 
--   **[Binding Collection Inline Count](binding-collection-inline-count-77d2310.md "")**  
+-   **[Binding the Count of a Collection](binding-the-count-of-a-collection-77d2310.md "")**  
 
 -   **[Type Determination](type-determination-53cdd55.md "")**  
 
@@ -37,10 +37,10 @@ The OData V4 model supports the following types of binding:
 In the OData V4 model, bindings are used to access and modify back-end data also if the data is accessed or modified in controller code.
 -   **[Automatic determination of $expand and $select](automatic-determination-of-expand-and-select-10ca58b.md "")**  
 
--   **[Data Reuse](data-reuse-648e360.md "The OData V4 model keeps data with respect to bindings. This allows different views on the same data but also means that data is not
-		automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in
+-   **[Data Reuse](data-reuse-648e360.md "The OData V4 model keeps data with respect to bindings. This allows different views on the same back-end data but also means that data is
+		not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in
 		different controls in sync.")**  
-The OData V4 model keeps data with respect to bindings. This allows different views on the same data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.
+The OData V4 model keeps data with respect to bindings. This allows different views on the same back-end data but also means that data is not automatically shared between bindings. There are mechanisms for sharing data to avoid redundant requests and to keep the same data in different controls in sync.
 
 **Related Information**  
 
@@ -59,13 +59,13 @@ The OData V4 model keeps data with respect to bindings. This allows different vi
 
 [Filtering](filtering-5338bd1.md "The OData V4 Model supports server-side filtering on lists.")
 
-[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")
+[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server-side sorting on lists.")
 
-[OData Version 4.0 Part 2: URL Conventions, 4 Resource Path](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)
+[OData Version 4.01 Part 2: URL Conventions, 4 Resource Path](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360928)
 
-[OData Version 4.0 Part 2: URL Conventions, 5 Query Options](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html)
+[OData Version 4.01 Part 2: URL Conventions, 5 Query Options](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31360954)
 
-[OData Version 4.0 Part 2: URL Conventions, 5.2 Custom Query Options](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html)
+[OData Version 4.01 Part 2: URL Conventions, 5.2 Custom Query Options](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#_Toc31361050)
 
-[OData Version 4.0 SimpleIdentifier](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_SimpleIdentifier)
+[OData Common Schema Definition Language \(CSDL\) XML Representation Version 4.01, 15.2 Simple Identifier](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html#_Toc38530448)
 

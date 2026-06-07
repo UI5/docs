@@ -440,9 +440,9 @@ Feature
 
 **Modern ECMAScript Support in OpenUI5**
 
-We have enabled UI5 framework libraries to use modern ECMAScript syntax in their code and define Specification Version 3.0 in their UI5 Tooling configuration.
+We have enabled UI5 framework libraries to use modern ECMAScript syntax in their code and define Specification Version 3.0 in their UI5 CLI configuration.
 
-**Action:** If you use UI5 Tooling in your projects, upgrade to UI5 Tooling 3.0 and make sure that your project's development infrastructure fully supports this change.
+**Action:** If you use UI5 CLI in your projects, upgrade to UI5 CLI 3.0 and make sure that your project's development infrastructure fully supports this change.
 
 For more information, see [Upgrade Your Tools for Modern ECMAScript in UI5](https://blogs.sap.com/2023/05/24/upgrade-your-tools-for-modern-ecmascript-in-ui5/).
 
@@ -466,6 +466,26 @@ Required
 
 **Related Information**  
 
+
+[What's New in OpenUI5 1.147](what-s-new-in-openui5-1-147-88df9d3.md "With this release OpenUI5 is upgraded from version 1.146 to 1.147.")
+
+[What's New in OpenUI5 1.146](what-s-new-in-openui5-1-146-6ccfe05.md "With this release OpenUI5 is upgraded from version 1.145 to 1.146.")
+
+[What's New in OpenUI5 1.145](what-s-new-in-openui5-1-145-7676a2a.md "With this release OpenUI5 is upgraded from version 1.144 to 1.145.")
+
+[What's New in OpenUI5 1.144](what-s-new-in-openui5-1-144-ad1c805.md "With this release OpenUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in OpenUI5 1.143](what-s-new-in-openui5-1-143-ad08c66.md "With this release OpenUI5 is upgraded from version 1.142 to 1.143.")
+
+[What's New in OpenUI5 1.142](what-s-new-in-openui5-1-142-92ed100.md "With this release OpenUI5 is upgraded from version 1.141 to 1.142.")
+
+[What's New in OpenUI5 1.141](what-s-new-in-openui5-1-141-a7ed66d.md "With this release OpenUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in OpenUI5 1.140](what-s-new-in-openui5-1-140-26a106c.md "With this release OpenUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in OpenUI5 1.139](what-s-new-in-openui5-1-139-e10db71.md "With this release OpenUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in OpenUI5 1.138](what-s-new-in-openui5-1-138-8f6a92b.md "With this release OpenUI5 is upgraded from version 1.136 to 1.138.")
 
 [What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
 

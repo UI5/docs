@@ -56,7 +56,7 @@ All apps are started using an HTML page that loads OpenUI5 and the component. Yo
 
     The FLP instantiates the component based on the information given in the descriptor file. The FLP can contain multiple apps at the same time. Each app can define local settings, such as supported themes or supported devices.
 
-    This app cannot be run standalone, meaning no `index.html` file is created but only HTML files for testing the app in the FLP sandbox.
+    This app cannot be run standalone, meaning no `index.html` file is created but only HTML files for testing the app in the [SAP Fiori Launchpad Sandbox](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.149_SAPUI5_ABAP/en-US/93076560923d4e809222aa09444ecf13.html "Learn how to install and work with the launchpad sandbox.") :arrow_upper_right:.
 
     For more information, search for *Embedding SAPUI5 Applications* in the documentation of your SAP NetWeaver version on the SAP Help Portal at [https://help.sap.com/viewer/p/SAP\_NETWEAVER](https://help.sap.com/viewer/p/SAP_NETWEAVER).
 
