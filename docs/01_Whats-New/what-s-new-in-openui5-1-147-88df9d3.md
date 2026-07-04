@@ -568,6 +568,8 @@ Info Only
 **Related Information**  
 
 
+[What's New in OpenUI5 1.148](what-s-new-in-openui5-1-148-6b940b3.md "With this release OpenUI5 is upgraded from version 1.147 to 1.148.")
+
 [What's New in OpenUI5 1.146](what-s-new-in-openui5-1-146-6ccfe05.md "With this release OpenUI5 is upgraded from version 1.145 to 1.146.")
 
 [What's New in OpenUI5 1.145](what-s-new-in-openui5-1-145-7676a2a.md "With this release OpenUI5 is upgraded from version 1.144 to 1.145.")

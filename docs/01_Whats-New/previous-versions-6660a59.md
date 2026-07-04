@@ -2,6 +2,10 @@
 
 # Previous Versions
 
+-   **[What's New in OpenUI5 1.148](what-s-new-in-openui5-1-148-6b940b3.md "With
+		this release OpenUI5 is upgraded
+		from version 1.147 to 1.148.")**  
+With this release OpenUI5 is upgraded from version 1.147 to 1.148.
 -   **[What's New in OpenUI5 1.147](what-s-new-in-openui5-1-147-88df9d3.md "With
 		this release OpenUI5 is upgraded
 		from version 1.146 to 1.147.")**  

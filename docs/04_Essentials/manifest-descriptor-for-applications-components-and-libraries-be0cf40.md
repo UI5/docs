@@ -430,6 +430,30 @@ OpenUI5 Version
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+2.9.0 *or* 1.87.0
+
+</td>
+<td valign="top">
+
+\>=1.149
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2.10.0 *or* 1.88.0
+
+</td>
+<td valign="top">
+
+\>=1.150
+
+</td>
+</tr>
 </table>
 
 For more information on the new fields introduced in each version and implications when upgrading, check out [Migration Information for Upgrading the Manifest File](migration-information-for-upgrading-the-manifest-file-a110f76.md).
@@ -1467,7 +1491,7 @@ Current version of the `manifest.json`
 ```
 
 {
-"_version": "1.86.0",
+"_version": "1.88.0",
  
     "start_url": "index.html",
  
@@ -1554,7 +1578,7 @@ Current version of the `manifest.json`
             }]
         },
         "dependencies": {
-            "minUI5Version": "1.148.0",
+            "minUI5Version": "1.150.0",
             "libs": {
                 "sap.m": {
                     "minVersion": "1.34.0"

@@ -185,5 +185,5 @@ To summarize: SAP recommends using as much SAP Fiori elements as possible and as
 
 [Developing Apps](../05_Developing_Apps/developing-apps-23cfd95.md "Create apps with rich user interfaces for modern web business applications, responsive across browsers and devices, based on HTML5.")
 
-[Developing Apps with SAP Fiori Elements](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.149_SAPUI5_ABAP/en-US/03265b0408e2432c9571d6b3feb6b1fd.html "Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.") :arrow_upper_right:
+[Developing Apps with SAP Fiori Elements](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.150_SAPUI5_ABAP/en-US/03265b0408e2432c9571d6b3feb6b1fd.html "Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.") :arrow_upper_right:
 
