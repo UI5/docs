@@ -30,7 +30,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 6](h
     ...
     	"sap.ui5": {
     		"dependencies": {
-    			"minUI5Version": "1.150.0",
+    			"minUI5Version": "1.151.0",
     			"libs": {
     				"sap.m": {},
     				"sap.ui.core": {},
@@ -137,12 +137,6 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 6](h
 
 
 You can use multiple model instances by using different model names. The model name can be set as the second parameter when using the `setModel(oResourceModel,"i18n")` method. The model is then propagated under this name to all aggregated child controls \(and their children, and so on …\). All these controls have access to this model under the name `i18n` as well as to the `JSONModel` \(default model, which has no name\).
-
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 5: One-Way Data Binding](step-5-one-way-data-binding-88756c0.md "Unlike the two-way binding behavior we've seen, one-way data binding is also possible. In this case, data travels in one direction only: from the model, through the binding instance, to the consumer (usually the property of a control), but never in the other direction. Let's modify the previous example to use one-way data binding. This shows how you can switch off the flow of data from the user interface back to the model if needed.")
-
-**Previous:**[Step 7: \(Optional\) Resource Bundles and Multiple Languages](step-7-optional-resource-bundles-and-multiple-languages-4e593b4.md "Resource bundles exist to enable an app to run in multiple languages without the need to change any code. To demonstrate this feature, let's create a German version of the app – in fact, all we need to do is create a German version of the resource bundle file. In our code, we activate the German locale for the ResourceModel.")
 
 **Related Information**  
 

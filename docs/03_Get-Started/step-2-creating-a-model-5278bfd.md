@@ -56,7 +56,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 2](h
     ...
     	"sap.ui5": {
     		"dependencies": {
-    			"minUI5Version": "1.150.0",
+    			"minUI5Version": "1.151.0",
     			"libs": {
     				"sap.m": {},
     				"sap.ui.core": {},
@@ -73,18 +73,12 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 2](h
     ```
 
 
-Generally speaking, a model object holding business data should be bound to the app's `Component.js` or to the view that displays the data. For an example, see the Walkthrough tutorial, [Step 7: JSON Model](step-7-json-model-70ef981.md) \(binding to the View\) or [Step 9: Component Configuration](step-9-component-configuration-4cfa608.md) \(binding to the Component\).
+Generally speaking, a model object holding business data should be bound to the app's `Component.js` or to the view that displays the data. For an example, see the Walkthrough tutorial, [Step 7: JSON Model](https://ui5.github.io/tutorials/walkthrough/steps/07/index.html) \(binding to the View\) or [Step 9: Component Configuration](https://ui5.github.io/tutorials/walkthrough/steps/09/index.html) \(binding to the Component\).
 
 The text that is displayed on the UI is still hard-coded and not taken from the model. We'll bind the property `greetingText` to our UI control in the next step.
 
 > ### Note:  
 > You can set models on every control by calling `setModel()`. The model is then propagated to all aggregated child controls \(and their children, and so on …\). All child controls then have access to that model.
-
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 1: No Data Binding](step-1-no-data-binding-4cde849.md "In this step, we create a basic application and simply place some text on the screen using a standard sap.m.Text control. The text in this control is a hard-coded part of the control's definition; therefore, this is not an example of data binding!")
-
-**Previous:**[Step 3: Create Property Binding](step-3-create-property-binding-d70e989.md "Although there is no visible difference, the text on the screen is now derived from model data.")
 
 **Related Information**  
 

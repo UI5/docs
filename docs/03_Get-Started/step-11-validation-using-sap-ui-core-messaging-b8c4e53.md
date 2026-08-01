@@ -31,7 +31,7 @@ To generally enable validation in the app, enter the highlighted line into the `
 "sap.ui5": {
 	"handleValidation": true,
 	"dependencies": {
-		"minUI5Version": "1.150.0",
+		"minUI5Version": "1.151.0",
 		"libs": {
 			"sap.m": {},
 			"sap.ui.core": {},
@@ -48,12 +48,6 @@ With validation handling enabled in the manifest, any validation error messages 
 You'll notice that the field in error has a red border: ![](images/loio44db88e92bc445b2b00e1b8e53b5ca9a_LowRes.png)
 
 However, the error message only displays when that particular field is in focus: ![](images/loioe67207b43d08410e82e74ad57ffbc022_LowRes.png)
-
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 10: Property Formatting Using Data Types](step-10-property-formatting-using-data-types-9252ee4.md "OpenUI5 offers a set of simple data types, including Boolean, Currency, Date and Float. You can apply these data types to controls to ensure that the value displayed on the screen is formatted correctly. If the field is open for input, this also ensures that the user input meets the requirements of that data type. Let's add a new field called Sales Amount of type Currency.")
-
-**Previous:**[Step 12: Aggregation Binding Using Templates](step-12-aggregation-binding-using-templates-97830de.md "Aggregation binding, also known as &quot;list binding&quot;, lets a control bind to a list within the model data. This binding allows relative binding to the list entries by its child controls.")
 
 **Related Information**  
 

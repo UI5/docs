@@ -4,13 +4,32 @@
 
 We start by setting up a simple app that loads data from an OData service and displays it in a table. We use a mock server to simulate requests to and responses from the service.
 
-The structure and data model created in this step will be used throughout this tutorial to illustrate the OData V4 features in OpenUI5.
+OData is a standard protocol for creating and consuming data by using simple HTTP and REST APIs for create, read, update, delete \(CRUD\) operations.
+
+We start with an initial app that simply retrieves data from an OData V4 service and displays it as a plain list.
+
+***
+
+<a name="loio15d84f36c0594cb2b3295aa1f55cb961__section_dsn_cwc_z1b"/>
+
+## Preview OData V4 Tutorial App
+
+![](images/loioe518debe1cdc4fcd9f5a6cffd014fbfa_LowRes.png)
+
+> ### Tip:  
+> You don't have to do all tutorial steps sequentially, you can jump directly to any step you want. In each step, download the code from the previous step, copy it to your workspace, and make sure that the application runs by calling the `webapp/index.html` file.
+> 
+> You can view and download the samples for all steps in the Demo Kit at [OData V4](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.odatav4). Depending on your development environment you might have to adjust resource paths and configuration entries.
+> 
+> For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 
 ***
 
 <a name="loio15d84f36c0594cb2b3295aa1f55cb961__section_bt4_fxc_z1b"/>
 
-## Preview
+## Preview Step 1
+
+The structure and data model created in this step will be used throughout this tutorial to illustrate the OData V4 features in OpenUI5.
 
   
   
@@ -118,10 +137,6 @@ The `metadata.xml` file contains the service metadata that includes, for example
 To be able to add data to the emulated OData responses, we have to store the entities for each entity type we use in a JSON file: The `people.json` file contains some data that is used for the mock service responses.
 
 In this tutorial, we only use the entity type `Person` of the *TripPin* service. The entities of type `Person` are collected in the entity set `People`. Each `Person` has a key property `UserName` and the properties `Age`, `FirstName`, and `LastName`.
-
-**Parent topic:**[OData V4 Tutorial](odata-v4-tutorial-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in OpenUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Previous:**[Step 2: Data Access and Client-Server Communication](step-2-data-access-and-client-server-communication-e9de002.md "In this step, we see how the Table that is bound to the People entity set initially requests its data, and how the data can be refreshed. We use the Console tab in the browser developer tools to monitor the communication between the browser and the server. We see the initial request as well as the requests for refreshing the data.")
 
 **Related Information**  
 

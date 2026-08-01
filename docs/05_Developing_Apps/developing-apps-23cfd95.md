@@ -95,7 +95,7 @@ In this guide we cover the most important accessibility aspects for application 
 **Related Information**  
 
 
-[Developing Apps with SAP Fiori Elements](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.150_SAPUI5_ABAP/en-US/03265b0408e2432c9571d6b3feb6b1fd.html "Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.") :arrow_upper_right:
+[Developing Apps with SAP Fiori Elements](https://help.sap.com/viewer/93953b95df5f4e938c8eb421cef56319/1.151_SAPUI5_ABAP/en-US/03265b0408e2432c9571d6b3feb6b1fd.html "Develop apps using SAP Fiori elements and benefit from a metadata-driven approach.") :arrow_upper_right:
 
 [Developing Apps with Modern Concepts: Guidance for Developers](../02_Read-Me-First/developing-apps-with-modern-concepts-guidance-for-developers-4cb54eb.md "This guidance explains how you can balance development efficiency, maintenance costs, and design flexibility when building enterprise-ready applications with SAP Fiori elements and freestyle SAPUI5.")
 

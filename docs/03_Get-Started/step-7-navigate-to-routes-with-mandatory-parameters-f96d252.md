@@ -47,7 +47,7 @@ You can view and download all files in the *Samples* in the Demo Kit at [Routing
 
 ```js
 {
-	"_version": "2.10.0",
+	"_version": "2.11.0",
 	"sap.app": {
 		...
 	},
@@ -326,12 +326,6 @@ That's it. You can go to `webapp/index.html#/employees` and click on any list it
 
 -   `webapp/index.html#/employees/33`
 
-
-**Parent topic:**[Navigation and Routing Tutorial](navigation-and-routing-tutorial-1b6dcd3.md "OpenUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in OpenUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of OpenUI5 to your applications.")
-
-**Next:**[Step 6: Navigate to Routes with Hard-Coded Patterns](step-6-navigate-to-routes-with-hard-coded-patterns-782aac0.md "In this step, we'll create a second button on the home page, with which we can navigate to a simple list of employees. This example illustrates how to navigate to a route that has a hard-coded pattern.")
-
-**Previous:**[Step 8: Navigate with Flip Transition](step-8-navigate-with-flip-transition-3e5f6f3.md "In this step, we want to illustrate how to navigate to a page with a custom transition animation. Both forward and backward navigation will use the &quot;flip&quot; transition but with a different direction. We will create a simple link on the Employee view that triggers a flip navigation to a page that displays the resume data of a certain employee. Pressing the Back button will navigate back to the Employee view with a reversed flip transition.")
 
 **Related Information**  
 

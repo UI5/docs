@@ -151,7 +151,7 @@ These lines of code make sure that the targets are only loaded when they are nee
 
 ```js
 {
-	"_version": "2.10.0",
+	"_version": "2.11.0",
 	"sap.app": {
 		...
 	},
@@ -229,12 +229,6 @@ Try it out yourself: Open the *Network* tab of your browser's developer tools an
 
 -   Lazy-load content that is not initially displayed to the user
 
-
-**Parent topic:**[Navigation and Routing Tutorial](navigation-and-routing-tutorial-1b6dcd3.md "OpenUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in OpenUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of OpenUI5 to your applications.")
-
-**Next:**[Step 9: Allow Bookmarkable Tabs with Optional Query Parameters](step-9-allow-bookmarkable-tabs-with-optional-query-parameters-b8561ff.md "The resume view contains four tabs as we have seen in the previous steps. However, when the user navigates to the resume page, only the first tab is displayed initially. Navigating directly to a specific tab or bookmarking a tab is not yet supported in our current app.")
-
-**Previous:**[Step 11: Assign Multiple Targets](step-11-assign-multiple-targets-b01840e.md "In this step, we will add a new button to the home page to illustrate the usage of multiple targets for a route. When the button is pressed, a new page opens that contains two parts: a header part at the top and a content part. The content part displays a table of employees that can be sorted and searched. We will use the array notation in the routing configuration to assign multiple targets to a route - a feature that we have not yet introduced.")
 
 **Related Information**  
 

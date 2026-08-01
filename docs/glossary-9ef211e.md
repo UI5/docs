@@ -336,7 +336,7 @@ SAPUI5/OpenUI5
 </td>
 <td valign="top">
 
-[Standard Composite Controls](07_Developing_Controls/standard-composite-controls-c1512f6.md)
+[Composite Controls](07_Developing_Controls/composite-controls-d6bab27.md)
 
 </td>
 </tr>

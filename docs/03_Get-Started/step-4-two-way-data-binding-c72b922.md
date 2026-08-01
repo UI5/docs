@@ -69,12 +69,6 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 4](h
 
 
 
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 3: Create Property Binding](step-3-create-property-binding-d70e989.md "Although there is no visible difference, the text on the screen is now derived from model data.")
-
-**Previous:**[Step 5: One-Way Data Binding](step-5-one-way-data-binding-88756c0.md "Unlike the two-way binding behavior we've seen, one-way data binding is also possible. In this case, data travels in one direction only: from the model, through the binding instance, to the consumer (usually the property of a control), but never in the other direction. Let's modify the previous example to use one-way data binding. This shows how you can switch off the flow of data from the user interface back to the model if needed.")
-
 **Related Information**  
 
 

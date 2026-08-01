@@ -175,10 +175,6 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 15](
 
 Congratulations! You've completed the Data Binding tutorial.
 
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 14: Expression Binding](step-14-expression-binding-5cff8d1.md "An expression binding lets you display a calculated value on the screen, which is derived from values found in a model object. This feature allows you to insert simple formatting or calculations directly into the data binding string. In this example, we're changing the color of the price depending on whether it's above or below a certain threshold. The threshold value is stored in the JSON model.")
-
 **Related Information**  
 
 

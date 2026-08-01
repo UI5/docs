@@ -91,7 +91,7 @@ As you know already from the previous steps, we add the `press` event handler `o
 
 ```js
 {
-	"_version": "2.10.0",
+	"_version": "2.11.0",
 	"sap.app": {
 		...
 	},
@@ -473,12 +473,6 @@ Employees=Employees
 ```
 
 Add the new texts to the `properties` file.
-
-**Parent topic:**[Navigation and Routing Tutorial](navigation-and-routing-tutorial-1b6dcd3.md "OpenUI5 comes with a powerful routing API that helps you control the state of your application efficiently. This tutorial will illustrate all major features and APIs related to navigation and routing in OpenUI5 apps by creating a simple and easy to understand mobile app. It represents a set of best practices for applying the navigation and routing features of OpenUI5 to your applications.")
-
-**Next:**[Step 10: Implement "Lazy Loading"](step-10-implement-lazy-loading-cdab0a1.md "In the previous steps, we have implemented a Resume view that uses tabs to display data. The complete content of the tabs is loaded once, no matter which tab is currently displayed. We can increase the performance of our app by avoiding to load content that is not visible. Therefore, we implement a &quot;lazy loading&quot; feature that only loads the view and data when requested by the user.")
-
-**Previous:**[Step 12: Make a Search Bookmarkable](step-12-make-a-search-bookmarkable-e85da53.md "In this step we will make the search bookmarkable. This allows users to search for employees in the Employees table and they can bookmark their search query or share the URL.")
 
 **Related Information**  
 

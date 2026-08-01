@@ -73,8 +73,10 @@ OpenUI5 supports right-to-left directionality \(RTL\) in controls.
 		 move the focus to the first control of the previous group. Adjacent tab chain elements between groups are automatically handled as one
 		group. For nested groups, the most concrete group is used.")**  
 Adjacent controls within the tab chain can be grouped. Within such a group, [F6\] or [Ctrl\] + [Alt/Option\] + [Down\] skip all controls of the group and move the focus to the first control in the tab chain of the next group. [Shift\] + [F6\]  or [Ctrl\] + [Alt/Option\] + [Up\]  move the focus to the first control of the previous group. Adjacent tab chain elements between groups are automatically handled as one group. For nested groups, the most concrete group is used.
--   **[Composite Controls](composite-controls-d6bab27.md "Composite controls are implemented by reusing other controls.")**  
-Composite controls are implemented by reusing other controls.
+-   **[Composite Controls](composite-controls-d6bab27.md "A composite control is an OpenUI5 control whose visual
+		representation is built by reusing other controls, providing a stable public API while
+		encapsulating implementation details.")**  
+A composite control is an OpenUI5 control whose visual representation is built by reusing other controls, providing a stable public API while encapsulating implementation details.
 -   **[Accessibility Aspects](accessibility-aspects-694b356.md "If you are developing OpenUI5 controls, you have to be aware of the accessibility aspects. A deeper understanding is
 		needed, so that all accessibility requirements are met.")**  
 If you are developing OpenUI5 controls, you have to be aware of the accessibility aspects. A deeper understanding is needed, so that all accessibility requirements are met.
