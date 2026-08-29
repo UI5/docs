@@ -12,7 +12,6 @@ The handling of resources in OpenUI5 is divided in a client-side and a server-si
 		changed. As long as they are not changed, the resources can always be fetched from the
 		browser's cache.")**  
 A cache buster allows OpenUI5 to notify the browser to refresh the resources only when the OpenUI5 resources have been changed. As long as they are not changed, the resources can always be fetched from the browser's cache.
--   **[Application Cache Buster](application-cache-buster-ff7aced.md "The application cache buster (short AppCacheBuster) is similar to the cache buster but is used for application
-		resources.")**  
-The application cache buster \(short `AppCacheBuster`\) is similar to the cache buster but is used for application resources.
+-   **[Application Cache Buster](application-cache-buster-ff7aced.md "The application cache buster (short AppCacheBuster) is similar to the Cache Buster for OpenUI5 but is used for application resources.")**  
+The application cache buster \(short `AppCacheBuster`\) is similar to the [Cache Buster for OpenUI5](cache-buster-for-openui5-91f0809.md) but is used for application resources.
 

@@ -2,7 +2,7 @@
 
 # Application Cache Buster
 
-The application cache buster \(short `AppCacheBuster`\) is similar to the cache buster but is used for application resources.
+The application cache buster \(short `AppCacheBuster`\) is similar to the [Cache Buster for OpenUI5](cache-buster-for-openui5-91f0809.md) but is used for application resources.
 
 > ### Note:  
 > OpenUI5 supports the application cache buster on SAP NetWeaver AS for ABAP only.

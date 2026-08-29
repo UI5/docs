@@ -127,7 +127,7 @@ The **`sap.ui5`** namespace adds OpenUI5-specific configuration parameters that 
     },
     "sap.ui5": {
         "dependencies": {
-            "minUI5Version": "1.151.0",
+            "minUI5Version": "1.152.0",
             "libs": {
                 "sap.ui.core": {},
                 "sap.m": {}
