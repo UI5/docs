@@ -80,7 +80,7 @@ Starting with OpenUI5 1.136, Manifest Version 2 \(`"_version": "2.x.y"`\) enforc
 
 ```json
 {
-    "_version": "2.11.0",
+    "_version": "2.12.0",
     "sap.app": {
         "id": "my.app",
         "type": "application",
