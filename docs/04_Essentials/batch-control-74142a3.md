@@ -21,7 +21,7 @@ For each of these cases, it is possible to specify a group ID of type `string`.
 
 A group ID has one of the following [submit modes](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.SubmitMode) to control the use of batch requests:
 
--   `sap.ui.model.odata.v4.SubmitMode.API` - Requests associated with the group ID are sent in a batch request via [`v4.ODataModel#submitBatch`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/submitBatch) .
+-   `sap.ui.model.odata.v4.SubmitMode.API` - Requests associated with the group ID are sent in a batch request via [`sap.ui.model.odata.v4.ODataModel#submitBatch`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/submitBatch) .
 
 -   `sap.ui.model.odata.v4.SubmitMode.Auto` - Requests associated with the group ID are sent in a batch request which is initiated automatically before rendering.
 
@@ -29,22 +29,17 @@ A group ID has one of the following [submit modes](https://ui5.sap.com/#/api/sap
 
 
 > ### Note:  
-> We recommend using either`SubmitMode.API` or `SubmitMode.Auto` groups in productive applications as not all features of the OData V4 model work without batch requests.
+> We recommend using either`sap.ui.model.odata.v4.SubmitMode.API` or `sap.ui.model.odata.v4.SubmitMode.Auto` groups in productive applications as not all features of the OData V4 model work without batch requests.
 
 The following group IDs are possible:
 
--   `"$auto"` and `"$auto.*"`: Predefined batch group ID which is the default if no group ID is specified. You can use different `$auto.*` group IDs to use different batch requests. The suffix can be any non-empty string consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. They have the submit mode `SubmitMode.Auto`.
+-   `"$auto"` and `"$auto.*"`: Predefined batch group ID which is the default if no group ID is specified. You can use different `$auto.*` group IDs to use different batch requests. The suffix can be any non-empty string consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. They have the submit mode `sap.ui.model.odata.v4.SubmitMode.Auto`.
 
--   `"$direct"`: Predefined batch group ID which has the submit mode `SubmitMode.Direct`. For more information, see [Performance Aspects](performance-aspects-5a0d286.md).
+-   `"$direct"`: Predefined batch group ID which has the submit mode `sap.ui.model.odata.v4.SubmitMode.Direct`. For more information, see [Performance Aspects](performance-aspects-5a0d286.md).
 
--   An application group ID is a non-empty string consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. By default, an application group has the submit mode `SubmitMode.API`. It is possible to use a different submit mode; for details see section [Define submit mode for an application group ID](batch-control-74142a3.md#loio74142a38e3d4467c8d6a70b28764048f__section_e1x_pfg_1cb).
+-   An application group ID is a non-empty string consisting of alphanumeric characters from the basic Latin alphabet, including the underscore. By default, an application group has the submit mode `sap.ui.model.odata.v4.SubmitMode.API`. It is possible to use a different submit mode; for details see section [Define submit mode for an application group ID](batch-control-74142a3.md#loio74142a38e3d4467c8d6a70b28764048f__section_e1x_pfg_1cb).
 
--   You can also use the `$single` group ID for the following methods, which results in a single batch request that is sent directly, similar to `SubmitMode.Direct` groups:
-
-    -   [`v4.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/delete)
-    -   [`v4.ODataModel#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/delete)
-    -   [`v4.ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding%23methods/invoke)
-
+-   With [`sap.ui.model.odata.v4.Context#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/delete), [`sap.ui.model.odata.v4.ODataModel#delete`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/delete), and [`sap.ui.model.odata.v4.ODataContextBinding#invoke`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataContextBinding%23methods/invoke), you can also use the `$single` group ID. With this group ID, a single batch request is sent directly, similar to `sap.ui.model.odata.v4.SubmitMode.Direct` groups.
 
 To specify the group ID for implicit requests, use the parameters `$$groupId` \(group ID for read requests\) and `$$updateGroupId` \(group ID for update requests\) for the binding which initiates the request \(see the [ODataModel.bindList](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindList), [ODataModel.bindContext](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindContext) and [ODataModel.bindProperty](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/bindProperty) API documentation\).
 
@@ -85,21 +80,6 @@ For explicit requests, the group ID can be specified as an optional parameter to
 ## Change Sets and Order of Requests Inside a Batch Request
 
 The OData V4 model automatically puts all non-GET requests into a single change set, which is located at the beginning of a batch request. All GET requests are put after it. If there is only a single request within the change set, it is replaced by that single request when submitting the batch group \(saves overhead on the wire\). PATCH requests for the same entity are merged into a single request.
-
-Use `ODataModel#submitBatch` in order to create a new change set within the same batch. This can be used, for example, within a loop in controller code to invoke actions for multiple selected elements within the same batch but in separate change sets. This can be especially useful with the "odata.continue-on-error" preference described below.
-
-***
-
-<a name="loio74142a38e3d4467c8d6a70b28764048f__section_COE"/>
-
-## Continue-On-Error
-
-Without the "odata.continue-on-error" preference, processing of a batch request stops when the first error is encountered. For a non-GET request, it also means that the whole change set containing that change request is rolled back. In order to invoke actions for multiple selected elements and allow individual success or failure, you need to separate each such change request into a change set of its own and use the "odata.continue-on-error" preference.
-
-The latter can be achieved by calling [`v4.ODataModel#setContinueOnError`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/setContinueOnError) and providing the corresponding group ID. This method can be called early on, when the batch queue for the given group ID is still empty, or even synchronously after [`v4.ODataModel#submitBatch`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/methods/submitBatch) - just as long as the $batch request is not already being sent to the server. It needs to be called again for future batch requests with the same group ID. It is safe to call it multiple times for the same batch request.
-
-> ### Caution:  
-> Make sure that no user input is lost due to a side-effects GET being applied even after a failed PATCH. It's safe to use [`v4.ODataModel#setContinueOnError`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/setContinueOnError) if, for example, only actions are invoked, or when [`v4.Context#setProperty`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/setProperty) is used without `bRetry` for mass updates. See also "Repeating Property Changes" below.
 
 ***
 
@@ -181,7 +161,7 @@ When calling [`v4.Context#requestSideEffects`](https://ui5.sap.com/#/api/sap.ui.
 
 On construction of the model, it is possible to specify the submit mode for application group IDs. This is useful when you want to separate requests requiring short processing time on the server from those requiring long processing time, so that responses to "fast" requests are visible earlier on the UI.
 
-The following example shows how to set the submit mode `SubmitMode.Auto` for the group IDs `fastGroup` and `slowGroup` in the manifest.
+The following example shows how to set the submit mode `sap.ui.model.odata.v4.SubmitMode.Auto` for the group IDs `fastGroup` and `slowGroup` in the manifest.
 
 > ### Example:  
 > Specify the submit mode for an application group in manifest.json
@@ -222,5 +202,5 @@ The following example shows how to set the submit mode `SubmitMode.Auto` for the
 
 [ODataPropertyBinding.setValue](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataPropertyBinding/methods/setValue)
 
-[OData Version 4.01. Part 1: Protocol, 11.7 Batch Requests](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#_Toc31359017)
+[OData V4 Specification Part 1, Batch Requests](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html)
 

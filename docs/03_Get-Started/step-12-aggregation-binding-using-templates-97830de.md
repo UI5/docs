@@ -36,7 +36,7 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 12](
     	"sap.ui5": {
     		"handleValidation": true,
     		"dependencies": {
-    			"minUI5Version": "1.153.0",
+    			"minUI5Version": "1.120.0",
     			"libs": {
     				"sap.m": {},
     				"sap.ui.core": {},
@@ -235,8 +235,14 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 12](
     ```
 
 
+**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
+
+**Next:**[Step 11: Validation Using sap/ui/core/Messaging](step-11-validation-using-sap-ui-core-messaging-b8c4e53.md "Up to this point, we've created a currency field that formats itself correctly. The currency data type can also validate user input to ensure it meets currency requirements. However, OpenUI5 manages data type validation functions and doesn't have a built-in mechanism for reporting error messages back to the UI. We therefore need a way to report error messages from validation functions back to the user. In this step, we're enabling validation for the entire app with a feature known as &quot;Messaging&quot;. Once this is set up, any validation error messages based on user input get passed to Messaging, which then connects them to the appropriate view and control that caused the error.")
+
+**Previous:**[Step 13: Element Binding](step-13-element-binding-6c7c5c2.md "Now, let's do something with that newly generated list. Typically, you use a list to allow selection of an item and then display the details of that item elsewhere. To accomplish this, we use a form with relatively bound controls and bind it to the selected entity via element binding.")
+
 **Related Information**  
 
 
-[List Binding and Tree Binding \(Aggregation Binding\)](../04_Essentials/list-binding-and-tree-binding-aggregation-binding-91f0577.md "List binding and tree binding are both also referred to as aggregation binding. List binding binds to a flat list and is used to automatically create child controls according to model data. Tree binding works the same way but binds to hierarchical data.")
+[List Binding \(Aggregation Binding\)](../04_Essentials/list-binding-aggregation-binding-91f0577.md "List binding (or aggregation binding) is used to automatically create child controls according to model data.")
 

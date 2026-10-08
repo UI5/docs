@@ -20,9 +20,9 @@ You can view and download all files at [Walkthrough - Step 2](https://ui5.sap.co
 
 <a name="loiofe12df2e338e43598977d09f3d191b7b__section_mkm_zwb_syb"/>
 
-## UI5 CLI
+## UI5 Tooling
 
-First, let's enhance your UI5 CLI setup:
+First, let's enhance your UI5 Tooling setup:
 
 1.  Open a terminal from the app root folder.
 
@@ -59,14 +59,14 @@ First, let's enhance your UI5 CLI setup:
 </html>
 ```
 
-In this step, we load the OpenUI5 framework from the webserver provided by UI5 CLI and initialize the core modules with the following configuration options:
+In this step, we load the OpenUI5 framework from the webserver provided by UI5 Tooling and initialize the core modules with the following configuration options:
 
 -   The `id` attribute of the `<script>` tag has to be exactly `"sap-ui-bootstrap"` to ensure proper booting of the SAPUI5 runtime.
 -   The `src` attribute of the `<script>` tag tells the browser where to find the OpenUI5 core library – it initializes the OpenUI5 runtime and loads additional resources, such as the libraries specified in the `data-sap-ui-libs` attribute.
 
 -   The OpenUI5 controls support different themes. We choose `sap_horizon` as our default theme.
 
--   We specify the required library `sap.m`, which contains the UI controls we need for this tutorial.
+-   We specify the required UI library `sap.m`, which contains the UI controls we need for this tutorial.
 
 -   To make use of the most recent functionality of OpenUI5 we define the compatibility version as `edge`.
 
@@ -92,6 +92,12 @@ sap.ui.define([], () => {
 Now, we create a new `index.js` script that contains the application logic for this tutorial step. We do this to avoid having executable code directly in the HTML file for security reasons. This script will be called from `index.html`. We defined it there as a module in a declarative way.
 
 In the next steps, the structure of a UI5 module will be explained in detail.
+
+**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
+
+**Next:**[Step 1: Hello World!](step-1-hello-world-2680aa9.md "As you know OpenUI5 is all about HTML5. Let's get started with building a first &quot;Hello World&quot; with only HTML.")
+
+**Previous:**[Step 3: Controls](step-3-controls-ddbceec.md "Now it is time to build our first little UI by replacing the &quot;Hello World&quot; text in the HTML body by the OpenUI5 control sap/m/Text. In the beginning, we will use the JavaScript control API to set up the UI, the control instance is then placed into the HTML body.")
 
 **Related Information**  
 

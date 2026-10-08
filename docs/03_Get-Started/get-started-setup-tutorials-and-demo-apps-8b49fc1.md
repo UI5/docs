@@ -12,7 +12,7 @@ Set up your development environment and go through our tutorials. They introduce
 
 -   You should be familiar with JavaScript.
 
--   Set up your [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md). We recommend UI5 CLI , but you could also use other development environments.
+-   Set up your [Development Environment](../05_Developing_Apps/development-environment-7bb04e0.md). We recommend UI5 Tooling , but you could also use other development environments.
 
 -   Set up a folder where you would place the application content. We will refer to this folder as the "app root folder".
 
@@ -31,7 +31,7 @@ To download the code from the Demo Kit, follow these steps:
 
 3.  Extract the project folder to a desired location on your local machine.
 
-4.  **If you use UI5 CLI \(recommended\):** At your chosen location, open a new shell and execute `npm install`. After all dependencies have been installed, enter `npm start` to start the development server. \(**Note:** if they're not already present, you may have to create and adapt some project configuration files first; see the [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md) for an example.\)
+4.  **If you use UI5 Tooling \(recommended\):** At your chosen location, open a new shell and execute `npm install`. After all dependencies have been installed, enter `npm start` to start the development server. \(**Note:** if they're not already present, you may have to create and adapt some project configuration files first; see the [Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md) for an example.\)
 
 5.  Test your project setup by opening one of its HTML pages in your development environment and making sure that the app displays the features exactly as shown in the preview of the step.
 
@@ -54,9 +54,8 @@ If you can't fix the problem, try downloading the solution of the previews or cu
 
 If you want to see some practical examples for OpenUI5 apps, check out our [Demo Apps](https://ui5.sap.com/#/demoapps). These are fully-functional apps that showcase certain floorplans, control libraries, or other OpenUI5 features. You can also download the source code of each demo app to find out how everything works together. Feel free to explore!
 
--   **[Best Practices for Developers](best-practices-for-developers-28fcd55.md "This page is a good starting point for you to ensure your code bases, specifically
-		your OpenUI5 applications and
-		libraries, are ready for the future and won't become outdated.")**  
+-   **[Best Practices for Developers](best-practices-for-developers-28fcd55.md "This page is a good starting point for you to ensure your code bases, specifically your OpenUI5 applications and libraries, are ready for the future and won't become
+		outdated.")**  
 This page is a good starting point for you to ensure your code bases, specifically your OpenUI5 applications and libraries, are ready for the future and won't become outdated.
 -   **[Quickstart Tutorial](quickstart-tutorial-592f36f.md "Unleash your OpenUI5 skills with this simple three-step tutorial. We start
 		with a simple &quot;Hello World&quot; example, and convert it to a minimalist two-page app.")**  
@@ -95,8 +94,8 @@ In this tutorial, we will explore some advanced features of the OData V2 mock se
 		shop owner can use to manage his product stock levels.")**  
 In this tutorial we will build an app using OpenUI5 that, for example, a shop owner can use to manage his product stock levels.
 -   **[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the
-		layout patterns that comply with the SAP Design System guidelines.")**  
-In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.
+		layout patterns that comply with the SAP Fiori design guidelines.")**  
+In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.
 -   **[Demo Apps](demo-apps-a3ab54e.md "With the Demo Kit, we deliver some demo apps that show you how you can use the
 		various features and controls of OpenUI5.")**  
 With the Demo Kit, we deliver some demo apps that show you how you can use the various features and controls of OpenUI5.

@@ -7,7 +7,7 @@ The `sap.ui.model.odata.v4.ODataModel` is the model implementation for consuming
 > ### Note:  
 > The interface for applications has been changed for an easier and more efficient use of the model. For a summary of these changes, see [Changes Compared to OData V2 Model](changes-compared-to-odata-v2-model-abd4d7c.md).
 
-The OData V4 model supports the following features:
+The OData V4 model supports the following:
 
 -   Read access
 
@@ -39,8 +39,8 @@ The OData V4 model supports certain events intended for applications, and others
 The OData V4 Model supports server-side filtering on lists.
 -   **[Selection](selection-ec55312.md "The OData V4 Model supports (de-)selection of individual rows and of all rows at once.")**  
 The OData V4 Model supports \(de-\)selection of individual rows and of all rows at once.
--   **[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server-side sorting on lists.")**  
-The OData V4 model supports server-side sorting on lists.
+-   **[Sorting](sorting-d2ce3f5.md "The OData V4 model supports server side sorting on lists.")**  
+The OData V4 model supports server side sorting on lists.
 -   **[Value Lists](value-lists-ab267a6.md "The OData V4 model supports the access to value list metadata and data.")**  
 The OData V4 model supports the access to value list metadata and data.
 -   **[OData Operations](odata-operations-b54f789.md "The OData V4 model supports OData operations (ActionImport,
@@ -80,7 +80,7 @@ When a single-valued navigation property has a `null` value, you can create a ne
 A draft is an interim version of a business entity that has not yet been explicitly saved. Drafts are saved automatically in the background whenever users add or change information within a business entity.
 -   **[Deleting an Entity](deleting-an-entity-2613ebc.md "The v4.Context.delete method deletes an entity on the server and updates the user interface accordingly.")**  
 The `v4.Context.delete` method deletes an entity on the server and updates the user interface accordingly.
--   **[Consuming OData V2 Services with the OData V4 Model \(deprecated\)](consuming-odata-v2-services-with-the-odata-v4-model-deprecated-365bdbd.md "The OpenUI5 framework can
+-   **[Consuming OData V2 Services with the OData V4 Model](consuming-odata-v2-services-with-the-odata-v4-model-365bdbd.md "The OpenUI5 framework can
 		consume OData V2 Services in a non-intrusive way as if working directly with OData
 		V4.")**  
 The OpenUI5 framework can consume OData V2 Services in a non-intrusive way as if working directly with OData V4.

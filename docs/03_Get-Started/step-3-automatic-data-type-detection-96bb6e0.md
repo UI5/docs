@@ -34,31 +34,35 @@ You can view and download all files at [OData V4 - Step 3](https://ui5.sap.com/#
 
 ```json
 {
-...
-
-    "sap.app": {
-        ...
-    },
-    "sap.ui": {
-        "technology": "UI5",
-        "deviceTypes": {
-            ...
-        }
-    },
-    "sap.ui5": {
-        "rootView": {
-            ...
-        },
-        "dependencies": {
-            ...
-        },
-        "handleValidation": true,
-        "models": {
-            ...
-        }
-    },
-    ...
+	"_version": "1.12.0",
+	"sap.app": {...
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+		   
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+		...
+		},
+		"dependencies": {
+			...
+			}
+		},
+		"contentDensities": {
+			...
+		},
+		"handleValidation": true,
+		
+		"models": {
+			...
+		}
+	},
+	...
 }
+
 ```
 
 In the `manifest.json` descriptor file, we add the `"handleValidation": true` setting. This makes sure that any validation errors that are detected by the OpenUI5 types are shown on the UI using the message manager.
@@ -66,7 +70,7 @@ In the `manifest.json` descriptor file, we add the `"handleValidation": true` se
 We now run the app using the `index.html` file and enter values that don't match the type and constraints given in the metadata file. For example, enter the string value `Young at Heart` in field *Age*, which requires an integer input \(OpenUI5 type `sap.ui.model.odata.type.Int64`, corresponding to OData type `Edm.Int64`\), or remove an entry from the *User Name* or *First Name* fields, which are mandatory. Fields with incorrect entries are highlighted and an error message is displayed.
 
 > ### Note:  
-> If you explicitly define a type in the binding info of a control, the automatic type detection for that binding will be turned off. For example, if you change the `Input` for `Age` in the view to `<Input value="{path: 'Age', type: 'EdmString'}" />`, the `Edm.String` type will be used, not the `Edm.Int64` type from the service metadata. Note that `EdmString` has to be required from `sap/ui/model/odata/type/String` as shown in [Binding Syntax](../04_Essentials/binding-syntax-e2e6f41.md).
+> If you explicitly define a type in the binding info of a control, the automatic type detection for that binding will be turned off. For example, if you change the `Input` for `Age` in the view to `<Input value="{path: 'Age', type: 'StringType'}" />`, the `String` type will be used, not the `Int64` type from the service metadata. Note that `StringType` has to be required from `sap/ui/model/odata/type/String` as shown in [Binding Syntax](../04_Essentials/binding-syntax-e2e6f41.md).
 
 ***
 
@@ -76,17 +80,17 @@ We now run the app using the `index.html` file and enter values that don't match
 
 ```xml
 <EntityType Name="Person">
-    <Key>
-        <PropertyRef Name="UserName" />
-    </Key>
-    <Property Name="UserName" Type="Edm.String" Nullable="false" />
-    <Property Name="FirstName" Type="Edm.String" />
-    <Property Name="LastName" Type="Edm.String" />
-    <Property Name="MiddleName" Type="Edm.String" />
-    <Property Name="Gender" Type="Microsoft.OData.Service.Sample.TrippinInMemory.Models.PersonGender"
-        Nullable="false" />
-    <Property Name="Age" Type="Edm.Int64" />
-
+	<Key>
+		<PropertyRef Name="UserName" />
+	</Key>
+	<Property Name="UserName" Type="Edm.String" Nullable="false" />
+	<Property Name="FirstName" Type="Edm.String" />
+	<Property Name="LastName" Type="Edm.String" />
+	<Property Name="MiddleName" Type="Edm.String" />
+	<Property Name="Gender" Type="Microsoft.OData.Service.Sample.TrippinInMemory.Models.PersonGender"
+			  Nullable="false" />
+	<Property Name="Age" Type="Edm.Int64" />
+   
 ```
 
 To make the *User Name* optional, we remove the parameter `Nullable="false"` from the `UserName` property. You can play around with the settings for the other properties, for example, change the type of property `Age` to `Type="Edm.String"` to allow free text.
@@ -95,6 +99,12 @@ To make the *User Name* optional, we remove the parameter `Nullable="false"` fro
 
 > ### Tip:  
 > To see the metadata of an OData service, you append the `$metadata` variable to the URL of the service. You can try this, for example, with [http://services.odata.org/TripPinRESTierService/](http://services.odata.org/TripPinRESTierService/) and [http://services.odata.org/TripPinRESTierService/$metadata](http://services.odata.org/TripPinRESTierService/$metadata)
+
+**Parent topic:**[OData V4 Tutorial](odata-v4-tutorial-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in OpenUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
+
+**Next:**[Step 2: Data Access and Client-Server Communication](step-2-data-access-and-client-server-communication-e9de002.md "In this step, we see how the Table that is bound to the People entity set initially requests its data, and how the data can be refreshed. We use the Console tab in the browser developer tools to monitor the communication between the browser and the server. We see the initial request as well as the requests for refreshing the data.")
+
+**Previous:**[Step 4: Filtering, Sorting, and Counting](step-4-filtering-sorting-and-counting-426ff31.md "In this step, we add features to filter, sort, and count the user data by using the OData V4 model API to apply OData system query options $filter, $orderby, and $count.")
 
 **Related Information**  
 

@@ -7,9 +7,11 @@ You can create own content for OpenUI5. To develop controls in JavaScript, you c
 > ### Note:  
 > If you want to contribute to OpenUI5, you have to consider our guidelines and recommendations with regard to, for example, product standards, file names and encoding.
 
-As a control developer, you create or modify libraries and their components, i.e. controls and types. You define the set of properties your control provides as well as events or aggregations. A major task is the implementation of a control-specific renderer, which knows how to create suitable HTML markup for a given control instance, taking its current state into account. A renderer is written in JavaScript and produces HTML output which is styled by means of CSS. Such style sheets are another important part of a library.
+As a control developer, you create or modify UI libraries and their pieces, i.e. controls and types. You define the set of properties your control provides as well as events or aggregations. A major task is the implementation of a control-specific renderer, which knows how to create suitable HTML markup for a given control instance, taking its current state into account. A renderer is written in JavaScript and produces HTML output which is styled by means of CSS. Such style sheets are another important part of a UI library.
 
-Custom controls can be defined within a component or application without requiring a library definition. When you want to develop several controls for reuse in different applications, we recommend creating a library containing your custom controls instead. Control libraries have additional features, such as automatic support for theming and right-to-left languages, but the implementation of the controls is the same as for controls defined directly within your app or component.
+Controls can be defined on the fly without a library definition or running generation steps. These controls are also called notepad controls.
+
+When you want to develop several controls for reuse in different applications, we recommend creating a control library instead of using these notepad controls. Control libraries have additional features such as automatic support for theming and right-to-left languages, but the implementation of the controls is the same as for notepad controls.
 
 > ### Note:  
 > This functionality is not restricted to controls. It can also be used to create or extend arbitrary objects, such as components, that are derived from `sap.ui.base.ManagedObject`. For more information, see [API Reference: `sap.ui.base.ManagedObject`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject). 
@@ -73,10 +75,8 @@ OpenUI5 supports right-to-left directionality \(RTL\) in controls.
 		 move the focus to the first control of the previous group. Adjacent tab chain elements between groups are automatically handled as one
 		group. For nested groups, the most concrete group is used.")**  
 Adjacent controls within the tab chain can be grouped. Within such a group, [F6\] or [Ctrl\] + [Alt/Option\] + [Down\] skip all controls of the group and move the focus to the first control in the tab chain of the next group. [Shift\] + [F6\]  or [Ctrl\] + [Alt/Option\] + [Up\]  move the focus to the first control of the previous group. Adjacent tab chain elements between groups are automatically handled as one group. For nested groups, the most concrete group is used.
--   **[Composite Controls](composite-controls-d6bab27.md "A composite control is an OpenUI5 control whose visual
-		representation is built by reusing other controls, providing a stable public API while
-		encapsulating implementation details.")**  
-A composite control is an OpenUI5 control whose visual representation is built by reusing other controls, providing a stable public API while encapsulating implementation details.
+-   **[Composite Controls](composite-controls-d6bab27.md "Composite controls are implemented by reusing other controls.")**  
+Composite controls are implemented by reusing other controls.
 -   **[Accessibility Aspects](accessibility-aspects-694b356.md "If you are developing OpenUI5 controls, you have to be aware of the accessibility aspects. A deeper understanding is
 		needed, so that all accessibility requirements are met.")**  
 If you are developing OpenUI5 controls, you have to be aware of the accessibility aspects. A deeper understanding is needed, so that all accessibility requirements are met.

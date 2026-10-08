@@ -43,7 +43,7 @@ A constructor is a special type of function that is called to create an object. 
 
 In OpenUI5, control constructors accept the following arguments in the specified order:
 
-1.  An optional unique identifier of type `string` which must either be the first argument, or omitted altogether. If you omit the ID, the OpenUI5 framework automatically computes an ID. Specifying your own identifier allows your application to easily find the control and, for example, retrieve the current user input from it. Alternatively, you can keep a reference to the control in a variable. For more information, see [ID Handling in OpenUI5: The Complete Guide](../05_Developing_Apps/id-handling-in-openui5-the-complete-guide-f51dbb7.md).
+1.  An optional unique identifier of type `string` which must either be the first argument, or omitted altogether. If you omit the ID, the OpenUI5 framework automatically computes an ID. Specifying your own identifier allows your application to easily find the control and, for example, retrieve the current user input from it. Alternatively, you can keep a reference to the control in a variable. For more information, see [Stable IDs: All You Need to Know](../05_Developing_Apps/stable-ids-all-you-need-to-know-f51dbb7.md).
 2.  A simple object as `mSettings` parameter that defines values for any property, aggregation, association, or event.
 
 The following code snippet shows an example of a constructor that is called to create a new text control saying "Hello World" with the specified tooltip and width:
@@ -58,7 +58,7 @@ var oText = new Text(this.createId("myTextID"), {
 ```
 
 > ### Note:  
-> In constructor settings, string values containing curly braces are interpreted as binding expressions. To avoid unintentionally interpreting them thus, escape them using [`ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.ManagedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue). For more information, see [Escaping Binding Syntax](binding-syntax-e2e6f41.md#loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS).
+> In constructor settings, string values containing curly braces are interpreted as binding expressions. To avoid unintentionally interpreting them thus, escape them using [`ManagedObject.escapeSettingsValue`](https://ui5.sap.com/#/api/sap.ui.base.managedObject%23methods/sap.ui.base.ManagedObject.escapeSettingsValue). For more information, see [Escaping Binding Syntax](binding-syntax-e2e6f41.md#loioe2e6f4127fe4450ab3cf1339c42ee832__section_EBS).
 
 The above example is an abbreviated version of the following code snippet with a detailed list of statements, which is alternatively supported:
 
