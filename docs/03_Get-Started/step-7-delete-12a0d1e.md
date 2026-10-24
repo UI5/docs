@@ -32,70 +32,70 @@ You can view and download all files at [OData V4 - Step 7](https://ui5.sap.com/#
 
 ```
 ...
-		onInit: function () {
-			...
-				oViewModel = new JSONModel({
-					busy : false,
-					hasUIChanges : false,
-					usernameEmpty : false,
-					order : 0
-				});
-			...
-		},
-		onCreate : function () {
-			var oList = this.byId("peopleList"),
-				oBinding = oList.getBinding("items"),
-				oContext = oBinding.create({
-					"UserName" : "",
-					"FirstName" : "",
-					"LastName" : "",
-					"Age" : "18"
-				});
+        onInit: function () {
+            ...
+                oViewModel = new JSONModel({
+                    busy : false,
+                    hasUIChanges : false,
+                    usernameEmpty : false,
+                    order : 0
+                });
+            ...
+        },
+        onCreate : function () {
+            var oList = this.byId("peopleList"),
+                oBinding = oList.getBinding("items"),
+                oContext = oBinding.create({
+                    "UserName" : "",
+                    "FirstName" : "",
+                    "LastName" : "",
+                    "Age" : "18"
+                });
 
-			this._setUIChanges();
-			this.getView().getModel("appView").setProperty("/usernameEmpty", true);
+            this._setUIChanges();
+            this.getView().getModel("appView").setProperty("/usernameEmpty", true);
 
-			oList.getItems().some(function (oItem) {
-				if (oItem.getBindingContext() === oContext) {
-					oItem.focus();
-					oItem.setSelected(true);
-					return true;
-				}
-			});
-		},
+            oList.getItems().some(function (oItem) {
+                if (oItem.getBindingContext() === oContext) {
+                    oItem.focus();
+                    oItem.setSelected(true);
+                    return true;
+                }
+            });
+        },
 
-		onDelete : function () {
-		    var oContext,
-		        oSelected = this.byId("peopleList").getSelectedItem(),
-		        sUserName;
+        onDelete : function () {
+            var oContext,
+                oSelected = this.byId("peopleList").getSelectedItem(),
+                sUserName;
  
-		    if (oSelected) {
-		        oContext = oSelected.getBindingContext();
-		        sUserName = oContext.getProperty("UserName");
-		        oContext.delete().then(function () {
-		            MessageToast.show(this._getText("deletionSuccessMessage", sUserName));
-		        }.bind(this), function (oError) {
-		            this._setUIChanges();
-		            if (oError.canceled) {
-		                MessageToast.show(this._getText("deletionRestoredMessage", sUserName));
-		                return;
-		            }
-		            MessageBox.error(oError.message + ": " + sUserName);
-		        }.bind(this));
-		        this._setUIChanges(true);
-		    }
-		},
+            if (oSelected) {
+                oContext = oSelected.getBindingContext();
+                sUserName = oContext.getProperty("UserName");
+                oContext.delete().then(function () {
+                    MessageToast.show(this._getText("deletionSuccessMessage", sUserName));
+                }.bind(this), function (oError) {
+                    this._setUIChanges();
+                    if (oError.canceled) {
+                        MessageToast.show(this._getText("deletionRestoredMessage", sUserName));
+                        return;
+                    }
+                    MessageBox.error(oError.message + ": " + sUserName);
+                }.bind(this));
+                this._setUIChanges(true);
+            }
+        },
 
-		onInputChange : function (oEvt) {
-			if (oEvt.getParameter("escPressed")) {
-				this._setUIChanges();
-			} else {
-				this._setUIChanges(true);
-				if (oEvt.getSource().getParent().getBindingContext().getProperty("UserName")) {
-					this.getView().getModel("appView").setProperty("/usernameEmpty", false);
-				}
-			}
-		},
+        onInputChange : function (oEvt) {
+            if (oEvt.getParameter("escPressed")) {
+                this._setUIChanges();
+            } else {
+                this._setUIChanges(true);
+                if (oEvt.getSource().getParent().getBindingContext().getProperty("UserName")) {
+                    this.getView().getModel("appView").setProperty("/usernameEmpty", false);
+                }
+            }
+        },
 
 ...
 ```
@@ -110,66 +110,66 @@ We add the `onDelete` event handler to the controller. In the event handler, we 
 
 ```
 <mvc:View
-	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
-	displayBlock="true"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Shell>
-		<App busy="{appView>/busy}" class="sapUiSizeCompact">
-			<pages>
-				<Page title="{i18n>peoplePageTitle}">
-					<content>
-						<Table
-							id="peopleList"
-							growing="true"
-							growingThreshold="10"
-							items="{
-								path: '/People',
-								parameters: {
-									$count: true,
-									$$updateGroupId : 'peopleGroup'
-								}
-							}"
-										mode="SingleSelectLeft">
-							<headerToolbar>
-								<OverflowToolbar>
-									<content>
-										<ToolbarSpacer/>
-										<SearchField
-										.../>
-										<Button
-										.../>
-										<Button
-											id="deleteUserButton"
-											icon="sap-icon://delete"
-											tooltip="{i18n>deleteButtonText}"
-											press=".onDelete">
-											<layoutData>
-												<OverflowToolbarLayoutData priority="NeverOverflow"/>
-											</layoutData>
-										</Button>
-										<Button
-										.../>
-										<Button
-										...>
-									</content>
-								</OverflowToolbar>
-							</headerToolbar>
-							<columns>
-								...
-							</columns>
-							<items>
-								...
-							</items>
-						</Table>
-					</content>
-					<footer>
-						...
-					</footer>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+    controllerName="sap.ui.core.tutorial.odatav4.controller.App"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Shell>
+        <App busy="{appView>/busy}" class="sapUiSizeCompact">
+            <pages>
+                <Page title="{i18n>peoplePageTitle}">
+                    <content>
+                        <Table
+                            id="peopleList"
+                            growing="true"
+                            growingThreshold="10"
+                            items="{
+                                path: '/People',
+                                parameters: {
+                                    $count: true,
+                                    $$updateGroupId : 'peopleGroup'
+                                }
+                            }"
+                            mode="SingleSelectLeft">
+                            <headerToolbar>
+                                <OverflowToolbar>
+                                    <content>
+                                        <ToolbarSpacer/>
+                                        <SearchField
+                                        .../>
+                                        <Button
+                                        .../>
+                                        <Button
+                                            id="deleteUserButton"
+                                            icon="sap-icon://delete"
+                                            tooltip="{i18n>deleteButtonText}"
+                                            press=".onDelete">
+                                            <layoutData>
+                                                <OverflowToolbarLayoutData priority="NeverOverflow"/>
+                                            </layoutData>
+                                        </Button>
+                                        <Button
+                                        .../>
+                                        <Button
+                                        ...>
+                                    </content>
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <columns>
+                                ...
+                            </columns>
+                            <items>
+                                ...
+                            </items>
+                        </Table>
+                    </content>
+                    <footer>
+                        ...
+                    </footer>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
 ```
 
@@ -201,12 +201,6 @@ deletionRestoredMessage=User {0} restored
 ```
 
 We add the missing texts to the properties file.
-
-**Parent topic:**[OData V4 Tutorial](odata-v4-tutorial-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in OpenUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:**[Step 6: Create and Edit](step-6-create-and-edit-b4f1266.md "In this step, we will make it possible to create and edit (update) user data from the user interface and send the data to the back end.")
-
-**Previous:**[Step 8: OData Operations](step-8-odata-operations-a3e7cb6.md "Our OData service provides one OData operation: the ResetDataSource action. In this step, we add a button that resets all data changes we made during the tutorial to their original state using this action.")
 
 **Related Information**  
 

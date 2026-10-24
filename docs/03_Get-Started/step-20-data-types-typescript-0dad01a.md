@@ -20,7 +20,7 @@ The list of invoices is already looking nice, but what is an invoice without a p
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 20: Data Types](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/20) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-20.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -93,7 +93,7 @@ Additionally, we set the formatting option `showMeasure` to `false`. This hides 
 </mvc:View>
 ```
 
-As you can see above, we use a special binding syntax for the `number` property of the `ObjectListItem`. This binding syntax makes use of so-called "Calculated Fields", which allows the binding of multiple properties from different models to a single property of a control. The properties bound from different models are called "parts". In the example above, the property of the control is `number` and the bound properties \("parts"\) retrieved from two different models are `invoice>ExtendedPrice` and `view>/currency`.
+As you can see above, we use a special binding syntax for the `number` property of the `ObjectListItem`. This binding syntax makes use of [Composite Binding](../04_Essentials/composite-binding-a2fe8e7.md), which allows the binding of multiple properties from different models to a single property of a control. The properties bound from different models are called "parts". In the example above, the property of the control is `number` and the bound properties \("parts"\) retrieved from two different models are `invoice>ExtendedPrice` and `view>/currency`.
 
 ***
 
@@ -101,16 +101,10 @@ As you can see above, we use a special binding syntax for the `number` property 
 
 Use data types instead of custom formatters whenever possible.
 
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 19: Aggregation Binding \(TypeScript\)](step-19-aggregation-binding-typescript-24580fb.md "Now that we have established a good structure for our app, it's time to add some more functionality. We start exploring more features of data binding by adding some invoice data in JSON format that we display in a list below the panel.")
-
-**Previous:**[Step 21: Expression Binding \(TypeScript\)](step-21-expression-binding-typescript-8d67ba2.md "Sometimes the predefined types of OpenUI5 are not flexible enough and you want to do a simple calculation or formatting in the view - that is where expressions are really helpful. We use them to format our price according to the current number in the data model.")
-
 **Related Information**  
 
 
-[Composite Binding](../04_Essentials/composite-binding-a2fe8e7.md "Calculated fields enable the binding of multiple properties in different models to a single property of a control.")
+[Composite Binding](../04_Essentials/composite-binding-a2fe8e7.md "Composite bindings let you bind multiple model properties to one control property. These properties can come from the same model or from different models.")
 
 [Formatting, Parsing, and Validating Data](../04_Essentials/formatting-parsing-and-validating-data-07e4b92.md "Data that is presented on the UI often has to be converted so that is human readable and fits to the locale of the user. On the other hand, data entered by the user has to be parsed and validated to be understood by the data source. For this purpose, you use formatters and data types.")
 

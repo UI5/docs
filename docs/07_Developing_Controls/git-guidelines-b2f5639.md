@@ -47,9 +47,9 @@ After that, describe the technical details of what you changed. It is important 
 
 The data section consists of name-value pairs:
 
--   `Fixes: https://github.com/SAP/openui5/issues/(issueNumber)` if the change fixes a GitHub-reported bug
+-   `Fixes: https://github.com/UI5/openui5/issues/(issueNumber)` if the change fixes a GitHub-reported bug
 
--   `Closes: https://github.com/SAP/openui5/pull/(pullRequestNumber)` if the change comes from a pull request. This is usually added by the OpenUI5 committer handling the pull request
+-   `Closes: https://github.com/UI5/openui5/pull/(pullRequestNumber)` if the change comes from a pull request. This is usually added by the OpenUI5 committer handling the pull request
 
 -   `Change-Id` for Gerrit
 
@@ -68,6 +68,6 @@ in Popover.
 focus/blur event listener in onBefore/AfterRerendering
 
 Change-Id: I3c7d6e4d52fa71e9412b729b7a234a112915c2a4
-Fixes: https://github.com/SAP/openui5/issues/1
+Fixes: https://github.com/UI5/openui5/issues/1
 ```
 

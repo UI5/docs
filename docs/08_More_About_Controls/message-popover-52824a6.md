@@ -21,7 +21,7 @@ The `MessagePopover` control shows a list of messages which can be further drill
   
 **Message Popover Control**
 
-![](images/loioa5667d8a793d41048af93f509445906e_LowRes.png "Message Popover Control")
+![Message Popover in expanded mode showing a list of messages each with a title and subtitle.](images/loioa5667d8a793d41048af93f509445906e_LowRes.png "Message Popover Control")
 
 The `MessagePopover` also features two modes - collapsed \(showing only the type and number of messages\) and expanded \(showing the complete list\). An example of the collapsed mode is shown in the following screenshot.
 
@@ -29,7 +29,7 @@ The `MessagePopover` also features two modes - collapsed \(showing only the type
   
 **Message Popover Collapsed**
 
-![](images/loiobd94678ddbbe47468b27398aac05963d_LowRes.png "Message Popover Collapsed")
+![Message Popover in collapsed mode showing only the message type filter bar with counts.](images/loiobd94678ddbbe47468b27398aac05963d_LowRes.png "Message Popover Collapsed")
 
 ***
 

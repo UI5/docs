@@ -22,7 +22,7 @@ To make this work, we have to pass over the information which item has been sele
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 31: Routing with Parameters](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/31) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-31.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -37,42 +37,42 @@ We want to hand over the information for the selected item when navigating to th
 
 ```js
 {
-  …
-  "sap.ui5": {
-	…
-	"routing": {
-	  "config": {
-		"routerClass": "sap.m.routing.Router",
-		"type": "View",
-		"viewType": "XML",
-		"path": "ui5.walkthrough.view",
-		"controlId": "app",
-		"controlAggregation": "pages"
-	  },
-	  "routes": [
-		{
-		  "pattern": "",
-		  "name": "overview",
-		  "target": "overview"
-		},
-		{
-		  "pattern": "detail/{invoicePath}",
-		  "name": "detail",
-		  "target": "detail"
-		}
-	  ],
-		  "targets": {
-		"overview": {
-		  "id": "overview",
-		  "name": "Overview"
-		},
-		"detail": {
-		  "id": "detail",
-		  "name": "Detail"
-		}
-	  }
-	}
-  }
+    …
+    "sap.ui5": {
+        …
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "type": "View",
+                "viewType": "XML",
+                "path": "ui5.walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail/{invoicePath}",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "id": "overview",
+                    "name": "Overview"
+                },
+                "detail": {
+                    "id": "detail",
+                    "name": "Detail"
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -104,8 +104,8 @@ import ObjectListItem from "sap/m/ObjectListItem";
 /**
  * @namespace ui5.walkthrough.controller
  */
-export default class App extends Controller {	
-	…
+export default class App extends Controller {    
+    …
     onPress(event: Event): void {
         const item = event.getSource() as ObjectListItem;
 
@@ -165,15 +165,15 @@ Our last piece to fit the puzzle together is the detail view. We replace the app
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.Detail"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		title="{i18n>detailPageTitle}">
-		<ObjectHeader
-			intro="{invoice>ShipperName}"
-			title="{invoice>ProductName}"/>
-	</Page>
+    controllerName="ui5.walkthrough.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        title="{i18n>detailPageTitle}">
+        <ObjectHeader
+            intro="{invoice>ShipperName}"
+            title="{invoice>ProductName}"/>
+    </Page>
 </mvc:View>
 ```
 
@@ -184,12 +184,6 @@ Our last piece to fit the puzzle together is the detail view. We replace the app
 -   Define the routing configuration in the `manifest.json` / app descriptor
 
 -   Initialize the router at the end of your `Component#init` function
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 30: Routing and Navigation \(TypeScript\)](step-30-routing-and-navigation-typescript-6173e3d.md "So far, we have put all app content on one single page. As we add more and more features, we want to split the content and put it on separate pages.")
-
-**Previous:**[Step 32: Routing Back and History \(TypeScript\)](step-32-routing-back-and-history-typescript-ae61211.md "Now we can navigate to our detail page and display an invoice, but we cannot go back to the overview page yet. We'll add a back button to the detail page and implement a function that shows our overview page again.")
 
 **Related Information**  
 

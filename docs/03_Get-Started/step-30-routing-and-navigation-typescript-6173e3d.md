@@ -22,7 +22,7 @@ In this step, we will use the OpenUI5 navigation features to load and show a sep
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 30: Routing and Navigation](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/30) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-30.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -54,12 +54,12 @@ Now we add the new `Detail.view.xml` file to our view folder. Besides the root n
 
 ```xml
 <mvc:View
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		title="{i18n>detailPageTitle}">
-		<ObjectHeader title="Invoice"/>
-	</Page>
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        title="{i18n>detailPageTitle}">
+        <ObjectHeader title="Invoice"/>
+    </Page>
 </mvc:View>
 ```
 
@@ -140,42 +140,42 @@ We add a new "routing" section to the `sap.ui5` part of the descriptor. There ar
 
 ```
 {
-  ...
-  "sap.ui5": {
-  ...
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "type": "View",
-        "viewType": "XML",
-        "path": "ui5.walkthrough.view",
-        "controlId": "app",
-        "controlAggregation": "pages"
-      },
-      "routes": [
-        {
-          "pattern": "",
-          "name": "overview",
-          "target": "overview"
-        },
-        {
-          "pattern": "detail",
-          "name": "detail",
-          "target": "detail"
+    ...
+    "sap.ui5": {
+    ...
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "type": "View",
+                "viewType": "XML",
+                "path": "ui5.walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "id": "overview",
+                    "name": "Overview"
+                },
+                "detail": {
+                    "id": "detail",
+                    "name": "Detail"
+                }
+            }
         }
-      ],
-      "targets": {
-        "overview": {
-          "id": "overview",
-          "name": "Overview"
-        },
-        "detail": {
-          "id": "detail",
-          "name": "Detail"
-        }
-      }
     }
-  }
 }
 ```
 
@@ -246,7 +246,7 @@ import UIComponent from "sap/ui/core/UIComponent";
  * @namespace ui5.walkthrough.controller
  */
 export default class App extends Controller {
-		…
+        …
     onPress(): void {
         const router = UIComponent.getRouterFor(this);
         router.navTo("detail");
@@ -314,12 +314,6 @@ If you open the app, you should now see the detail page when clicking an item in
 -   Define the routing configuration in the descriptor
 
 -   Initialize the router at the end of your `Component#init` function
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 29: Debugging Tools \(TypeScript\)](step-29-debugging-tools-typescript-50990a0.md "Even though we have added a basic test coverage in the previous steps, it seems like we accidentally broke our app, because it does not display prices to our invoices anymore. We need to debug the issue and fix it before someone finds out.")
-
-**Previous:**[Step 31: Routing with Parameters \(TypeScript\)](step-31-routing-with-parameters-typescript-afd5eb6.md "We can now navigate between the overview and the detail page, but the actual item that we selected in the overview is not displayed on the detail page yet. A typical use case for our app is to show additional information for the selected item on the detail page.")
 
 **Related Information**  
 

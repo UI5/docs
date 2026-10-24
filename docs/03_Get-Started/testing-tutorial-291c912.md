@@ -18,7 +18,7 @@ There are a lot more reasons and many small details that we will address through
 
 ## Preview
 
-![](images/loio89001ea1e4ab4529b8d412ee683b9744_HiRes.png)
+![Preview of the bulletin board application](images/loio89001ea1e4ab4529b8d412ee683b9744_HiRes.png)
 
 ***
 

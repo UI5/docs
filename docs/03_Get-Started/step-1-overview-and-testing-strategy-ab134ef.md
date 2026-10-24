@@ -15,7 +15,7 @@ In this step, we will take a look at the prototype and define the test strategy 
   
 **The prototype app**
 
-![](images/loio7946d242c8a14ac39fb22556b59d4bcd_LowRes.jpg "The prototype app")
+![Bulletin board app displaying a table of items with columns for name, category and price.](images/loio7946d242c8a14ac39fb22556b59d4bcd_LowRes.jpg "The prototype app")
 
 ***
 
@@ -33,7 +33,7 @@ After downloading *Step 1*, you should have the following files:
   
 **Folder structure with downloaded files**
 
-![](images/loio80078484830540769b67f12a6b88bbd3_LowRes.png "Folder structure with downloaded files")
+![Project folder structure.](images/loio80078484830540769b67f12a6b88bbd3_LowRes.png "Folder structure with downloaded files")
 
 ***
 
@@ -114,7 +114,7 @@ With the downloaded code, you now have the bulletin board prototype, set up acco
 
 Now that we have a running prototype, we can further extend it with additional tests and features. Make sure that the app is running by calling the test page and the test suite from the entry page `webapp/test.html`. The app should display a list of bulletin board posts as seen in the screenshot above and the tests should run without errors.
 
-![](images/loiob5ea0590dd68474786ab3b494564fae3_LowRes.jpg)
+![Bulletin board screenshot.](images/loiob5ea0590dd68474786ab3b494564fae3_LowRes.jpg)
 
 ***
 
@@ -135,7 +135,7 @@ Before you start implementing your first test, you should think about how to tes
   
 **Testing pyramid**
 
-![](images/loio88758c3b4ad94e9ca6508d106fe66972_LowRes.png "Testing pyramid")
+![Testing pyramid diagram showing unit tests at the base, component tests in the middle, and system tests and manual tests at the top.](images/loio88758c3b4ad94e9ca6508d106fe66972_LowRes.png "Testing pyramid")
 
 When you set up application testing, you should automate as many testing steps as possible. If you immediately write a test for all the features that we implement, then you can greatly reduce manual testing efforts that are time consuming and cumbersome. If you change something later, you can simply run the existing tests and see if the functionality is still working as expected.
 

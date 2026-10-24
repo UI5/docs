@@ -20,7 +20,7 @@ In this step, we replace the text with a button and show the "Hello World" messa
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 5: Controllers](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/05) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-05.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -42,7 +42,7 @@ export default class AppController extends Controller {
     onShowHello(): void {
         // show a native JavaScript alert
         alert("Hello World");
-     }
+    }
 };
 ```
 
@@ -82,12 +82,6 @@ A view does not necessarily need an explicitly assigned controller. You do not h
 
 -   Controller names always end with `*.controller.js` \(in JavaScript\) or `*.controller.ts` \(in TypeScript\)
 
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 4: XML Views \(TypeScript\)](step-4-xml-views-typescript-6c66ed8.md "Putting all our UI into the index.ts file will very soon result in a messy setup, and there is quite a bit of work ahead of us. So let's do a first modularization by putting the sap/m/Text control into a dedicated view.")
-
-**Previous:**[Step 6: Modules \(TypeScript\)](step-6-modules-typescript-3510034.md "In OpenUI5, resources are often referred to as modules. In this step, we replace the alert from the last exercise with a proper Message Toast from the sap.m library.")
 
 **Related Information**  
 

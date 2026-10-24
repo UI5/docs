@@ -14,7 +14,8 @@ In this step, we utilize the `sap.f.routing.Router`.
   
 **Changing layouts based on the sap.f.routing.Router \(no visual changes to last step\)**
 
-![](images/loio24122e039ed14a7a874ec26d0cf51614_LowRes.png "Changing layouts based on the sap.f.routing.Router (no visual changes to last step)")
+![Screenshot of two-column layout showing the product list on the left and the detail page on the right, with Save and Cancel buttons at the bottom.](images/loio24122e039ed14a7a874ec26d0cf51614_LowRes.png "Changing layouts based on the sap.f.routing.Router (no
+					visual changes to last step)")
 
 ***
 
@@ -271,7 +272,7 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 
 ```json
 {
-	"_version": "1.38.0",
+	"_version": "2.13.0",
 	"sap.app": {
 		"id": "sap.ui.demo.fcl",
 		"type": "application",
@@ -287,7 +288,7 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 			"id": "fcl"
 		},
 		"dependencies": {
-			"minUI5Version": "1.98.0",
+			"minUI5Version": "1.154.0",
 			"libs": {
 				"sap.f": {},
 				"sap.m": {},
@@ -342,7 +343,7 @@ We initialize the router and bind to its `onBeforeRouteMatched` event, and we in
 
 Finally, we add the routing configuration in the `manifest.json`.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 6: Adding a Floating Footer](step-6-adding-a-floating-footer-555ed73.md "In this step, we add a floating footer to the detail page.")
 

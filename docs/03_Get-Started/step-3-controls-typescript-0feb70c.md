@@ -21,7 +21,7 @@ Now it is time to build our first little UI by replacing the "Hello World" text 
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 3: Controls](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/03) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-03.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -74,19 +74,19 @@ We also add the `sapUiBody` class, which provides additional theme-dependent sty
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>UI5 TypeScript Walkthrough</title>
-	<script
-		id="sap-ui-bootstrap"
-		src="resources/sap-ui-core.js"
-		data-sap-ui-theme="sap_horizon"
-		data-sap-ui-compat-version="edge"
-		data-sap-ui-async="true"
-		data-sap-ui-on-init="module:ui5/walkthrough/index"
-		data-sap-ui-resource-roots='{
-			"ui5.walkthrough": "./"
-		}'>
-	</script>
+    <meta charset="utf-8">
+    <title>UI5 TypeScript Walkthrough</title>
+    <script
+        id="sap-ui-bootstrap"
+        src="resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-compat-version="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-on-init="module:ui5/walkthrough/index"
+        data-sap-ui-resource-roots='{
+            "ui5.walkthrough": "./"
+        }'>
+    </script>
 </head>
 <body class="sapUiBody" id="content">
 </body>
@@ -99,21 +99,15 @@ In the example above, the callback of the `init` event is where we now instantia
 
 <a name="loio0feb70c39c5e4074893c294667b3f36b__section_anl_htd_lzb"/>
 
-## UI5 Tooling
+## UI5 CLI
 
-As we now use the `sap.m` library with our app, we need to update our UI5 Tooling setup with a dependency to this library.
+As we now use the `sap.m` library with our app, we need to update our UI5 CLI setup with a dependency to this library.
 
 Open a terminal in the app root folder and execute the following command:
 
 `ui5 add sap.m`
 
 This will configure the `sap.m` OpenUI5 library as a dependency in our `ui5.yaml`.
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 2: Bootstrap \(TypeScript\)](step-2-bootstrap-typescript-32b14d8.md "Before we can do something with OpenUI5, we need to load and initialize it. This process of loading and initializing OpenUI5 is called bootstrapping. Once this bootstrapping is finished, we simply display an alert.")
-
-**Previous:**[Step 4: XML Views \(TypeScript\)](step-4-xml-views-typescript-6c66ed8.md "Putting all our UI into the index.ts file will very soon result in a messy setup, and there is quite a bit of work ahead of us. So let's do a first modularization by putting the sap/m/Text control into a dedicated view.")
 
 **Related Information**  
 

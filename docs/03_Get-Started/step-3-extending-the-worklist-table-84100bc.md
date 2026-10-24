@@ -12,7 +12,7 @@ In this step, we will edit the worklist table to include additional columns for 
   
 **The improved worklist table with new columns and formatting**
 
-![](images/loio2def9d9de16f4b4a87dd4342486c70f7_LowRes.png "The improved worklist table with new columns and formatting")
+![Worklist table with product name, supplier, price, units ordered, and units in stock columns.](images/loio2def9d9de16f4b4a87dd4342486c70f7_LowRes.png "The improved worklist table with new columns and formatting")
 
 ***
 
@@ -300,7 +300,7 @@ tableNoDataText=No products are currently available
 Finally, we modify the existing column names in the resource bundle file `webapp/i18n/i18n.properties` to match our scenario and add the new texts for the column titles.
 
 > ### Note:  
-> The `webapp/i18n/i18n.properties` file contains some annotations for each key in the file. These annotations offer some more context, which can help translators to better interpret the semantics of the text belonging to the keys. An example for such an annotation is XTIT in the `i18n.properties` file above, which tells that the corresponding key is supposed to be used as a title. The guidelines at [https://github.com/SAP/openui5/blob/-/docs/guidelines/translationfiles.md](https://github.com/SAP/openui5/blob/-/docs/guidelines/translationfiles.md) give you a better idea of how this can be used. Be aware that this is how SAP uses the annotations internally. In case you want to use this approach to work with your own translators make sure that you agree on a common set of allowed annotations that everybody understands.
+> The `webapp/i18n/i18n.properties` file contains some annotations for each key in the file. These annotations offer some more context, which can help translators to better interpret the semantics of the text belonging to the keys. An example for such an annotation is XTIT in the `i18n.properties` file above, which tells that the corresponding key is supposed to be used as a title. The guidelines at [https://github.com/UI5/openui5/blob/-/docs/guidelines/translationfiles.md](https://github.com/UI5/openui5/blob/-/docs/guidelines/translationfiles.md) give you a better idea of how this can be used. Be aware that this is how SAP uses the annotations internally. In case you want to use this approach to work with your own translators make sure that you agree on a common set of allowed annotations that everybody understands.
 
 > ### Tip:  
 > **Testing the responsiveness of the app**

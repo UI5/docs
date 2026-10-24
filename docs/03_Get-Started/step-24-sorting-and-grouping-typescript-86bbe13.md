@@ -20,7 +20,7 @@ To make our list of invoices even more user-friendly, we sort it alphabetically 
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 24: Sorting and Grouping](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/24) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-24.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -86,12 +86,6 @@ As with the sorter, no further action is required. The list and the data binding
 ```
 
 We could define a custom group header factory if we wanted by setting the `groupHeaderFactory` property, but the result looks already fine.
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 23: Filtering \(TypeScript\)](step-23-filtering-typescript-7f02e9d.md "In this step, we add a search field for our product list and define a filter that represents the search term. When searching, the list is automatically updated to show only the items that match the search term.")
-
-**Previous:**[Step 25: Remote OData Service \(TypeScript\)](step-25-remote-odata-service-typescript-b68d321.md "So far we have worked with local JSON data, but now we will access a real OData service to visualize remote data.")
 
 **Related Information**  
 

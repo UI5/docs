@@ -14,7 +14,7 @@ By default, the `headerContent` of the `ObjectPage` snaps to the `headerTitle` w
   
 **Object Page Header: Expanded \(left\) / Snapped \(right\)**
 
-![](images/loio1106798cda9a4eda858c4322b933579d_LowRes.png "Object Page Header: Expanded (left) / Snapped (right)")
+![Side-by-side comparison of the Object Page header. On the left, the expanded header shows a profile photo, contact details, social links, bio, location, a progress bar and section navigation tabs. On the right, the snapped header shows only the name, job title, and section navigation tabs.](images/loio1106798cda9a4eda858c4322b933579d_LowRes.png "Object Page Header: Expanded (left) / Snapped (right)")
 
 This behavior can be altered. Setting the property `alwaysShowContentHeader` to `true` will prevent the `headerContent` from snapping.
 

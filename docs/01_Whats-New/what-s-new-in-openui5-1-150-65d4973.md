@@ -1,0 +1,920 @@
+<!-- loio65d4973a83614c5dbf7b471e64d50888 -->
+
+# What's New in OpenUI5 1.150
+
+With this release OpenUI5 is upgraded from version 1.149 to 1.150.
+
+****
+
+
+<table>
+<tr>
+<th valign="top">
+
+Version
+
+</th>
+<th valign="top">
+
+Type
+
+</th>
+<th valign="top">
+
+Category
+
+</th>
+<th valign="top">
+
+Title
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+<th valign="top">
+
+Action
+
+</th>
+<th valign="top">
+
+Available as of
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Deprecated 
+
+</td>
+<td valign="top">
+
+Feature 
+
+</td>
+<td valign="top">
+
+**Deprecations** 
+
+</td>
+<td valign="top">
+
+**Deprecations**
+
+There are currently some deprecations in the `TypeScript` and OData V2 areas \(see the respective entries\). For a complete list of all deprecations, see [Deprecated APIs](https://ui5.sap.com/#/api/deprecated).
+
+<sub>Deprecated•Feature•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Feature 
+
+</td>
+<td valign="top">
+
+**`TypeScript`** 
+
+</td>
+<td valign="top">
+
+**`TypeScript`**
+
+We have recently made several changes in the `TypeScript` area:
+
+-   `TypeScript`-specific API documentation is now published at [https://ui5.github.io/typescript/api/](https://ui5.github.io/typescript/api/) for the latest version and the long-term maintenance versions. It includes `TypeScript`-specific APIs, such as the event-specific parameter types \(like `Input$LiveChangeEventParameters`, see [Interface: Input$LiveChangeEventParameters](https://ui5.github.io/typescript/api/openui5/1.120/sap.m/sap/m/Input/interfaces/Input$LiveChangeEventParameters.html)\), which are not included in the API documentation in the Demo Kit.
+
+-   The long deprecated type definition packages`@sapui5/ts-types-esm` and `@openui5/ts-types-esm` are no longer released. Use the identical packages `@sapui5/types` and `@openui5/types` instead.
+
+-   The type definition package `@types/openui5` is now deprecated \(since it offers no benefit when used with the current `TypeScript` versions 6.x and higher\). Use `@openui5/types` instead. `@types/openui5` continues to be released throughout 2026 at minimum.
+
+-   `TypeScript` 6 and 7 are coming with incompatible changes. From an OpenUI5 perspective, most things continue to work, but the `@ui5/ts-interface-generator` tool cannot yet be used with `TypeScript` 7.
+
+    For more information, see this [blog post](https://community.sap.com/t5/technology-blog-posts-by-sap/typescript-6-and-7-what-ui5-typescript-developers-need-to-know-in-2026/ba-p/14393526).
+
+
+<sub>Changed•Feature•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.StandardListItem`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.StandardListItem`**
+
+The `StandardListItem` now supports an optional icon alongside the info text through the new `infoIcon` property. The info text rendering has been migrated to use the internal `ObjectStatus` control. This ensures consistency with `ObjectStatus` behavior and brings the following:
+
+-   Improved accessibility, including support for inverted state wrapping and high-contrast theming
+-   Text-spacing compliance
+-   Full support for wrapping in inverted state mode
+-   Native truncation handling
+-   Better screen reader support
+
+These changes ensure adherence to accessibility standards. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.StandardListItem), the [Sample](https://ui5.sap.com/#/entity/sap.m.StandardListItem/sample/sap.m.sample.StandardListItemInfo), and the [Sample for Wrapping](https://ui5.sap.com/#/entity/sap.m.StandardListItem/sample/sap.m.sample.StandardListItemWrapping).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.ui.mdc.ValueHelp`** 
+
+</td>
+<td valign="top">
+
+**`sap.ui.mdc.ValueHelp` **
+
+We have improved the filtering behavior in `DefineConditionPanel`. Only the relevant list entries are now shown in the results, and the text that matches what has been entered is now highlighted if the new `highlightFilterResults` is set to `true`. This enhancement improves accessibility for screen reader users and simplifies keyboard and mouse navigation when selecting condition operators. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.mdc.valuehelp.content.FixedList%23methods/getHighlightFilterResults) and the [Sample](https://ui5.sap.com/#/entity/sap.ui.mdc.FilterBar/sample/sap.ui.mdc.demokit.sample.FilterbarTypes).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.RatingIndicator`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.RatingIndicator`**
+
+In read-only and display-only modes, `sap.m.RatingIndicator` now renders the unselected half of a half-value icon as an outline instead of a filled grey shape. This makes half-value ratings distinguishable without relying on color alone, improving accessibility for users with color vision deficiency. Interactive \(editable\) mode is unchanged. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.RatingIndicator%23overview).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.Panel`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.Panel`**
+
+`sap.m.Panel` now supports a new `Contrast` value for its `backgroundDesign` property. It applies a subtly different background color, making the panel visually distinguishable when placed inside containers with the same background, such as a dialog. In non-Horizon themes, it falls back to the solid background for compatibility. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.Panel) and the [Sample](https://ui5.sap.com/#/entity/sap.m.Panel/sample/sap.m.sample.PanelBackgroundDesign).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.ComboBox`, `sap.m.MultiComboBox`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.ComboBox`, `sap.m.MultiComboBox`**
+
+`sap.m.ComboBox` and `sap.m.MultiComboBox` now support a `maxPickerHeight` property, allowing developers to limit the height of the picker dropdown. When items exceed the set height, vertical scrolling is enabled automatically. Keyboard navigation continues to work seamlessly with scrolling. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.ComboBox) and the [Sample](https://ui5.sap.com/#/entity/sap.m.ComboBox/sample/sap.m.sample.ComboBoxMaxPickerHeight).
+
+Note: Has no effect on phones, where suggestions display in a full-screen dialog.
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.Dialog`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.Dialog`**
+
+`sap.m.Dialog` now supports a full-screen toggle via the new `showFullScreenButton` property. When enabled, users can expand the dialog to fill the entire screen by clicking the header button, pressing [Shift\] + [Ctrl\] + [F\] , or double-clicking the dialog header. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.Dialog/sample/sap.m.sample.DialogFullScreen).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**UI Integration Cards** 
+
+</td>
+<td valign="top">
+
+**UI Integration Cards**
+
+-   The Object Card groups configuration now supports a new `itemsLayout` property, allowing label/value pairs to be arranged either vertically \(default\) or horizontally. For more information, see the [Sample](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/explore/object/horizontalItemsLayout) and the [API Reference](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/typesDeclarative/object) in the Card Explorer.
+
+-   UI Integration Cards functionality is now available as Claude Code Skills, enabling AI-assisted development for Cards directly in your IDE. The skills are delivered as part of the UI5 plugins for Claude Code, giving developers intelligent, context-aware support when working with Card manifests and configurations. The Card Explorer documentation has also been updated to reflect AI-driven Card creation workflows. For more information, see the [AI Generation](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/overview/aiGeneration), [Developing Cards](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/overview/developingCards) and [Getting Started](https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html#/learn/gettingStarted) in the Card Explorer.
+
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**Date Controls** 
+
+</td>
+<td valign="top">
+
+**Date Controls**
+
+Date controls now show a more accurate placeholder when no value is set. Previously, the placeholder always displayed the last date of the current year. Now, if a min/max range is configured and the year-end date falls outside it, the placeholder shows the max value instead. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.DatePicker/sample/sap.m.sample.DatePicker).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.PlanningCalendar`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.PlanningCalendar`**
+
+The recurring concept, introduced in version 1.128 for non-working time periods, is now extended to appointments. You can define recurring appointments for any period type — daily, weekly, monthly, or custom occurrences. For example, a weekly 1:1 every Monday at 11 AM or a daily standup every workday at 10 AM. For more information, see the [Sample](https://ui5.sap.com/#/entity/sap.m.PlanningCalendar/sample/sap.m.sample.PlanningCalendarRecurringItem).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Control 
+
+</td>
+<td valign="top">
+
+**`sap.m.DynamicDateRange`** 
+
+</td>
+<td valign="top">
+
+**`sap.m.DynamicDateRange`**
+
+Custom options in `sap.m.DynamicDateRange` can now display both date and time in the value help dialog footer. Previously, the footer only showed the date, which was misleading for time-sensitive options such as a custom Business Day \(9 AM – 5 PM\). Developers can now override `getValueHelpUIFooterFormatTypes` to return `datetime`, enabling the full date and time to appear in the selected date bar at the bottom of the dialog. For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.m.DynamicDateOption%23methods/getValueHelpUIFooterFormatTypes) and the [Sample](https://ui5.sap.com/#/entity/sap.m.DynamicDateRange/sample/sap.m.sample.DynamicDateRangeWithCustomOptions/code).
+
+<sub>Changed•Control•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Feature 
+
+</td>
+<td valign="top">
+
+**OpenUI5 OData V4 Model** 
+
+</td>
+<td valign="top">
+
+**OpenUI5 OData V4 Model**
+
+The new version of the OpenUI5 OData V4 model introduces the following features:
+
+-   The `groupPaths` feature introduced with OpenUI5 1.148 and 1.149 is now documented in [Sorting](../04_Essentials/sorting-d2ce3f5.md) and [Sorting, Grouping, and Filtering for List Binding and Tree Binding](../04_Essentials/sorting-grouping-and-filtering-for-list-binding-and-tree-binding-ec79a5d.md).
+
+-   The combination of data aggregation or recursive hierarchies with `sap.ui.model.odata.v4.ODataModel#getKeepAliveContext` is now supported.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23methods/getKeepAliveContext).
+
+-   When you use data aggregation without group levels, the following features are supported experimentally:
+
+    -   When you create a new record, the header context is marked as outdated only if its properties are used in a `Sorter` or `Filter` object, or if a `$search` or custom query option is set. The grand total's context is marked as outdated if the new properties are used in a `Filter` object, or if a `$search` or custom query option is set.
+
+    -   Properties specified with the `additionally` option in `$$aggregation` or `v4.ODataListBinding#setAggregation` can now be read using `v4.Context#requestSideEffects`. For more information, see the API Reference for [`v4.ODataListBinding#setAggregation`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding%23methods/setAggregation) and [`v4.Context#requestSideEffects`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.Context%23methods/requestSideEffects).
+
+
+
+<sub>Changed•Feature•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Changed 
+
+</td>
+<td valign="top">
+
+Feature 
+
+</td>
+<td valign="top">
+
+**`sap.ui.model.type` Types** 
+
+</td>
+<td valign="top">
+
+**`sap.ui.model.type` Types**
+
+The `#getPlaceholderText` method for the following types now accepts two new optional parameters, `oMinimum` and `oMaximum`. Use these parameters to compute a placeholder that fits within a specific date range.
+
+-   `sap.ui.model.type.Date`
+-   `sap.ui.model.type.Time`
+-   `sap.ui.model.type.DateTime`
+-   `sap.ui.model.type.DateInterval`
+-   `sap.ui.model.type.TimeInterval`
+-   `sap.ui.model.type.DateTimeInterval`
+
+<sub>Changed•Feature•Info Only•1.150</sub>
+
+</td>
+<td valign="top">
+
+Info Only 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1.150 
+
+</td>
+<td valign="top">
+
+Deprecated 
+
+</td>
+<td valign="top">
+
+Feature 
+
+</td>
+<td valign="top">
+
+**OpenUI5 OData V2 Model** 
+
+</td>
+<td valign="top">
+
+**OpenUI5 OData V2 Model**
+
+The OData V2 hierarchy solution is now fully deprecated. This now also applies to the following:
+
+-   `sap.ui.model.odata.v2.ODataTreeBinding` class
+-   `sap.ui.model.odata.ODataTreeBindingFlat` class
+-   `sap.ui.model.odata.v2.ODataModel#bindTree` method
+
+**Action:** Switch to the OData V4 hierarchy solution. For more information, see [Transition from OData V2 to OData V4](../04_Essentials/upgrading-your-odata-model-cda632b.md#loiocda632b01c1e4a988ccecab759d19380__section_OD2OD4) and [Recursive Hierarchy](../04_Essentials/data-aggregation-and-recursive-hierarchy-7d91431.md#loio7d914317c0b64c23824bf932cc8a4ae1__section_RCH).
+
+<sub>Deprecated•Feature•Recommended•1.150</sub>
+
+</td>
+<td valign="top">
+
+Recommended 
+
+</td>
+<td valign="top">
+
+2026-07-09
+
+</td>
+</tr>
+</table>
+
+**Parent topic:**[Previous Versions](previous-versions-6660a59.md "")
+
+**Related Information**  
+
+
+[What's New in OpenUI5 1.152](what-s-new-in-openui5-1-152-e1592c8.md "With this release OpenUI5 is upgraded from version 1.151 to 1.152.")
+
+[What's New in OpenUI5 1.151](what-s-new-in-openui5-1-151-e824a0e.md "With this release OpenUI5 is upgraded from version 1.150 to 1.151.")
+
+[What's New in OpenUI5 1.149](what-s-new-in-openui5-1-149-8591ff4.md "With this release OpenUI5 is upgraded from version 1.148 to 1.149.")
+
+[What's New in OpenUI5 1.148](what-s-new-in-openui5-1-148-6b940b3.md "With this release OpenUI5 is upgraded from version 1.147 to 1.148.")
+
+[What's New in OpenUI5 1.147](what-s-new-in-openui5-1-147-88df9d3.md "With this release OpenUI5 is upgraded from version 1.146 to 1.147.")
+
+[What's New in OpenUI5 1.146](what-s-new-in-openui5-1-146-6ccfe05.md "With this release OpenUI5 is upgraded from version 1.145 to 1.146.")
+
+[What's New in OpenUI5 1.145](what-s-new-in-openui5-1-145-7676a2a.md "With this release OpenUI5 is upgraded from version 1.144 to 1.145.")
+
+[What's New in OpenUI5 1.144](what-s-new-in-openui5-1-144-ad1c805.md "With this release OpenUI5 is upgraded from version 1.143 to 1.144.")
+
+[What's New in OpenUI5 1.143](what-s-new-in-openui5-1-143-ad08c66.md "With this release OpenUI5 is upgraded from version 1.142 to 1.143.")
+
+[What's New in OpenUI5 1.142](what-s-new-in-openui5-1-142-92ed100.md "With this release OpenUI5 is upgraded from version 1.141 to 1.142.")
+
+[What's New in OpenUI5 1.141](what-s-new-in-openui5-1-141-a7ed66d.md "With this release OpenUI5 is upgraded from version 1.140 to 1.141.")
+
+[What's New in OpenUI5 1.140](what-s-new-in-openui5-1-140-26a106c.md "With this release OpenUI5 is upgraded from version 1.139 to 1.140.")
+
+[What's New in OpenUI5 1.139](what-s-new-in-openui5-1-139-e10db71.md "With this release OpenUI5 is upgraded from version 1.138 to 1.139.")
+
+[What's New in OpenUI5 1.138](what-s-new-in-openui5-1-138-8f6a92b.md "With this release OpenUI5 is upgraded from version 1.136 to 1.138.")
+
+[What's New in OpenUI5 1.136](what-s-new-in-openui5-1-136-a82754d.md "With this release OpenUI5 is upgraded from version 1.135 to 1.136.")
+
+[What's New in OpenUI5 1.135](what-s-new-in-openui5-1-135-93d7630.md "With this release OpenUI5 is upgraded from version 1.134 to 1.135.")
+
+[What's New in OpenUI5 1.134](what-s-new-in-openui5-1-134-c512d71.md "With this release OpenUI5 is upgraded from version 1.133 to 1.134.")
+
+[What's New in OpenUI5 1.133](what-s-new-in-openui5-1-133-86d7605.md "With this release OpenUI5 is upgraded from version 1.132 to 1.133.")
+
+[What's New in OpenUI5 1.132](what-s-new-in-openui5-1-132-bd2e61f.md "With this release OpenUI5 is upgraded from version 1.131 to 1.132.")
+
+[What's New in OpenUI5 1.131](what-s-new-in-openui5-1-131-7d24d94.md "With this release OpenUI5 is upgraded from version 1.130 to 1.131.")
+
+[What's New in OpenUI5 1.130](what-s-new-in-openui5-1-130-85609d4.md "With this release OpenUI5 is upgraded from version 1.129 to 1.130.")
+
+[What's New in OpenUI5 1.129](what-s-new-in-openui5-1-129-d22b8af.md "With this release OpenUI5 is upgraded from version 1.128 to 1.129.")
+
+[What's New in OpenUI5 1.128](what-s-new-in-openui5-1-128-1f76220.md "With this release OpenUI5 is upgraded from version 1.127 to 1.128.")
+
+[What's New in OpenUI5 1.127](what-s-new-in-openui5-1-127-e5e1317.md "With this release OpenUI5 is upgraded from version 1.126 to 1.127.")
+
+[What's New in OpenUI5 1.126](what-s-new-in-openui5-1-126-1d98116.md "With this release OpenUI5 is upgraded from version 1.125 to 1.126.")
+
+[What's New in OpenUI5 1.125](what-s-new-in-openui5-1-125-9d87044.md "With this release OpenUI5 is upgraded from version 1.124 to 1.125.")
+
+[What's New in OpenUI5 1.124](what-s-new-in-openui5-1-124-7f77c3f.md "With this release OpenUI5 is upgraded from version 1.123 to 1.124.")
+
+[What's New in OpenUI5 1.123](what-s-new-in-openui5-1-123-9d00ac7.md "With this release OpenUI5 is upgraded from version 1.122 to 1.123.")
+
+[What's New in OpenUI5 1.122](what-s-new-in-openui5-1-122-5d078da.md "With this release OpenUI5 is upgraded from version 1.121 to 1.122.")
+
+[What's New in OpenUI5 1.121](what-s-new-in-openui5-1-121-91a4a2f.md "With this release OpenUI5 is upgraded from version 1.120 to 1.121.")
+
+[What's New in OpenUI5 1.120](what-s-new-in-openui5-1-120-2359b63.md "With this release OpenUI5 is upgraded from version 1.119 to 1.120.")
+
+[What's New in OpenUI5 1.119](what-s-new-in-openui5-1-119-0b1903a.md "With this release OpenUI5 is upgraded from version 1.118 to 1.119.")
+
+[What's New in OpenUI5 1.118](what-s-new-in-openui5-1-118-3eecbde.md "With this release OpenUI5 is upgraded from version 1.117 to 1.118.")
+
+[What's New in OpenUI5 1.117](what-s-new-in-openui5-1-117-029d3b4.md "With this release OpenUI5 is upgraded from version 1.116 to 1.117.")
+
+[What's New in OpenUI5 1.116](what-s-new-in-openui5-1-116-ebd6f34.md "With this release OpenUI5 is upgraded from version 1.115 to 1.116.")
+
+[What's New in OpenUI5 1.115](what-s-new-in-openui5-1-115-409fde8.md "With this release OpenUI5 is upgraded from version 1.114 to 1.115.")
+
+[What's New in OpenUI5 1.114](what-s-new-in-openui5-1-114-890fce1.md "With this release OpenUI5 is upgraded from version 1.113 to 1.114.")
+
+[What's New in OpenUI5 1.113](what-s-new-in-openui5-1-113-a9553fe.md "With this release OpenUI5 is upgraded from version 1.112 to 1.113.")
+
+[What's New in OpenUI5 1.112](what-s-new-in-openui5-1-112-34afc69.md "With this release OpenUI5 is upgraded from version 1.111 to 1.112.")
+
+[What's New in OpenUI5 1.111](what-s-new-in-openui5-1-111-7a67837.md "With this release OpenUI5 is upgraded from version 1.110 to 1.111.")
+
+[What's New in OpenUI5 1.110](what-s-new-in-openui5-1-110-71a855c.md "With this release OpenUI5 is upgraded from version 1.109 to 1.110.")
+
+[What's New in OpenUI5 1.109](what-s-new-in-openui5-1-109-3264bd2.md "With this release OpenUI5 is upgraded from version 1.108 to 1.109.")
+
+[What's New in OpenUI5 1.108](what-s-new-in-openui5-1-108-66e33f0.md "With this release OpenUI5 is upgraded from version 1.107 to 1.108.")
+
+[What's New in OpenUI5 1.107](what-s-new-in-openui5-1-107-d4ff916.md "With this release OpenUI5 is upgraded from version 1.106 to 1.107.")
+
+[What's New in OpenUI5 1.106](what-s-new-in-openui5-1-106-5b497b0.md "With this release OpenUI5 is upgraded from version 1.105 to 1.106.")
+
+[What's New in OpenUI5 1.105](what-s-new-in-openui5-1-105-4d6c00e.md "With this release OpenUI5 is upgraded from version 1.104 to 1.105.")
+
+[What's New in OpenUI5 1.104](what-s-new-in-openui5-1-104-69e567c.md "With this release OpenUI5 is upgraded from version 1.103 to 1.104.")
+
+[What's New in OpenUI5 1.103](what-s-new-in-openui5-1-103-0e98c76.md "With this release OpenUI5 is upgraded from version 1.102 to 1.103.")
+
+[What's New in OpenUI5 1.102](what-s-new-in-openui5-1-102-f038c99.md "With this release OpenUI5 is upgraded from version 1.101 to 1.102.")
+
+[What's New in OpenUI5 1.101](what-s-new-in-openui5-1-101-7733b00.md "With this release OpenUI5 is upgraded from version 1.100 to 1.101.")
+
+[What's New in OpenUI5 1.100](what-s-new-in-openui5-1-100-27dec1d.md "With this release OpenUI5 is upgraded from version 1.99 to 1.100.")
+
+[What's New in OpenUI5 1.99](what-s-new-in-openui5-1-99-4f35848.md "With this release OpenUI5 is upgraded from version 1.98 to 1.99.")
+
+[What's New in OpenUI5 1.98](what-s-new-in-openui5-1-98-d9f16f2.md "With this release OpenUI5 is upgraded from version 1.97 to 1.98.")
+
+[What's New in OpenUI5 1.97](what-s-new-in-openui5-1-97-fa0e282.md "With this release OpenUI5 is upgraded from version 1.96 to 1.97.")
+
+[What's New in OpenUI5 1.96](what-s-new-in-openui5-1-96-7a9269f.md "With this release OpenUI5 is upgraded from version 1.95 to 1.96.")
+
+[What's New in OpenUI5 1.95](what-s-new-in-openui5-1-95-a1aea67.md "With this release OpenUI5 is upgraded from version 1.94 to 1.95.")
+
+[What's New in OpenUI5 1.94](what-s-new-in-openui5-1-94-c40f1e6.md "With this release OpenUI5 is upgraded from version 1.93 to 1.94.")
+
+[What's New in OpenUI5 1.93](what-s-new-in-openui5-1-93-f273340.md "With this release OpenUI5 is upgraded from version 1.92 to 1.93.")
+
+[What's New in OpenUI5 1.92](what-s-new-in-openui5-1-92-1ef345d.md "With this release OpenUI5 is upgraded from version 1.91 to 1.92.")
+
+[What's New in OpenUI5 1.91](what-s-new-in-openui5-1-91-0a2bd79.md "With this release OpenUI5 is upgraded from version 1.90 to 1.91.")
+
+[What's New in OpenUI5 1.90](what-s-new-in-openui5-1-90-91c10c2.md "With this release OpenUI5 is upgraded from version 1.89 to 1.90.")
+
+[What's New in OpenUI5 1.89](what-s-new-in-openui5-1-89-e56cddc.md "With this release OpenUI5 is upgraded from version 1.88 to 1.89.")
+
+[What's New in OpenUI5 1.88](what-s-new-in-openui5-1-88-e15a206.md "With this release OpenUI5 is upgraded from version 1.87 to 1.88.")
+
+[What's New in OpenUI5 1.87](what-s-new-in-openui5-1-87-b506da7.md "With this release OpenUI5 is upgraded from version 1.86 to 1.87.")
+
+[What's New in OpenUI5 1.86](what-s-new-in-openui5-1-86-4c1c959.md "With this release OpenUI5 is upgraded from version 1.85 to 1.86.")
+
+[What's New in OpenUI5 1.85](what-s-new-in-openui5-1-85-1d18eb5.md "With this release OpenUI5 is upgraded from version 1.84 to 1.85.")
+
+[What's New in OpenUI5 1.84](what-s-new-in-openui5-1-84-dc76640.md "With this release OpenUI5 is upgraded from version 1.82 to 1.84.")
+
+[What's New in OpenUI5 1.82](what-s-new-in-openui5-1-82-3a8dd13.md "With this release OpenUI5 is upgraded from version 1.81 to 1.82.")
+
+[What's New in OpenUI5 1.81](what-s-new-in-openui5-1-81-f5e2a21.md "With this release OpenUI5 is upgraded from version 1.80 to 1.81.")
+
+[What's New in OpenUI5 1.80](what-s-new-in-openui5-1-80-8cee506.md "With this release OpenUI5 is upgraded from version 1.79 to 1.80.")
+
+[What's New in OpenUI5 1.79](what-s-new-in-openui5-1-79-99c4cdc.md "With this release OpenUI5 is upgraded from version 1.78 to 1.79.")
+
+[What's New in OpenUI5 1.78](what-s-new-in-openui5-1-78-f09b63e.md "With this release OpenUI5 is upgraded from version 1.77 to 1.78.")
+
+[What's New in OpenUI5 1.77](what-s-new-in-openui5-1-77-c46b439.md "With this release OpenUI5 is upgraded from version 1.76 to 1.77.")
+
+[What's New in OpenUI5 1.76](what-s-new-in-openui5-1-76-aad03b5.md "With this release OpenUI5 is upgraded from version 1.75 to 1.76.")
+
+[What's New in OpenUI5 1.75](what-s-new-in-openui5-1-75-5cbb62d.md "With this release OpenUI5 is upgraded from version 1.74 to 1.75.")
+
+[What's New in OpenUI5 1.74](what-s-new-in-openui5-1-74-c22208a.md "With this release OpenUI5 is upgraded from version 1.73 to 1.74.")
+
+[What's New in OpenUI5 1.73](what-s-new-in-openui5-1-73-231dd13.md "With this release OpenUI5 is upgraded from version 1.72 to 1.73.")
+
+[What's New in OpenUI5 1.72](what-s-new-in-openui5-1-72-521cad9.md "With this release OpenUI5 is upgraded from version 1.71 to 1.72.")
+
+[What's New in OpenUI5 1.71](what-s-new-in-openui5-1-71-a93a6a3.md "With this release OpenUI5 is upgraded from version 1.70 to 1.71.")
+
+[What's New in OpenUI5 1.70](what-s-new-in-openui5-1-70-f073d69.md "With this release OpenUI5 is upgraded from version 1.69 to 1.70.")
+
+[What's New in OpenUI5 1.69](what-s-new-in-openui5-1-69-89a18bd.md "With this release OpenUI5 is upgraded from version 1.68 to 1.69.")
+
+[What's New in OpenUI5 1.68](what-s-new-in-openui5-1-68-f94bf93.md "With this release OpenUI5 is upgraded from version 1.67 to 1.68.")
+
+[What's New in OpenUI5 1.67](what-s-new-in-openui5-1-67-a6b1472.md "With this release OpenUI5 is upgraded from version 1.66 to 1.67.")
+
+[What's New in OpenUI5 1.66](what-s-new-in-openui5-1-66-c9896e9.md "With this release OpenUI5 is upgraded from version 1.65 to 1.66.")
+
+[What's New in OpenUI5 1.65](what-s-new-in-openui5-1-65-0f5acfd.md "With this release OpenUI5 is upgraded from version 1.64 to 1.65.")
+
+[What's New in OpenUI5 1.64](what-s-new-in-openui5-1-64-0e30822.md "With this release OpenUI5 is upgraded from version 1.63 to 1.64.")
+
+[What's New in OpenUI5 1.63](what-s-new-in-openui5-1-63-e8d9da7.md "With this release OpenUI5 is upgraded from version 1.62 to 1.63.")
+
+[What's New in OpenUI5 1.62](what-s-new-in-openui5-1-62-771f4d5.md "With this release OpenUI5 is upgraded from version 1.61 to 1.62.")
+
+[What's New in OpenUI5 1.61](what-s-new-in-openui5-1-61-d991552.md "With this release OpenUI5 is upgraded from version 1.60 to 1.61.")
+
+[What's New in OpenUI5 1.60](what-s-new-in-openui5-1-60-5a0e1f7.md "With this release OpenUI5 is upgraded from version 1.58 to 1.60.")
+
+[What's New in OpenUI5 1.58](what-s-new-in-openui5-1-58-7c927aa.md "With this release OpenUI5 is upgraded from version 1.56 to 1.58.")
+
+[What's New in OpenUI5 1.56](what-s-new-in-openui5-1-56-108b7fd.md "With this release OpenUI5 is upgraded from version 1.54 to 1.56.")
+
+[What's New in OpenUI5 1.54](what-s-new-in-openui5-1-54-c838330.md "With this release OpenUI5 is upgraded from version 1.52 to 1.54.")
+
+[What's New in OpenUI5 1.52](what-s-new-in-openui5-1-52-849e1b6.md "With this release OpenUI5 is upgraded from version 1.50 to 1.52.")
+
+[What's New in OpenUI5 1.50](what-s-new-in-openui5-1-50-759e9f3.md "With this release OpenUI5 is upgraded from version 1.48 to 1.50.")
+
+[What's New in OpenUI5 1.48](what-s-new-in-openui5-1-48-fa1efac.md "With this release OpenUI5 is upgraded from version 1.46 to 1.48.")
+
+[What's New in OpenUI5 1.46](what-s-new-in-openui5-1-46-6307539.md "With this release OpenUI5 is upgraded from version 1.44 to 1.46.")
+
+[What's New in OpenUI5 1.44](what-s-new-in-openui5-1-44-a0cb7a0.md "With this release OpenUI5 is upgraded from version 1.42 to 1.44.")
+
+[What's New in OpenUI5 1.42](what-s-new-in-openui5-1-42-468b05d.md "With this release OpenUI5 is upgraded from version 1.40 to 1.42.")
+
+[What's New in OpenUI5 1.40](what-s-new-in-openui5-1-40-fbab50e.md "With this release OpenUI5 is upgraded from version 1.38 to 1.40.")
+
+[What's New in OpenUI5 1.38](what-s-new-in-openui5-1-38-f218918.md "With this release OpenUI5 is upgraded from version 1.36 to 1.38.")
+

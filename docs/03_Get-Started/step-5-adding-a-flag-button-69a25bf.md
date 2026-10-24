@@ -12,7 +12,7 @@ Now that we have implemented the conversion tests, we add the corresponding func
   
 **The Flag button is now added to the table**
 
-![](images/loio0cfabfd43c5f4c3b86a0ac7b7ef9e99d_LowRes.jpg "The Flag button is now added to the table")
+![Table with a Flag toggle button added as the last column in each row.](images/loio0cfabfd43c5f4c3b86a0ac7b7ef9e99d_LowRes.jpg "The Flag button is now added to the table")
 
 ***
 

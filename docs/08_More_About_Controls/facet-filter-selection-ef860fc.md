@@ -10,7 +10,7 @@ The `FacetFilterList.getSelectedItems()` method returns a copy of each selected 
 
 An application can support the personalization of settings and allow the user to save the facet filter list selections as well as other properties by means of a variant. For example, you can use `getSelectedKeys` to retrieve an object containing all selected items and use JSON.stringify to marshall and JSON.parse to unmarshall. After unmarshalling, you can use `setSelectedKeys` to apply the selections to the list. The following figure and code snippet give an example.
 
-![](images/loioce923dff09294b65b51609d2ec1f1718_Source1.png)
+![FacetFilter with a Products facet list open. One item is selected.](images/loioce923dff09294b65b51609d2ec1f1718_Source1.png)
 
 ```js
 

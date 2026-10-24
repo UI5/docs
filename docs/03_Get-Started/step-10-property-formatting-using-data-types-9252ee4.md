@@ -127,12 +127,6 @@ You can view and download all files in the Demo Kit at [Data Binding - Step 10](
     ```
 
 
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 9: Formatting Values](step-9-formatting-values-6fdf0ac.md "We'd also like to provide our users with a way of contacting Harry Hawk, so we're adding a link that sends an e-mail to Harry. To do this, we convert our data in the model to match the sap.m.URLHelper.normalizeEmail API. As soon as the user changes the name, the e-mail also changes. We need a custom formatter function for this.")
-
-**Previous:**[Step 11: Validation Using sap/ui/core/Messaging](step-11-validation-using-sap-ui-core-messaging-b8c4e53.md "Up to this point, we've created a currency field that formats itself correctly. The currency data type can also validate user input to ensure it meets currency requirements. However, OpenUI5 manages data type validation functions and doesn't have a built-in mechanism for reporting error messages back to the UI. We therefore need a way to report error messages from validation functions back to the user. In this step, we're enabling validation for the entire app with a feature known as &quot;Messaging&quot;. Once this is set up, any validation error messages based on user input get passed to Messaging, which then connects them to the appropriate view and control that caused the error.")
-
 **Related Information**  
 
 

@@ -101,6 +101,9 @@ It is also possible to create nested entities in a navigation property with a si
 
 Bind the list for the nested collection relative to the transient context of the created main entity. A [`create`](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataListBinding/methods/create) in the nested table then creates a row which contributes to the POST request of the main entity. A deep create is not restricted to one level; it is also possible that a nested entity has a nested collection itself.
 
+> ### Caution:  
+> Only a single such list must be bound to the nested collection. You cannot share this nested collection among multiple list bindings.
+
 "Deep create" supports a simple collection-valued navigation property \(no path like "detail/items"\). It requires that the `autoExpandSelect` [model](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel/constructor) parameter is `true`. There must be no context binding in the binding hierarchy between the top-level and nested list binding.
 
 **Example: Creating a sales order with line items**

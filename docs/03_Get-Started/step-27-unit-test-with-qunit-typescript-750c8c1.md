@@ -23,7 +23,7 @@ Actually, every feature that we added to the app so far, would require a separat
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 27: Unit Test with QUnit](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/27) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-27.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
   
   
@@ -111,17 +111,17 @@ The page will be referenced in the test suite that we will create next.
 <!DOCTYPE html>
 <html>
 <head>
-     <meta charset="utf-8">
-     <script
-		  src="../resources/sap/ui/test/starter/runTest.js"
-		  data-sap-ui-resource-roots='{
-			      "test-resources.ui5.walkthrough": "./"
-		  }' 
-	></script>
+    <meta charset="utf-8">
+    <script
+        src="../resources/sap/ui/test/starter/runTest.js"
+        data-sap-ui-resource-roots='{
+            "test-resources.ui5.walkthrough": "./"
+        }'
+    ></script>
 </head>
 <body class="sapUiBody">
-     <div id="qunit"></div>
-     <div id="qunit-fixture"></div>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
 </body>
 </html>
 ```
@@ -142,33 +142,30 @@ The previously created generic `Test.qunit.html` file is referenced as the test 
 
 For more information, see [Concept and Basic Setup](../04_Essentials/concept-and-basic-setup-22f50c0.md).
 
-> ### Note:  
-> There are currently no types available for the test suite configuration. Please refer to [Configuration Options](../04_Essentials/configuration-options-738ed02.md) to see all options.
-
 ```ts
-
+import type {SuiteConfiguration} from "sap/ui/test/starter/config";
 export default {
-        name: "QUnit test suite for UI5 TypeScript Walkthrough",
-        defaults: {
-		      page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
-		      qunit: {
-			        version: 2
-		      },
-		      ui5: {
-			        theme: "sap_horizon"
-		      },
-		      loader: {
-			        paths: {
-				          "ui5/walkthrough": "../"
-			       }
-		      }
+    name: "QUnit test suite for UI5 TypeScript Walkthrough",
+    defaults: {
+        page: "ui5://test-resources/ui5/walkthrough/Test.qunit.html?testsuite={suite}&test={name}",
+        qunit: {
+            version: 2
         },
-        tests: {
-               "unit/unitTests": {
-                       title: "UI5 TypeScript Walkthrough - Unit Tests"
-               }
+        ui5: {
+            theme: "sap_horizon"
+        },
+        loader: {
+            paths: {
+                "ui5/walkthrough": "../"
+            }
         }
-};
+    },
+    tests: {
+        "unit/unitTests": {
+            title: "UI5 TypeScript Walkthrough - Unit Tests"
+        }
+    }
+} satisfies SuiteConfiguration;
 ```
 
 ***
@@ -183,14 +180,14 @@ We also create a corresponding `testsuite.qunit.html` in the same folder. This i
 <!DOCTYPE html>
 <html>
 <head>
-	 <meta charset="utf-8">
-	 <script
-		   src="../resources/sap/ui/test/starter/createSuite.js"
-		   data-sap-ui-testsuite="test-resources/ui5/walkthrough/testsuite.qunit"
-		   data-sap-ui-resource-roots='{
-			       "test-resources.ui5.walkthrough": "./"
-		   }'
-	></script>
+    <meta charset="utf-8">
+    <script
+        src="../resources/sap/ui/test/starter/createSuite.js"
+        data-sap-ui-testsuite="test-resources/ui5/walkthrough/testsuite.qunit"
+        data-sap-ui-resource-roots='{
+            "test-resources.ui5.walkthrough": "./"
+        }'
+    </script>
 </head>
 <body>
 </body>
@@ -213,12 +210,6 @@ If we now open the `webapp/test/testsuite.qunit.html` file in the browser and se
 
 -   All dependencies are replaced by stubs to test only the functionality in scope.
 
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 26: Mock Server Configuration \(TypeScript\)](step-26-mock-server-configuration-typescript-3e1c64f.md "We just ran our app against a real service, but for developing and testing our app we do not want to rely on the availability of the &quot;real&quot; service or put additional load on the system where the data service is located.")
-
-**Previous:**[Step 28: Integration Test with OPA \(TypeScript\)](step-28-integration-test-with-opa-typescript-412f0b6.md "If we want to test interaction patterns or more visual features of our app, we can also write an integration test.")
 
 **Related Information**  
 

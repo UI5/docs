@@ -24,7 +24,7 @@ Depending on the environment in which OpenUI5 is used, the libraries or your app
 
 ## Artifacts in the Framework
 
-The top-level structural unit is called a **library**. Libraries are the master artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom UI libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
+The top-level structural unit is called a **library**. Libraries are the main artifacts in the extensibility concept. They bundle a set of controls and related types and make them consumable by Web applications. There are predefined and standard libraries, like `sap.m`, with many commonly used controls. At the same time, it treats custom libraries as first-class citizens, making it easy for you to write and use your own controls alongside the predefined ones.
 
 A UI **element** is the basic building block of our user interfaces; it is a reusable entity with properties, events, methods, and relations. The most important relations are aggregations to other UI elements, and in this way a tree structure of elements can be created.
 
@@ -42,6 +42,18 @@ OpenUI5 provides Components as independent and reusable parts of UI5 application
 -   **[Model View Controller \(MVC\)](model-view-controller-mvc-91f2334.md "The Model View Controller (MVC) concept is used in OpenUI5 to separate the
 		representation of information from the user interaction. This separation facilitates development and the changing of parts independently.")**  
 The Model View Controller \(MVC\) concept is used in OpenUI5 to separate the representation of information from the user interaction. This separation facilitates development and the changing of parts independently.
+-   **[Models](models-e1b6259.md "A model in the Model View Controller concept holds the data and provides methods to
+		retrieve the data from the database and to set and update data.")**  
+A model in the Model View Controller concept holds the data and provides methods to retrieve the data from the database and to set and update data.
+-   **[Views](views-91f27e3.md "The view in the Model-View-Controller (MVC) concept is responsible for defining and rendering the UI. OpenUI5 supports predefined view types.")**  
+The view in the Model-View-Controller \(MVC\) concept is responsible for defining and rendering the UI. OpenUI5 supports predefined view types.
+-   **[Controller](controller-121b8e6.md "A controller contains methods that define how models and views interact.")**  
+A controller contains methods that define how models and views interact.
+-   **[Support for Unique IDs](support-for-unique-ids-91f28be.md "Stable IDs are used to identify and modify the controls within the controller during
+		runtime. However, if you reuse or nest these views, these stable IDs are no longer unique.
+		To avoid ambiguity, each view adds its own ID as prefix to all its child
+		controls.")**  
+Stable IDs are used to identify and modify the controls within the controller during runtime. However, if you reuse or nest these views, these stable IDs are no longer unique. To avoid ambiguity, each view adds its own ID as prefix to all its child controls.
 -   **[Data Binding](data-binding-68b9644.md "You use data binding to bind UI elements to data sources to keep the data in sync and
 		allow data editing on the UI.")**  
 You use data binding to bind UI elements to data sources to keep the data in sync and allow data editing on the UI.
@@ -85,11 +97,11 @@ No need to worry about device specifics! OpenUI5 apps run on smartphones, tablet
 -   **[Testing](testing-7cdee40.md "OpenUI5 provides several testing options, like to unit and integration tests
 		and the OData V2 mock server.")**  
 OpenUI5 provides several testing options, like to unit and integration tests and the OData V2 mock server.
--   **[Theming](theming-497c27a.md "OpenUI5 is an HTML UI
-		library, therefore styling is done using Cascading Style Sheets (CSS). This allows for
-		creating an impressive visual experience using a widely known standard technology which is
-		well-accepted on the market.")**  
-OpenUI5 is an HTML UI library, therefore styling is done using Cascading Style Sheets \(CSS\). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.
+-   **[Theming](theming-497c27a.md "OpenUI5 is an HTML library,
+		therefore styling is done using Cascading Style Sheets (CSS). This allows for creating an
+		impressive visual experience using a widely known standard technology which is well-accepted
+		on the market.")**  
+OpenUI5 is an HTML library, therefore styling is done using Cascading Style Sheets \(CSS\). This allows for creating an impressive visual experience using a widely known standard technology which is well-accepted on the market.
 -   **[Localization](localization-91f217c.md "The framework concepts for text localization in OpenUI5 are aligned with the general
 		concepts of the Java platform. ")**  
 The framework concepts for text localization in OpenUI5 are aligned with the general concepts of the Java platform.

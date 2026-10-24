@@ -12,7 +12,7 @@ It's now time to improve the content of the *Info* tab. We want to see the *Post
   
 **Unit tests of the formatter**
 
-![](images/loio8ab2798015ec431ab2125632cc37bcc3_HiRes.png "Unit tests of the formatter")
+![Screenshot showing unit test results.](images/loio8ab2798015ec431ab2125632cc37bcc3_HiRes.png "Unit tests of the formatter")
 
 Depending on the current date, we distinguish four different formatting categories, as shown in the table below:
 
@@ -274,7 +274,7 @@ In the implementation we use the `DateFormat` of OpenUI5 to create a short date.
 > ### Note:  
 > The implementation should not do more than the current tests covers. This makes sure you cover all the code paths. You can enable the code coverage by selecting the *Enable coverage* checkbox.
 > 
-> ![](images/loioa700487ab86444eb8643924d0dccf942_HiRes.png)
+> ![Screenshot of the unit tests view with highlighted Enable coverage checkbox that is selected.](images/loioa700487ab86444eb8643924d0dccf942_HiRes.png)
 > 
 > It will show the lines covered by your tests \(white\) and the ones that were not covered \(red\). For the single test above the coverage looks like this. The red line is already covered by the previous test so in total we have a test coverage of 100%.
 

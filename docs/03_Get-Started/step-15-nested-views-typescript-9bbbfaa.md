@@ -21,7 +21,7 @@ Our panel content is getting more and more complex and now it is time to move th
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 15: Nested Views](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/15) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-15.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -65,27 +65,27 @@ We create a new `HelloPanel.view.xml` file in our `webapp/view` folder and move 
 
 ```xml
 <mvc:View
-   controllerName="ui5.walkthrough.controller.HelloPanel"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-   <Panel
-      headerText="{i18n>helloPanelTitle}"
-      class="sapUiResponsiveMargin"
-      width="auto">
-      <content>
-         <Button
-            text="{i18n>showHelloButtonText}"
-            press=".onShowHello"
-            class="myCustomButton"/>
-         <Input
-            value="{/recipient/name}"
-            valueLiveUpdate="true"
-            width="60%"/>
-         <FormattedText
-            htmlText="Hello {/recipient/name}"
-            class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-      </content>
-   </Panel>
+    controllerName="ui5.walkthrough.controller.HelloPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Panel
+        headerText="{i18n>helloPanelTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto">
+        <content>
+            <Button
+                text="{i18n>showHelloButtonText}"
+                press=".onShowHello"
+                class="myCustomButton"/>
+            <Input
+                value="{/recipient/name}"
+                valueLiveUpdate="true"
+                width="60%"/>
+            <FormattedText
+                htmlText="Hello {/recipient/name}"
+                class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+        </content>
+    </Panel>
 </mvc:View>
 ```
 
@@ -99,21 +99,21 @@ In the app view, we remove the panel control and its content and put the `XMLVie
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
-	<Shell>
-		<App class="myAppDemoWT">
-			<pages>
-				<Page title="{i18n>homePageTitle}">
-					<content>
-						<mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <Page title="{i18n>homePageTitle}">
+                    <content>
+                        <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
 ```
 
@@ -134,12 +134,6 @@ export default class App extends Controller {
 ```
 
 We have now moved everything out of the app view and controller. The app controller remains an empty stub for now, we will use it later to add more functionality.
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 14: Custom CSS and Theme Colors \(TypeScript\)](step-14-custom-css-and-theme-colors-typescript-4cc841e.md "Sometimes we need to define some more fine-granular layouts and this is when we can use the flexibility of CSS by adding custom style classes to controls and style them as we like.")
-
-**Previous:**[Step 16: Dialogs and Fragments \(TypeScript\)](step-16-dialogs-and-fragments-typescript-4b2e306.md "In this step, we will take a closer look at another element which can be used to assemble views: the fragment.")
 
 **Related Information**  
 

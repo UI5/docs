@@ -4,7 +4,7 @@
 
 The *Diagnostics* window available in OpenUI5 is a support tool that runs within an existing OpenUI5 app.
 
-To open *Diagnostics*, use the following [shortcuts](../02_Read-Me-First/keyboard-shortcuts-for-openui5-tools-154844c.md): [CTRL\] + [SHIFT\] + [Alt\] /[Option\] + [S\]  in the app.
+To open the *Diagnostics* window, use the following [shortcuts](../02_Read-Me-First/keyboard-shortcuts-for-openui5-tools-154844c.md): [CTRL\] + [SHIFT\] + [Alt\] /[Option\] + [S\]  in the app.
 
 ![](../03_Get-Started/images/loio5ceb62ab5b7a405c835ab39f491a0735_LowRes.png)
 
@@ -330,4 +330,47 @@ You can start the interaction data collection in the following ways:
 
 
 [Interaction Tracking for Performance Measurement](interaction-tracking-for-performance-measurement-b2825ea.md "You can analyze the performance of your UI5 application by tracking the interaction that is performed on the UI.")
+
+<a name="loioc4ce41599ed143ecaf750f701695b88f"/>
+
+<!-- loioc4ce41599ed143ecaf750f701695b88f -->
+
+## Flexibility
+
+This feature lets you download data relevant to flexibility, which you can use for support and troubleshooting.
+
+For example, support teams can use the data to identify which change is causing an issue with your application.
+
+***
+
+<a name="loioc4ce41599ed143ecaf750f701695b88f__section_dkw_gtn_42b"/>
+
+## Prerequisites
+
+-   This feature is available only if the app uses the `sap.ui.fl` library.
+
+***
+
+<a name="loioc4ce41599ed143ecaf750f701695b88f__section_uf3_ptn_42b"/>
+
+## Anonymize User IDs
+
+You can select the checkbox to anonymize user IDs in the data, such as those of users who have made changes to the application :
+
+![](images/loio8c492fa33ff94033bb95ef57fbd09daa_LowRes.png)
+
+***
+
+<a name="loioc4ce41599ed143ecaf750f701695b88f__section_zfw_ptn_42b"/>
+
+## Download Flexibility Data
+
+When you press this button, a JSON file downloads to your machine. It contains the flexibility data from the current application. You can examine this data or send it to support for troubleshooting. Make sure to review the file contents for any personal or confidential data before sharing..
+
+You can export data in two formats:
+
+-   *Full Data Export -* Exports all data, including the ability to revert applied changes.
+-   *Reduced Data Export -* Exports a limited set of data with less flexibility.
+
+Exporting the full data set is recommended. Exporting the reduced data set is required as a fallback.
 

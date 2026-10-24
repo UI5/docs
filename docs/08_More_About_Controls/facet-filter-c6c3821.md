@@ -8,7 +8,7 @@ With the facet filter, users can explore a data collection by applying multiple 
 
 The following figure shows the structure of the facet filter in default 'Simple' type.
 
-![](images/loiof144853312cd42a1bff62ce4695eba2d_Source1.png)
+![FacetFilter Simple type showing a facet list, search field, list items, and controls for adding, removing, and resetting facets.](images/loiof144853312cd42a1bff62ce4695eba2d_Source1.png)
 
 The facet filter supports the following two types that can be configured using the control's `type` property:
 
@@ -34,7 +34,7 @@ Your application displays a large list of products that can be grouped by catego
 -   SupplierName \(Alpha Printers\)
 
 
-![](images/loiof57566c5aa854e2f86a8df84040ba13c_Source1.png)
+![Product table filtered by Category and SupplierName using FacetFilter.](images/loiof57566c5aa854e2f86a8df84040ba13c_Source1.png)
 
 -   **[Facet Filter: Simple Type](facet-filter-simple-type-1586c19.md "The simple type of the FacetFilter control is only available for
 		desktop and tablets.")**  

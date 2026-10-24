@@ -20,7 +20,7 @@ Our dialog is still pretty much empty. Since OpenUI5 is shipped with a large ico
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 18: Icons](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/18) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-18.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -101,12 +101,6 @@ In the dialog fragment, we add an icon control to the content aggregation of the
 
 -   Always use icon fonts rather than images wherever possible, as they are scalable without quality loss \(vector graphics\) and do not need to be loaded separately.
 
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 17: Fragment Callbacks \(TypeScript\)](step-17-fragment-callbacks-typescript-f030afc.md "Now that we have integrated the dialog, it's time to add some user interaction. The user will definitely want to close the dialog again at some point, so we add a button to close the dialog and assign an event handler.")
-
-**Previous:**[Step 19: Aggregation Binding \(TypeScript\)](step-19-aggregation-binding-typescript-24580fb.md "Now that we have established a good structure for our app, it's time to add some more functionality. We start exploring more features of data binding by adding some invoice data in JSON format that we display in a list below the panel.")
 
 **Related Information**  
 

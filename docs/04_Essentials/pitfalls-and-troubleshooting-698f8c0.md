@@ -12,7 +12,7 @@ OPA checks many conditions before it passes a control to your matchers/actions/s
 
 After selecting *verbose*, you can have a look at the log and also filter it by looking for `opa` or `matchers`.
 
-![](images/loio340d18e41c28469fbd14b6fe128ff89b_LowRes.png)
+![Screenshot showing OPA5 debug logs.](images/loio340d18e41c28469fbd14b6fe128ff89b_LowRes.png)
 
 A frequent cause of error is typos in the view name or control IDs. These are easily found by looking through the logs.
 

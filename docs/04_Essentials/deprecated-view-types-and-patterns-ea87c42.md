@@ -1,0 +1,244 @@
+<!-- loioea87c42d1bdb4365b86b7359d083b306 -->
+
+# Deprecated View Types and Patterns
+
+As of OpenUI5 version 1.120, XML views and Typed Views are the only recommended view types. All other view types and related patterns are deprecated.
+
+> ### Note:  
+> We recommend using [XML views](xml-view-91f2928.md) for all new development. For programmatic view creation, use [Typed views](typed-view-e6bb33d.md) via `View.extend()`.
+
+
+<table>
+<tr>
+<th valign="top">
+
+Deprecated Pattern
+
+</th>
+<th valign="top">
+
+Deprecated as of
+
+</th>
+<th valign="top">
+
+Replacement
+
+</th>
+<th valign="top">
+
+Details
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+**JSON View** \(`sap.ui.core.mvc.JSONView`\)
+
+</td>
+<td valign="top">
+
+1.120
+
+</td>
+<td valign="top">
+
+[XML View](xml-view-91f2928.md)
+
+</td>
+<td valign="top">
+
+[JSON View \(deprecated\)](json-view-deprecated-91f2852.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Declarative Support** \(`sap.ui.core.plugin.DeclarativeSupport`\)
+
+</td>
+<td valign="top">
+
+1.120
+
+</td>
+<td valign="top">
+
+[XML View](xml-view-91f2928.md)
+
+</td>
+<td valign="top">
+
+[Declarative Support \(deprecated\)](declarative-support-deprecated-91f1301.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**View Cloning**
+
+</td>
+<td valign="top">
+
+1.120
+
+</td>
+<td valign="top">
+
+Call the view factory function again
+
+</td>
+<td valign="top">
+
+[View Cloning \(deprecated\)](view-cloning-deprecated-a575619.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Native HTML in XML Views** \(via XHTML namespace `xmlns:html="http://www.w3.org/1999/xhtml"`\)<sup>1</sup>
+
+</td>
+<td valign="top">
+
+1.120
+
+</td>
+<td valign="top">
+
+`sap.html` library
+
+</td>
+<td valign="top">
+
+[Using Native HTML in XML Views](using-native-html-in-xml-views-be54950.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**CSS in XML Views**
+
+</td>
+<td valign="top">
+
+1.120
+
+</td>
+<td valign="top">
+
+External CSS file
+
+</td>
+<td valign="top">
+
+[Using CSS Style Sheets in XML Views \(deprecated\)](using-css-style-sheets-in-xml-views-deprecated-b564935.md)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**HTML View** \(`sap.ui.core.mvc.HTMLView`\)
+
+</td>
+<td valign="top">
+
+1.108
+
+</td>
+<td valign="top">
+
+[XML View](xml-view-91f2928.md)
+
+</td>
+<td valign="top">
+
+No more known usages as HTML syntax brings no advantages over XML
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**JS View** \(`sap.ui.core.mvc.JSView`\)
+
+</td>
+<td valign="top">
+
+1.90
+
+</td>
+<td valign="top">
+
+[Typed View](typed-view-e6bb33d.md) via `View.extend()`
+
+</td>
+<td valign="top">
+
+Define view class in JavaScript using `sap.ui.core.mvc.View.extend()`
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**XML Composite Controls** \(`sap.ui.core.XMLComposite`\)
+
+</td>
+<td valign="top">
+
+1.88
+
+</td>
+<td valign="top">
+
+[How Do I Migrate from `XMLComposite`?](../07_Developing_Controls/composite-controls-d6bab27.md#loiod6bab27b5dc041b29b419bae8ae8f1d1__section_MFXMLC)
+
+</td>
+<td valign="top">
+
+[Migrating from XMLComposite](../07_Developing_Controls/building-standard-composite-controls-c1512f6.md#loioc1512f6ce1454ff1913e3857bad56392__section_coming_from_xmlcomposite)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Template View** \(`sap.ui.core.mvc.TemplateView`\)
+
+</td>
+<td valign="top">
+
+1.56
+
+</td>
+<td valign="top">
+
+[XML View](xml-view-91f2928.md) or [Typed View](typed-view-e6bb33d.md)
+
+</td>
+<td valign="top">
+
+Include Handlebars template support
+
+</td>
+</tr>
+</table>
+
+1\) The `sap.html` library replaces the deprecated XHTML namespace. Instead of declaring `xmlns:html="http://www.w3.org/1999/xhtml"`, declare the `sap.html` namespace \(for example as the default namespace with `xmlns="sap.html"`\) and write tags with their native lowercase names. Add `sap.html` as a library dependency in your `manifest.json`. The `sap.html` library integrates with OpenUI5 data binding and event handling, validates URL-bearing attributes automatically, and is secure by design. For full migration details and code examples, see [Using Native HTML in XML Views](using-native-html-in-xml-views-be54950.md).
+
+**Related Information**  
+
+
+[Views](views-91f27e3.md "The view in the Model-View-Controller (MVC) concept is responsible for defining and rendering the UI. OpenUI5 supports predefined view types.")
+
+[XML View](xml-view-91f2928.md "The XML view type is defined in an XML file, with a file name ending in .view.xml. The file name and the folder structure together specify the name of the view that equals the OpenUI5 module name.")
+
+[Typed View](typed-view-e6bb33d.md "A view can also be defined by extending the sap.ui.core.mvc.View class. Such a view is referred to as a typed view. This means the view definition represents its own view class.")
+

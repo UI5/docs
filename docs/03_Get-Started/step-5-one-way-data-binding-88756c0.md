@@ -67,9 +67,3 @@ If you wish to alter the binding mode, you've got two options:
 > 
 > -   Altering a model's default binding mode doesn't affect already existing binding instances.
 
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 4: Two-Way Data Binding](step-4-two-way-data-binding-c72b922.md "In the examples we've looked at so far, we've displayed the value of a model property using a read-only field. We'll now change the user interface to display first and last name fields using sap.m.Input fields. We're also adding a check box control to enable or disable both input fields. This setup illustrates a feature known as &quot;two-way data binding&quot;. As the view now contains more controls, we're also moving the view definition into an XML file.")
-
-**Previous:**[Step 6: Resource Models](step-6-resource-models-9790d9a.md "Business applications often require language-specific (translatable) text used as labels and descriptions on the user interface.")
-

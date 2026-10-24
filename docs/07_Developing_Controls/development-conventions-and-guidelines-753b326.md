@@ -36,11 +36,6 @@ Provides an overview how to develop OpenUI5 control libraries in TypeScript.
 -   **[OpenUI5 Control Development Guidelines](openui5-control-development-guidelines-4549da6.md "Content developers developing OpenUI5 controls should follow the guidelines outlined
 		below with regard to APIs, behavior, and themes/CSS.")**  
 Content developers developing OpenUI5 controls should follow the guidelines outlined below with regard to APIs, behavior, and themes/CSS.
--   **[Product Standards and Acceptance Criteria](product-standards-and-acceptance-criteria-bafc686.md "To be of high quality and usable in mission-critical business software, OpenUI5 needs to
-		fulfill specific product standards and acceptance criteria. While these are not directly
-		related to code conventions, the most important standards and criteria are mentioned here,
-		because new code needs to fulfill these requirements.")**  
-To be of high quality and usable in mission-critical business software, OpenUI5 needs to fulfill specific product standards and acceptance criteria. While these are not directly related to code conventions, the most important standards and criteria are mentioned here, because new code needs to fulfill these requirements.
 -   **[File Names and Encoding](file-names-and-encoding-104135d.md "Some target platforms of OpenUI5 impose technical restrictions on the naming or structure
 		of resources (files).For this, rules for file names and encoding have been
 		introduced.")**  

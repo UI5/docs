@@ -26,6 +26,9 @@ A view can also be defined by extending the `sap.ui.core.mvc.View` class. Such a
 		method View.create defined in module
 		sap/ui/core/mvc/View.")**  
 To instantiate views asychronously, OpenUI5 provides the factory method `View.create` defined in module `sap/ui/core/mvc/View`.
+-   **[Deprecated View Types and Patterns](deprecated-view-types-and-patterns-ea87c42.md "As of OpenUI5 version 1.120, XML views and Typed Views are the only
+		recommended view types. All other view types and related patterns are deprecated.")**  
+As of OpenUI5 version 1.120, XML views and Typed Views are the only recommended view types. All other view types and related patterns are deprecated.
 -   **[JSON View \(deprecated\)](json-view-deprecated-91f2852.md "The JSON view type is defined in a file. The file name has to either end with .view.json or as a JSON string. The file
 		name and the folder structure together specify the name of the view that equals the OpenUI5 module name within the modularization concept.")**  
 The JSON view type is defined in a file. The file name has to either end with `.view.json` or as a JSON string. The file name and the folder structure together specify the name of the view that equals the OpenUI5 module name within the modularization concept.

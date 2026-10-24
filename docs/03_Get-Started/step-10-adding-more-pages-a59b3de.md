@@ -14,7 +14,7 @@ In this step, we create an additional page that is displayed in a separate fulls
   
 **Additional page displayed in a separate fullscreen column**
 
-![](images/loio41f6ae105130408ca78197f7c528e388_LowRes.gif "Additional page displayed in a separate fullscreen column")
+![Animation showing navigation from the three-column layout to an additional About Supplier page displayed in fullscreen.](images/loio41f6ae105130408ca78197f7c528e388_LowRes.gif "Additional page displayed in a separate fullscreen column")
 
 ***
 
@@ -180,7 +180,7 @@ sap.ui.define([
 
 Finally, we add a `handleAboutPress` function in the detail-detail page controller to navigate to the additional page without passing any data this time.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 9: Adding a Detail-Detail Page](step-9-adding-a-detail-detail-page-e4d21fd.md "In this step, we create a detail-detail page using sap.f.DynamicPage, which is opened by choosing a supplier from the detail page.")
 

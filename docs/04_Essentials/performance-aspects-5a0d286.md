@@ -8,7 +8,7 @@ The OData V4 model offers the features described below which influence performan
 
 ## `odata.metadata=minimal`
 
-The OData V4 model uses an `odata.metadata=minimal` header in its requests to reduce the amount of data that is sent from server to client. For more information, see section "3.1.1 odata.metadata=minimal" in the [OData JSON Format Version 4.0](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html) specification.
+The OData V4 model uses an `odata.metadata=minimal` header in its requests to reduce the amount of data that is sent from server to client. For more information, see section "3.1.1 odata.metadata=minimal" in the [OData JSON Format Version 4.01, 3.1.1 metadata=minimal](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#_Toc38457726) specification.
 
 ***
 
@@ -57,7 +57,7 @@ The separate loading of expensive navigation properties in list requests can imp
 **Related Information**  
 
 
-[OData JSON Format Version 4.0](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html)
+[OData JSON Format Version 4.01, 3.1.1 metadata=minimal](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#_Toc38457726)
 
 [Bindings](bindings-54e0ddf.md "Bindings connect OpenUI5 view elements to model data, allowing changes in the model to be reflected in the view element and vice versa.")
 

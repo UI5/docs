@@ -24,7 +24,7 @@ Icon library ensures consistent icon usage within a product and also across prod
 
 Focus visualization is very important for user efficiency.​
 
-![](images/loiof04ef120bcc8407b8985f35a696b76ff_LowRes.png)
+![Focus visualization of a button in three themes: Native HTML (blue outline), High Contrast Black (white dashed outline on black background), and High Contrast White (black dashed outline).](images/loiof04ef120bcc8407b8985f35a696b76ff_LowRes.png)
 
 ***
 

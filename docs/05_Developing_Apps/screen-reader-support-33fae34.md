@@ -127,7 +127,7 @@ The labeling on the empty option will be read by the screen reader and the end u
 > ### Tip:  
 > The empty label *\(None\)* should always be the first item in the drop-down.
 
-For more information, see [Fiori Guidelines for Empty states](https://experience.sap.com/fiori-design-web/designing-for-empty-states/).
+For more information, see [Empty States](https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/designing-for-empty-states) in the SAP Design System.
 
 ***
 
@@ -202,7 +202,7 @@ Start a screen reader, start the application, walk through the application using
 
 The `lang` attribute for the current language is set at page level for the entire page. If a page contains text that is not in the current language \(for example, French elements on an English page\), this text cannot be labeled with a different language tag. OpenUI5 doesn't offer dedicated support to mark application parts, sections, etc. that are in a different language.
 
-Depending on the use case, application developers can alternatively use techniques like directly defining the HTML with the `sap.ui.core.HTML` control and set the `lang` attribute accordingly. Another alternative could be iFrame isolation.
+Depending on the use case, application developers can alternatively use techniques like defining native HTML with the `sap.html` library and setting the `lang` attribute on the corresponding element accordingly. Another alternative could be iFrame isolation.
 
 For more information, see:
 

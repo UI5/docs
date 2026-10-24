@@ -94,12 +94,6 @@ We replace the instantiation of the `sap/m/Text` control by our new `App.view.xm
 -   Other XML namespaces use the last part of the SAP namespace as alias \(for example, `mvc` for `sap.ui.core.mvc`\)
 
 
-**Parent topic:**[Walkthrough Tutorial \(JavaScript\)](walkthrough-tutorial-javascript-3da5f4b.md "In this tutorial we will introduce you to all major development paradigms of OpenUI5.")
-
-**Next:**[Step 3: Controls](step-3-controls-ddbceec.md "Now it is time to build our first little UI by replacing the &quot;Hello World&quot; text in the HTML body by the OpenUI5 control sap/m/Text. In the beginning, we will use the JavaScript control API to set up the UI, the control instance is then placed into the HTML body.")
-
-**Previous:**[Step 5: Controllers](step-5-controllers-50579dd.md "In this step, we replace the text with a button and show the &quot;Hello World&quot; message when the button is pressed. The handling of the button's press event is implemented in the controller of the view.")
-
 **Related Information**  
 
 

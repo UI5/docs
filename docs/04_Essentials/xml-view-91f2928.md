@@ -34,8 +34,11 @@ The names of the OpenUI5 control libraries and the related subpackages are mappe
 In XML views, aggregated child controls can be added as child tags.
 -   **[Control Properties and Associations in XML Views](control-properties-and-associations-in-xml-views-5ee3be4.md "")**  
 
--   **[Using Native HTML in XML Views \(deprecated\)](using-native-html-in-xml-views-deprecated-be54950.md "The use of native HTML in XML views depends on the XHTML feature set.")**  
-The use of native HTML in XML views depends on the XHTML feature set.
+-   **[Using Native HTML in XML Views](using-native-html-in-xml-views-be54950.md "With the sap.html library, you can write standard HTML tags directly
+		inside XML views and freely mix them with regular OpenUI5 controls while staying
+		within the OpenUI5 programming
+		model (data binding, models, event handling).")**  
+With the `sap.html` library, you can write standard HTML tags directly inside XML views and freely mix them with regular OpenUI5 controls while staying within the OpenUI5 programming model \(data binding, models, event handling\).
 -   **[Using CSS Style Sheets in XML Views \(deprecated\)](using-css-style-sheets-in-xml-views-deprecated-b564935.md "Style sheets are included in XML views in the same way as plain HTML. To add further
 		CSS classes to OpenUI5 controls,
 		use the class attribute.")**  

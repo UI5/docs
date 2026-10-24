@@ -16,7 +16,7 @@ The `ObjectPageLayout` layout is composed of a header \(title and content\), an 
   
 **ObjectPageLayout Main Structure**
 
-![](images/loio6b015871feac4b62a1111c73ba78c86f_LowRes.png "ObjectPageLayout Main Structure")
+![Screenshot of Object Page main structure with the header, anchor bar, sections, subsections, and blocks highlighted.](images/loio6b015871feac4b62a1111c73ba78c86f_LowRes.png "ObjectPageLayout Main Structure")
 
 ***
 
@@ -81,13 +81,16 @@ The content of the page that appears below the header is composed of blocks stru
   
 **Blocks Structured into Sections and Subsections**
 
-![](images/loio69eeaf31d2e3481fa479d8a42229b6ec_LowRes.png "Blocks Structured into Sections and Subsections")
+![Screenshot of Object Page showing the anchor bar and two subsections, each containing a block .](images/loio69eeaf31d2e3481fa479d8a42229b6ec_LowRes.png "Blocks Structured into Sections and Subsections")
 
 The blocks hold the actual app content, while the purpose of the sections and subsections is to define grouping.
 
 A subsection groups together a set of blocks \(under a common title\), while a section groups together a set of subsections \(under a common title\).
 
 The grouping enables the control to automatically create an internal menu \(anchor bar\) that shows the titles of the sections and subsections as separate anchors. The user can select them to scroll to the respective section or subsection content.
+
+> ### Note:  
+> To avoid critical accessibility issues, always set a `title` on sections and subsections, especially when a section contains multiple subsections. Without descriptive titles, page navigation cannot be operated correctly, and the overall page structure becomes unclear for users of assistive technologies. This can also lead to issues with focus and visual contrast.
 
 Here are some examples of how sections are initialized in both views:
 
@@ -132,7 +135,7 @@ The `subSectionLayout` property provides information on how all the underlying s
   
 **Blocks Content Arranged in Columns with Section and Subsection Titles Displayed on Top**
 
-![](images/loio80c15831d2f14649ab7e56f24b17a5b9_LowRes.png "Blocks Content Arranged in Columns with Section and Subsection Titles
+![Screenshot of Object Page showing the subsection title above three side-by-side blocks.](images/loio80c15831d2f14649ab7e56f24b17a5b9_LowRes.png "Blocks Content Arranged in Columns with Section and Subsection Titles
 					Displayed on Top")
 
 Additionally, a second layout named `titleOnLeft` arranges the blocks content from the second column, leaving the first one for section and subsection titles only.
@@ -141,7 +144,7 @@ Additionally, a second layout named `titleOnLeft` arranges the blocks content fr
   
 **Blocks Content Arranged in Columns with Section and Subsection Titles Displayed on the Left**
 
-![](images/loio96bf1fad37a74191968095bdd71698d3_LowRes.png "Blocks Content Arranged in Columns with Section and Subsection Titles
+![Screenshot of Object Page showing section and subsection titles in the left column and blocks to the right.](images/loio96bf1fad37a74191968095bdd71698d3_LowRes.png "Blocks Content Arranged in Columns with Section and Subsection Titles
 					Displayed on the Left")
 
 Here is how this property is set in the XML view:
@@ -166,7 +169,7 @@ Here is how this property is set in the XML view:
 
 The `moreBlocks` aggregation of `sap.uxap.ObjectPageSubSection` allows you to specify blocks to be displayed only after the user clicks the internally created *See more* button:
 
-![](images/loio74c97287cab245018b4ad7dc364108ee_LowRes.png)
+![Screenshot of Object Page subsection with a Show More button.](images/loio74c97287cab245018b4ad7dc364108ee_LowRes.png)
 
 The *See more* button is only displayed for subsections that contain one of the following:
 

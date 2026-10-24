@@ -16,7 +16,8 @@ The structure in this step will be used throughout the rest of this tutorial. Th
   
 **The basic OpenUI5 app**
 
-![](images/loio613be5aa54644aabbd11fbbb43fd5fcc_LowRes.png "The basic OpenUI5 app")
+![Preview of the basic app showing an empty page with a toolbar at the top.](images/loio613be5aa54644aabbd11fbbb43fd5fcc_LowRes.png "The basic OpenUI5
+					app")
 
 ***
 
@@ -36,9 +37,9 @@ You should have the same files as displayed in the following figure:
   
 **Folder structure with downloaded files**
 
-![](images/loiobc4395be3fd64b8aa49058340e92a192_LowRes.png "Folder structure with downloaded files")
+![Project folder structure showing the downloaded files.](images/loiobc4395be3fd64b8aa49058340e92a192_LowRes.png "Folder structure with downloaded files")
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Previous:**[Step 2: Creating an Empty Flexible Column Layout](step-2-creating-an-empty-flexible-column-layout-bf38e4d.md "In this step, we add an instance of the sap.f.FlexibleColumnLayout control in the main view of the app.")
 

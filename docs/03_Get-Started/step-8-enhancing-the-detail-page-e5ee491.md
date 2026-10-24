@@ -14,7 +14,8 @@ With routing implemented, the model of the detail page is updated for each produ
   
 **Enhanced detail page displaying information specific to the selected product**
 
-![](images/loiob687506e7e55437193741a31ff739b7b_LowRes.gif "Enhanced detail page displaying information specific to the selected product")
+![Animation showing the two-column layout with the detail page displaying product-specific information.](images/loiob687506e7e55437193741a31ff739b7b_LowRes.gif "Enhanced detail page displaying information specific to the selected
+					product")
 
 ***
 
@@ -147,7 +148,7 @@ We adjust the `headerContent` so that the `sap.f.Avatar` displays the specific i
 
 We adjust the *General Information* section to display Product ID, Description and Supplier of the selected product.
 
-**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Fiori design guidelines.")
+**Parent topic:**[Flexible Column Layout App Tutorial](flexible-column-layout-app-tutorial-c4de2df.md "In this tutorial, we showcase how to structure your OpenUI5 app using the layout patterns that comply with the SAP Design System guidelines.")
 
 **Next:**[Step 7: Routing](step-7-routing-7f65131.md "In this step, we utilize the sap.f.routing.Router.")
 

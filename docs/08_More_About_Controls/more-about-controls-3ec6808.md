@@ -5,7 +5,7 @@
 OpenUI5 contains controls that are provided with multiple libraries. This section contains detailed information about some of the controls beyond the information provided in the API reference.
 
 > ### Note:  
-> The following sections only provide additional information for some of the controls. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
+> The following sections provide additional information for selected controls and features. For a complete list of all controls and their documentation, see the [API Reference](https://ui5.sap.com/#/api) and the [Samples](https://ui5.sap.com/#/controls). 
 
 -   **[Busy Indicators](busy-indicators-0dd2110.md "You use busy indicators to inform users that something is going on in the background,
 		for example, some data is being fetched from the back end and the user has to wait. As long
@@ -51,10 +51,9 @@ This library contains the most important controls for building a user interface 
 This library contains controls that provide the basic structure of a tool app.
 -   **[sap.ui.codeeditor](sap-ui-codeeditor-2832a13.md "This library contains the CodeEditor control.")**  
 This library contains the `CodeEditor` control.
--   **[sap.ui.core](sap-ui-core-72227f8.md "This library contains the jQuery plugins (jQuery.sap.*), the core
-		and all its components, base classes for controls, components and the Model-View-Controller
-		(MVC) classes.")**  
-This library contains the jQuery plugins \(`jQuery.sap.*`\), the core and all its components, base classes for controls, components and the Model-View-Controller \(MVC\) classes.
+-   **[sap.ui.core](sap-ui-core-72227f8.md "This library contains the core of the OpenUI5 runtime, including modules for
+		Model-View-Controller (MVC), components, event handling, routing, XML templating, base classes for control development, and i18n.")**  
+This library contains the core of the OpenUI5 runtime, including modules for Model-View-Controller \(MVC\), components, event handling, routing, XML templating, base classes for control development, and i18n.
 -   **[sap.ui.mdc](sap-ui-mdc-1dd2aa9.md "The sap.ui.mdc library contains composite, metadata-driven controls
 		that assemble UI elements with predefined user experience and various functionalities. The
 		controls can be used as a basis for scalable application development and can be implemented
@@ -72,5 +71,5 @@ This library includes controls associated with the `ObjectPage`.
 
 [Supported Library Combinations](../02_Read-Me-First/supported-library-combinations-363cd16.md "OpenUI5 provides a set of JavaScript and CSS libraries, which can be combined in an application using the combinations that are supported.")
 
-[Browser and Platform Support](../02_Read-Me-First/browser-and-platform-support-74b59ef.md "Here you can find information on the browser and platform support for the OpenUI5 libraries on iOS, Android, macOS, and Windows platforms.")
+[Browser and Platform Support](../02_Read-Me-First/browser-and-platform-support-74b59ef.md "Supported browsers and platforms for the OpenUI5 libraries.")
 

@@ -23,7 +23,7 @@ We haven't thought about testing our interaction with the app yet, so in this st
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 28: Integration Test with OPA](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/28) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-28.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
   
   
@@ -56,27 +56,27 @@ import Press from "sap/ui/test/actions/Press";
 const viewName = "ui5.walkthrough.view.HelloPanel";
 
 export default class HelloPanelPage extends Opa5 {
-	// Actions
-	iPressTheSayHelloWithDialogButton() {
-		return this.waitFor({
-			id: "helloDialogButton",
-			viewName,
-			actions: new Press(),
-			errorMessage: "Did not find the 'Say Hello With Dialog' button on the HelloPanel view"
-		});
-	}
-	
-	// Assertions
-	iShouldSeeTheHelloDialog() {
-		return this.waitFor({
-			controlType: "sap.m.Dialog",
-			success: function () {
-				// we set the view busy, so we need to query the parent of the app
-				Opa5.assert.ok(true, "The dialog is open");
-			},
-			errorMessage: "Did not find the dialog control"
-		});
-	}
+    // Actions
+    iPressTheSayHelloWithDialogButton() {
+        return this.waitFor({
+            id: "helloDialogButton",
+            viewName,
+            actions: new Press(),
+            errorMessage: "Did not find the 'Say Hello With Dialog' button on the HelloPanel view"
+        });
+    }
+
+    // Assertions
+    iShouldSeeTheHelloDialog() {
+        return this.waitFor({
+            controlType: "sap.m.Dialog",
+            success: function () {
+                // we set the view busy, so we need to query the parent of the app
+                Opa5.assert.ok(true, "The dialog is open");
+            },
+            errorMessage: "Did not find the dialog control"
+        });
+    }
 };
 ```
 
@@ -115,21 +115,21 @@ QUnit.module("Navigation");
 
 opaTest("Should open the Hello dialog", function () {
 
-	// Arrangements
-	onTheHelloPanelPage.iStartMyUIComponent({
-		componentConfig: {
-			name: "ui5.walkthrough"
-		}
-	});
-	
-	// Actions
-	onTheHelloPanelPage.iPressTheSayHelloWithDialogButton();
-	
-	// Assertions
-	onTheHelloPanelPage.iShouldSeeTheHelloDialog();
-	
-	// Cleanup
-	onTheHelloPanelPage.iTeardownMyApp();
+    // Arrangements
+    onTheHelloPanelPage.iStartMyUIComponent({
+        componentConfig: {
+            name: "ui5.walkthrough"
+        }
+    });
+
+    // Actions
+    onTheHelloPanelPage.iPressTheSayHelloWithDialogButton();
+
+    // Assertions
+    onTheHelloPanelPage.iShouldSeeTheHelloDialog();
+
+    // Cleanup
+    onTheHelloPanelPage.iTeardownMyApp();
 });
 ```
 
@@ -156,17 +156,18 @@ import "./NavigationJourney";
 Finally we reference the new `integration/opaTests.qunit.ts` in the `testsuite.qunit.ts` file. The `.qunit.ts` extension is omitted and will be added automatically during runtime.
 
 ```ts
+import type {SuiteConfiguration} from "sap/ui/test/starter/config";
 export default {
-	  // ...
-	  tests: {
-		    "unit/unitTests": {
-			       title: "UI5 TypeScript Walkthrough - Unit Tests"
-		    },
-		    "integration/opaTests": {
-			       title: "UI5 TypeScript Walkthrough - Integration Tests"
-		    }
-	  }
-};
+    // ...
+    tests: {
+        "unit/unitTests": {
+            title: "UI5 TypeScript Walkthrough - Unit Tests"
+        },
+        "integration/opaTests": {
+            title: "UI5 TypeScript Walkthrough - Integration Tests"
+        }
+    }
+} satisfies SuiteConfiguration;
 ```
 
 If we now open the `webapp/test/testsuite.qunit.html` file in the browser and select `integration/opaTests`, the QUnit layout should appear and a test "Should see the Hello dialog" will run immediately. This action will load the app component on the right side of the page. There you can see the operations the test is performing on the app. If everything works correctly, a button click will be triggered, then a dialog will be displayed and the test case will be green.
@@ -179,12 +180,6 @@ If we now open the `webapp/test/testsuite.qunit.html` file in the browser and se
 
 -   Use `page` objects and `journeys` for structuring OPA tests.
 
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 27: Unit Test with QUnit \(TypeScript\)](step-27-unit-test-with-qunit-typescript-750c8c1.md "Now that we have a test folder in the app, we can start to increase our test coverage.")
-
-**Previous:**[Step 29: Debugging Tools \(TypeScript\)](step-29-debugging-tools-typescript-50990a0.md "Even though we have added a basic test coverage in the previous steps, it seems like we accidentally broke our app, because it does not display prices to our invoices anymore. We need to debug the issue and fix it before someone finds out.")
 
 **Related Information**  
 

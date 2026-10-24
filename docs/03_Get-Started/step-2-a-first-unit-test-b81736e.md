@@ -32,7 +32,7 @@ As we use Test Driven Development \(TDD\) we define the test case first, before 
   
 **The unit test will initially fail as the implementation is not provided yet**
 
-![](images/loio4e2924722bd64b51a96d198b760ac780_LowRes.png "The unit test will initially fail as the implementation is not provided
+![Unit test results showing failing tests.](images/loio4e2924722bd64b51a96d198b760ac780_LowRes.png "The unit test will initially fail as the implementation is not provided
 					yet")
 
 ***
@@ -41,11 +41,7 @@ As we use Test Driven Development \(TDD\) we define the test case first, before 
 
 All unit tests are located in the `webapp/test/unit` folder and can be started by opening the `webapp/test/testsuite.qunit.html` in your browser and selecting `unit/unitTests`.
 
-  
-  
-**Unit Test Infrastructure in the Application**
-
-![](images/loiof25ffee0c48947bca16249c229654d69_LowRes.png "Unit Test Infrastructure in the Application")
+![Unit Test Infrastructure in the Application](images/loiof25ffee0c48947bca16249c229654d69_LowRes.png)
 
 The `testsuite.qunit.html` file utlizes the configuration from `webapp/test/testsuite.qunit.js` which lists all tests within the project, including the `unitTests.qunit.js` module. This module is the entry point for all unit tests for functionality such as formatters or models.
 

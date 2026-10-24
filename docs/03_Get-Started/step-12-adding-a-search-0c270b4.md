@@ -12,7 +12,7 @@ We now add a search field to our bulletin board and define a filter that represe
   
 **Search field**
 
-![](images/loiob012fdf751b947f08cf77cf124334c9f_LowRes.jpg "Search field")
+![Screenshot showing a table with a list of items and a search field at the top.](images/loiob012fdf751b947f08cf77cf124334c9f_LowRes.jpg "Search field")
 
 ***
 
@@ -113,5 +113,5 @@ To enable filtering, we extend the controller with a method that applies the sea
 **Related Information**  
 
 
-[Step 42 of Walkthrough: Filtering](step-23-filtering-5295470.md "In this step, we add a search field for our product list and define a filter that represents the search term. When searching, the list is automatically updated to show only the items that match the search term.")
+[Walkthrough Tutorial — Step 23: Filtering](https://ui5.github.io/tutorials/walkthrough/steps/23/index.html?lang=js)
 

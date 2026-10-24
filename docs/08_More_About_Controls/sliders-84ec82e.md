@@ -2,6 +2,8 @@
 
 # Sliders
 
+Slider controls enable users to adjust values within a specified range, with options for single values or range intervals, and support for custom scales and tooltips.
+
 ***
 
 <a name="loio84ec82e7498345ccbfcd754d4578313b__section_dnk_kqr_pdb"/>
@@ -14,13 +16,13 @@ A slider is a control that enables you to adjust values on a specified range. Op
   
 **Slider**
 
-![](images/loio18fb5f88c2fb45f994f3567279b20e49_LowRes.png "Slider")
+![Slider control with a single handle.](images/loio18fb5f88c2fb45f994f3567279b20e49_LowRes.png "Slider")
 
   
   
 **RangeSlider**
 
-![](images/loio923cc5ea784a4c87826b01fd922cbed2_LowRes.png "RangeSlider")
+![RangeSlider control with two handles defining a selected range.](images/loio923cc5ea784a4c87826b01fd922cbed2_LowRes.png "RangeSlider")
 
 Technically, the RangeSlider extends `sap.m.Slider` and thus uses all its properties. It has two additional properties for the second slider value and the selected range.
 

@@ -142,7 +142,7 @@ Granular structure of a form control
 </td>
 <td valign="top">
 
-![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
+![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif)
 
 </td>
 </tr>
@@ -161,7 +161,7 @@ Granular structure of a form control
 
 -   ![Yes](../02_Read-Me-First/images/loio3cb17ee88aed44d2bf1d14b97728c709_LowRes.gif): Feature is supported for this form type
 
--   ![No](../02_Read-Me-First/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif): Feature is not supported for this form type
+-   ![No](../03_Get-Started/images/loio5befb5af20ed42fd9052a99014d953a3_LowRes.gif): Feature is not supported for this form type
 
 
 ***

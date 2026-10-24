@@ -118,12 +118,6 @@ Since using an escaped character is not so easy to read, we recommend reversing 
 
 The ampersand \(`&`\) character also has a high-priority meaning to the XML parser. This character always means "The start of an escaped character". So, if you'd like to use the Boolean `AND` operator \(`&&`\) in a condition, you must escape both ampersand characters \(`&amp;&amp;`\).
 
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 13: Element Binding](step-13-element-binding-6c7c5c2.md "Now, let's do something with that newly generated list. Typically, you use a list to allow selection of an item and then display the details of that item elsewhere. To accomplish this, we use a form with relatively bound controls and bind it to the selected entity via element binding.")
-
-**Previous:**[Step 15: Aggregation Binding Using a Factory Function](step-15-aggregation-binding-using-a-factory-function-284a036.md "Instead of using a single hard-coded template control, we now opt for a factory function to generate different controls based on the data received at runtime. This approach is much more flexible and allows for the display of complex or heterogeneous data.")
-
 **Related Information**  
 
 

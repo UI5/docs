@@ -40,12 +40,6 @@ panelHeaderText=Data Binding Grundlagen
 
 To check the result, append the `sap-language=DE` URL parameter to the URL in your browser, for example `http://localhost:port/index.html?sap-language=DE`. Once you remove this parameter, your app reverts to your browser's default language.
 
-**Parent topic:**[Data Binding Tutorial](data-binding-tutorial-e531093.md "In this tutorial, we explain the concepts of data binding in OpenUI5.")
-
-**Next:**[Step 6: Resource Models](step-6-resource-models-9790d9a.md "Business applications often require language-specific (translatable) text used as labels and descriptions on the user interface.")
-
-**Previous:**[Step 8: Binding Paths: Accessing Properties in Hierarchically Structured Models](step-8-binding-paths-accessing-properties-in-hierarchically-structured-models-9373793.md "In Step 6 , we stated that the fields in a resource model are arranged in a flat structure; in other words, there is no hierarchy of properties. However, this is only true for resource models. The properties within JSON and OData models are usually arranged in a hierarchical structure. So, let's explore how to reference fields in a hierarchically structured model object.")
-
 **Related Information**  
 
 

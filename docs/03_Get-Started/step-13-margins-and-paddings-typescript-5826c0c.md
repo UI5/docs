@@ -22,7 +22,7 @@ Instead of manually adding CSS to the controls, we will use the standard classes
 
 ## Coding
 
-You can view all files at [OpenUI5 TypeScript Walkthrough - Step 13: Margins and Paddings](https://github.com/sap-samples/ui5-typescript-walkthrough/tree/main/steps/13) and [download the solution as a zip file](https://sap-samples.github.io/ui5-typescript-walkthrough/ui5-typescript-walkthrough-step-13.zip).
+You can view all files at [UI5 Tutorials](https://ui5.github.io/tutorials/) and download the solution as a zip file.
 
 ***
 
@@ -40,38 +40,38 @@ To format the output text individually, we remove the description from the input
 
 ```xml
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true">
-	<Shell>
-		<App>
-			<pages>
-				<Page title="{i18n>homePageTitle}">
-					<content>
-						<Panel
-							headerText="{i18n>helloPanelTitle}"
-							class="sapUiResponsiveMargin"
-							width="auto">
-							<content>
-								<Button
-									text="{i18n>showHelloButtonText}"
-									press=".onShowHello"
-									class="sapUiSmallMarginEnd"/>
-								<Input
-									value="{/recipient/name}"
-									valueLiveUpdate="true"
-									width="60%"/>
-								<Text
-									text="Hello {/recipient/name}"
-									class="sapUiSmallMargin"/>
-							</content>
-						</Panel>
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+    <Shell>
+        <App>
+            <pages>
+                <Page title="{i18n>homePageTitle}">
+                    <content>
+                        <Panel
+                            headerText="{i18n>helloPanelTitle}"
+                            class="sapUiResponsiveMargin"
+                            width="auto">
+                            <content>
+                                <Button
+                                    text="{i18n>showHelloButtonText}"
+                                    press=".onShowHello"
+                                    class="sapUiSmallMarginEnd"/>
+                                <Input
+                                    value="{/recipient/name}"
+                                    valueLiveUpdate="true"
+                                    width="60%"/>
+                                <Text
+                                    text="Hello {/recipient/name}"
+                                    class="sapUiSmallMargin"/>
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
 ```
 
@@ -81,12 +81,6 @@ To format the output text individually, we remove the description from the input
 
 -   Use the standard OpenUI5 CSS classes for the layout if possible.
 
-
-**Parent topic:**[Walkthrough Tutorial \(TypeScript\)](walkthrough-tutorial-typescript-dad1905.md "In this tutorial we'll introduce you to all major development paradigms of OpenUI5. We'll demonstrate the use of TypeScript with OpenUI5 and highlight the specific characteristics of this approach.")
-
-**Next:**[Step 12: Shell Control as Container \(TypeScript\)](step-12-shell-control-as-container-typescript-4af44cb.md "Now we use a shell control as container for our app and use it as our new root element. The shell takes care of visual adaptation of the application to the device's screen size by introducing a so-called letterbox on desktop screens.")
-
-**Previous:**[Step 14: Custom CSS and Theme Colors \(TypeScript\)](step-14-custom-css-and-theme-colors-typescript-4cc841e.md "Sometimes we need to define some more fine-granular layouts and this is when we can use the flexibility of CSS by adding custom style classes to controls and style them as we like.")
 
 **Related Information**  
 

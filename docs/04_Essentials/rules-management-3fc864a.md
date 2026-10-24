@@ -16,7 +16,7 @@ The *Available Rulesets* tab contains the list of the currently loaded rulesets 
   
 **Support Assistant Available Rulesets**
 
-![](images/loiod7d49af739dd4b31a0ba2f457e03a331_HiRes.png "Support Assistant Available Rulesets")
+![](images/loiod7d49af739dd4b31a0ba2f457e03a331_LowRes.png "Support Assistant Available Rulesets")
 
 The *Additional Rulesets* tab shows rules for libraries that are not used by the application at the particular moment.
 
@@ -24,7 +24,7 @@ The *Additional Rulesets* tab shows rules for libraries that are not used by the
   
 **Support Assistant Additional Rulesets**
 
-![](images/loioc34ca5f09e244bdea0217b684adcb875_HiRes.png "Support Assistant Additional Rulesets")
+![](images/loioc34ca5f09e244bdea0217b684adcb875_Source1.png "Support Assistant Additional Rulesets")
 
 You can select the rules from the *Additional Rulesets* tab and choose *Load* to move them to the set of *Available Rulesets* and use them in your analysis.
 
@@ -40,7 +40,7 @@ The Support Assistant allows you to export and import subsets of preselected rul
   
 **Support Assistant Rule Presets**
 
-![Support Assistant - Available Rulesets tab](images/loio562a49a871e04125867052231ec52660_LowRes.png "Support Assistant Rule Presets")
+![Support Assistant - Available Rulesets tab](images/loio562a49a871e04125867052231ec52660_Source1.png "Support Assistant Rule Presets")
 
 ***
 
@@ -81,7 +81,7 @@ You have the option to personalize the Rules view by choosing which columns to b
   
 **Support Assistant Columns Personalization**
 
-![](images/loio3d1206248735431fb4223c4724914997_HiRes.png "Support Assistant Columns Personalization")
+![](images/loio3d1206248735431fb4223c4724914997_Source1.png "Support Assistant Columns Personalization")
 
 > ### Note:  
 > Choosing *I agree to use local storage persistency for* from the settings menu ![](images/loio24b9cee6f45340778480ea25e80bf0e5_HiRes.png) will also preserve your choice of visible columns.
@@ -112,8 +112,6 @@ Selecting the *Create Rule* button allows you to create a new rule. You can crea
 
 Additionally you need to provide or modify the JavaScript check function that implements the rule in the *Check function* tab. You can directly test the newly added or modified rule on the already loaded page.
 
-The newly created rule remains *temporary* until you submit and assign it to a library.
-
 > ### Remember:  
 > Don't forget to copy and paste the resulting new rule and submit it separately in the IDE of your choice. You can select all the code from the *Code* tab.
 
@@ -124,9 +122,6 @@ The newly created rule remains *temporary* until you submit and assign it to a l
 ## Executing Rules
 
 Once you load your rulesets or select a rule preset, you can run an analysis with them. To do this, select *Analyze*. For more information about the execution scope, you can refer to [Execution Scope](execution-scope-e15067d.md)
-
-> ### Note:  
-> If you have enforced a strict Content Security Policy \(CSP\), your temporary rules would not be executed. For more information about CSP, check [Content Security Policy](../05_Developing_Apps/content-security-policy-fe1a6db.md).
 
 **Related Information**  
 

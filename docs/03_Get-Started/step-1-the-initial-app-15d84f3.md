@@ -4,13 +4,32 @@
 
 We start by setting up a simple app that loads data from an OData service and displays it in a table. We use a mock server to simulate requests to and responses from the service.
 
-The structure and data model created in this step will be used throughout this tutorial to illustrate the OData V4 features in OpenUI5.
+OData is a standard protocol for creating and consuming data by using simple HTTP and REST APIs for create, read, update, delete \(CRUD\) operations.
+
+We start with an initial app that simply retrieves data from an OData V4 service and displays it as a plain list.
+
+***
+
+<a name="loio15d84f36c0594cb2b3295aa1f55cb961__section_dsn_cwc_z1b"/>
+
+## Preview OData V4 Tutorial App
+
+![](images/loioe518debe1cdc4fcd9f5a6cffd014fbfa_LowRes.png)
+
+> ### Tip:  
+> You don't have to do all tutorial steps sequentially, you can jump directly to any step you want. In each step, download the code from the previous step, copy it to your workspace, and make sure that the application runs by calling the `webapp/index.html` file.
+> 
+> You can view and download the samples for all steps in the Demo Kit at [OData V4](https://ui5.sap.com/#/entity/sap.ui.core.tutorial.odatav4). Depending on your development environment you might have to adjust resource paths and configuration entries.
+> 
+> For more information check the [Downloading Code for a Tutorial Step](get-started-setup-tutorials-and-demo-apps-8b49fc1.md#loio8b49fc198bf04b2d9800fc37fecbb218__tutorials_download) section of the tutorials overview page [Get Started: Setup, Tutorials, and Demo Apps](get-started-setup-tutorials-and-demo-apps-8b49fc1.md).
 
 ***
 
 <a name="loio15d84f36c0594cb2b3295aa1f55cb961__section_bt4_fxc_z1b"/>
 
-## Preview
+## Preview Step 1
+
+The structure and data model created in this step will be used throughout this tutorial to illustrate the OData V4 features in OpenUI5.
 
   
   
@@ -60,19 +79,48 @@ This file defines the home page of the app. It contains the bootstrap script and
 
 ### `webapp/manifest.json`
 
-The `manifest.json` descriptor file contains the app configuration. In the `sap.app` section, the OData V4 service is configured as the default service:
+The `manifest.json` descriptor file contains the app configuration:
+
+-   In the `sap.app` section, the OData V4 service is configured as the default service.
+-   In the `sap.ui5` section, the OData V4.0 model provided by the default service is configured with the following settings:
+    -   `"preload"`: Whether to enable a preload model, thus improving the startup performance. For more information, see [Manifest Model Preload](../04_Essentials/manifest-model-preload-26ba6a5.md).
+    -   `"autoExpandSelect"`: Whether to automatically generate `$select` and `$expand` system query options for service requests from the binding hierarchy of the OData model. Only data needed for the UI are then selected, leading to a minimal response size and improved performance. For more information, see [Automatic determination of $expand and $select](../04_Essentials/automatic-determination-of-expand-and-select-10ca58b.md).
+    -   `"earlyRequests"`: Whether the root `$metadata` document, the annotation files, and the security token are requested at the earliest convenience to speed up the start of your app or component.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor).
+    -   `"operationMode"`: The operation mode for filtering and sorting; only `Server` is supported by the OData V4 model.For more information, see the [API Reference](https://ui5.sap.com/#/api/sap.ui.model.odata.v4.ODataModel%23constructor).
+
 
 ```json
-"dataSources": {
-	"default": {
-		"uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
-		"type": "OData",
-		"settings": {
-			"odataVersion": "4.0"
-		}
-	}
+{
+    ...
+    "sap.app": {
+        ...
+        "dataSources": {
+            "default": {
+                "uri": "https://services.odata.org/TripPinRESTierService/(S(id))/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    ...
+    "sap.ui5": {
+        ...
+        "models": {
+            ...
+            "": {
+                "dataSource": "default",
+                "preload": true,
+                "settings": {
+                    "autoExpandSelect": true,
+                    "earlyRequests": true,
+                    "operationMode": "Server"
+                }
+            }
+        }
+    }
 }
-
 ```
 
 ***
@@ -80,7 +128,7 @@ The `manifest.json` descriptor file contains the app configuration. In the `sap.
 ### Mock server \(`webapp/localService/*`\)
 
 > ### Note:  
-> The mock server included in this tutorial is only meant to support the features needed in this tutorial. Currently, there is no "general-purpose mock server" for application development available with OData V4 \(like there is for OData V2\).
+> The [Mock Server](../04_Essentials/mock-server-69d3cbd.md) included in this tutorial is only meant to support the features needed in this tutorial. Currently, there is no "general-purpose mock server" for application development available with OData V4 \(like there is for OData V2\).
 
 The `mockserver.js` file contains the implementation of the mock server. It is quite simple since the mock server is only used to simulate certain types of requests to the *TripPin* service.
 
@@ -90,10 +138,6 @@ To be able to add data to the emulated OData responses, we have to store the ent
 
 In this tutorial, we only use the entity type `Person` of the *TripPin* service. The entities of type `Person` are collected in the entity set `People`. Each `Person` has a key property `UserName` and the properties `Age`, `FirstName`, and `LastName`.
 
-**Parent topic:**[OData V4 Tutorial](odata-v4-tutorial-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in OpenUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Previous:**[Step 2: Data Access and Client-Server Communication](step-2-data-access-and-client-server-communication-e9de002.md "In this step, we see how the Table that is bound to the People entity set initially requests its data, and how the data can be refreshed. We use the Console tab in the browser developer tools to monitor the communication between the browser and the server. We see the initial request as well as the requests for refreshing the data.")
-
 **Related Information**  
 
 
@@ -102,4 +146,6 @@ In this tutorial, we only use the entity type `Person` of the *TripPin* service.
 [Bootstrapping: Loading and Initializing](../04_Essentials/bootstrapping-loading-and-initializing-a04b0d1.md "To use OpenUI5 features in your HTML page, you have to load and initialize the SAPUI5 library.")
 
 [Manifest \(Descriptor for Applications, Components, and Libraries\)](../04_Essentials/manifest-descriptor-for-applications-components-and-libraries-be0cf40.md "The manifest (also known as descriptor for applications, components, and libraries, in short: app descriptor) is inspired by the WebApplication Manifest concept introduced by the W3C. The manifest provides a central, machine-readable, and easy-to-access location for storing metadata associated with an application, an application component, or a library.")
+
+[Mock Server](../04_Essentials/mock-server-69d3cbd.md "A mock server mimics one or more back-end services. It is used to simplify integration testing and to decouple UI development from service development. By using a mock server you can develop and test the UI even if the service in the back end is incomplete or unstable.")
 

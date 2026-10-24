@@ -137,7 +137,7 @@ You can use this attribute instead of attaching individual options with individu
 <script id="sap-ui-bootstrap"
 	src="resources/sap-ui-core.js"
 	data-sap-ui-config="
-	\"anmination-mode\":\"full\",
+	\"animation-mode\":\"full\",
 		\"compat-version\":\"edge\"
 	">
 </script>
@@ -203,7 +203,7 @@ The URL parameter name is composed of the name of the configuration option and t
 
 The value of a URL parameter is of type `string` and the same type mapping as for HTML attributes applies. However, URLs require a different encoding than HTML; they use, for example % encoding instead of entity encoding.
 
-For security reasons, only some configuration options can be set via URL parameters. An application can set the `ignore-url-parameters` option to `true` to disable URL configuration parameters completely.
+For security reasons, only some configuration options can be set via URL parameters. An application can set the `ignore-url-params` option to `true` to disable URL configuration parameters completely.
 
 ***
 
@@ -217,9 +217,9 @@ You can find these APIs in [Configuration Options and URL Parameters](configurat
 
 -   **[Configuration Options and URL Parameters](configuration-options-and-url-parameters-91f2d03.md "The following tables show available configuration options.")**  
 The following tables show available configuration options.
--   **[Deprecated Configuration Options](deprecated-configuration-options-b474a71.md "The following tables show
-			deprecated configuration options.")**  
-The following tables show deprecatedconfiguration options.
+-   **[Deprecated Configuration Options](deprecated-configuration-options-b474a71.md "The following
+			table shows deprecated configuration options.")**  
+The following table shows deprecated configuration options.
 -   **[Deprecated Configuration API](deprecated-configuration-api-2acafbf.md "This page describes important aspects of the deprecation of the sap.ui.core.Configuration API facade. It shows a
 		migration path away from the deprecated legacy APIs and towards their future-proof alternatives, provided the functionality is still meant for
 		productive usage.")**  

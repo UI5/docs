@@ -43,7 +43,7 @@ Clicking the browser action icon in the address bar provides you with:
 > ### Note:  
 > Your version of OpenUI5 may be older than the latest and the features described in the documentation may not be available for you.
 
-![](images/loiob02f8ec2ea55400cb9d99c96f28e1987_LowRes.png)
+![Chrome DevTools open on an app with the UI5 Inspector tab highlighted in the toolbar, showing the Control Inspector.](images/loiob02f8ec2ea55400cb9d99c96f28e1987_LowRes.png)
 
 **Control Inspector**
 
@@ -53,9 +53,9 @@ Hovering over a specific branch of the tree highlights the corresponding control
 
 Additionally, you can right click on any OpenUI5 control from the app and select *Inspect UI5 control*. This automatically selects the control in the tree and you can review its properties directly.
 
-![](images/loioa2c8084fb6464f71957b98e2571e357d_LowRes.png)
+![Chrome context menu on a UI5 app showing the Inspect UI5 control option, with the Control Inspector panel open on the right displaying the selected control and its properties.](images/loioa2c8084fb6464f71957b98e2571e357d_LowRes.png)
 
-![](images/loioa5e904cf213540baaf98ddd6e4f71684_LowRes.png)
+![UI5 Inspector showing a highlighted control on the left and its properties on the right.](images/loioa5e904cf213540baaf98ddd6e4f71684_LowRes.png)
 
 **Properties**
 
@@ -70,7 +70,7 @@ You can change the values of the properties. The changes will be validated again
 
 In this tab, you can see the bindings for a specific control. The number of bindings is displayed in parentheses in the tab title. Selecting the tab gives you more information about individual models, paths and values. The model property holds a link to the corresponding binding file. Clicking on the link opens the *Model Information* section with details about all values.
 
-![](images/loiob9efcc68caa44fe89718e4e8b2e7412a_HiRes.png)
+![UI5 Inspector Bindings tab showing binding details for a selected control, with a Model Information panel below.](images/loiob9efcc68caa44fe89718e4e8b2e7412a_HiRes.png)
 
 > ### Tip:  
 > UI5 Inspector supports a dark theme in case you are using the Google Developer Tools in dark mode.

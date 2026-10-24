@@ -32,25 +32,25 @@ You can view and download all files at [OData V4 - Step 8](https://ui5.sap.com/#
 
 ```js
 ...
-		onResetChanges : function () {
-			this.byId("peopleList").getBinding("items").resetChanges();
-			this._setUIChanges();
-		},
+        onResetChanges : function () {
+            this.byId("peopleList").getBinding("items").resetChanges();
+            this._setUIChanges();
+        },
 
-		onResetDataSource : function () {
-			var oModel = this.getView().getModel(),
-				oOperation = oModel.bindContext("/ResetDataSource(...)");
+        onResetDataSource : function () {
+            var oModel = this.getView().getModel(),
+                oOperation = oModel.bindContext("/ResetDataSource(...)");
 
-			oOperation.invoke().then(function () {
-					oModel.refresh();
-					MessageToast.show(this._getText("sourceResetSuccessMessage"));
-				}.bind(this), function (oError) {
-					MessageBox.error(oError.message);
-				}
-			);
-		},
+            oOperation.invoke().then(function () {
+                    oModel.refresh();
+                    MessageToast.show(this._getText("sourceResetSuccessMessage"));
+                }.bind(this), function (oError) {
+                    MessageBox.error(oError.message);
+                }
+            );
+        },
 
-		onSave : function () {
+        onSave : function () {
 ...
 
 ```
@@ -72,23 +72,23 @@ The invocation is asynchronous; the `invoke` method therefore returns a `Promise
 
 ```xml
 <mvc:View
-	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
-	displayBlock="true"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Shell>
-		<App busy="{appView>/busy}" class="sapUiSizeCompact">
-			<pages>
-				<Page title="{i18n>peoplePageTitle}">
-					<headerContent>
-						<Button
-							id="resetChangesButton"
-							text="{i18n>resetChangesButtonText}"
-							enabled="{= !${appView>/hasUIChanges}}"
-							press="onResetDataSource"
-							type="Emphasized">
-						</Button>
-					</headerContent>
+    controllerName="sap.ui.core.tutorial.odatav4.controller.App"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Shell>
+        <App busy="{appView>/busy}" class="sapUiSizeCompact">
+            <pages>
+                <Page title="{i18n>peoplePageTitle}">
+                    <headerContent>
+                        <Button
+                            id="resetChangesButton"
+                            text="{i18n>resetChangesButtonText}"
+                            enabled="{= !${appView>/hasUIChanges}}"
+                            press="onResetDataSource"
+                            type="Emphasized">
+                        </Button>
+                    </headerContent>
 ...
 ```
 
@@ -118,12 +118,6 @@ We add the missing texts to the properties file.
 ***
 
 And now we are done! We built a simple application with user data from an OData V4 service. We can display, edit, create, and delete users. And we use OData V4 features such as batch groups and automatic type detection.
-
-**Parent topic:**[OData V4 Tutorial](odata-v4-tutorial-bcdbde6.md "In this tutorial, we explore how features of OData V4 can be used in OpenUI5. We write a small app that consumes data from an OData V4 service to understand how to access, modify, aggregate, and filter data in an OData V4 model.")
-
-**Next:**[Step 7: Delete](step-7-delete-12a0d1e.md "In this step, we make it possible to delete user data.")
-
-**Previous:**[Step 9: List-Detail Scenario](step-9-list-detail-scenario-ec44581.md "In this step we add a detail area with additional information.")
 
 **Related Information**  
 

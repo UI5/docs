@@ -4,7 +4,7 @@
 
 This section contains information about other as well as former OpenUI5 development environments ans scenarios.
 
--   **[Development for Hybrid Web Containers](development-for-hybrid-web-containers-293eb94.md "You can develop mobile apps as hybrid app consisting of a native app wrapper, for
+-   **[Development for Hybrid Web Containers \(deprecated\)](development-for-hybrid-web-containers-deprecated-293eb94.md "You can develop mobile apps as hybrid app consisting of a native app wrapper, for
 		example PhoneGap, and an HTML viewer to display the content on the user
 		interface.")**  
 You can develop mobile apps as hybrid app consisting of a native app wrapper, for example PhoneGap, and an HTML viewer to display the content on the user interface.
